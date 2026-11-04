@@ -23,7 +23,7 @@
 
 
 #ifdef HAVE_LIBPNG
-#include <png.h>	/* for png saving, below */
+#include <libpng12/png.h>	/* for png saving, below */
 #endif
 
 
