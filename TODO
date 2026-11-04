@@ -1,0 +1,85 @@
+***  f = fixed, d = done, w = work in progress, b = broken  ***
+     * = fix before next release
+     1 = 1.0 release showstopper
+ (no particular order)
+
+High priority:
+==============
+
+d>fix preset menu
+d>add menu mnemonics
+
+MAIN:
+=====
+
+ >hook popup menus in playlist window to keyboard (GDK_Menu & GDK_F10)
+
+d>playlist window is slow when loading many files,,,
+
+
+PLAYLIST:
+=========
+
+1>allow session playlist to remember (file) name of loaded playlist.
+
+ >add support of relative paths in playlist
+  for any paths that would require going up the parent (../path/to/file)
+  use absolute paths and print warning to user when saved as such.
+
+
+SLIK:
+=====
+
+ (please see slik's TODO file for complete listing)
+
+SKINS:
+======
+
+ >the track number widget should be hidden when the track # is 0
+
+default:
+
+d>update font descriptions
+
+
+Mr clean:
+
+d>update font descriptions
+
+
+MPG123:
+=======
+
+
+OGG123:
+=======
+
+ >figure out what to do about ogginfo reading the entire file, all I
+  want is the song header info (doh!)
+
+RADIO:
+======
+
+XMP:
+====
+
+New modules:
+============
+
+ >look into adding a VQF module (using dreamplayer?)
+
+ >timidity support (awaiting possible patch)
+  UPDATE: to late for 0.13.0, but I do have a patch sitting here.
+
+MISC: (low priority)
+=====
+
+ >finish the command queueing for async playback controls (fix it to work correctly)
+ >fix 'hang' when next or prev is changed 'too fast'. (attempted solution is above)
+
+ >ipc loading of playlists has a problem when used with netscape (4.x) - netscape
+  removes the temp file before the parent gqmpeg process begins loading it. This
+  causes it to fail, pehaps ipc for playlists should work: control process sends
+  ipc command, then listens (by subscribing to stat file) for load done signal
+  from parent - then exits.
+

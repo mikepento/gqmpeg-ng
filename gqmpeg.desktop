@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=GQmpeg
+Comment=MP3 player
+Comment[fr]=Lecteur MP3
+Comment[pl]=Odtwarzacz MP3
+Exec=gqmpeg
+Icon=gqmpeg.png
+Info[fr]=Lecteur GQmpeg
+Info=GQmpeg player
+Terminal=0
+Type=Application
+StartupNotify=false
+StartupWMClass=gqmpeg
+Encoding=UTF-8
+Categories=Application;AudioVideo;

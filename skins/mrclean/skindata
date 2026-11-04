@@ -1,0 +1,335 @@
+#SLIK skin data file
+
+#file created by gqmpeg 0.91.0 (SLIK 0.91.0)
+
+#Title: MrClean
+#Version: 0.91.0
+#Date stamp: Mon Apr  5 14:15:34 2004
+#Build: 3
+#Author: John Ellis
+#Email: johne@verizon.net
+#URL: gqmpeg.sourceforge.net
+#License: images and design free for any use
+#Comments:
+
+[main]
+image = blue2-soft-round-7.png
+transparent = FALSE
+border = TRUE
+border_left = 7
+border_right = 7
+border_top = 7
+border_bottom = 8
+border_left_stretch = FALSE
+border_right_stretch = FALSE
+border_top_stretch = FALSE
+border_bottom_stretch = FALSE
+width = 320
+height = 163
+focus = focus-rect-border-7b.png
+focus_stretch = FALSE
+focus_has_border = TRUE
+focus_border_left = 7
+focus_border_right = 7
+focus_border_top = 7
+focus_border_bottom = 7
+focus_anchor_right = FALSE
+focus_anchor_bottom = FALSE
+focus_filled = FALSE
+focus_red = 255
+focus_green = 0
+focus_blue = 0
+focus_alpha = 128
+
+[digit_large]
+image = digit-digital-24-aa.png
+
+[digit_small]
+image = digit-digital-15-aa.png
+
+[font_lucida]
+description = Sans Bold 10.5
+
+[button_playlist]
+image = btn-rect-clr-32-eject.png
+x = 10
+y = 79
+prelight = TRUE
+indicator = FALSE
+
+[button_pause]
+image = btn-rect-clr-32r-pause.png
+x = 58
+y = 79
+prelight = TRUE
+indicator = TRUE
+
+[button_play]
+image = btn-rect-clr-32r-play.png
+x = 106
+y = 79
+prelight = TRUE
+indicator = TRUE
+
+[button_stop]
+image = btn-rect-clr-32-stop.png
+x = 154
+y = 79
+prelight = TRUE
+indicator = FALSE
+
+[slider_position]
+image = bubble-slider-16-h.png
+x = 9
+y = 114
+length = 60
+pressable = TRUE
+prelight = TRUE
+reversed = FALSE
+vertical = FALSE
+trough_length = 302
+border_1 = 15
+border_2 = 15
+stretch = FALSE
+sizeable = FALSE
+
+[button_preset_1]
+image = btn-rnd-clr-26-01.png
+x = 7
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_2]
+image = btn-rnd-clr-26-02.png
+x = 38
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_3]
+image = btn-rnd-clr-26-03.png
+x = 69
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_4]
+image = btn-rnd-clr-26-04.png
+x = 100
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_5]
+image = btn-rnd-clr-26-05.png
+x = 131
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_6]
+image = btn-rnd-clr-26-06.png
+x = 162
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_7]
+image = btn-rnd-clr-26-07.png
+x = 193
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_8]
+image = btn-rnd-clr-26-08.png
+x = 224
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_9]
+image = btn-rnd-clr-26-09.png
+x = 255
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_preset_10]
+image = btn-rnd-clr-26-10.png
+x = 286
+y = 133
+prelight = TRUE
+indicator = FALSE
+
+[button_prev]
+image = btn-rnd-clr-26-left.png
+x = 69
+y = 50
+prelight = TRUE
+indicator = FALSE
+
+[button_next]
+image = btn-rnd-clr-26-right.png
+x = 165
+y = 50
+prelight = TRUE
+indicator = FALSE
+
+[button_shuffle]
+image = btn-rnd-clr-26-toggle.png
+x = 226
+y = 50
+prelight = TRUE
+indicator = TRUE
+
+[button_repeat]
+image = btn-rnd-clr-26-toggle.png
+x = 258
+y = 50
+prelight = TRUE
+indicator = TRUE
+
+[button_skin_open]
+image = btn-rnd-clr-16-plus.png
+x = 295
+y = 31
+prelight = TRUE
+indicator = FALSE
+data = skindata_extra
+
+[button_skin_open]
+image = btn-rnd-clr-26-list.png
+x = 206
+y = 3
+prelight = TRUE
+indicator = FALSE
+data = skindata_playlist
+
+[button_iconify]
+image = btn-rnd-clr-26-min.png
+x = 234
+y = 3
+prelight = TRUE
+indicator = FALSE
+
+[button_skin_toggle]
+image = btn-rnd-clr-26-max.png
+x = 262
+y = 3
+prelight = TRUE
+indicator = FALSE
+data = skindata_compact
+
+[button_exit]
+image = btn-rnd-clr-26-x.png
+x = 290
+y = 3
+prelight = TRUE
+indicator = FALSE
+
+[number_hour]
+digit = large
+x = 216
+y = 82
+length = 1
+zeros = FALSE
+center = FALSE
+rotation = 0
+
+[number_minute]
+digit = large
+x = 242
+y = 82
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+
+[number_second]
+digit = large
+x = 281
+y = 82
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+
+[number_song]
+digit = small
+x = 101
+y = 55
+length = 5
+zeros = FALSE
+center = TRUE
+rotation = 0
+
+[number_song_total]
+digit = small
+x = 5
+y = 55
+length = 5
+zeros = FALSE
+center = TRUE
+rotation = 0
+
+[text_artist]
+font = lucida
+red = 0
+green = 0
+blue = 0
+alpha = 200
+x = 9
+y = 7
+width = 189
+sizeable = FALSE
+rotation = 0
+
+[text_title]
+font = lucida
+red = 0
+green = 0
+blue = 0
+alpha = 200
+x = 9
+y = 29
+width = 279
+sizeable = FALSE
+rotation = 0
+
+[item_shuffle-static]
+image = item-pda-random-static.png
+x = 209
+y = 55
+sections = 1
+
+[item_repeat-static]
+image = item-pda-repeat-static.png
+x = 286
+y = 55
+sections = 1
+
+[item_minus]
+image = item-pda-minus.png
+x = 208
+y = 93
+sections = 2
+
+[item_colon]
+image = item-colon-24.png
+x = 234
+y = 89
+sections = 1
+
+[item_load]
+image = item-clear-load-aa.png
+x = 302
+y = 55
+sections = 4
+
+[item_colon]
+image = item-colon-24.png
+x = 274
+y = 89
+sections = 1

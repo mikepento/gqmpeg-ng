@@ -1,0 +1,3734 @@
+# gqmpeg de.po file.
+# Copyright (C) 1999 John Ellis.
+# Matthias Warkus <mawa@iname.com>, 1999.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gqmpeg-0.6.3a\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-04-05 14:47-0400\n"
+"PO-Revision-Date: 1999-10-14 00:37+02:00\n"
+"Last-Translator: Matthias Warkus <mawa@iname.com>\n"
+"Language-Team: Me and my monkey <mawa@iname.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/btn_funcs.c:728
+msgid "Skin editor - GQmpeg"
+msgstr ""
+
+#: src/display_flyby.c:96
+msgid "Upper left"
+msgstr ""
+
+#: src/display_flyby.c:99
+#, fuzzy
+msgid "Upper right"
+msgstr "Copyright: "
+
+#: src/display_flyby.c:102
+#, fuzzy
+msgid "Lower right"
+msgstr "Copyright: "
+
+#: src/display_flyby.c:105
+msgid "Lower left"
+msgstr ""
+
+#: src/display_flyby.c:231
+#, fuzzy
+msgid "now playing:"
+msgstr "Mit Abspielen beginnen"
+
+#: src/display_flyby.c:246
+msgid "up next:"
+msgstr ""
+
+#: src/display_menu.c:180
+msgid "Play"
+msgstr "Abspielen"
+
+#: src/display_menu.c:182 src/menus.c:101
+msgid "Pause"
+msgstr "Pause"
+
+#: src/display_menu.c:184
+msgid "Stop"
+msgstr "Stopp"
+
+#: src/display_menu.c:190 src/display_menu.c:228
+msgid "Playlist..."
+msgstr "Titelliste..."
+
+#: src/display_menu.c:193 src/preferences.c:860
+msgid "Presets"
+msgstr "Programme"
+
+#: src/display_menu.c:210 src/menus.c:57
+#, c-format
+msgid "%d - (empty)"
+msgstr "%d - (leer)"
+
+#: src/display_menu.c:221
+msgid "Set preset to playlist..."
+msgstr "Programm auf Titelliste setzen..."
+
+#: src/display_menu.c:223
+msgid "Set preset to song..."
+msgstr "Programm auf Titel setzen..."
+
+#: src/display_menu.c:226
+msgid "Open"
+msgstr "Öffnen"
+
+#: src/display_menu.c:230
+msgid "File..."
+msgstr "Datei..."
+
+#: src/display_menu.c:232
+msgid "Custom..."
+msgstr "Eigenes..."
+
+#: src/display_menu.c:235
+#, fuzzy
+msgid "Save playlist..."
+msgstr "Titelliste speichern"
+
+#: src/display_menu.c:241
+msgid "Toggle"
+msgstr "An/aus"
+
+#: src/display_menu.c:243
+msgid "Shuffle"
+msgstr "Zufall"
+
+#: src/display_menu.c:245
+msgid "Repeat"
+msgstr "Wiederholung"
+
+#: src/display_menu.c:247
+#, fuzzy
+msgid "Repeat 1"
+msgstr "Wiederholung"
+
+#: src/display_menu.c:249
+#, fuzzy
+msgid "Time total"
+msgstr "Live-Strom."
+
+#: src/display_menu.c:251
+#, fuzzy
+msgid "Time remaining"
+msgstr "Verbleibende Zeit"
+
+#: src/display_menu.c:254
+msgid "Preferences..."
+msgstr "Einstellungen..."
+
+#: src/display_menu.c:260
+msgid "Current song"
+msgstr "Aktueller Titel"
+
+#: src/display_menu.c:262
+msgid "Song Info..."
+msgstr "Titelinfo..."
+
+#: src/display_menu.c:264
+msgid "Add to playlist"
+msgstr "Zur Titelliste hinzufügen"
+
+#: src/display_menu.c:266
+msgid "Remove from playlist"
+msgstr "Aus Titelliste entfernen"
+
+#: src/display_menu.c:269
+msgid "Run mixer..."
+msgstr "Mischpult ausführen..."
+
+#: src/display_menu.c:275
+#, fuzzy
+msgid "Skin Editor..."
+msgstr "Bearbeiten..."
+
+#: src/display_menu.c:277
+msgid "Help..."
+msgstr ""
+
+#: src/display_menu.c:279
+msgid "About..."
+msgstr "Info"
+
+#: src/display_menu.c:285
+msgid "Iconify"
+msgstr "Minimieren"
+
+#: src/display_menu.c:289
+#, fuzzy
+msgid "Close window"
+msgstr "Fenster"
+
+#: src/display_menu.c:292
+msgid "Quit"
+msgstr ""
+
+#: src/globals.c:138 src/main.c:1292
+msgid "Untitled.gqmpeg"
+msgstr "Namenlos.gqmpeg"
+
+#: src/io_mpg123.c:159
+msgid "mpg123 version prior to 0.59o found!\n"
+msgstr "mpg123-Version älter als 0.59o gefunden!\n"
+
+#: src/io_mpg123.c:160
+#, fuzzy
+msgid "assuming 0.59o compatible\n"
+msgstr "Gehe von 0.59o-Kompatibilität aus (oder Freeamp)\n"
+
+#: src/io_mpg123.c:161 src/io_mpg123.c:173
+#, c-format
+msgid ""
+"The version line reported was:\n"
+"%s\n"
+msgstr ""
+"Die zurückgegebene Versionszeile war:\n"
+"%s\n"
+
+#: src/io_mpg123.c:171
+#, c-format
+msgid "unknown version of mpg123, assuming %s compatible\n"
+msgstr "Unbekannte Version von mpg123, gehe von %s-Kompatibilität aus\n"
+
+#: src/io_mpg123.c:172
+msgid "(GQmpeg requires mpg123 0.59o or later)\n"
+msgstr "(GQmpeg braucht mpg123 0.59o oder neuer)\n"
+
+#: src/io_mpg123.c:177
+#, c-format
+msgid "mpg123 version detected: %d\n"
+msgstr "mpg123-Version %d gefunden\n"
+
+#: src/io_mpg123.c:430
+#, fuzzy, c-format
+msgid "Warning, unrecognized mpg123 output:\"%s\"\n"
+msgstr "Warnung, unleserliche mpg123-Ausgabe: \"%s\")\n"
+
+#: src/io_mpg123.c:500
+#, fuzzy, c-format
+msgid "Error, mpg123 reported:\"%s\"\n"
+msgstr "Fehler, mpg123 berichtet: \"%s\")\n"
+
+#: src/io_mpg123.c:502
+msgid "GQmpeg: mpg123 error"
+msgstr "GQmpeg: mpg123-Fehler"
+
+#: src/io_mpg123.c:522
+msgid "mpg123 disappeared! (unexpected EOF)\n"
+msgstr "mpg123 ist verschwunden! (unerwartetes Dateiende)\n"
+
+#: src/io_mpg123.c:530
+msgid "error reading from mpg123!\n"
+msgstr ""
+
+#: src/io_mpg123.c:548
+msgid "Error: mpg123 stopped sending data! (timeout)\n"
+msgstr ""
+"Fehler: mpg123 hörte auf, Daten zu senden! (Zeitbegrenzung überschritten)\n"
+
+#: src/io_mpg123.c:848 src/io_ogg123.c:63 src/io_xmp.c:537 src/io_xmp.c:543
+msgid "Pipe failed.\n"
+msgstr "Pipe fehlgeschlagen.\n"
+
+#: src/io_mpg123.c:866 src/io_ogg123.c:79 src/io_xmp.c:564
+#, c-format
+msgid "unable to run %s (in the path?)\n"
+msgstr "Kann %s nicht ausführen (im PATH?)\n"
+
+#: src/io_mpg123.c:872 src/io_ogg123.c:85 src/io_xmp.c:570
+msgid "Fork failed.\n"
+msgstr "Fork fehlgeschlagen.\n"
+
+#: src/io_mpg123.c:916 src/io_ogg123.c:603 src/io_xmp.c:212
+#, c-format
+msgid "Failed to successfully send signal to pid = %d\n"
+msgstr "Konnte kein Signal erfolgreich an PID %d schicken\n"
+
+#: src/io_mpg123.c:1014
+msgid "MPEG audio file"
+msgstr "MPEG-Audiodatei"
+
+#: src/io_mpg123.c:1211
+msgid "io_mpg123.c warning: attempt to stop playback of non matching file\n"
+msgstr ""
+"io_mpg123.c: Warnung: Versuche, Abspielen von nicht passender Datei "
+"anzuhalten\n"
+
+#: src/io_mpg123.c:1224
+msgid "io_mpg123.c warning: attempt to pause playback of non matching file\n"
+msgstr ""
+"io_mpg123.c: Warnung: Versuche, Abspielen von nicht passender Datei zu "
+"pausieren\n"
+
+#: src/io_mpg123.c:1243
+msgid ""
+"io_mpg123.c warning: attempt to continue playback of non matching file\n"
+msgstr ""
+"io_mpg123.c: Warnung: Versuche, Abspielen von nicht passender Datei "
+"fortzusetzen\n"
+
+#: src/io_mpg123.c:1260
+msgid "io_mpg123.c warning: attempt to seek in non matching file\n"
+msgstr "io_mpg123.c: Warnung: Versuche Suchlauf in nicht passender Datei\n"
+
+#: src/io_mpg123.c:1303
+msgid "Failed to find mpg123 in your path!\n"
+msgstr "Konnte mpg123 nicht in Ihrem Pfad finden!\n"
+
+#: src/io_mpg123.c:1304
+msgid "mpg123 player module disabled.\n"
+msgstr ""
+
+#: src/io_mpg123.c:1310
+msgid "mp3 player"
+msgstr "MP3-Player"
+
+#: src/io_mpg123.c:1340
+msgid "MP3/Shoutcast stream"
+msgstr "MP3/Shoutcast-Strom"
+
+#: src/io_mpg123_cfg.c:250
+msgid "Use ID3 tags when available"
+msgstr "ID3-Tags benutzen, wenn möglich"
+
+#: src/io_mpg123_cfg.c:259
+msgid "Enable output buffer of size(Kbytes):"
+msgstr "Ausgabepuffer folgender Größe (kBytes) verwenden:"
+
+#: src/io_mpg123_cfg.c:272
+msgid "Downsampling"
+msgstr "Downsampling"
+
+#: src/io_mpg123_cfg.c:282
+msgid "Auto or(1:1)"
+msgstr "Auto oder (1:1)"
+
+#: src/io_mpg123_cfg.c:293
+msgid "22Khz (2:1)"
+msgstr "22 kHz (2:1)"
+
+#: src/io_mpg123_cfg.c:304
+msgid "11Khz (4:1)"
+msgstr "11 kHz (4:1)"
+
+#: src/io_mpg123_cfg.c:319
+msgid "Custom (bits/sec):"
+msgstr "Eigenes (bits/s):"
+
+#: src/io_mpg123_cfg.c:335
+msgid "Mix both channels into mono output"
+msgstr "Beide Kanäle in Mono-Ausgabe mischen"
+
+#: src/io_mpg123_cfg.c:340
+msgid "8-bit output"
+msgstr "8-Bit-Ausgabe"
+
+#: src/io_mpg123_cfg.c:349
+msgid "Specific output device:"
+msgstr "Bestimmtes Ausgabegegerät:"
+
+#: src/io_mpg123_cfg.c:362
+msgid "Attempt to get higher priority. (setuid root mpg123 helps here)"
+msgstr ""
+"Höher Priorität zu erlangen versuchen. (mpg123 als setuid root kann hier "
+"helfen)"
+
+#: src/io_mpg123_cfg.c:367
+msgid "disable resync on error (may help VBR files)"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:372
+#, fuzzy
+msgid "Output to Wave"
+msgstr "Ausgabe"
+
+#: src/io_mpg123_cfg.c:381
+#, fuzzy
+msgid "Output to file"
+msgstr "Ausgabe"
+
+#: src/io_mpg123_cfg.c:390
+msgid "Format:"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:395
+msgid "Wave (.wav)"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:401
+msgid "CDR raw (.raw)"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:415
+msgid "Place files in path:"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:430 src/io_ogg123_cfg.c:169
+#, fuzzy
+msgid "User options:"
+msgstr " Standardoptionen:\n"
+
+#: src/io_mpg123_cfg.c:442 src/io_ogg123_cfg.c:181
+#, fuzzy
+msgid "Options do not take effect until the next song."
+msgstr ""
+"mpg123-Optionen werden erst beim\n"
+" nächsten Titel aktiv"
+
+#: src/io_ogg123.c:483
+#, fuzzy, c-format
+msgid ""
+"Failed to set comments for file:\n"
+"%s"
+msgstr "Konnte Lautstärke an %d nicht einstellen\n"
+
+#: src/io_ogg123.c:484
+#, fuzzy
+msgid "Comment set failed - GQmpeg"
+msgstr "Datei löschen"
+
+#: src/io_ogg123.c:763
+#, fuzzy, c-format
+msgid "Error, ogg123 reported:\"%s\")\n"
+msgstr "Fehler, mpg123 berichtet: \"%s\")\n"
+
+#: src/io_ogg123.c:765
+#, fuzzy
+msgid "GQmpeg: ogg123 error"
+msgstr "GQmpeg: mpg123-Fehler"
+
+#: src/io_ogg123.c:801
+#, fuzzy
+msgid "ogg123 disappeared! (unexpected EOF)\n"
+msgstr "mpg123 ist verschwunden! (unerwartetes Dateiende)\n"
+
+#: src/io_ogg123.c:963
+#, fuzzy
+msgid "Ogg bitstream audio file"
+msgstr "MPEG-Audiodatei"
+
+#: src/io_ogg123.c:1137 src/io_xmp.c:1021
+#, fuzzy, c-format
+msgid "Failed to find %s in your path!\n"
+msgstr "Konnte mpg123 nicht in Ihrem Pfad finden!\n"
+
+#: src/io_ogg123.c:1138
+msgid "ogg123 player module disabled.\n"
+msgstr ""
+
+#: src/io_ogg123.c:1144
+#, fuzzy, c-format
+msgid "\"%s\" not found.\n"
+msgstr "Skin nicht gefunden: %s\n"
+
+#: src/io_ogg123.c:1150
+#, c-format
+msgid "\"%s\" not found, comment support disabled.\n"
+msgstr ""
+
+#: src/io_ogg123.c:1156
+#, fuzzy
+msgid "ogg player"
+msgstr "MP3-Player"
+
+#: src/io_ogg123_cfg.c:129
+#, fuzzy
+msgid "Device Options"
+msgstr "%d Sekunden"
+
+#: src/io_ogg123_cfg.c:142
+msgid "Device:"
+msgstr ""
+
+#: src/io_ogg123_cfg.c:155
+#, fuzzy
+msgid "Device options:"
+msgstr " Standardoptionen:\n"
+
+#: src/io_radio.c:268
+#, fuzzy, c-format
+msgid "Failed to find %s\n"
+msgstr "Konnte %s nicht öffnen\n"
+
+#: src/io_radio.c:424
+msgid "radio player module disabled. (failed check)\n"
+msgstr ""
+
+#: src/io_radio.c:563 src/io_radio.c:953
+msgid "Radio tuner"
+msgstr ""
+
+#: src/io_radio.c:568 src/mod_info.c:36 src/ogg_info.c:263
+#, fuzzy
+msgid "Song info"
+msgstr "Titelinfo - "
+
+#: src/io_radio.c:579
+#, c-format
+msgid "%.2f Mhz"
+msgstr ""
+
+#: src/io_radio.c:580
+msgid "Frequency"
+msgstr ""
+
+#: src/io_radio.c:584 src/mod_info.c:49 src/mpg_info.c:231
+#: src/playlist-window.c:106
+msgid "Title"
+msgstr "Titel"
+
+#: src/io_radio.c:598 src/io_radio.c:977
+#, fuzzy
+msgid "Radio station"
+msgstr "Ungültiges Ziel"
+
+#: src/io_radio.c:695
+msgid "Radio auto scan"
+msgstr ""
+
+#: src/io_radio.c:695
+msgid "Scanning for available stations..."
+msgstr ""
+
+#: src/io_radio.c:755
+msgid "Frequency (MHz):"
+msgstr ""
+
+#: src/io_radio.c:770 src/ui2_editor.c:3945
+#, fuzzy
+msgid "Title:"
+msgstr "Titel"
+
+#: src/io_radio.c:787
+msgid "Auto scan"
+msgstr ""
+
+#: src/io_radio_cfg.c:72
+msgid "Radio tuner found"
+msgstr ""
+
+#: src/io_radio_cfg.c:74
+#, fuzzy
+msgid "Radio tuner not found"
+msgstr "Skin nicht gefunden: %s\n"
+
+#: src/io_radio_cfg.c:111
+#, fuzzy
+msgid "Options"
+msgstr "%d Sekunden"
+
+#: src/io_radio_cfg.c:124
+msgid "device:"
+msgstr ""
+
+#: src/io_radio_cfg.c:141
+msgid "Detect radio"
+msgstr ""
+
+#: src/io_xmp.c:352
+#, fuzzy
+msgid "GQmpeg: xmp error"
+msgstr "GQmpeg: mpg123-Fehler"
+
+#: src/io_xmp.c:387
+#, fuzzy
+msgid "xmp disappeared! (unexpected EOF)\n"
+msgstr "mpg123 ist verschwunden! (unerwartetes Dateiende)\n"
+
+#: src/io_xmp.c:903
+#, fuzzy
+msgid "MOD format audio file"
+msgstr "MPEG-Audiodatei"
+
+#: src/io_xmp.c:1022
+msgid "xmp player module disabled.\n"
+msgstr ""
+
+#: src/io_xmp.c:1028
+#, fuzzy
+msgid "mod player"
+msgstr "MP3-Player"
+
+#: src/io_xmp_cfg.c:186
+msgid "Sound Options"
+msgstr ""
+
+#: src/io_xmp_cfg.c:195
+#, fuzzy
+msgid "Mono output"
+msgstr "8-Bit-Ausgabe"
+
+#: src/io_xmp_cfg.c:199
+msgid "Panning Percent:"
+msgstr ""
+
+#: src/io_xmp_cfg.c:203
+msgid "Software Mixer"
+msgstr ""
+
+#: src/io_xmp_cfg.c:212
+msgid "Mixing rate (hz):"
+msgstr ""
+
+#: src/io_xmp_cfg.c:216
+#, fuzzy
+msgid "8 bit"
+msgstr "%d kbits"
+
+#: src/io_xmp_cfg.c:220
+#, fuzzy
+msgid "Enable interpolation"
+msgstr "Fenstermanager-Dekoration aktiv"
+
+#: src/ipc.c:69
+#, c-format
+msgid "error opening file for write %s\n"
+msgstr "Fehler beim Öffnen von Datei zum Schreiben %s\n"
+
+#: src/ipc.c:155
+#, c-format
+msgid "error opening command file for write %s\n"
+msgstr "Fehler beim Öffnen der Befehlsdatei zum Schreiben %s\n"
+
+#: src/ipc.c:323
+msgid "available ipc commands:\n"
+msgstr "Verfügbare IPC-Befehle:\n"
+
+#: src/ipc.c:324
+#, fuzzy
+msgid "play, pause, stop, next, prev, quit\n"
+msgstr "play, pause, stop, next, prev\n"
+
+#: src/ipc.c:325
+#, fuzzy
+msgid "seek [+|-]n                seek n seconds into file, or +/-n\n"
+msgstr ""
+"seek [+|-]n                  n Sekunden weit in Datei vorspuelen, oder +/-n\n"
+
+#: src/ipc.c:326
+msgid "pladd {\"file\"|file}        add file to playlist\n"
+msgstr "pladd {\"datei\"|datei}      Datei zu Titelliste hinzufügen\n"
+
+#: src/ipc.c:327
+msgid "pladd_play {\"file\"|file}   add file to playlist and play it\n"
+msgstr ""
+"pladd_play {\"datei\"|datei} Datei zu Titelliste hinzufügen und abspielen\n"
+
+#: src/ipc.c:328
+msgid "plremove {\"file\"|file}     remove file from playlist\n"
+msgstr "plremove {\"datei\"|datei}   Datei aus Titelliste entfernen\n"
+
+#: src/ipc.c:329
+msgid "plclr                      clear playlist\n"
+msgstr "plclr                      Titelliste löschen\n"
+
+#: src/ipc.c:330
+msgid "plload {playlist}          load playlist\n"
+msgstr "plload {titelliste}        Titelliste laden\n"
+
+#: src/ipc.c:331
+msgid "plappend {playlist}        append playlist\n"
+msgstr "plappend {titelliste}      Titelliste anhängen\n"
+
+#: src/ipc.c:332
+msgid "play_file {\"file\"|file}    play file, do not add to playlist\n"
+msgstr ""
+"play_file {\"datei\"|datei   Datei abspielen, nicht zur Liste hinzufügen\n"
+
+#: src/ipc.c:333
+msgid "                           or, if playlist, load playlist\n"
+msgstr "                           oder, wenn Titelliste, diese laden\n"
+
+#: src/ipc.c:334
+msgid "   file is a path or http://server:port\n"
+msgstr "   datei ist ein Pfad oder http://maschine:port\n"
+
+#: src/ipc.c:335
+#, fuzzy
+msgid "skin \"file\"                set skin\n"
+msgstr "  -skin:<skin-verz>            angegebene Skin laden\n"
+
+#: src/ipc.c:336
+#, fuzzy
+msgid "volume [+|-]n              set volume to n (0 - 100) or +/-n\n"
+msgstr ""
+"seek [+|-]n                  n Sekunden weit in Datei vorspuelen, oder +/-n\n"
+
+#: src/ipc.c:337
+msgid "getting a status printed to a file is also possible:\n"
+msgstr "Der Status läßt sich auch in eine Datei ausgeben:\n"
+
+#: src/ipc.c:338
+msgid "status_add \"key\" \"file\"    start status printing to file\n"
+msgstr "status_add \"schlüssel\" \"datei\" Statusausgabe in datei beginnen\n"
+
+#: src/ipc.c:339
+msgid "status_rm \"key\"|\"file\"     stop printing to file or key\n"
+msgstr ""
+"status_rm \"schlüssel\"|\"datei\" Ausgabe in datei oder schlüssel beenden\n"
+
+#: src/ipc.c:340
+msgid "these commands open file requestors, windows, etc.\n"
+msgstr "diese Befehle öffnen Dateidialoge, Fenster etc.\n"
+
+#: src/ipc.c:341
+msgid "show_playlist\n"
+msgstr "show_playlist\n"
+
+#: src/ipc.c:342
+msgid "show_open_file, show_open_custom, show_open_playlist\n"
+msgstr "show_open_file, show_open_custom, show_open_playlist\n"
+
+#: src/ipc.c:346
+#, fuzzy, c-format
+msgid "unknown ipc command: [%s]\n"
+msgstr "Unbekannter IPC-Befehl: `%s'\n"
+
+#: src/ipc.c:367
+msgid "ipc command file already locked, ipc disabled\n"
+msgstr "IPC-Befehlsdatei bereits gesperrt, IPC abgeschaltet\n"
+
+#: src/ipc.c:380
+#, c-format
+msgid "Failed to mkfifo for %s\n"
+msgstr "Konnte mkfifo für %s nicht ausführen\n"
+
+#: src/ipc.c:390 src/mixer.c:112 src/mixer.c:197 src/mixer.c:228
+#, c-format
+msgid "unable to open %s\n"
+msgstr "Konnte %s nicht öffnen\n"
+
+#: src/main.c:622
+msgid "execing gqmpeg failed\n"
+msgstr "exec von gqmpeg fehlgeschlagen\n"
+
+#: src/main.c:635
+msgid "Timeout waiting for ipc of spawned gqmpeg process\n"
+msgstr ""
+"Zeit überschritten beim Warten auf IPC von abgezweigtem gqmpeg-Prozess\n"
+
+#: src/main.c:679
+#, c-format
+msgid "ipc %s command requires data\n"
+msgstr "IPC-Befehl %s braucht Daten\n"
+
+#: src/main.c:828
+#, c-format
+msgid "Creating GQmpeg dir:%s\n"
+msgstr "Erzeuge GQmpeg-Verzeichnis: %s\n"
+
+#: src/main.c:831 src/rcfile.c:122
+#, c-format
+msgid "Could not create dir:%s\n"
+msgstr "Konnte Verzeichnis nicht anlegen: %s\n"
+
+#: src/main.c:880
+#, c-format
+msgid "Using skin: %s\n"
+msgstr "Benutze Skin: %s\n"
+
+#: src/main.c:884
+#, c-format
+msgid "Skin not found: %s\n"
+msgstr "Skin nicht gefunden: %s\n"
+
+#: src/main.c:912
+#, fuzzy
+msgid "Help - GQmpeg"
+msgstr "Datei löschen"
+
+#: src/main.c:921
+msgid "usage: gqmpeg [option(s)] [file(s) | ipc_command(s)]\n"
+msgstr "Verwendung: gqmpeg [option(en)] [datei(en) | ipc_befehl(e)]\n"
+
+#: src/main.c:922
+msgid " standard options:\n"
+msgstr " Standardoptionen:\n"
+
+#: src/main.c:923
+#, fuzzy
+msgid "  --skin:<skindir>             load specified skin\n"
+msgstr "  -skin:<skin-verz>            angegebene Skin laden\n"
+
+#: src/main.c:924
+#, fuzzy
+msgid "  --dock                       enable docking behavior\n"
+msgstr "  -dock                        Dockverhalten einschalten\n"
+
+#: src/main.c:925
+#, fuzzy
+msgid "  --dockwm                     enable Window Maker docking\n"
+msgstr "  -dockwm                      Docken mit Window Maker einschalten\n"
+
+#: src/main.c:926
+#, fuzzy
+msgid "  --skinhelp                   print mouse event coordinates\n"
+msgstr "  -skinhelp                    Mausevent-Koordinaten ausgeben\n"
+
+#: src/main.c:927
+#, fuzzy
+msgid "  --debug                      enable debug output\n"
+msgstr "  -debug                       Diagnoseausgabe einschalten\n"
+
+#: src/main.c:928
+#, fuzzy
+msgid "  -h,  --help                  displays this message\n"
+msgstr "  -h, ---help                  Diese Meldung anzeigen\n"
+
+#: src/main.c:929
+#, fuzzy
+msgid "  -v,  --version               shows version info\n"
+msgstr "  -h, ---help                  Diese Meldung anzeigen\n"
+
+#: src/main.c:930
+#, fuzzy
+msgid "  --blank                      start with empty playlist\n"
+msgstr "  -blank                       Mit leerer Titelliste starten\n"
+
+#: src/main.c:931
+msgid "  --geometry [+|-]xxx[+|-]yyy  specify window position\n"
+msgstr ""
+
+#: src/main.c:932
+#, fuzzy
+msgid "  --crack                      reserved\n"
+msgstr "  -dock                        Dockverhalten einschalten\n"
+
+#: src/main.c:933
+msgid " available ipc_commands:\n"
+msgstr " verfügbare ipc_befehle:\n"
+
+#: src/main.c:934
+msgid "  -p          --play\n"
+msgstr "  -p          --play\n"
+
+#: src/main.c:935
+msgid "  -s          --stop\n"
+msgstr "  -s          --stop\n"
+
+#: src/main.c:936
+msgid "  -n          --next\n"
+msgstr "  -n          --next\n"
+
+#: src/main.c:937
+msgid "  -b          --back\n"
+msgstr "  -b          --back\n"
+
+#: src/main.c:938
+msgid "  -ps         --pause\n"
+msgstr "  -ps          --pause\n"
+
+#: src/main.c:939
+msgid "  -pladd      --playlist_add <f>[..]    add file to playlist\n"
+msgstr ""
+"  -plad      --playlist_add <d>[..]    datei zu Titelliste hinzufügen\n"
+
+#: src/main.c:940
+msgid ""
+"  -pladdplay  --playlist_add_play <f>   add file to playlist and play it\n"
+msgstr ""
+"  -pladdplay --playlist_add_play <d>   datei zu Titelliste hinzufügen und "
+"abspielen\n"
+
+#: src/main.c:941
+msgid "  -plrm       --playlist_remove <f>[..] remove file from playlist\n"
+msgstr ""
+"  -plrm       --playlist_remove <d>[..] Datei aus Titelliste entfernen\n"
+
+#: src/main.c:942
+#, fuzzy
+msgid "  -plclr      --playlist_clear          clear playlist\n"
+msgstr "  -plclr       --playlist_clear <d>      Titelliste löschen\n"
+
+#: src/main.c:943
+msgid "  -pl         --playlist <f>            load playlist\n"
+msgstr "  -pl         --playlist <d>            Titelliste laden\n"
+
+#: src/main.c:944
+msgid "  -plappend   --playlist_append <f>[..] append playlist\n"
+msgstr "  -plappend  --playlist_append <d>[..] Titelliste anhängen\n"
+
+#: src/main.c:945
+msgid ""
+"  -f          --file <f>[..]            play file, do not add to playlist\n"
+msgstr ""
+"  -f          --file <d>[..]            Datei abspielen, nicht zu Liste "
+"hinzufügen\n"
+
+#: src/main.c:946
+msgid ""
+"                                        or, if playlist, load playlist\n"
+msgstr "                                  oder, wenn Titelliste, diese laden\n"
+
+#: src/main.c:947
+#, fuzzy
+msgid "  -q          --quit                    tell GQmpeg to quit\n"
+msgstr "  -debug                       Diagnoseausgabe einschalten\n"
+
+#: src/main.c:948
+#, fuzzy
+msgid "              --skin_set <f>            set skin\n"
+msgstr "  -pl         --playlist <d>            Titelliste laden\n"
+
+#: src/main.c:949
+#, fuzzy
+msgid ""
+"              --status                  print current status, song, time\n"
+msgstr "  -debug                       Diagnoseausgabe einschalten\n"
+
+#: src/main.c:950
+msgid ""
+"              --volume [+|-]#           set, or increment volume (0-100)\n"
+msgstr ""
+
+#: src/main.c:951
+msgid "              * files can also be of the format http://server:port\n"
+msgstr ""
+"              * dateien können auch vom Format http://maschine:port sein\n"
+
+#: src/main.c:1047
+msgid "Unable to determine the home directory\n"
+msgstr "Kann Heimverzeichnis nicht bestimmen\n"
+
+#: src/main.c:1052
+#, c-format
+msgid "Could not find home directory: %s\n"
+msgstr "Konnte Heimverzeichnis nicht finden: %s\n"
+
+#: src/main.c:1128
+msgid "--geometry missing argument\n"
+msgstr ""
+
+#: src/main.c:1130
+msgid "Invalid geometry format ([+|-]xxx[+|-]yyy)\n"
+msgstr ""
+
+#: src/main.c:1154
+msgid "Ignoring multiple skins!\n"
+msgstr "Ignoriere mehrfache Skin-Angabe!\n"
+
+#: src/main.c:1182
+#, c-format
+msgid ""
+"unknown option: %s\n"
+"use --help for options\n"
+msgstr ""
+"Unbekannte Option: %s\n"
+"Benutzen Sie --help für Optionen\n"
+
+#: src/main.c:1223
+#, c-format
+msgid "Loading playlist:%s\n"
+msgstr "Lade Titelliste: %s\n"
+
+#: src/main.c:1228
+#, c-format
+msgid "Appending playlist:%s\n"
+msgstr "Hänge Titelliste an: %s\n"
+
+#: src/main.c:1243
+#, c-format
+msgid "Adding song:%s\n"
+msgstr "Füge Titel hinzu: %s\n"
+
+#: src/main.c:1252
+#, c-format
+msgid "Unable to determine type:%s\n"
+msgstr "Kann Typ nicht bestimen: %s\n"
+
+#: src/main.c:1286
+msgid "Could not load session-playlist file\n"
+msgstr "Konnte Sitzungs-Titellistendatei nicht finden\n"
+
+#: src/main.c:1312
+#, c-format
+msgid ""
+"config file contains invalid startup path:\n"
+"%s\n"
+msgstr ""
+"Konfigurationsdatei enthält falschen Startpfad:\n"
+"%s\n"
+
+#: src/menus.c:64
+#, fuzzy
+msgid "Set preset to _playlist..."
+msgstr "Programm auf Titelliste setzen..."
+
+#: src/menus.c:65
+#, fuzzy
+msgid "Set preset to _song..."
+msgstr "Programm auf Titel setzen..."
+
+#: src/menus.c:100 src/menus.c:193 src/menus.c:230
+#, fuzzy
+msgid "_Play"
+msgstr "Abspielen"
+
+#: src/menus.c:102
+#, fuzzy
+msgid "_Stop"
+msgstr "Stopp"
+
+#: src/menus.c:106
+#, fuzzy
+msgid "Play_list..."
+msgstr "Titelliste..."
+
+#: src/menus.c:109
+#, fuzzy
+msgid "P_resets"
+msgstr "Programme"
+
+#: src/menus.c:113 src/menus.c:214 src/playlist-window.c:2393
+#, fuzzy
+msgid "_Open"
+msgstr "Öffnen"
+
+#: src/menus.c:115
+#, fuzzy
+msgid "_Playlist..."
+msgstr "Titelliste..."
+
+#: src/menus.c:116
+#, fuzzy
+msgid "_File..."
+msgstr "Datei..."
+
+#: src/menus.c:117
+#, fuzzy
+msgid "_Custom..."
+msgstr "Eigenes..."
+
+#: src/menus.c:120
+#, fuzzy
+msgid "Sa_ve playlist..."
+msgstr "Titelliste speichern"
+
+#: src/menus.c:126
+#, fuzzy
+msgid "_Toggle"
+msgstr "An/aus"
+
+#: src/menus.c:128
+#, fuzzy
+msgid "_Shuffle"
+msgstr "Zufall"
+
+#: src/menus.c:129
+#, fuzzy
+msgid "_Repeat"
+msgstr "Wiederholung"
+
+#: src/menus.c:130
+#, fuzzy
+msgid "Repeat _1"
+msgstr "Wiederholung"
+
+#: src/menus.c:131
+#, fuzzy
+msgid "_Time total"
+msgstr "Live-Strom."
+
+#: src/menus.c:132
+#, fuzzy
+msgid "T_ime remaining"
+msgstr "Verbleibende Zeit"
+
+#: src/menus.c:135
+#, fuzzy
+msgid "Pre_ferences..."
+msgstr "Einstellungen..."
+
+#: src/menus.c:140
+#, fuzzy
+msgid "_Current song"
+msgstr "Aktueller Titel"
+
+#: src/menus.c:142
+#, fuzzy
+msgid "Song _Info..."
+msgstr "Titelinfo..."
+
+#: src/menus.c:144
+#, fuzzy
+msgid "_Add to playlist"
+msgstr "Zur Titelliste hinzufügen"
+
+#: src/menus.c:146
+#, fuzzy
+msgid "_Remove from playlist"
+msgstr "Aus Titelliste entfernen"
+
+#: src/menus.c:150
+#, fuzzy
+msgid "Run _mixer..."
+msgstr "Mischpult ausführen..."
+
+#: src/menus.c:154
+#, fuzzy
+msgid "Skin _Editor..."
+msgstr "Bearbeiten..."
+
+#: src/menus.c:155
+msgid "_Help..."
+msgstr ""
+
+#: src/menus.c:157
+#, fuzzy
+msgid "_About..."
+msgstr "Info"
+
+#: src/menus.c:159
+#, fuzzy
+msgid "_Iconify"
+msgstr "Minimieren"
+
+#: src/menus.c:162
+#, fuzzy
+msgid "Close _window"
+msgstr "Fenster"
+
+#: src/menus.c:165
+msgid "_Quit"
+msgstr ""
+
+#: src/menus.c:177 src/menus.c:189 src/playlist-window.c:2429
+#, fuzzy
+msgid "_Add"
+msgstr "Hinzufügen"
+
+#: src/menus.c:178
+#, fuzzy
+msgid "Add _Recursive"
+msgstr "Rekursiv hinzufügen"
+
+#: src/menus.c:191 src/playlist-window.c:2430
+#, fuzzy
+msgid "_Insert"
+msgstr "Einfügen"
+
+#: src/menus.c:194
+#, fuzzy
+msgid "Add and P_lay"
+msgstr "Hinzufügen und abspielen"
+
+#: src/menus.c:195 src/menus.c:234
+#, fuzzy
+msgid "_Song Info..."
+msgstr "Titelinfo..."
+
+#: src/menus.c:198 src/menus.c:218 src/menus.c:255
+#, fuzzy
+msgid "_Copy"
+msgstr "Kopieren"
+
+#: src/menus.c:200 src/menus.c:220 src/menus.c:257
+#, fuzzy
+msgid "_Move"
+msgstr "Verschieben"
+
+#: src/menus.c:201 src/menus.c:221 src/ui_pathsel.c:616 src/ui_pathsel.c:624
+#, fuzzy
+msgid "_Rename"
+msgstr "Umbenennen"
+
+#: src/menus.c:202 src/menus.c:222 src/menus.c:259 src/ui_pathsel.c:626
+#, fuzzy
+msgid "_Delete"
+msgstr "Löschen"
+
+#: src/menus.c:216
+#, fuzzy
+msgid "_Append"
+msgstr "Anhängen"
+
+#: src/menus.c:232 src/playlist-window.c:2431
+#, fuzzy
+msgid "_Remove"
+msgstr "Entfernen"
+
+#: src/menus.c:236
+#, fuzzy
+msgid "Edit _title"
+msgstr "Titel"
+
+#: src/menus.c:237
+#, fuzzy
+msgid "Edit c_omment"
+msgstr "Kommentar"
+
+#: src/menus.c:244
+msgid "Randomize _list"
+msgstr ""
+
+#: src/menus.c:258
+#, fuzzy
+msgid "Re_name"
+msgstr "Umbenennen"
+
+#: src/menus.c:275
+#, fuzzy
+msgid "_Edit..."
+msgstr "Bearbeiten..."
+
+#: src/mixer.c:122
+msgid "Unable to determine mixer devices\n"
+msgstr "Konnte Mixergeräte nicht bestimmen\n"
+
+#: src/mixer.c:203
+#, c-format
+msgid "failed to set volume on %d\n"
+msgstr "Konnte Lautstärke an %d nicht einstellen\n"
+
+#: src/mixer.c:234
+#, c-format
+msgid "failed to get volume on %d\n"
+msgstr "Konnte Lautstärke an %d nicht bestimmen\n"
+
+#: src/mixer.c:908
+msgid "no OSF MME devices found\n"
+msgstr ""
+
+#: src/mod_info.c:34 src/mpg_info.c:186 src/ogg_info.c:261
+#: src/playlist-window.c:112
+msgid "Filename"
+msgstr "Dateiname"
+
+#: src/mod_info.c:51 src/ogg_info.c:277 src/ui2_editor.c:4512
+#, fuzzy
+msgid "Type"
+msgstr "Layer: "
+
+#: src/mod_info.c:51 src/mod_info.c:53
+msgid "unknown"
+msgstr ""
+
+#: src/mod_info.c:53
+#, fuzzy
+msgid "Tracker name"
+msgstr "Programmname"
+
+#: src/mod_info.c:55
+#, fuzzy
+msgid "Length (estimated)"
+msgstr "Länge: "
+
+#: src/mod_info.c:55 src/mpg_info.c:207 src/ogg_info.c:304
+#, fuzzy
+msgid "seconds"
+msgstr "%d Sekunden"
+
+#: src/mod_info.c:56
+msgid "Patterns"
+msgstr ""
+
+#: src/mod_info.c:57
+msgid "Unique patterns"
+msgstr ""
+
+#: src/mod_info.c:58
+msgid "Instruments"
+msgstr ""
+
+#: src/mod_info.c:59 src/ogg_info.c:281
+#, fuzzy
+msgid "Channels"
+msgstr "Channelcodierung: "
+
+#: src/mpg_hdrutil.c:140
+#, c-format
+msgid "unable to open file for read: %s\n"
+msgstr "Konnte Datei nicht zum Lesen öffnen: %s\n"
+
+#: src/mpg_info.c:145
+msgid "Information"
+msgstr "Information"
+
+#: src/mpg_info.c:156
+msgid "Live stream."
+msgstr "Live-Strom."
+
+#: src/mpg_info.c:158
+msgid "File across network."
+msgstr "Datei über Netzwerk."
+
+#: src/mpg_info.c:188
+msgid "Song data"
+msgstr "Titeldaten"
+
+#: src/mpg_info.c:200
+#, fuzzy
+msgid "Version"
+msgstr "Version: "
+
+#: src/mpg_info.c:201
+#, fuzzy
+msgid "Layer"
+msgstr "Layer: "
+
+#: src/mpg_info.c:202
+#, fuzzy
+msgid "Channel encoding"
+msgstr "Channelcodierung: "
+
+#: src/mpg_info.c:204
+#, fuzzy
+msgid "Bit Rate"
+msgstr "Bitrate: "
+
+#: src/mpg_info.c:204 src/ogg_info.c:290 src/ogg_info.c:299 src/ogg_info.c:302
+#: src/ogg_info.c:303
+#, fuzzy
+msgid "Kbits"
+msgstr "%d kbits"
+
+#: src/mpg_info.c:205
+#, fuzzy
+msgid "Sample Rate"
+msgstr "Samplerate: "
+
+#: src/mpg_info.c:205
+msgid "Hz"
+msgstr ""
+
+#: src/mpg_info.c:206 src/ogg_info.c:305
+#, fuzzy
+msgid "File Size"
+msgstr "Dateigröße: "
+
+#: src/mpg_info.c:206 src/ogg_info.c:305
+#, fuzzy
+msgid "bytes"
+msgstr "%d Bytes"
+
+#: src/mpg_info.c:207 src/ogg_info.c:304
+#, fuzzy
+msgid "Length"
+msgstr "Länge: "
+
+#: src/mpg_info.c:209
+#, fuzzy
+msgid "Copyright"
+msgstr "Copyright: "
+
+#: src/mpg_info.c:210
+#, fuzzy
+msgid "Original"
+msgstr "Original: "
+
+#: src/mpg_info.c:211
+#, fuzzy
+msgid "Emphasis"
+msgstr "Emphasis: "
+
+#: src/mpg_info.c:212
+#, fuzzy
+msgid "Extensions"
+msgstr "Extensions: "
+
+#: src/mpg_info.c:216
+msgid "unable to find a valid header"
+msgstr "Konnte keinen gültigen Kopf finden"
+
+#: src/mpg_info.c:219
+msgid "ID3 data"
+msgstr "ID3-Daten"
+
+#: src/mpg_info.c:233 src/playlist-window.c:108
+msgid "Artist"
+msgstr "Künstler"
+
+#: src/mpg_info.c:235 src/playlist-window.c:107
+msgid "Album"
+msgstr "Album"
+
+#: src/mpg_info.c:237 src/playlist-window.c:109
+msgid "Year"
+msgstr "Jahr"
+
+#: src/mpg_info.c:239 src/playlist-window.c:111
+msgid "Genre"
+msgstr "Genre"
+
+#: src/mpg_info.c:240 src/playlist-window.c:113
+msgid "Comment"
+msgstr "Kommentar"
+
+#: src/mpg_info.c:243 src/playlist-window.c:114
+msgid "Track"
+msgstr ""
+
+#: src/mpg_info.c:251
+msgid "Save Tag"
+msgstr "Tag speichern"
+
+#: src/mpg_info.c:261
+msgid "disabled when no header is found"
+msgstr "Inaktiv, wenn kein Kopf gefunden wurde"
+
+#: src/mpg_tagutil.c:107 src/mpg_tagutil.c:175
+#, c-format
+msgid "error opening file for tag: %s\n"
+msgstr "Fehler beim Öffnen von Datei für Tag: %s\n"
+
+#: src/mpg_tagutil.c:113 src/mpg_tagutil.c:183 src/mpg_tagutil.c:198
+#: src/mpg_tagutil.c:208 src/mpg_tagutil.c:219
+#, c-format
+msgid "could not seek in file: %s\n"
+msgstr "Konnte nicht in Datei suchen: %s\n"
+
+#: src/mpg_tagutil.c:120 src/mpg_tagutil.c:189
+#, c-format
+msgid "could not read 128 bytes in file: %s\n"
+msgstr "Konnte keine 128 Bytes in Datei lesen: %s\n"
+
+#: src/mpg_tagutil.c:255
+#, c-format
+msgid "could not write tag to file: %s\n"
+msgstr "Konnte kein Tag in Datei schreiben: %s\n"
+
+#: src/ogg_info.c:102 src/ogg_info.c:111
+msgid "Newkey"
+msgstr ""
+
+#: src/ogg_info.c:277
+#, fuzzy
+msgid "ogg bitstream file"
+msgstr "MPEG-Audiodatei"
+
+#: src/ogg_info.c:278
+#, fuzzy
+msgid "Vendor"
+msgstr "Anhängen"
+
+#: src/ogg_info.c:280
+msgid "Integrity check passed"
+msgstr ""
+
+#: src/ogg_info.c:283
+#, fuzzy
+msgid "Bit Rate (lowest)"
+msgstr "Bitrate: "
+
+#: src/ogg_info.c:286 src/ogg_info.c:295
+#, fuzzy
+msgid "none set"
+msgstr "Wiederholung"
+
+#: src/ogg_info.c:292
+#, fuzzy
+msgid "Bit Rate (highest)"
+msgstr "Bitrate: "
+
+#: src/ogg_info.c:302
+#, fuzzy
+msgid "Bit Rate (encoded)"
+msgstr "Bitrate: "
+
+#: src/ogg_info.c:303
+#, fuzzy
+msgid "Bit Rate (average)"
+msgstr "Bitrate: "
+
+#: src/ogg_info.c:309
+#, fuzzy
+msgid "unable to read file info"
+msgstr "Konnte Datei nicht zum Lesen öffnen: %s\n"
+
+#: src/ogg_info.c:312 src/ui2_editor.c:3963
+#, fuzzy
+msgid "Comments"
+msgstr "Kommentar"
+
+#: src/ogg_info.c:339 src/ui2_button_edit.c:309 src/ui2_dial_edit.c:696
+#: src/ui2_editor.c:4511 src/ui2_item_edit.c:262 src/ui2_list_edit.c:511
+#: src/ui2_list_edit.c:1504 src/ui2_number_edit.c:655
+#: src/ui2_slider_edit.c:583 src/ui2_text_edit.c:802
+msgid "Key"
+msgstr ""
+
+#: src/ogg_info.c:347
+#, fuzzy
+msgid "Description"
+msgstr "%d Sekunden"
+
+#: src/ogg_info.c:365 src/ui2_button_edit.c:296 src/ui2_dial_edit.c:683
+#: src/ui2_item_edit.c:249 src/ui2_list_edit.c:1491 src/ui2_number_edit.c:630
+#: src/ui2_number_edit.c:643 src/ui2_slider_edit.c:570 src/ui2_text_edit.c:776
+#: src/ui2_text_edit.c:789
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: src/ogg_info.c:371
+msgid "Remove"
+msgstr "Entfernen"
+
+#: src/ogg_info.c:378
+#, fuzzy
+msgid "Save Comments"
+msgstr "Kommentar"
+
+#: src/players.c:46
+#, fuzzy
+msgid "GQmpeg warning"
+msgstr "GQmpeg - Umbenennen"
+
+#: src/players.c:47
+msgid ""
+"No player modules registered!\n"
+"This is not necessarily a problem, but does make the program a little "
+"useless.\n"
+msgstr ""
+
+#: src/players.c:207
+#, c-format
+msgid "No registered player types match: %s\n"
+msgstr "Keine registrierten Playertypen passen: %s\n"
+
+#: src/players.c:264
+#, c-format
+msgid "No registered player types claim playback for: %s\n"
+msgstr "Keine registrierten Playertypen stellen Abspielen bereit für: %s\n"
+
+#: src/playlist.c:455 src/playlist.c:461
+#, c-format
+msgid "undetermined type:%s\n"
+msgstr "unbestimmbarer Typ: %s\n"
+
+#: src/playlist.c:600
+#, c-format
+msgid "failed to open \"%s\"\n"
+msgstr "konnte \"%s\" nicht öffnen\n"
+
+#: src/playlist.c:725
+msgid "Open failed"
+msgstr "Öffnen fehlgeschlagen"
+
+#: src/playlist.c:725
+msgid ""
+"The specified file could\n"
+"not be opened."
+msgstr ""
+"Die angegebene Datei konnte\n"
+"nicht geöffnet werden."
+
+#: src/playlist.c:729
+msgid "Invalid file"
+msgstr "Ungültige Datei"
+
+#: src/playlist.c:729
+msgid ""
+"The specified file is\n"
+"not a valid playlist."
+msgstr ""
+"Die angegebene Datei ist\n"
+"keine gültige Titelliste."
+
+#: src/playlist.c:761
+#, c-format
+msgid "failed to open %s\n"
+msgstr "Konnte %s nicht öffnen\n"
+
+#: src/playlist.c:989
+msgid "live"
+msgstr "live"
+
+#: src/playlist-dlg.c:70
+#, c-format
+msgid ""
+"Overwrite playlist file:\n"
+"%s"
+msgstr ""
+"Titellistendatei überschreiben:\n"
+"%s"
+
+#: src/playlist-dlg.c:71
+msgid "Overwrite File"
+msgstr "Datei überschreiben"
+
+#: src/playlist-dlg.c:74 src/utilops.c:590 src/utilops.c:1205
+#: src/utilops.c:1763
+msgid "Overwrite"
+msgstr "Überschreiben"
+
+#: src/playlist-dlg.c:83
+#, c-format
+msgid ""
+"Failed to save the playlist:\n"
+"%s"
+msgstr ""
+"Konnte die Titelliste nicht speichern:\n"
+"%s"
+
+#: src/playlist-dlg.c:84
+msgid "Save Failed"
+msgstr "Speichern fehlgeschlagen"
+
+#: src/playlist-dlg.c:160
+msgid "Save Playlist"
+msgstr "Titelliste speichern"
+
+#: src/playlist-dlg.c:161
+msgid "Save playlist as:"
+msgstr "Titelliste speichern unter:"
+
+#: src/playlist-dlg.c:169
+#, fuzzy
+msgid "Open Playlist"
+msgstr "Titelliste anhängen"
+
+#: src/playlist-dlg.c:170
+#, fuzzy
+msgid "Open playlist from:"
+msgstr "Titelliste anhängen aus:"
+
+#: src/playlist-dlg.c:178
+msgid "Append Playlist"
+msgstr "Titelliste anhängen"
+
+#: src/playlist-dlg.c:179
+msgid "Append playlist from:"
+msgstr "Titelliste anhängen aus:"
+
+#: src/playlist-dlg.c:180
+msgid "Append"
+msgstr "Anhängen"
+
+#: src/playlist-dlg.c:187
+msgid "Import Playlist"
+msgstr "Titelliste importieren"
+
+#: src/playlist-dlg.c:188
+msgid "Import playlist from:"
+msgstr "Titelliste importieren aus:"
+
+#: src/playlist-dlg.c:189
+msgid "Import"
+msgstr "Import"
+
+#: src/playlist-dlg.c:200
+#, fuzzy
+msgid "GQmpeg Playlist Files"
+msgstr "GQmpeg-Titelliste - "
+
+#: src/playlist-dlg.c:203 src/preset-dlg.c:92
+#, fuzzy
+msgid "m3u Playlist"
+msgstr "Titelliste"
+
+#: src/playlist-dlg.c:232
+msgid "Playlist empty"
+msgstr "Titelliste leer"
+
+#: src/playlist-dlg.c:232
+msgid "The current playlist is empty, save aborted."
+msgstr "Die aktuelle Titelliste ist leer, Speichern abgebrochen."
+
+#: src/playlist-dlg.c:314 src/playlist-dlg.c:377 src/playlist-dlg.c:455
+msgid "no entry defined"
+msgstr "Kein Eintrag definiert"
+
+#: src/playlist-dlg.c:338
+msgid "GQmpeg - add custom song type"
+msgstr "GQmpeg - eigenen Titeltyp hinzufügen"
+
+#: src/playlist-dlg.c:342
+msgid "GQmpeg - open custom song type"
+msgstr "GQmpeg - eigenen Titeltyp öffnen"
+
+#: src/playlist-dlg.c:389
+msgid "No types enabled"
+msgstr "Keine Typen aktiv"
+
+#: src/playlist-dlg.c:447
+msgid "GQmpeg - edit custom song type"
+msgstr "GQmpeg - eigenen Titeltyp bearbeiten"
+
+#: src/playlist-dlg.c:475
+#, c-format
+msgid "File %s not found."
+msgstr ""
+
+#: src/playlist-dlg.c:476
+#, fuzzy
+msgid "File not found"
+msgstr "Skin nicht gefunden: %s\n"
+
+#: src/playlist-dlg.c:509
+msgid "Add to playlist:"
+msgstr "Zur Titelliste hinzufügen:"
+
+#: src/playlist-dlg.c:513
+msgid "Open file:"
+msgstr "Datei öffnen:"
+
+#: src/playlist-dlg.c:516
+msgid "GQmpeg - open"
+msgstr "GQmpeg - Öffnen"
+
+#: src/playlist-dlg.c:521 src/preset-dlg.c:95
+#, fuzzy
+msgid "Song Files"
+msgstr "Titel"
+
+#: src/playlist-window.c:110
+msgid "Time"
+msgstr "Zeit"
+
+#: src/playlist-window.c:1705
+#, c-format
+msgid "Playlist length: %02d:%02d:%02d , %d songs"
+msgstr "Titellistenlänge: %02d:%02d:%02d, %d Titel"
+
+#: src/playlist-window.c:1709
+#, c-format
+msgid "(header loading is off), %d songs"
+msgstr "(Kopfzeilen-Lesen abgeschaltet), %d Titel"
+
+#: src/playlist-window.c:1722
+#, fuzzy
+msgid " - GQmpeg playlist"
+msgstr "GQmpeg-Titelliste - "
+
+#: src/playlist-window.c:2284
+#, fuzzy
+msgid " - GQmpeg Playlist"
+msgstr "GQmpeg-Titelliste - "
+
+#: src/playlist-window.c:2332
+#, fuzzy
+msgid "Folders:"
+msgstr "Dateien:"
+
+#: src/playlist-window.c:2349
+msgid "Files:"
+msgstr "Dateien:"
+
+#: src/playlist-window.c:2371
+#, fuzzy
+msgid "_Home"
+msgstr "Heim"
+
+#: src/playlist-window.c:2372 src/songinfo.c:75
+msgid "Close"
+msgstr "Schließen"
+
+#: src/playlist-window.c:2374 src/preferences.c:817
+msgid "Playlist"
+msgstr "Titelliste"
+
+#: src/playlist-window.c:2383
+#, fuzzy
+msgid "_Save"
+msgstr "Speichern"
+
+#: src/playlist-window.c:2384
+#, fuzzy
+msgid "Sa_ve as..."
+msgstr "Speichern unter..."
+
+#: src/playlist-window.c:2386
+msgid "save mode"
+msgstr "Speichermodus"
+
+#: src/playlist-window.c:2394
+#, fuzzy
+msgid "A_ppend"
+msgstr "Anhängen"
+
+#: src/playlist-window.c:2396
+msgid "Move Song"
+msgstr "Titel verschieben"
+
+#: src/playlist-window.c:2409
+#, fuzzy
+msgid "_Top"
+msgstr "Anfang"
+
+#: src/playlist-window.c:2410
+#, fuzzy
+msgid "_End"
+msgstr "Ende"
+
+#: src/playlist-window.c:2416
+#, fuzzy
+msgid "_Up"
+msgstr "Rauf"
+
+#: src/playlist-window.c:2417
+#, fuzzy
+msgid "_Down"
+msgstr "Runter"
+
+#: src/playlist-window.c:2419
+msgid "Songs"
+msgstr "Titel"
+
+#: src/playlist-window.c:2428
+#, fuzzy
+msgid "Add A_ll"
+msgstr "Alle hinzufügen"
+
+#: src/playlist-window.c:2432
+#, fuzzy
+msgid "Re_move All"
+msgstr "Alle entfernen"
+
+#: src/playlist-window.c:2438
+#, fuzzy
+msgid "Add _Custom"
+msgstr "Eigene hinzufügen"
+
+#: src/preferences.c:271
+msgid "None (default)"
+msgstr "Keine (Standard)"
+
+#: src/preferences.c:312
+#, c-format
+msgid "Valid skin not found in:%s\n"
+msgstr "Keine gültige Skin gefunden in: %s\n"
+
+#: src/preferences.c:313
+msgid ""
+"File named skindata (gqmpeg skins) or main.bmp (winamp skins) not found.\n"
+msgstr ""
+"Datei namens skindata (für GQmpeg-Skins) oder main.bmp (für WinAmp-Skins) "
+"nicht gefunden.\n"
+
+#: src/preferences.c:561
+msgid "GQmpeg configuration"
+msgstr "GQmpeg-Konfiguration"
+
+#: src/preferences.c:605
+msgid "General"
+msgstr "Allgemein"
+
+#: src/preferences.c:613
+msgid "Song Information"
+msgstr "Titelinformation"
+
+#: src/preferences.c:615
+msgid "Read file headers (enables playlist length calculation)"
+msgstr "Dateiköpfe lesen (macht Titellisten-Längenberechnung möglich)"
+
+#: src/preferences.c:617
+msgid "Window"
+msgstr "Fenster"
+
+#: src/preferences.c:619
+msgid "Smart window placement"
+msgstr "Intelligente Fensterplazierung"
+
+#: src/preferences.c:620
+msgid "Remember window position"
+msgstr "An Fensterposition erinnern"
+
+#: src/preferences.c:621
+msgid "Enable window manager decorations"
+msgstr "Fenstermanager-Dekoration aktiv"
+
+#: src/preferences.c:622
+msgid "Double sized window"
+msgstr "Fenster mit doppelter Größe"
+
+#: src/preferences.c:624
+#, fuzzy
+msgid "Title Display"
+msgstr "Zeitanzeige"
+
+#: src/preferences.c:626
+msgid "Always scroll title"
+msgstr ""
+
+#: src/preferences.c:627
+msgid "Show filename extension"
+msgstr ""
+
+#: src/preferences.c:628
+msgid "Convert underscores to spaces"
+msgstr ""
+
+#: src/preferences.c:630
+msgid "Mixer"
+msgstr "Mischpult"
+
+#: src/preferences.c:636
+msgid "External Mixer:"
+msgstr "Externes Mischpult:"
+
+#: src/preferences.c:651
+msgid "Volume controls device:"
+msgstr "Lautstärke-Kontrollgerät:"
+
+#: src/preferences.c:682
+msgid "First press of prev restarts song when playing"
+msgstr "Erster Druck auf `Zurück' beim Abspielen startet Titel neu"
+
+#: src/preferences.c:683
+msgid "Allow command parsing through ~/.gqmpeg/command"
+msgstr "Befehlsannahme durch ~/.gqmpeg/command aktiv"
+
+#: src/preferences.c:689
+#, fuzzy
+msgid "Delay between songs (seconds):"
+msgstr "Titelliste zwischen Sitzungen speichern"
+
+#: src/preferences.c:706
+msgid "Startup"
+msgstr "Start"
+
+#: src/preferences.c:714
+msgid "Initial playlist"
+msgstr "Anfängliche Titelliste"
+
+#: src/preferences.c:717
+msgid "Empty"
+msgstr "Leer"
+
+#: src/preferences.c:728
+msgid "Save playlist between sessions"
+msgstr "Titelliste zwischen Sitzungen speichern"
+
+#: src/preferences.c:739
+msgid "Open specific playlist:"
+msgstr "Bestimmte Titelliste öffnen:"
+
+#: src/preferences.c:757 src/preferences.c:777
+msgid "Use current"
+msgstr "Aktuelle benutzen"
+
+#: src/preferences.c:763
+msgid "When program starts:"
+msgstr "Wenn Programm startet:"
+
+#: src/preferences.c:765
+msgid "Start playing"
+msgstr "Mit Abspielen beginnen"
+
+#: src/preferences.c:766
+msgid "Show playlist window"
+msgstr "Titellisten-Fenster anzeigen"
+
+#: src/preferences.c:767
+msgid "Change to this directory:"
+msgstr "In dieses Verzeichnis wechseln:"
+
+#: src/preferences.c:788
+msgid "Output"
+msgstr "Ausgabe"
+
+#: src/preferences.c:825
+msgid "Obey shuffle / repeat if saved in playlist"
+msgstr "Zufall / Wiederholung anwenden, wenn in Titelliste gespeichert"
+
+#: src/preferences.c:826
+msgid "Show hidden files and directories in playlist window"
+msgstr "Verborgene Dateien und Verzeichnisse in Titellisten-Fenster anzeigen"
+
+#: src/preferences.c:827
+msgid "Show all files in the playlist window"
+msgstr "Alle Dateien im Titellisten-Fenster anzeigen"
+
+#: src/preferences.c:828
+msgid "Add single item drops on main window to playlist"
+msgstr "Einzelobjekt-Abwürfe über Hauptfenster zur Titelliste hinzufügen"
+
+#: src/preferences.c:829
+msgid "Play next song on error"
+msgstr "Bei Fehler nächsten Titel spielen"
+
+#: src/preferences.c:831
+msgid "Flybys"
+msgstr ""
+
+#: src/preferences.c:837
+msgid "Enable flybys"
+msgstr ""
+
+#: src/preferences.c:872 src/ui2_list_edit.c:510
+msgid "#"
+msgstr "Nr. "
+
+#: src/preferences.c:875
+msgid "Preset name"
+msgstr "Programmname"
+
+#: src/preferences.c:878
+msgid "Playlist file"
+msgstr "Titellistendatei"
+
+#: src/preferences.c:909
+msgid "Play presets immediately"
+msgstr "Programme sofort abspielen"
+
+#: src/preferences.c:916
+msgid "Skins"
+msgstr "Skins"
+
+#: src/preferences.c:928
+msgid "Skin:"
+msgstr "Skin:"
+
+#: src/preferences.c:944
+msgid "Available skins:"
+msgstr "Verfügbare Skins:"
+
+#: src/preferences.c:956
+msgid "Display cpu and frame information in amp skins"
+msgstr "CPU- und Frame-Information in Amp-Skins anzeigen"
+
+#: src/preferences.c:960
+msgid "Skin Adjustment"
+msgstr ""
+
+#: src/preferences.c:964
+#, fuzzy
+msgid "Color tint:"
+msgstr "Schließen"
+
+#: src/preferences.c:973
+msgid "Force transparency"
+msgstr ""
+
+#: src/preferences.c:976
+#, fuzzy
+msgid "Enable menu skins"
+msgstr "Verfügbare Skins:"
+
+#: src/preferences.c:977
+msgid "Enable keyboard focus"
+msgstr ""
+
+#: src/preferences.c:1026 src/window.c:379
+msgid "About - GQmpeg"
+msgstr ""
+
+#: src/preferences.c:1046
+#, fuzzy, c-format
+msgid ""
+"GQmpeg %s\n"
+"A frontend to mpg123\n"
+"\n"
+"Copyright (c) %s John Ellis\n"
+"website: %s\n"
+"email: %s\n"
+"\n"
+"Released under the GNU General Public License"
+msgstr ""
+"QGmpeg %s\n"
+"Eine Oberfläche für mpg123\n"
+"\n"
+"Copyright (C) 2003 by John Ellis\n"
+"http://netpedia.net/hosting/gqview\n"
+"gqview@email.com\n"
+"\n"
+"Freigegeben unter der GNU General Public License"
+
+#: src/preset-dlg.c:69
+#, fuzzy
+msgid "Set preset to playlist:"
+msgstr "Programm auf Titelliste setzen..."
+
+#: src/preset-dlg.c:74
+#, fuzzy
+msgid "Set preset to song:"
+msgstr "Programm auf Titel setzen..."
+
+#: src/preset-dlg.c:78
+#, fuzzy
+msgid "GQmpeg - set preset"
+msgstr "GQmpeg - Umbenennen"
+
+#: src/preset-dlg.c:89
+#, fuzzy
+msgid "GQmpeg Playlist File"
+msgstr "GQmpeg-Titelliste - "
+
+#: src/rcfile.c:119
+#, c-format
+msgid "Creating gqmpeg dir:%s\n"
+msgstr "Erzeuge GQmpeg-Verzeichnis: %s\n"
+
+#: src/rcfile.c:123
+msgid "Config not saved!\n"
+msgstr "Konfiguration nicht gespeichert!\n"
+
+#: src/rcfile.c:137
+#, c-format
+msgid "error saving config file: %s\n"
+msgstr "Fehler beim Speichern von Konfigurationsdatei: %s\n"
+
+#: src/skin_compat.c:104
+#, c-format
+msgid "Unable to create button from: %s\n"
+msgstr "Konnte keinen Knopf aus %s erzeugen\n"
+
+#: src/skin_compat.c:196
+msgid "Large digit specified, but not defined\n"
+msgstr "Große Ziffer angegeben, aber nicht definiert\n"
+
+#: src/skin_compat.c:214
+msgid "Small digit specified, but not defined\n"
+msgstr "Kleine Ziffer angegeben, aber nicht definiert\n"
+
+#: src/skin_compat.c:230
+#, c-format
+msgid "Unable to load number file: %s"
+msgstr "Kann Zifferndatei nicht laden: %s"
+
+#: src/skin_compat.c:296
+#, c-format
+msgid "Unable to load item file: %s\n"
+msgstr "Kann Objektdatei nicht laden: %s\n"
+
+#: src/skin_compat.c:353
+#, c-format
+msgid "Unable to load font file: %s\n"
+msgstr "Kann Schriftartdatei nicht laden: %s\n"
+
+#: src/skin_compat.c:413
+#, c-format
+msgid "Unable to create slider from: %s\n"
+msgstr "Kann keinen Schieber aus %s erzeugen\n"
+
+#: src/skin_compat.c:492
+#, fuzzy, c-format
+msgid "Unable to create dial from: %s\n"
+msgstr "Kann keinen Schieber aus %s erzeugen\n"
+
+#: src/skin_compat.c:729 src/ui2_parse.c:513
+#, c-format
+msgid "No background image from: %s\n"
+msgstr "Kein Hintergrundbild aus: %s\n"
+
+#: src/songinfo.c:49
+msgid "Song info - "
+msgstr "Titelinfo - "
+
+#: src/songinfo.c:65
+msgid "Unknown audio type"
+msgstr "Unbekannter Audiotyp"
+
+#: src/songinfo.c:114 src/utilops.c:283
+msgid "Yes"
+msgstr "Ja"
+
+#: src/songinfo.c:116
+msgid "No"
+msgstr "Nein"
+
+#: src/ui2_button_edit.c:175 src/ui2_button_edit.c:288
+#: src/ui2_button_edit.c:310
+#, fuzzy
+msgid "Indicator"
+msgstr "Ungültiges Verzeichnis"
+
+#: src/ui2_button_edit.c:178 src/ui2_button_edit.c:289
+#: src/ui2_button_edit.c:311 src/ui2_dial_edit.c:402 src/ui2_dial_edit.c:645
+#: src/ui2_dial_edit.c:698 src/ui2_list_edit.c:473 src/ui2_slider_edit.c:369
+#: src/ui2_slider_edit.c:549 src/ui2_slider_edit.c:586
+msgid "Prelight"
+msgstr ""
+
+#: src/ui2_button_edit.c:208
+msgid "Button error"
+msgstr ""
+
+#: src/ui2_button_edit.c:208
+msgid "Button must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_button_edit.c:285 src/ui2_dial_edit.c:640 src/ui2_editor.c:4584
+#: src/ui2_item_edit.c:240 src/ui2_list_edit.c:1473 src/ui2_number_edit.c:609
+#: src/ui2_slider_edit.c:543 src/ui2_text_edit.c:743
+#, fuzzy
+msgid "Data:"
+msgstr "ID3-Daten"
+
+#: src/ui2_button_edit.c:286 src/ui2_dial_edit.c:641 src/ui2_editor.c:4590
+#: src/ui2_item_edit.c:241 src/ui2_list_edit.c:1474 src/ui2_number_edit.c:610
+#: src/ui2_slider_edit.c:544 src/ui2_text_edit.c:744
+msgid "Text id:"
+msgstr ""
+
+#: src/ui2_button_edit.c:291 src/ui2_dial_edit.c:677 src/ui2_editor.c:1851
+#: src/ui2_editor.c:2277 src/ui2_editor.c:4600 src/ui2_item_edit.c:245
+#: src/ui2_list_edit.c:430 src/ui2_list_edit.c:461 src/ui2_list_edit.c:483
+#: src/ui2_list_edit.c:527 src/ui2_list_edit.c:532 src/ui2_number_edit.c:626
+#: src/ui2_slider_edit.c:564 src/ui2_text_edit.c:765
+msgid "Image:"
+msgstr ""
+
+#: src/ui2_button_edit.c:294 src/ui2_dial_edit.c:662 src/ui2_editor.c:4603
+msgid "Clip mask:"
+msgstr ""
+
+#: src/ui2_button_edit.c:308 src/ui2_dial_edit.c:695 src/ui2_editor.c:1794
+#: src/ui2_editor.c:1866 src/ui2_editor.c:2296 src/ui2_item_edit.c:261
+#: src/ui2_list_edit.c:1503 src/ui2_number_edit.c:654
+#: src/ui2_slider_edit.c:582 src/ui2_text_edit.c:801
+msgid "Image"
+msgstr ""
+
+#: src/ui2_dial_edit.c:401 src/ui2_dial_edit.c:644 src/ui2_dial_edit.c:697
+#: src/ui2_list_edit.c:472 src/ui2_slider_edit.c:366 src/ui2_slider_edit.c:548
+#: src/ui2_slider_edit.c:585
+#, fuzzy
+msgid "Press"
+msgstr "Programme"
+
+#: src/ui2_dial_edit.c:406 src/ui2_dial_edit.c:654
+msgid "Rotation axis"
+msgstr ""
+
+#: src/ui2_dial_edit.c:408 src/ui2_dial_edit.c:418 src/ui2_dial_edit.c:655
+#: src/ui2_dial_edit.c:667 src/ui2_editor.c:4567
+msgid "x:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:412 src/ui2_dial_edit.c:422 src/ui2_dial_edit.c:656
+#: src/ui2_dial_edit.c:668 src/ui2_editor.c:4571
+msgid "y:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:416 src/ui2_dial_edit.c:666
+msgid "Handle rotation axis"
+msgstr ""
+
+#: src/ui2_dial_edit.c:426 src/ui2_dial_edit.c:647
+msgid "Endpoints"
+msgstr ""
+
+#: src/ui2_dial_edit.c:428
+msgid "begin:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:433
+#, fuzzy
+msgid "end:"
+msgstr "Anhängen"
+
+#: src/ui2_dial_edit.c:438 src/ui2_dial_edit.c:652 src/ui2_slider_edit.c:398
+#: src/ui2_slider_edit.c:561
+#, fuzzy
+msgid "Reverse"
+msgstr "Entfernen"
+
+#: src/ui2_dial_edit.c:442 src/ui2_dial_edit.c:658
+msgid "Clipping area"
+msgstr ""
+
+#: src/ui2_dial_edit.c:444 src/ui2_dial_edit.c:659
+msgid "width:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:448 src/ui2_dial_edit.c:660
+msgid "height:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:454 src/ui2_dial_edit.c:671
+msgid "Fixed handle"
+msgstr ""
+
+#: src/ui2_dial_edit.c:457 src/ui2_dial_edit.c:674
+msgid "Radius:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:463 src/ui2_dial_edit.c:681 src/ui2_slider_edit.c:402
+#: src/ui2_slider_edit.c:568
+msgid "Item link key:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:517
+msgid "Dial error"
+msgstr ""
+
+#: src/ui2_dial_edit.c:517
+msgid "Dial must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_dial_edit.c:648
+msgid "Begin:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:650
+#, fuzzy
+msgid "End:"
+msgstr "Ende"
+
+#: src/ui2_editor.c:284
+#, fuzzy
+msgid "Select font"
+msgstr "%d Sekunden"
+
+#: src/ui2_editor.c:430 src/ui2_editor.c:4576 src/ui2_number_edit.c:641
+#: src/ui2_text_edit.c:787
+msgid "Key:"
+msgstr ""
+
+#: src/ui2_editor.c:756
+msgid "Widget too big"
+msgstr ""
+
+#: src/ui2_editor.c:756
+msgid "The widget is too big, the width or height exceeds the background size."
+msgstr ""
+
+#: src/ui2_editor.c:1796 src/ui2_editor.c:2203
+msgid "Has border"
+msgstr ""
+
+#: src/ui2_editor.c:1802 src/ui2_list_edit.c:445 src/ui2_list_edit.c:467
+#, fuzzy
+msgid "Left:"
+msgstr "Länge: "
+
+#: src/ui2_editor.c:1803 src/ui2_list_edit.c:446 src/ui2_list_edit.c:468
+msgid "Right:"
+msgstr ""
+
+#: src/ui2_editor.c:1807 src/ui2_list_edit.c:448
+#, fuzzy
+msgid "Top:"
+msgstr "Anfang"
+
+#: src/ui2_editor.c:1808 src/ui2_list_edit.c:449
+#, fuzzy
+msgid "Bottom:"
+msgstr "in:"
+
+#: src/ui2_editor.c:1810 src/ui2_editor.c:2209 src/ui2_editor.c:2213
+#: src/ui2_editor.c:2219 src/ui2_editor.c:2223 src/ui2_list_edit.c:450
+#: src/ui2_slider_edit.c:380 src/ui2_slider_edit.c:554
+msgid "Stretch"
+msgstr ""
+
+#: src/ui2_editor.c:1813
+msgid "Anchor"
+msgstr ""
+
+#: src/ui2_editor.c:1814 src/ui2_editor.c:2211 src/ui2_editor.c:4608
+msgid "Right"
+msgstr ""
+
+#: src/ui2_editor.c:1815 src/ui2_editor.c:2221 src/ui2_editor.c:4612
+msgid "Bottom"
+msgstr ""
+
+#: src/ui2_editor.c:1817 src/ui2_text_edit.c:500 src/ui2_text_edit.c:769
+#, fuzzy
+msgid "Color"
+msgstr "Schließen"
+
+#: src/ui2_editor.c:1819 src/ui2_list_edit.c:490 src/ui2_text_edit.c:502
+#: src/ui2_text_edit.c:770
+#, fuzzy
+msgid "Red:"
+msgstr "Anhängen"
+
+#: src/ui2_editor.c:1820 src/ui2_list_edit.c:491 src/ui2_text_edit.c:505
+#: src/ui2_text_edit.c:771
+#, fuzzy
+msgid "Green:"
+msgstr "Anhängen"
+
+#: src/ui2_editor.c:1821 src/ui2_list_edit.c:492 src/ui2_text_edit.c:508
+#: src/ui2_text_edit.c:772
+msgid "Blue:"
+msgstr ""
+
+#: src/ui2_editor.c:1823
+#, fuzzy
+msgid "Filled"
+msgstr "Dateien:"
+
+#: src/ui2_editor.c:1825 src/ui2_list_edit.c:494 src/ui2_text_edit.c:512
+#: src/ui2_text_edit.c:774
+msgid "Alpha:"
+msgstr ""
+
+#: src/ui2_editor.c:1855 src/ui2_editor.c:2283
+msgid "Change"
+msgstr "Ändern"
+
+#: src/ui2_editor.c:1867 src/ui2_editor.c:2300 src/ui2_list_edit.c:442
+#: src/ui2_list_edit.c:465
+msgid "Border"
+msgstr ""
+
+#: src/ui2_editor.c:2010 src/ui2_editor.c:2018
+msgid "Background error"
+msgstr ""
+
+#: src/ui2_editor.c:2010
+msgid "Mask is not valid."
+msgstr ""
+
+#: src/ui2_editor.c:2018
+msgid "Image is not valid."
+msgstr ""
+
+#: src/ui2_editor.c:2207
+msgid "Left"
+msgstr ""
+
+#: src/ui2_editor.c:2208 src/ui2_editor.c:2212 src/ui2_editor.c:2218
+#: src/ui2_editor.c:2222
+#, fuzzy
+msgid "Size:"
+msgstr "Skin:"
+
+#: src/ui2_editor.c:2217
+msgid "Top"
+msgstr "Anfang"
+
+#: src/ui2_editor.c:2227
+msgid "Stretch background"
+msgstr ""
+
+#: src/ui2_editor.c:2228
+msgid "Allow resize"
+msgstr ""
+
+#: src/ui2_editor.c:2230
+#, fuzzy
+msgid "Default size"
+msgstr "Datei löschen"
+
+#: src/ui2_editor.c:2231 src/ui2_list_edit.c:437 src/ui2_text_edit.c:488
+#: src/ui2_text_edit.c:751
+msgid "Width:"
+msgstr ""
+
+#: src/ui2_editor.c:2232 src/ui2_list_edit.c:438
+msgid "Height:"
+msgstr ""
+
+#: src/ui2_editor.c:2234
+msgid "Reset to image"
+msgstr ""
+
+#: src/ui2_editor.c:2238
+msgid "Width attributes"
+msgstr ""
+
+#: src/ui2_editor.c:2239 src/ui2_editor.c:2244
+#, fuzzy
+msgid "Min:"
+msgstr "Skin:"
+
+#: src/ui2_editor.c:2240 src/ui2_editor.c:2245
+msgid "Max:"
+msgstr ""
+
+#: src/ui2_editor.c:2241 src/ui2_editor.c:2246
+msgid "Increment:"
+msgstr ""
+
+#: src/ui2_editor.c:2243
+msgid "Height attributes"
+msgstr ""
+
+#: src/ui2_editor.c:2280
+msgid "Mask:"
+msgstr ""
+
+#: src/ui2_editor.c:2281 src/ui2_editor.c:2301
+msgid "Transparent"
+msgstr ""
+
+#: src/ui2_editor.c:2297 src/ui2_list_edit.c:512
+msgid "Width"
+msgstr ""
+
+#: src/ui2_editor.c:2298
+msgid "Height"
+msgstr ""
+
+#: src/ui2_editor.c:2299
+msgid "Sizeable"
+msgstr ""
+
+#: src/ui2_editor.c:2540
+#, fuzzy
+msgid "window"
+msgstr "Fenster"
+
+#: src/ui2_editor.c:2596 src/ui2_editor.c:4150
+msgid "focus"
+msgstr ""
+
+#: src/ui2_editor.c:2803
+#, c-format
+msgid "%-12s w: %-3d h: %-3d"
+msgstr ""
+
+#: src/ui2_editor.c:2803
+msgid "skin size"
+msgstr ""
+
+#: src/ui2_editor.c:3539
+msgid "Load error"
+msgstr ""
+
+#: src/ui2_editor.c:3539
+msgid "Failed to load skin from path and key specified."
+msgstr ""
+
+#: src/ui2_editor.c:3564
+msgid "Widget still referenced"
+msgstr ""
+
+#: src/ui2_editor.c:3564
+msgid ""
+"This widget can not be removed,\n"
+"other widgets still reference it."
+msgstr ""
+
+#: src/ui2_editor.c:3617
+#, c-format
+msgid ""
+"Skin successfully saved to \"%s\"\n"
+"with data file \"%s\".\n"
+"Build %d\n"
+"Use the comment button to edit release information."
+msgstr ""
+
+#: src/ui2_editor.c:3620
+#, fuzzy
+msgid "Skin saved"
+msgstr "Skins"
+
+#: src/ui2_editor.c:3627
+#, c-format
+msgid ""
+"Failed to save skin to \"%s\"\n"
+"with data file \"%s\"."
+msgstr ""
+
+#: src/ui2_editor.c:3629
+#, fuzzy
+msgid "Skin save failed"
+msgstr "Speichern fehlgeschlagen"
+
+#: src/ui2_editor.c:3778
+msgid "Help - SLIK"
+msgstr ""
+
+#: src/ui2_editor.c:3786
+msgid "Scroll to follow active widget"
+msgstr ""
+
+#: src/ui2_editor.c:3936
+#, fuzzy
+msgid "Edit comments - SLIK"
+msgstr "Kommentar"
+
+#: src/ui2_editor.c:3946
+#, fuzzy
+msgid "Version:"
+msgstr "Version: "
+
+#: src/ui2_editor.c:3947
+#, fuzzy
+msgid "Author:"
+msgstr "Auto oder (1:1)"
+
+#: src/ui2_editor.c:3948
+msgid "Email:"
+msgstr ""
+
+#: src/ui2_editor.c:3949
+msgid "URL:"
+msgstr ""
+
+#: src/ui2_editor.c:3950
+msgid "License:"
+msgstr ""
+
+#: src/ui2_editor.c:3952
+#, fuzzy
+msgid "Time stamp:"
+msgstr "Live-Strom."
+
+#: src/ui2_editor.c:3956
+msgid "Build:"
+msgstr ""
+
+#: src/ui2_editor.c:3957
+#, fuzzy
+msgid "Reset"
+msgstr "Wiederholung"
+
+#: src/ui2_editor.c:4067
+#, fuzzy
+msgid "Reading skins - SLIK"
+msgstr "Lade Skin...\n"
+
+#: src/ui2_editor.c:4073
+msgid "Extracting widgets, please wait..."
+msgstr ""
+
+#: src/ui2_editor.c:4146
+msgid "background"
+msgstr ""
+
+#: src/ui2_editor.c:4214
+msgid "Add widget - SLIK"
+msgstr ""
+
+#: src/ui2_editor.c:4236
+#, fuzzy
+msgid "import"
+msgstr "Import"
+
+#: src/ui2_editor.c:4246
+msgid "generate list from installed skins"
+msgstr ""
+
+#: src/ui2_editor.c:4384
+msgid "Editor warning"
+msgstr ""
+
+#: src/ui2_editor.c:4384
+msgid ""
+"The skin editor requires that the transparency, color tint,\n"
+"and double size options be off."
+msgstr ""
+
+#: src/ui2_editor.c:4419
+msgid "Skin editor - SLIK"
+msgstr ""
+
+#: src/ui2_editor.c:4459
+msgid "help"
+msgstr ""
+
+#: src/ui2_editor.c:4465
+msgid "overlay"
+msgstr ""
+
+#: src/ui2_editor.c:4473
+msgid "redraw"
+msgstr ""
+
+#: src/ui2_editor.c:4479
+msgid "click to focus"
+msgstr ""
+
+#: src/ui2_editor.c:4486
+#, fuzzy
+msgid "comments"
+msgstr "Kommentar"
+
+#: src/ui2_editor.c:4492
+#, fuzzy
+msgid "add..."
+msgstr "Bearbeiten..."
+
+#: src/ui2_editor.c:4498
+#, fuzzy
+msgid "remove"
+msgstr "Entfernen"
+
+#: src/ui2_editor.c:4513
+#, fuzzy
+msgid "Data"
+msgstr "ID3-Daten"
+
+#: src/ui2_editor.c:4606
+msgid "Coordinate anchor"
+msgstr ""
+
+#: src/ui2_editor.c:4624
+msgid "Load"
+msgstr "Laden"
+
+#: src/ui2_editor.c:4630
+#, fuzzy
+msgid "Skin path:"
+msgstr "Skin:"
+
+#: src/ui2_editor.c:4643
+#, fuzzy
+msgid "Data filename:"
+msgstr "Dateiname: "
+
+#: src/ui2_editor.c:4664
+msgid "Save"
+msgstr "Speichern"
+
+#: src/ui2_item_edit.c:137 src/ui2_item_edit.c:243 src/ui2_list_edit.c:536
+#, fuzzy
+msgid "Sections:"
+msgstr " Standardoptionen:\n"
+
+#: src/ui2_item_edit.c:170
+msgid "Item error"
+msgstr ""
+
+#: src/ui2_item_edit.c:170
+msgid "Item must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_item_edit.c:263
+#, fuzzy
+msgid "Sections"
+msgstr "%d Sekunden"
+
+#: src/ui2_list_edit.c:440 src/ui2_slider_edit.c:394 src/ui2_slider_edit.c:559
+#: src/ui2_text_edit.c:483 src/ui2_text_edit.c:747
+msgid "Dynamic size"
+msgstr ""
+
+#: src/ui2_list_edit.c:452 src/ui2_list_edit.c:469
+msgid "Stretch center"
+msgstr ""
+
+#: src/ui2_list_edit.c:454
+msgid "Background"
+msgstr ""
+
+#: src/ui2_list_edit.c:475
+msgid "Row"
+msgstr ""
+
+#: src/ui2_list_edit.c:482 src/ui2_text_edit.c:150 src/ui2_text_edit.c:497
+#: src/ui2_text_edit.c:761
+msgid "Font:"
+msgstr ""
+
+#: src/ui2_list_edit.c:487 src/ui2_text_edit.c:147 src/ui2_text_edit.c:480
+#: src/ui2_text_edit.c:746 src/ui2_text_edit.c:803
+msgid "Extended"
+msgstr ""
+
+#: src/ui2_list_edit.c:489
+#, fuzzy
+msgid "Color:"
+msgstr "Schließen"
+
+#: src/ui2_list_edit.c:496
+msgid "Text"
+msgstr ""
+
+#: src/ui2_list_edit.c:503
+msgid "Columns:"
+msgstr ""
+
+#: src/ui2_list_edit.c:513
+msgid "Dynamic"
+msgstr ""
+
+#: src/ui2_list_edit.c:514
+msgid "Justify"
+msgstr ""
+
+#: src/ui2_list_edit.c:516
+msgid "Flag column:"
+msgstr ""
+
+#: src/ui2_list_edit.c:517
+msgid "Right justify"
+msgstr ""
+
+#: src/ui2_list_edit.c:519
+msgid "Columns"
+msgstr ""
+
+#: src/ui2_list_edit.c:526
+msgid "Column divider"
+msgstr ""
+
+#: src/ui2_list_edit.c:531
+msgid "Flags"
+msgstr ""
+
+#: src/ui2_list_edit.c:538
+msgid "Images"
+msgstr ""
+
+#: src/ui2_list_edit.c:560 src/ui2_list_edit.c:1297
+msgid "right"
+msgstr ""
+
+#: src/ui2_list_edit.c:560 src/ui2_list_edit.c:1297
+#, fuzzy
+msgid "left"
+msgstr "Löschen"
+
+#: src/ui2_list_edit.c:1140 src/ui2_list_edit.c:1145 src/ui2_list_edit.c:1150
+#: src/ui2_list_edit.c:1155 src/ui2_list_edit.c:1199
+msgid "List error"
+msgstr ""
+
+#: src/ui2_list_edit.c:1140
+msgid "List must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_list_edit.c:1145
+msgid "Invalid or missing row image."
+msgstr ""
+
+#: src/ui2_list_edit.c:1150
+msgid "Invalid or missing text image."
+msgstr ""
+
+#: src/ui2_list_edit.c:1155
+msgid "Must specify valid font description or image."
+msgstr ""
+
+#: src/ui2_list_edit.c:1199
+msgid "Failed to initialize font with specified parameters."
+msgstr ""
+
+#: src/ui2_list_edit.c:1505
+msgid "Flag"
+msgstr ""
+
+#: src/ui2_main.c:1347
+msgid "About - SLIK"
+msgstr ""
+
+#: src/ui2_main.c:1368
+#, fuzzy, c-format
+msgid ""
+"SLIK\n"
+"SimpLIstic sKin interface\n"
+"%s\n"
+"Copyright (c) %s John Ellis\n"
+"website: %s\n"
+"email: %s\n"
+"\n"
+"Released under the GNU General Public License"
+msgstr ""
+"QGmpeg %s\n"
+"Eine Oberfläche für mpg123\n"
+"\n"
+"Copyright (C) 2003 by John Ellis\n"
+"http://netpedia.net/hosting/gqview\n"
+"gqview@email.com\n"
+"\n"
+"Freigegeben unter der GNU General Public License"
+
+#: src/ui2_main.c:1430
+#, c-format
+msgid ""
+"utilizes SLIK %s\n"
+"SimpLIstic sKin interface"
+msgstr ""
+
+#: src/ui2_number_edit.c:412 src/ui2_number_edit.c:613
+#: src/ui2_slider_edit.c:376 src/ui2_slider_edit.c:553
+#, fuzzy
+msgid "Length:"
+msgstr "Länge: "
+
+#: src/ui2_number_edit.c:416 src/ui2_number_edit.c:614 src/ui2_text_edit.c:491
+#: src/ui2_text_edit.c:753
+#, fuzzy
+msgid "Rotation:"
+msgstr "Ungültiges Ziel"
+
+#: src/ui2_number_edit.c:422 src/ui2_number_edit.c:618
+msgid "Pad with zeros"
+msgstr ""
+
+#: src/ui2_number_edit.c:426 src/ui2_number_edit.c:619
+#, fuzzy
+msgid "Center"
+msgstr "Erzeugen"
+
+#: src/ui2_number_edit.c:432 src/ui2_number_edit.c:623
+msgid "Digit key:"
+msgstr ""
+
+#: src/ui2_number_edit.c:465
+msgid "Digit error"
+msgstr ""
+
+#: src/ui2_number_edit.c:465
+msgid "Digit must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_number_edit.c:503
+msgid "Number error"
+msgstr ""
+
+#: src/ui2_number_edit.c:503
+msgid "Number must contain a key, and valid image or digit key."
+msgstr ""
+
+#: src/ui2_number_edit.c:640
+#, fuzzy
+msgid "Add digit only"
+msgstr "Hinzufügen und abspielen"
+
+#: src/ui2_slider_edit.c:363 src/ui2_slider_edit.c:547
+#: src/ui2_slider_edit.c:584
+msgid "Vertical"
+msgstr ""
+
+#: src/ui2_slider_edit.c:372 src/ui2_slider_edit.c:551
+msgid "Trough"
+msgstr ""
+
+#: src/ui2_slider_edit.c:386 src/ui2_slider_edit.c:556
+msgid "Border 1:"
+msgstr ""
+
+#: src/ui2_slider_edit.c:390 src/ui2_slider_edit.c:557
+msgid "Border 2:"
+msgstr ""
+
+#: src/ui2_slider_edit.c:445
+msgid "Slider error"
+msgstr ""
+
+#: src/ui2_slider_edit.c:445
+msgid "Slider must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_slider_edit.c:562
+msgid "Trough length:"
+msgstr ""
+
+#: src/ui2_text_edit.c:518 src/ui2_text_edit.c:757
+msgid "Font key:"
+msgstr ""
+
+#: src/ui2_text_edit.c:565
+msgid "Font error"
+msgstr ""
+
+#: src/ui2_text_edit.c:565
+msgid "Font must contain a key and valid font description or image."
+msgstr ""
+
+#: src/ui2_text_edit.c:574 src/ui2_text_edit.c:647
+#, fuzzy
+msgid "Invalid font"
+msgstr "Ungültige Datei"
+
+#: src/ui2_text_edit.c:574 src/ui2_text_edit.c:647
+msgid "Specified font not found, text not created"
+msgstr ""
+
+#: src/ui2_text_edit.c:615
+msgid "Text error"
+msgstr ""
+
+#: src/ui2_text_edit.c:615
+msgid ""
+"Text must contain a key, and valid image, font description, or font key."
+msgstr ""
+
+#: src/ui2_text_edit.c:786
+#, fuzzy
+msgid "Add font only"
+msgstr "Hinzufügen und abspielen"
+
+#: src/ui2_util.c:494
+#, fuzzy, c-format
+msgid "Unable to save skin state information to: %s\n"
+msgstr "Konnte keinen Knopf aus %s erzeugen\n"
+
+#: src/ui_help.c:110
+#, fuzzy, c-format
+msgid ""
+"Unable to load:\n"
+"%s"
+msgstr "Konnte Ziffer nicht laden: %s\n"
+
+#: src/ui_pathsel.c:418
+#, fuzzy, c-format
+msgid "A file with name %s already exists."
+msgstr ""
+"Das Verzeichnis:\n"
+"%s\n"
+"existiert bereits"
+
+#: src/ui_pathsel.c:424
+#, fuzzy, c-format
+msgid "Failed to rename %s to %s."
+msgstr ""
+"Kann Datei nicht umbenennen:\n"
+"%s\n"
+" in:\n"
+"%s"
+
+#: src/ui_pathsel.c:480 src/utilops.c:892 src/utilops.c:1047
+#, c-format
+msgid ""
+"Unable to delete file:\n"
+"%s"
+msgstr ""
+"Kann Datei nicht löschen:\n"
+"%s"
+
+#: src/ui_pathsel.c:481 src/utilops.c:1048
+msgid "File deletion failed"
+msgstr "Dateilöschen fehlgeschlagen"
+
+#: src/ui_pathsel.c:523 src/utilops.c:1072
+#, c-format
+msgid ""
+"About to delete the file:\n"
+" %s"
+msgstr ""
+"Werde Datei löschen:\n"
+" %s"
+
+#: src/ui_pathsel.c:524
+#, fuzzy
+msgid "Delete file"
+msgstr "Dateien löschen"
+
+#: src/ui_pathsel.c:528 src/utilops.c:1032 src/utilops.c:1077
+msgid "Delete"
+msgstr "Löschen"
+
+#: src/ui_pathsel.c:618 src/ui_pathsel.c:628
+msgid "Add _Bookmark"
+msgstr ""
+
+#: src/ui_pathsel.c:730 src/ui_pathsel.c:1034
+#, fuzzy
+msgid "New Directory"
+msgstr "Verzeichnisse:"
+
+#: src/ui_pathsel.c:740
+#, c-format
+msgid ""
+"Unable to create directory:\n"
+"%s"
+msgstr ""
+"Kann Verzeichnis nicht anlegen:\n"
+"%s"
+
+#: src/ui_pathsel.c:741
+msgid "Error creating directory"
+msgstr "Fehler beim Anlegen von Verzeichnis"
+
+#: src/ui_pathsel.c:954
+#, fuzzy
+msgid "All Files"
+msgstr "Dateien:"
+
+#: src/ui_pathsel.c:1028
+msgid "Home"
+msgstr "Heim"
+
+#: src/ui_pathsel.c:1040
+msgid "Show hidden"
+msgstr ""
+
+#: src/ui_pathsel.c:1087
+#, fuzzy
+msgid "Folders"
+msgstr "Dateien:"
+
+#: src/ui_pathsel.c:1099
+msgid "Path"
+msgstr ""
+
+#: src/ui_pathsel.c:1128
+#, fuzzy
+msgid "Filter:"
+msgstr "Dateien:"
+
+#: src/ui_pathsel.c:1162
+#, fuzzy
+msgid "Files"
+msgstr "Dateien:"
+
+#: src/utilops.c:278
+#, c-format
+msgid ""
+"Overwrite file:\n"
+" %s\n"
+" with:\n"
+" %s"
+msgstr ""
+"Datei überschreiben:\n"
+" %s\n"
+" mit:\n"
+" %s"
+
+#: src/utilops.c:279 src/utilops.c:586 src/utilops.c:1201 src/utilops.c:1759
+#, fuzzy
+msgid "Overwrite file - GQmpeg"
+msgstr "Datei überschreiben"
+
+#: src/utilops.c:284
+msgid "Yes to all"
+msgstr "Ja zu allen"
+
+#: src/utilops.c:286
+msgid "Skip"
+msgstr "Überspringen"
+
+#: src/utilops.c:287
+#, fuzzy
+msgid "Skip all"
+msgstr "Überspringen"
+
+#: src/utilops.c:299 src/utilops.c:601 src/utilops.c:1299 src/utilops.c:1361
+#: src/utilops.c:1657
+msgid "Auto rename"
+msgstr ""
+
+#: src/utilops.c:309 src/utilops.c:611 src/utilops.c:1599 src/utilops.c:1817
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: src/utilops.c:350
+msgid "Source to copy matches destination"
+msgstr ""
+
+#: src/utilops.c:351
+#, fuzzy, c-format
+msgid ""
+"Unable to copy file:\n"
+"%s\n"
+"to itself."
+msgstr ""
+"Kann Datei nicht kopieren:\n"
+"%s\n"
+"nach:\n"
+"%s"
+
+#: src/utilops.c:355
+msgid "Source to move matches destination"
+msgstr ""
+
+#: src/utilops.c:356
+#, fuzzy, c-format
+msgid ""
+"Unable to move file:\n"
+"%s\n"
+"to itself."
+msgstr ""
+"Kann Datei nicht verschieben:\n"
+"%s\n"
+"auf:\n"
+"%s"
+
+#: src/utilops.c:362 src/utilops.c:450 src/utilops.c:885
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: src/utilops.c:438 src/utilops.c:651
+msgid "Error copying file"
+msgstr "Fehler beim Kopieren der Datei"
+
+#: src/utilops.c:439
+#, fuzzy, c-format
+msgid ""
+"Unable to copy file:\n"
+"%s\n"
+"to:\n"
+"%s\n"
+"during multiple file copy."
+msgstr ""
+"Kann Datei nicht kopieren:\n"
+"%s auf:\n"
+"%s\n"
+" beim Kopieren mehrerer Dateien."
+
+#: src/utilops.c:443 src/utilops.c:656
+msgid "Error moving file"
+msgstr "Fehler beim Verschieben der Datei"
+
+#: src/utilops.c:444
+#, fuzzy, c-format
+msgid ""
+"Unable to move file:\n"
+"%s\n"
+"to:\n"
+"%s\n"
+"during multiple file move."
+msgstr ""
+"Kann Datei nicht verschieben:\n"
+"%s auf:\n"
+"%s\n"
+" beim Verschieben mehrerer Dateien."
+
+#: src/utilops.c:575
+msgid "Source matches destination"
+msgstr ""
+
+#: src/utilops.c:576
+msgid "Source and destination are the same, operation cancelled."
+msgstr ""
+
+#: src/utilops.c:585
+#, c-format
+msgid ""
+"Overwrite file:\n"
+"%s\n"
+" with:\n"
+"%s"
+msgstr ""
+"Datei überschreiben:\n"
+"%s\n"
+" mit:\n"
+"%s"
+
+#: src/utilops.c:652
+#, c-format
+msgid ""
+"Unable to copy file:\n"
+"%s\n"
+"to:\n"
+"%s"
+msgstr ""
+"Kann Datei nicht kopieren:\n"
+"%s\n"
+"nach:\n"
+"%s"
+
+#: src/utilops.c:657
+#, c-format
+msgid ""
+"Unable to move file:\n"
+"%s\n"
+"to:\n"
+"%s"
+msgstr ""
+"Kann Datei nicht verschieben:\n"
+"%s\n"
+"auf:\n"
+"%s"
+
+#: src/utilops.c:700
+msgid "Invalid destination"
+msgstr "Ungültiges Ziel"
+
+#: src/utilops.c:701
+#, fuzzy
+msgid ""
+"When operating with multiple files, please select\n"
+"a folder, not a file."
+msgstr ""
+"Beim Umgang mit mehreren Dateien, bitte ein\n"
+" Verzeichnis, keine Datei wählen."
+
+#: src/utilops.c:704
+#, fuzzy
+msgid "Invalid folder"
+msgstr "Ungültige Datei"
+
+#: src/utilops.c:705
+#, fuzzy
+msgid "Please select an existing folder"
+msgstr "Bitte wählen Sie ein existierendes Verzeichnis"
+
+#: src/utilops.c:753
+msgid "Copy - GQmpeg"
+msgstr ""
+
+#: src/utilops.c:754
+msgid "Copy"
+msgstr "Kopieren"
+
+#: src/utilops.c:756
+#, c-format
+msgid ""
+"Copy file:\n"
+"%s\n"
+"to:"
+msgstr ""
+"Datei kopieren:\n"
+"%s\n"
+"auf:"
+
+#: src/utilops.c:758
+#, fuzzy
+msgid "Copy multiple files to:"
+msgstr ""
+"Mehrere Dateien kopieren von:\n"
+"%s\n"
+"nach:"
+
+#: src/utilops.c:763
+msgid "Move - GQmpeg"
+msgstr ""
+
+#: src/utilops.c:764
+msgid "Move"
+msgstr "Verschieben"
+
+#: src/utilops.c:766
+#, c-format
+msgid ""
+"Move file:\n"
+"%s\n"
+"to:"
+msgstr ""
+"Datei verschieben:\n"
+"%s\n"
+"auf:"
+
+#: src/utilops.c:768
+#, fuzzy
+msgid "Move multiple files to:"
+msgstr ""
+"Mehrere Dateien verschieben von:\n"
+"%s\n"
+"nach:"
+
+#: src/utilops.c:880
+#, c-format
+msgid ""
+"Unable to delete file:\n"
+" %s\n"
+" Continue multiple delete operation?"
+msgstr ""
+"Kann Datei nicht löschen:\n"
+" %s\n"
+"Mehrfaches Löschen fortsetzen?"
+
+#: src/utilops.c:881 src/utilops.c:893
+msgid "Delete failed"
+msgstr "Löschen fehlgeschlagen"
+
+#: src/utilops.c:956
+#, fuzzy, c-format
+msgid "File %d of %d"
+msgstr "Konnte %s nicht öffnen\n"
+
+#: src/utilops.c:991
+#, fuzzy
+msgid "Delete files - GQmpeg"
+msgstr "Datei löschen"
+
+#: src/utilops.c:991
+msgid "About to delete multiple files..."
+msgstr "Werde mehrere Dateien löschen..."
+
+#: src/utilops.c:1025
+#, c-format
+msgid "Review %d files"
+msgstr ""
+
+#: src/utilops.c:1073
+#, fuzzy
+msgid "Delete file - GQmpeg"
+msgstr "Datei löschen"
+
+#: src/utilops.c:1200 src/utilops.c:1758
+#, c-format
+msgid ""
+"Overwrite file:\n"
+"%s\n"
+"by renaming:\n"
+"%s"
+msgstr ""
+"Datei überschreiben:\n"
+"%s\n"
+"durch Umbenennen von:\n"
+"%s"
+
+#: src/utilops.c:1216
+#, c-format
+msgid ""
+"Unable to rename file:\n"
+"%s\n"
+" to:\n"
+"%s"
+msgstr ""
+"Kann Datei nicht umbenennen:\n"
+"%s\n"
+" in:\n"
+"%s"
+
+#: src/utilops.c:1219 src/utilops.c:1774
+msgid "Error renaming file"
+msgstr "Fehler beim Umbenennen von Datei"
+
+#: src/utilops.c:1299
+msgid ""
+"Can not auto rename with the selected\n"
+"number set, one or more files exist that\n"
+"match the resulting name list.\n"
+msgstr ""
+
+#: src/utilops.c:1360
+#, fuzzy, c-format
+msgid ""
+"Failed to rename\n"
+"%s\n"
+"The number was %d."
+msgstr ""
+"Kann Datei nicht umbenennen:\n"
+"%s\n"
+" in:\n"
+"%s"
+
+#: src/utilops.c:1597 src/utilops.c:1814
+msgid "Rename - GQmpeg"
+msgstr ""
+
+#: src/utilops.c:1597
+msgid "Rename multiple files:"
+msgstr "Mehrere Dateien umbenennen:"
+
+#: src/utilops.c:1627
+#, fuzzy
+msgid "Original Name"
+msgstr "Original: "
+
+#: src/utilops.c:1628
+#, fuzzy
+msgid "Preview"
+msgstr "Entfernen"
+
+#: src/utilops.c:1667
+msgid "Rename:"
+msgstr "Umbenennen:"
+
+#: src/utilops.c:1669
+msgid "to:"
+msgstr "in:"
+
+#: src/utilops.c:1686
+msgid "Begin text"
+msgstr ""
+
+#: src/utilops.c:1694
+#, fuzzy
+msgid "Start #"
+msgstr "Start"
+
+#: src/utilops.c:1703
+msgid "End text"
+msgstr ""
+
+#: src/utilops.c:1715
+msgid "Padding:"
+msgstr ""
+
+#: src/utilops.c:1773
+#, c-format
+msgid ""
+"Unable to rename file:\n"
+"%s\n"
+"to:\n"
+"%s"
+msgstr ""
+"Kann Datei nicht umbenennen:\n"
+"%s\n"
+"in:\n"
+"%s"
+
+#: src/utilops.c:1814
+#, fuzzy
+msgid "Rename file:"
+msgstr ""
+"Datei umbenennen:\n"
+"%s\n"
+"in:"
+
+#: src/utilops.c:1866
+#, fuzzy, c-format
+msgid ""
+"The folder:\n"
+"%s\n"
+"already exists."
+msgstr ""
+"Das Verzeichnis:\n"
+"%s\n"
+"existiert bereits"
+
+#: src/utilops.c:1867
+#, fuzzy
+msgid "Folder exists"
+msgstr "Verzeichnis existiert"
+
+#: src/utilops.c:1872
+#, c-format
+msgid ""
+"The path:\n"
+"%s\n"
+"already exists as a file."
+msgstr ""
+"Der Pfad:\n"
+"%s\n"
+"existiert bereits als Datei."
+
+#: src/utilops.c:1873
+#, fuzzy
+msgid "Could not create folder"
+msgstr "Konnte Verzeichnis nicht anlegen"
+
+#: src/utilops.c:1880
+#, fuzzy, c-format
+msgid ""
+"Unable to create folder:\n"
+"%s"
+msgstr ""
+"Kann Verzeichnis nicht anlegen:\n"
+"%s"
+
+#: src/utilops.c:1881
+#, fuzzy
+msgid "Error creating folder"
+msgstr "Fehler beim Anlegen von Verzeichnis"
+
+#: src/utilops.c:1935
+#, fuzzy, c-format
+msgid ""
+"Create folder in:\n"
+"%s\n"
+"named:"
+msgstr ""
+"Verzeichnis anlegen in:\n"
+"%s\n"
+"mit Namen:"
+
+#: src/utilops.c:1936
+#, fuzzy
+msgid "New folder - GQmpeg"
+msgstr "Datei löschen"
+
+#: src/utilops.c:1940
+msgid "Create"
+msgstr "Erzeugen"
+
+#: src/window.c:367
+#, fuzzy
+msgid "Playlist - GQmpeg"
+msgstr "Titelliste leer"
+
+#: src/window.c:371
+#, fuzzy
+msgid "Song Information - GQmpeg"
+msgstr "Titelinformation"
+
+#: src/window.c:375
+#, fuzzy
+msgid "Extras - GQmpeg"
+msgstr "Datei löschen"
+
+#: src/window.c:383
+#, fuzzy
+msgid "GQmpeg"
+msgstr "GQmpeg - Verschieben"
+
+#: src/window.c:415
+msgid "loading skin..\n"
+msgstr "Lade Skin...\n"
+
+#: src/window.c:422
+msgid "Default skin not loaded, using built-in default\n"
+msgstr "Standardskin nicht geladen, benutze eingebaute Voreinstellung\n"
+
+#: src/window.c:428
+msgid "Skin not loaded, using built-in default\n"
+msgstr "Skin nicht geladen, benutze eingebaute Voreinstellung\n"
+
+#: src/window.c:437
+msgid "Skin in config file not loaded, using built-in default\n"
+msgstr ""
+"Skin in Konfigurationsdatei nicht geladen, benutze eingebaute "
+"Voreinstellung\n"
+
+#~ msgid "Exit"
+#~ msgstr "Beenden"
+
+#~ msgid "Ok"
+#~ msgstr "OK"
+
+#~ msgid "Apply"
+#~ msgstr "Übernehmen"
+
+#~ msgid "Cancel"
+#~ msgstr "Abbrechen"
+
+#~ msgid "Directories:"
+#~ msgstr "Verzeichnisse:"
+
+#, fuzzy
+#~ msgid "data"
+#~ msgstr "ID3-Daten"
+
+#, fuzzy
+#~ msgid "Unable to write history lists to: %s\n"
+#~ msgstr "Kann keinen Schieber aus %s erzeugen\n"
+
+#~ msgid "Invalid directory"
+#~ msgstr "Ungültiges Verzeichnis"
+
+#~ msgid "Delete files"
+#~ msgstr "Dateien löschen"
+
+#~ msgid "GQmpeg - rename"
+#~ msgstr "GQmpeg - Umbenennen"
+
+#~ msgid ""
+#~ "Overwrite file:\n"
+#~ "%s\n"
+#~ "with:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Datei überschreiben:\n"
+#~ "%s\n"
+#~ "mit:\n"
+#~ "%s"
+
+#, fuzzy
+#~ msgid "length:"
+#~ msgstr "Länge: "
+
+#~ msgid "Filename: "
+#~ msgstr "Dateiname: "
+
+#, fuzzy
+#~ msgid "Title: %s"
+#~ msgstr "Titel: "
+
+#~ msgid "Title : "
+#~ msgstr "Titel: "
+
+#, fuzzy
+#~ msgid "Length (patterns) : "
+#~ msgstr "Länge: "
+
+#~ msgid "%d Hz"
+#~ msgstr "%d Hz"
+
+#~ msgid "%d seconds"
+#~ msgstr "%d Sekunden"
+
+#~ msgid "Length : "
+#~ msgstr "Länge: "
+
+#~ msgid "Artist : "
+#~ msgstr "Künstler: "
+
+#~ msgid "Album : "
+#~ msgstr "Album: "
+
+#~ msgid "Year : "
+#~ msgstr "Jahr: "
+
+#~ msgid "Genre : "
+#~ msgstr "Genre: "
+
+#~ msgid "Comment : "
+#~ msgstr "Kommentar: "
+
+#~ msgid "Time Display"
+#~ msgstr "Zeitanzeige"
+
+#~ msgid "Load Playlist"
+#~ msgstr "Titelliste laden"
+
+#~ msgid "Load playlist from:"
+#~ msgstr "Titelliste laden aus:"
+
+#, fuzzy
+#~ msgid "GQmpeg Playlist FIle"
+#~ msgstr "GQmpeg-Titelliste - "
+
+#~ msgid ""
+#~ "Specified path:\n"
+#~ "%s\n"
+#~ "is a directory, playlists are files"
+#~ msgstr ""
+#~ "Angegebener Pfad:\n"
+#~ "%s\n"
+#~ "ist ein Verzeichnis, Titellisten sind Dateien"
+
+#~ msgid "Invalid filename"
+#~ msgstr "Ungültiger Dateiname"
+
+#~ msgid "About"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Slider"
+#~ msgstr "live"
+
+#, fuzzy
+#~ msgid "Untitled"
+#~ msgstr "Namenlos.gqmpeg"
+
+#~ msgid "     Ok     "
+#~ msgstr "     OK     "
+
+#~ msgid "GQmpeg - copy"
+#~ msgstr "GQmpeg - Kopieren"
+
+#~ msgid "GQmpeg - new directory"
+#~ msgstr "GQmpeg - Neues Verzeichnis"
+
+#~ msgid "Unable to open skin data file: %s/skindata\n"
+#~ msgstr "Kann skindata-Datei nicht öffnen: %s/skindata\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "io_mmikmod.c warning: attempt to stop playback of non matching file\n"
+#~ msgstr ""
+#~ "io_mpg123.c: Warnung: Versuche, Abspielen von nicht passender Datei "
+#~ "anzuhalten\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "io_mikmod.c warning: attempt to pause playback of non matching file\n"
+#~ msgstr ""
+#~ "io_mpg123.c: Warnung: Versuche, Abspielen von nicht passender Datei zu "
+#~ "pausieren\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "io_mikmod.c warning: attempt to continue playback of non matching file\n"
+#~ msgstr ""
+#~ "io_mpg123.c: Warnung: Versuche, Abspielen von nicht passender Datei "
+#~ "fortzusetzen\n"
+
+#, fuzzy
+#~ msgid "io_mikmod.c warning: attempt to seek in non matching file\n"
+#~ msgstr "io_mpg123.c: Warnung: Versuche Suchlauf in nicht passender Datei\n"
+
+#, fuzzy
+#~ msgid "Channel Separation:"
+#~ msgstr "Channelcodierung: "
+
+#~ msgid "But did find freeamp, will try to use it's mpg123 emulation.\n"
+#~ msgstr ""
+#~ "Konnte aber freeamp finden, werde versuchen, seine mpg123-Emulation zu "
+#~ "benutzen.\n"
+
+#~ msgid ""
+#~ "mpg123 player module disabled, too bad this is currently the only "
+#~ "module...\n"
+#~ msgstr ""
+#~ "mpg123-Abspielmodul abgeschaltet, zu schade, daß dies momentan das "
+#~ "einzige Modul ist...\n"
+
+#~ msgid "Use Freeamp's mpg123 emulation (does not support all options)"
+#~ msgstr ""
+#~ "Freeamps mpg123-Emulation verwenden (unterstützt nicht alle Optionen)"
+
+#~ msgid "unable to open /dev/mixer\n"
+#~ msgstr "Kann /dev/mixer nicht öffnen\n"
+
+#~ msgid "Please place custom skins in:"
+#~ msgstr "Eigene Skins bitte ablegen in:"
+
+#~ msgid "Window Maker not detected!\n"
+#~ msgstr "Window Maker nicht aufgefunden!\n"
+
+#~ msgid "unable to load background: %s\n"
+#~ msgstr "Konnte Hintergrund nicht laden: %s\n"

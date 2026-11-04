@@ -1,0 +1,496 @@
+###################################################################
+##                          GQmpeg 0.91.1        (April 7, 2004) ##
+##                                                               ##
+##              Copyright (C) 1999 - 2004 John Ellis.            ##
+##                                                               ##
+##                      Use at your own risk!                    ##
+##                                                               ##
+##  This software released under the GNU General Public License. ##
+##       Please read the COPYING file for more information.      ##
+###################################################################
+
+Author: John Ellis <johne@verizon.net>
+e-mail: gqview@users.sourceforge.net
+homepage: http://gqmpeg.sourceforge.net
+
+======== Major sections of this document
+
+  - Requirements
+  - Notes and changes for this release
+  - Installation
+  - Description / Features
+  - Command Line options
+  - Skins
+  - Documentation (brief) [lists keyboard controls]
+  - Skin editing notes
+  - Credits
+
+======== Requirements
+
+  GTK >= 2.2.0: ftp://ftp.gtk.org/pub/gtk
+
+  mpg123 >= 0.59o http://ftp.tu-clausthal.de/pub/unix/audio/mpg123/
+  (mpg123 >= 0.59p required for streaming (http://, shoutcast, etc))
+
+  or try the GPL'd mpg321 drop-in replacement to mpg123 at
+  http://mpg321.sourceforge.net
+
+  optional components:
+  (support disabled if not found)
+
+    - xmp for mod (.mod, and others) files.
+      http://xmp.helllabs.org
+
+    - ogg123 for Ogg Vorbis (.ogg) files. (ogg123 is in vorbis-tools package)
+      http://www.xiph.org/ogg/vorbis/     (tested with Ogg123 1.0rc2)
+
+    - video4linux compatible radio/tv card (for radio tuner support)
+
+======== Notes and changes for this release             [section:release_notes]
+
+  Changes:
+
+    (0.91.1) Fixed crash when gtk reports no (zero) dpi.
+
+    - Add accelerators to playlist window buttons, menus.
+    * Fix slow loading of playlists with playlist window open.
+    * Minor bug fixes.
+
+  SLIK relates changes:
+
+    + Fonts are now antialiased.
+    + Added decal widget, to allow drawing onto the skin background, and
+      under other widgets.
+    + Added support for skin_sticky button widget.
+    - Font descriptions now use pango style, the old X font style
+      descriptions are depreciated.
+    - Changed color shift algorithm.
+    - Skin editor enhancements.
+    * Fix list row flag when app does not set them.
+    * Bug fixes.
+
+  Notes:
+
+    Starting with this release the ogg vorbis release candidates are no longer
+    supported by GQmpeg. It's about time to upgrade to 1.0 final, anyway ;)
+
+    There is a small howto section (below) in this document to help users set
+    up X support for their internet keyboard's audio keys.
+
+    - Keyboard focus support with tab and shift-tab uses the order of widgets
+      in the skin. Most skins were made before keyboard focus was added, so
+      tab and shift-tab movement may seem completely random in those skins.
+    - ogg123's default device requires the setup of a ~/.ogg123rc file
+      (see ogg123's included file ogg123rc-example for details)
+    - xmp {mod} support is buggy, seeking is at best an estimate/ unreliable.
+
+  Bugs:
+
+    See TODO file.
+
+
+======== Installation
+
+  Compilation: ./configure ; make
+     - I18N note: Set the shell variable LINGUAS with a list of required
+                  translations before configure (supported: cs de fr ja pt_BR).
+     - Use the --enable-japanese option to enable japanese ID3 tag support.
+     - To build an RPM binary use 'rpmbuild -tb gqmpeg-x.x.x.tar.gz'.
+
+  Installation: make install
+
+  Removal: make uninstall
+
+======== Description / Features
+
+  GQmpeg is a frontend to mpg123 with extensive themeability and playlist
+  support.
+
+  Support is included for:
+    - mpg123  (.MP3, http streaming)
+    - ogg123  (.OGG)
+    - xmp     (.MOD, and most derivatives)
+    - video4linux radio tuner (/dev/radio)
+
+  Features:
+    - Extensive mpg123 option support.
+    - Shuffle, repeat.
+    - Shuffle and repeat preferences can be saved in each playlist.
+    - Customizable skins, including winamp skin support.
+    - A skin can contain an alternative face (shade mode for instance)
+    - ID3 tag reading/writing support (v1)
+    - Volume controls (can be connected to any available device)
+    - Basic file management (move/copy/rename/delete)
+    - Tab completion in most dialogs.
+    - Presets for playlists.
+    - Drag and drop support.
+    - Shoutcast (http://server:port) support.
+
+======== Command Line options:
+
+   Note: 'gqmpeg --help' to list all options, this list is probably outdated.
+
+    --skin:skindir   tells GQmpeg to use the skin in the directory named
+                     skindir, GQmpeg searches for skinfile in the current dir,
+                     HOME/.gqmpeg/skins/, and /PREFIX/share/gqmpeg/skins
+    --geometry       specify window position at [+|-]xxx[+|-]yyy
+    --dock           enable docking behavior
+    --dockwm         enable Window Maker docking
+    --skinhelp       shows the mouse coordinates as you move the mouse to help
+                     position items when designing skins
+    --debug          enable debug mode (spews lots of weird junk :)
+    --blank          start with empty playlist
+
+   The following commands send a command to another running gqmpeg and exit.
+   (requires 'allow command parsing' to be enabled)
+
+     option:                               ipc_function:
+     -p          --play                     play
+     -s          --stop                     stop
+     -ps         --pause                    pause
+     -n          --next                     next
+     -b          --back                     prev
+     -pladd      --playlist_add <f>[..]     pladd "<f>"
+     -pladdplay  --playlist_add_play <f>    pladd_play "<f>"
+     -plrm       --playlist_remove <f>[..]  plrm "<f>"
+     -plclr      --playlist_clear           plclr
+     -pl         --playlist <f>             plload "<f>"
+     -plappend   --playlist_append <f>[..]  plappend "<f>"
+     -f          --file <f>[..]             play_file "<f>"
+                 --skin_set <f>             set skin
+                 --status                   print status (track, song, time)
+                 --volume [+|-]n            set or increment volume by n%
+     -q          --quit                     quit
+
+     Note: also echoing the ipc_function above to ~/.gqmpeg/command will work
+     example: `echo next > ~/.gqmpeg/command` will tell gqmpeg to skip to
+              the next song.
+
+======== Extended keyboard keys (internet keys)
+
+  Many modern keybaords, often refered to as internet keyboards, include
+  extra keys that can be assigned to various functions. Audio controls
+  are often included on these keyboards, but X does not support these
+  extra keys by default. This is a brief summary of what is needed to
+  make these audio keys work in GQmpeg.
+
+  At this time, only XFree86 is supported.
+
+  Run the 'xev' command, press the spacebar, you will see output like this:
+
+       KeyPress event, serial 27, synthetic NO, window 0x2400001,
+           root 0x3a, subw 0x0, time 301742283, (124,120), root:(134,178),
+           state 0x0, keycode 65 (keysym 0x20, space), same_screen YES,
+           XLookupString gives 1 characters:  " "
+
+  The important thing here is the keycode and keysym codes reported. Now
+  try one of your internet keys, you will see a keycode for the key, but
+  the keysym will be 0 (if it assigned already, you may be already set),
+  X has not mapped this key to anything useful. Note that for any keys
+  that send a keycode value of 0, then something else will be needed (like
+  jumping through hoops) which is outside the scope of this document.
+
+  The keysyms that are understood for the common internet keys are stored
+  in a file called XKeysymDB, usually located here (use slocate to find it):
+
+    /usr/X11R6/lib/X11/XKeysymDB
+
+  It may be handy to have this file open for reference during the next step.
+
+  Now, in another terminal, open the ~/.Xmodmap file for editing with your
+  favorite editor (if it does not exist, this is fine, simply create it as
+  an empty file). In this file, for each key you wish to assign a mapping
+  add a line like this:
+
+    keycode ### = XF86KEYDESCRIPTION
+
+  the ### will be the keycode number reported for the key with xev, and
+  the XF86KEYDESCRIPTION should be a XF86XXXXXXX keysym listed in the
+  XKeysymDB file. An example line for a play button:
+
+    keycode 162 = XF86AudioPlay
+
+  This assignes the keycode 162 (The play button on my keyboard), to send
+  the XF86AudioPlay code to X applications. (If you wish to add comments
+  to the file for future reference, use ! to mark a line as a comment).
+
+  At this point, you should have three things open:
+     the xev program (from a terminal) to display the keycodes of your keys
+     the XKeysymDB file for reference of available keysyms
+     the ~/.Xmodmap file you are editing
+
+  For each key, move the focus to the xev window, press it. If a keysym is
+  not assigned, note the keycode, find a suitable keysym from the XKeysymDB
+  reference file, and add a line to the ~/.Xmodmap file.
+
+  When done adding lines in ~/.Xmodmap for each of your internet keys, save
+  the file. Now run the command:
+
+    xmodmap ~/.Xmodmap
+
+  Now go back to the xev program and test to see if your keys are now sending
+  the keysyms you assigned. If they are, congratulations! you are set.
+
+  When X is started, ~/.Xmodmap is usually read automatically, if not, you may
+  need to add the xmodmap command above to your xinitrc or .Xclients file.
+
+  GQmpeg supports the following keysyms:
+
+       KeySym                  Function
+
+     XF86AudioLowerVolume    Volume Control
+     XF86AudioRaiseVolume    Volume Control
+     XF86AudioMute           Run external mixer
+     XF86AudioPlay           Play
+     XF86AudioPause          Pause
+     XF86AudioStop           Stop
+     XF86AudioPrev           Previous song
+     XF86AudioNext           Next song
+     XF86AudioMedia          Open playlist window
+     XF86Eject               Open Playlist window
+     XF86OpenURL             Display file open dialog
+
+  GQmpeg must have the focus for these keys to work, if you want these to
+  be global shortcuts to gqmpeg (regardless of application focus) they will
+  need to be set up as shortcuts to gqmpeg command line controls (see
+  gqmpeg --help) in either your window manager, or a suitable utility.
+
+======== Skins
+
+  Also see (Skin editing notes), below.
+
+  To specify a skin use the -skin:skinfile command line parameter (see above).
+  When specifying a default skin in the config dialog, the skin must reside
+  in HOME/.gqmpeg/skins 
+  If valid, a new default skin is loaded when 'ok' or 'apply' is pressed.
+
+  A skin is a directory which contains a file named skindata and xpm files for
+  the skin. Creating a skin is explained in the SKIN-SPECS file, you can
+  download sample skins to use as a template from the GQmpeg web site:
+
+     http://gqmpeg.sourceforge.net
+
+  Winamp skin support:
+    All files must be lowercase.
+    Support is an added bonus. Most skins will work, however a few will not.
+    Please  do not request support to get a particular skin to work.
+
+======== Documentation (brief)                          [section:documentation]
+
+  Shoutcast support:
+    (unsupported, very buggy) (not available in binary packages)
+    Shoutcast support _requires_ mpg123 0.59pre-p ..
+              ... mpg123 0.59o WILL NOT WORK!
+    The shoutcast directory of the source code includes a script and
+    instructions to use GQmpeg as a netscape plugin for shoutcast(.com)
+    pls files.
+
+  Keyboard controls:
+
+       F10            show pop up menu
+
+       p, [ENTER]     play/pause
+       s              stop
+       n              next
+       b              back
+       l              playlist
+       m              run mixer
+       w              switch skin mode
+       i              song information
+       -              volume down
+       +, =           volume up
+       [CTRL] -       balance left
+       [CTRL] +, =    balance right
+       1 .. 0         presets 1 through 10, respectively
+
+       [CTRL] s       shuffle
+       [CTRL] r       repeat
+       [CTRL] 1       repeat 1
+       a              loop a-b (set start, set end, off)
+       Escape         cancel loop a-b
+       [CTRL] t       time display
+       [CTRL] o       options/preferences
+       [CTRL] i       iconify
+       [CTRL] a       about
+       [CTRL] w       close window
+       [CTRL] q       quit
+
+       ~, `           open skin editor window
+
+      When window size button has the focus:
+       [Shift] left,
+              right,
+                 up,
+               down   Resize window.
+       [Shift] pgup   Shrink window to smallest size.
+       [Shift] pgdn   Expand window to largest size.
+       [Shift] home   Resize window to default size.
+
+  IPC (external control and status):
+    control:
+      Send commands to gqmpeg through "$HOME/.gqmpeg/command", send text 'help'
+       and a brief list of available commands will be printed.
+      Note: "$HOME/.gqmpeg/command.pid" will contain the current PID of the
+            gqmpeg process (if any) that is listening for commands.
+
+    status:
+      Send this command to have gqmpeg start printing it's status to a file:
+
+         status_add "key" "/path/to/file"
+
+      and use this to stop it:
+
+         status_rm ["key"|"/path/to/file"]
+
+      You can stop it by using the key or path. When the updating is stopped,
+      two things may be printed: 'close' is printed when status_rm is used;
+      or 'exit' is printed just before gqmpeg shuts down (quits).
+
+      Information printed is the current song path, title, track position,
+      status (play, stop, pause), and seconds played/remaining.
+      Status is only updated when items change, for instance when the song
+      changes, the time count changes, or the play/pause/stop status changes.
+      Note: If the length of path is 0, no song is loaded in the player. Use
+            this to determine 'no song selected', because 'track: 0 of 0'
+            may be a valid song if the current active song is not in the
+            playlist, and the playlist is empty.
+
+======== Skin editing notes
+
+   Mouse control:
+    - The mouse in the skin editor uses these buttons in the skin display area:
+        - Button 1 : Same as in the normal main window (press buttons, etc.)
+        - Button 2 : Click to select widget, drag to move selected a widget.
+               (when click to focus is disabled, widgets are always draggable)
+        - Button 3 : same as button 2
+
+   Converting version 1 skins:
+    - To convert a version 1 skin to a version 2 skin, load the skin into the
+      skin editor (tilde '~' key) then save it, do this for all skindata_alt
+      files too.
+
+   Extracting widget from other skins:
+    - To generate a list, and use widgets from any installed skin, press the
+      'extract' button from the 'add' dialog of the skin editor.
+
+   Editing / extracting widgets from the built-in or winamp skins:
+    - To re-use widgets from the default skin or winamp skins, first load them
+      into the skin editor and save them as a new skin (reason, widget
+      extraction only works on offical (version 1 and version 2) skins. To make
+      the new widgets show up in the widget lists, close the skin editor, then
+      reopen it and press the extract button on the add dialog.
+
+   Skin toggle buttons:
+    - The "skin_toggle" button is a special case, the data field must contain
+      the filename of the skin the button is to switch to. If the data field is
+      left blank the default skin (skindata) will be loaded. If the filename
+      does not exist or is an invalid skin file, the button will do nothing.
+
+      (NOTE on naming of the skindata type files: the widget extraction
+       feature only extracts widgets from skins defined by files matching the
+       pattern "skindata*" but _not_ including '.bak'. All others are ignored.)
+
+   Writing a skin to disk:
+    - When saving a skin, existing files are never overwritten: the skindata
+      file is backed up with an extension of .bak or .bakXXX; graphics files
+      will first be compared by file length and checksum, if they match it
+      will keep the existing file, otherwise the new graphics file will be
+      written to a new filename with an appended number increment (name_1.png).
+
+   Dial and Slider 'item link key':
+    - Dials and sliders have a 'Item link key' field, this is for use when you
+      want an item with that key to update with the dial or slider in such a
+      way that the dial/slider handle is drawn over top of the item. This is
+      useful for example when it is desired that a slider that controls the
+      volume also shows the volume level. If you want the item to be the only
+      thing displayed with slider-like interaction, the slider handle size can
+      be set to zero by specifying a trough length equal to the image
+      dimensions.
+
+   Limits:
+    - You can add as many widgets of the same function as you want and they
+      will all work. (For example 100 play buttons :).
+
+   Invalid UI keys:
+    - If an invalid key is assigned to a widget, the widget will still load
+      but be ignored when activated/operated.
+
+   Detailed skin specs (VERSION 1 or VERSION 2)
+    - See SKIN-SPECS or SKIN-SPECS-V2, respectively.
+
+
+======== Thanks go to the following for fixes, additions, and patches:
+
+  Translations:
+
+     Eric Lassauge <lassauge@mail.dotcom.fr>
+        for French translation.
+
+     Tomas Prochazka <xprocha2@informatics.muni.cz>
+        for Czech translation.
+
+     Yuuki NINOMIYA <gm@smn.enjoy.ne.jp>
+        for Japanese translation, japanese id3 tags.
+
+     Matthias Warkus <mawarkus@t-online.de>
+        for German translation.
+
+     Hellbrasil <hellbrasil@ig.com.br>
+	for Brazilian Portuguese translation.
+
+     Ryan Cheng <ryan@chinese2000.sniic.com>
+        for Traditional Chinese translation.
+
+     Lauri Nurmi <lanurmi@iki.fi>
+        for Finnish translation.
+
+  Fixes, additions, and patches:
+
+     Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de> and
+     Rui-Xiang Guo <rxg@ms25.url.com.tw>
+        for NetBSD patches.
+
+     Kimball Thurston <kimball@sgrail.com>
+        for sgi mixer support
+
+     BALATON Zoltán <balaton@eik.bme.hu>
+        for Window Maker dock support.
+
+     Bruno Rohee <rohee@OpenBSD.ORG>
+        for BSD cpu utilization code.
+
+     Michael Bruun Petersen <mbp@image.dk>
+        for playlist window enhancements.
+
+     László, Róbert - rob@sch.bme.hu
+        for additional skin widgets: Numbers and fonts, other fixes.
+
+     Yick W. Tse <ywtse@mailcity.com>
+        for ID3 genre updates.
+
+     Sampo Niskanen <sampo@compart.fi>
+        for early help with playlists, misc.
+
+     Tino Schwarze <tino.schwarze@informatik.tu-chemnitz.de>.
+        for ipc crash fixes.
+
+     Chris Houser <chouser@bluweb.com>
+        for Tru64 mixer support.
+
+     Sylvain Meunier <meunier@sns.fr>
+        for HPUX mixer support.
+
+     Grigory Bakunov <black@asplinux.ru>
+        for Russian ID3 tag support.
+
+     Chris Houser <chouser@bluweb.com>
+        for Tru64 mixer support.
+
+     Luke Mewburn <lukem@netbsd.org> and
+     Tim Spalding <dominus@citcom.net>
+        for ogg123 fixes.
+
+     And thank you to the all the others not mentioned here.
+
+===========
+

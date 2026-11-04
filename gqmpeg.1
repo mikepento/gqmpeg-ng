@@ -1,0 +1,123 @@
+.\"
+.\" GQmpeg manual page.
+.\" (C)2001, 2002 John Ellis <johne@verizon.net>
+.\"
+.\" This document is free to modify and distribute.
+.\"
+.TH GQMPEG 1 "GQmpeg"
+.SH NAME
+GQmpeg \- A frontend to mpg123.
+.SH SYNOPSIS
+.PP
+.B gqmpeg
+[option(s)] [file(s) | ipc_command(s)]
+.SH DESCRIPTION
+A frontend to mpg123 with extensive themeability and playlist support.
+.SH OPTIONS
+General options:
+.TP
+\fB\-\-skin:\fR\fIskindir
+Load skin from \fIskindir\fR.
+.TP
+\fB\-\-geometry \fR\fI[+|-]xxx[+|-]yyy
+Specify window position using the format \fI[+|-]xxx[+|-]yyy\fR.
+.TP
+\fB\-\-dock
+Enable docking behavior. Changes mouse button behavior only, disconnects middle button (button2) and disables moving of the window by dragging the mouse.
+.TP
+\fB\-\-dockwm
+Enable Window Maker docking. Also applies the -dock option.
+.TP
+\fB\-\-skinhelp
+Print mouse event coordinates, helpful for skin creation.
+.TP
+\fB\-\-debug
+Enable debugging output.
+.TP
+\fB\-h,  \-\-help
+Displays basic usage information.
+.TP
+\fB\-\-blank
+Start up with an empty playlist.
+.PP
+Commands (refered to as ipc commands) are also available that allow the control of another GQmpeg process, ipc must be enabled in the programs options.
+If GQmpeg is not running and ipc commands are used, a new process is spawned for these commands to control.
+These are the available ipc options:
+.TP
+\fB\-p, \-\-play
+Starts playback, if already playing works like pause.
+.TP
+\fB\-s,  \-\-stop
+Stop playback.
+.TP
+\fB\-n,  \-\-next
+Skips to the next song in the playlist.
+.TP
+\fB\-b,  \-\-back
+Skips to the previous song in the playlist.
+.TP
+\fB\-ps,  \-\-pause
+If playingm toggles pause of playback.
+.TP
+\fB\-pladd,  \-\-playlist_add \fIfile [...]
+Add \fIfile\fR(s) to the current playlist.
+.TP
+\fB\-pladdplay,  \-\-playlist_add_play \fIfile
+Add \fIfile\fR to the current playlist and play it.
+.TP
+\fB\-plrm,  \-\-playlist_remove \fIfile [...]
+Remove \fIfile\fR(s) from the current playlist, if present.
+.TP
+\fB\-plclr,  \-\-playlist_clear
+Clear the current playlist.
+.TP
+\fB\-pl,  \-\-playlist \fIfile\fR
+Load playlist \fIfile\fR.
+.TP
+\fB\-plappend,  \-\-playlist_append \fIfile [...]
+Append \fIfile\fR(s) to the current playlist.
+.TP
+\fB\-f,  \-\-file \fIfile\fR
+Play \fIfile\fR but do not add to the current playlist, or if \fIfile\fR is a playlist, load it as the current playlist.
+.TP
+\fB\-q,  \-\-quit
+Tell a running GQmpeg to quit.
+.SH FILES
+.I
+Files in home directories:
+.TP
+\&.gqmpeg/gqmpegrc
+The main configuration file, all options are saved here.
+.TP
+\&.gqmpeg/session-playlist.gqmpeg
+On application exit, the current playlist is saved to this file. Then depending on start up options, read upon application start.
+.TP
+\&.gqmpeg/playlists
+Default location for playlist files.
+.TP
+\&.gqmpeg/skins
+Default location for skins.
+.TP
+\&.gqmpeg/command
+A FIFO file that commands can be sent to (for example, with echo), to control the currently running process. Example commands are play, pause, stop, next, prev, quit, play_file <filename>, etc. See README for more details.
+.TP
+\&.gqmpeg/command.pid
+Contains the current PID of the gqmpeg process (if any) that is listening for ipc commands.
+.SH "SEE ALSO"
+.BR
+\fBmpg123\fP(1), \fBogg123\fP(1), \fBxmp\fP(1), \fBv4l\fP(4)
+.SH AUTHORS
+.TP
+Main Author
+.br
+John Ellis <johne@verizon.net>
+.TP
+See README for full credits.
+.TP
+HomePage:
+.br
+http://gqmpeg.sourceforge.net
+.br
+.PP
+Please send feedback to gqview@users.sourceforge.net or the author, above.
+

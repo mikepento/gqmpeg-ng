@@ -1,0 +1,282 @@
+#SLIK skin data file
+
+#file created by gqmpeg 0.91.0 (SLIK 0.91.0)
+
+#Title: MrClean
+#Version: 0.91.0
+#Date stamp: Mon Apr  5 13:56:43 2004
+#Build: 6
+#Author: John Ellis
+#Email: johne@verizon.net
+#URL: gqmpeg.sourceforge.net
+#License: images and design free for any use
+
+[main]
+image = blue2-soft-round-logo.png
+transparent = FALSE
+border = TRUE
+border_left = 7
+border_right = 128
+border_top = 9
+border_bottom = 85
+border_left_stretch = FALSE
+border_right_stretch = FALSE
+border_top_stretch = FALSE
+border_bottom_stretch = FALSE
+sizeable = TRUE
+width = 320
+height = 255
+width_min = 319
+width_max = 404
+width_increment = 7
+height_min = 175
+height_max = 415
+height_increment = 16
+focus = focus-rect-border-1.png
+focus_stretch = FALSE
+focus_has_border = TRUE
+focus_border_left = 1
+focus_border_right = 1
+focus_border_top = 1
+focus_border_bottom = 1
+focus_anchor_right = FALSE
+focus_anchor_bottom = FALSE
+focus_filled = FALSE
+focus_red = 255
+focus_green = 0
+focus_blue = 0
+focus_alpha = 128
+
+[digit_large]
+image = digit-digital-24-aa.png
+
+[digit_small]
+image = digit-digital-15-aa.png
+
+[list_playlist]
+image = list-clear-back.png
+x = 10
+y = 33
+width = 271
+height = 166
+sizeable = TRUE
+columns = 2
+columns_right_justify = FALSE
+border_top = 3
+border_right = 3
+border_bottom = 3
+border_left = 3
+center_stretch = FALSE
+row_image = list-row-clear.png
+row_pressable = TRUE
+row_prelight = TRUE
+row_border_left = 4
+row_border_right = 4
+row_stretch = FALSE
+text_font = Sans Bold 9
+text_red = 0
+text_green = 0
+text_blue = 0
+text_alpha = 255
+flag_image = list-clear-flags.png
+flag_sections = 4
+flag_column = 0
+column_0_key = number
+column_0_width = 32
+column_0_proportional = FALSE
+column_0_right_justify = TRUE
+column_1_key = title
+column_1_width = 20
+column_1_proportional = FALSE
+column_1_right_justify = FALSE
+
+[button_list_playlist_scroll_up]
+image = btn-rnd-clr-26-up.png
+x = 286
+y = 32
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+
+[slider_list_playlist_scroll]
+image = bubble-slider-16-v.png
+x = 291
+y = 58
+length = 60
+pressable = TRUE
+prelight = TRUE
+reversed = FALSE
+vertical = TRUE
+trough_length = 115
+border_1 = 15
+border_2 = 15
+stretch = FALSE
+sizeable = TRUE
+anchor_right = TRUE
+
+[button_list_playlist_scroll_down]
+image = btn-rnd-clr-26-dn.png
+x = 286
+y = 173
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[button_playlist]
+image = btn-rect-clr-32-eject.png
+x = 8
+y = 219
+prelight = TRUE
+indicator = FALSE
+anchor_bottom = TRUE
+
+[button_play]
+image = btn-rect-clr-32r-play.png
+x = 86
+y = 219
+prelight = TRUE
+indicator = TRUE
+anchor_bottom = TRUE
+
+[button_stop]
+image = btn-rect-clr-32-stop.png
+x = 134
+y = 219
+prelight = TRUE
+indicator = FALSE
+anchor_bottom = TRUE
+
+[button_skin_size]
+image = blue-handle-24.png
+x = 296
+y = 231
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[button_skin_iconify]
+image = btn-rnd-clr-26-min.png
+x = 262
+y = 3
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+
+[button_skin_close]
+image = btn-rnd-clr-26-x.png
+x = 290
+y = 3
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+
+[number_hour]
+digit = large
+x = 196
+y = 223
+length = 1
+zeros = FALSE
+center = FALSE
+rotation = 0
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[number_minute]
+digit = large
+x = 222
+y = 223
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[number_second]
+digit = large
+x = 261
+y = 223
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[number_song]
+digit = small
+x = 1
+y = 202
+length = 5
+zeros = FALSE
+center = TRUE
+rotation = 0
+anchor_bottom = TRUE
+
+[number_song_total]
+digit = small
+x = 197
+y = 9
+length = 5
+zeros = FALSE
+center = TRUE
+rotation = 0
+anchor_right = TRUE
+
+[text_title]
+description = Sans Bold 10.5
+red = 0
+green = 0
+blue = 0
+alpha = 200
+x = 69
+y = 199
+width = 243
+sizeable = TRUE
+rotation = 0
+anchor_bottom = TRUE
+
+[text_playlist]
+description = Sans Bold 10.5
+red = 0
+green = 0
+blue = 0
+alpha = 200
+x = 10
+y = 7
+width = 180
+sizeable = TRUE
+rotation = 0
+
+[item_minus]
+image = item-pda-minus.png
+x = 187
+y = 233
+sections = 2
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[item_load]
+image = item-clear-load-aa.png
+x = 63
+y = 228
+sections = 4
+anchor_bottom = TRUE
+
+[item_colon]
+image = item-colon-24.png
+x = 214
+y = 230
+sections = 1
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[item_colon]
+image = item-colon-24.png
+x = 254
+y = 230
+sections = 1
+anchor_right = TRUE
+anchor_bottom = TRUE

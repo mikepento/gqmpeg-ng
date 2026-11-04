@@ -1,0 +1,1110 @@
+
+                                                                 [section:top]
+
+         ############ SLIK basic skin specifications file ############
+
+              (SLIK: SimpLIstic sKin interface - revision 0.91.0)
+
+                                GQmpeg - 0.91.0
+
+Skin hierarchy:
+   Skins are simply a directory which contain image files and one or more
+   skindata files, usually named skindata or skindata_*.
+
+The skindata file(s):
+   All skin features are configured in the skindata file. A skin's default mode
+   is always defined in the file named 'skindata', which can then contain
+   buttons (key: "skin_toggle") that link to other skindata type files for
+   changing the layout/size of the skin. Empty lines, and those beginning with
+   a '#' (for comments) are ignored.
+
+Image files:
+   All image files can be any size, in most cases the drawing data will be
+   calculated automatically. Skins can have any size buttons, items, digits,
+   etc. The files can be of any type supported by gdk-pixbuf (xpm, png,
+   jpeg, gif, etc.) The recommended file format is png.
+
+Image contents:
+  Every image within a file must have the same width and height, for example
+  if the play button was 30 by 20, the resulting image file would be
+  180 by 20. (6 button states total, including status lights and prelights)
+
+  Addendum: If the above button was specified with the status light and
+            prelight options as false, the resulting image file would be
+            60 by 20. (2 button states total, 1 for normal, 1 for pressed)
+
+Required elements:
+  Only section [main] is required , everything else is optional (although it
+  would be nice to always have a play button :)
+
+Transparency:
+  The main background image uses a threshold of 1 (out of 256 levels) for the
+  window shape, the rest is used for partially overwriting the background when
+  the Transparency option is true.
+
+  If a mask file is specified, the threshold changes to 128 (of 256 levels).
+  The 'mask = file.png' option is provided for backwards compatibility only.
+
+  Portions of items, buttons, sliders, numbers, and text that never change and
+  are the same as the background image (example: round buttons) should be set
+  transparent so that the 'force transparent' option works properly.
+
+All widgets recognize the following keys:
+-----------------------------------------
+
+anchor_right,
+anchor_bottom:	When a skin changes size, this defines how a widget will be
+		positioned. Anchor right will will keep the widget the same
+		distance from the right side of the skin, bottom works in the
+		same way. 
+data:		Data defined for the widget. This is generic text, some widgets
+		will use this. Also applications can access the text in this
+		field (app access is read only).
+id:		Nickname to use for this widget, when grouping (unimplemented).
+
+
+------------------------------------------------------------------------------
+Recognized format subsections:
+------------------------------------------------------------------------------
+
+
+Note: Keys that contain text in parenthesis '()' are optional, and describe
+      the default behavior when the key is ommited.
+
+
+==============================                                  [section:main]
+main
+==============================
+
+This section is required in all skindata files, image must be valid.
+
+Format:
+-------
+
+[main]
+image = file.png
+
+mask = file.png		(mask from 'image')
+transparent = TRUE	(FALSE)
+id = text		(none)
+
+border = TRUE		(FALSE)
+
+border_left = 3		(1)
+border_right = 3	(1)
+border_top = 3		(1)
+border_bottom = 3	(1)
+
+border_left_stretch = TRUE	(FALSE)
+border_right_stretch = TRUE	(FALSE)
+border_top_stretch = TRUE	(FALSE)
+border_bottom_stretch = TRUE	(FALSE)
+
+stretch = TRUE		(FALSE)
+
+sizeable = TRUE		(FALSE)
+
+width = 20		(taken from 'image' size)
+height = 20		(taken from 'image' size)
+
+width_min = 10		(taken from 'width')
+width_max = 30		(taken from 'height')
+height_min = 10		(taken from 'width')
+height_max = 30		(taken from 'height')
+width_increment = 5	(1)
+height_increment = 5	(1)
+
+focus = file.png	(none, uses rectangle with colors r, g, b)
+
+focus_has_border = TRUE	(FALSE)
+focus_border_left = 1	(0)
+focus_border_right = 1	(0)
+focus_border_top = 1	(0)
+focus_border_bottom = 1	(0)
+
+focus_anchor_right = TRUE	(FALSE)
+focus_anchor_bottom = TRUE	(FALSE)
+
+focus_filled = TRUE	(FALSE)
+focus_red = 128		(255)
+focus_green = 128	(0)
+focus_blue = 128	(0)
+
+focus_alpha = 255	(128)
+
+focus_stretch = TRUE	(unimplemented)
+
+Keys:
+-----
+
+image:		Background image file.
+mask:		Background mask file.
+		NOTE: This is a depreciated option, masks should now be
+		included with 'image' file.
+
+border:		When TRUE, 'image' contains border images.
+
+border_left,
+border_right,
+border_top,
+border_bottom:	Size of the background borders.
+
+border_*_stretch:
+		If TRUE, scale the respective (*) border image to fit within
+		the actual size, when FALSE the border image is tiled.
+
+stretch:	If TRUE, scale the image to fit within the actual window size,
+		when FALSE the image is tiled.
+
+sizeable:	TRUE if the window is to be resizeable. FALSE is a window with
+		fixed size.
+width_min/max:	Minimum and maximum width when resizing the window.
+height_min/max: Minimum and maximum height when resizing the window.
+
+width_increment,
+height_increment:
+		When resizing window, lock the size into steps of this value.
+
+transparent:	TRUE if the skin has alpha channel transparent areas, and
+		therefore should also capture the root window background.
+
+focus:		Image file to use for the focus, if not specified a rectangle
+		with color focus_red, focus_green, focus_blue (below) is used.
+
+focus_has_border: When TRUE, the image is drawn in in rectangular form, and
+		the 'center' of the image is ignored. The rectangle size is
+		determined y the focus_border_??? options, below.
+
+focus_border_left:
+focus_border_right:
+focus_border_top:
+focus_border_bottom: The respective sizes of the focus border with respect to
+		the focus image. The image borders are tiled to fit the
+		widget size.
+
+focus_anchor_right: When TRUE, the focus image is aligned to the right side of
+		the widget with the focus. Ignored if focus has a border.
+focus_anchor_bottom: When TRUE, the focus image is aligned to the bottom side
+		of the widget with the focus. Ignored if focus has a border.
+
+focus_filled:	When TRUE, the focus rectangle is a solid rectangle. Only has
+		effect when there is no focus image.
+
+focus_red:
+focus_green:
+focus_blue:	When no focus image is specified, these are the color
+		attributes to use when drawing the focus rectangle. Values are
+		valid from 0 to 255.
+
+focus_alpha:	The transparency to use when drawing the focus overlay, valid
+		values are 0 to 255. (255 is fully visible, 128 half, ...)
+
+focus_stretch:	Unimplemented.
+
+
+Shaped window note:
+-------------------
+    To have a shaped window simply supply 'image' with an alpha channel
+    (transparency). The cutoff alpha level for shaped windows is 1 for
+    'image' and 123 for 'mask'.
+
+    Use of 'mask' is discouraged, since it is ignored for sizeable windows.
+    Simply give 'image' an alpha channel (transparency) instead.
+
+
+==============================                                  [section:item]
+item_XXXX
+==============================
+
+Recognized items:
+-----------------
+
+Use in place of XXXX, the second column is number of sections, the third column
+is a text description of each section.
+(second column key: A = animation; I = incremental by percentage (min to max) )
+
+balance		I	balance left, ... , balance right
+load		A	blank, [loading frame 1, ... , loading frame x (A - 1)]
+loop_ab		2	off, on
+minus		2	time counts up, time counts down
+mpeglayer	4	blank, 1, 2, 3
+mpegmode	5	blank, stereo, joint-stereo, dual-chan., single-chan.
+mpegversion	3	blank, 1, 2
+position	I	song beginning, ... , song end
+repeat		2	off, on
+repeat_1	2	off, on
+shuffle		2	off, on
+status		3	stop, pause, play
+stereo		3	blank, mono , stereo
+time_mode	3	time refers to current song, total playlist, or live
+volume		I	volume min, ... , volume max
+
+
+Format:
+-------
+
+[item_XXXX]
+image = file.png
+sections = 2
+x = 0
+y = 0
+
+animated = TRUE		(FALSE, reserved: FIXME)
+id = text		(none)
+
+Keys:
+-----
+
+image:		File containing images vertically for the item.
+x, y:		Coordinates for placement of the item.
+sections:	Number of images vertically in 'image' file.
+animated:	Item is animated (first section is blank, rest are animation
+		frame loop.
+id:		Nickname to use for this widget, when grouping.
+
+
+==============================                                [section:button]
+button_XXXX
+==============================
+
+Recognized buttons:
+-------------------
+
+Use in place of XXXX, the second column indicates if the button supports
+an indicator, the third column is a text description of the button.
+
+Reserved:
+  skin_toggle		Change to skin mode_key held in 'data'.
+			(If data is empty the default, "skindata", is assumed.)
+  skin_size		Drag the button to change the skin's size.
+			(Ignored if skin is not sizeable.)
+  skin_expand	X	Change size of skin by text held in 'data'
+			"[+/-]x [+/-]y" subsequent press reverts to original
+			size. The indicator is off in the default state.
+  skin_iconify		Iconifies the window.
+  skin_sticky	X	Toggle window stick state, indicator is on when the
+			window is sticky. Sticky makes the window appear on all
+			workspaces.
+			  note: sticky is not supported by all window managers.
+  skin_open		Similar to skin_toggle, but opens a new window.
+  skin_close		Close current window, ignored for parent (main) window.
+
+balance_left		Move balance left.
+balance_right		Move balance right.
+config			Show configuration window.
+exit			Exit the application.
+ff			Fast forward.
+iconify			Iconify main window. (please use skin_iconify instead)
+loop_ab		X	Control the loop A to B feature.
+mixer			Run an external mixer.
+next			Skip to next song.
+open_custom		Display open custom dialog.
+open_file		Display open file dialog.
+open_playlist		Display open playlist dialog.
+pause		X	Pause.
+play		X	Play.
+playlist	X	Toggle display of the playlist window.
+prev			Skip to previous song.
+repeat		X	Toggle repeat.
+repeat_1	X	Toggle the repeat 1 feature.
+rw			Rewind.
+save_playlist		Display the save playlist as dialog.
+shuffle		X	Toggle shuffle.
+stop		X	Stop.
+time_remaining	X	Toggle between normal time (count up) and time
+			remaining (count down).
+time_total	X	Toggle between time for current song and time for
+			entire playlist.
+volume_up		Increase volume.
+volume_down		Decrease volume.
+
+Format:
+-------
+
+[button_XXXX]
+image = file.png
+x = 0
+y = 0
+
+prelight = TRUE		(FALSE)
+indicator = TRUE	(FALSE)
+clip_mask = file.png	(none)
+id = text		(none)
+
+
+Keys:
+-----
+
+image:		File containing images horizontally for the button. Contains
+		the buttons horizontally in the order: normal, normal pressed,
+		normal active, normal active pressed, prelit, prelit active.
+		(see Notes)
+x, y:		Coordinates for placement of the button.
+prelight:	The button contains a mouse-over prelight.
+indicator:	The button contains a status indicator.
+clip_mask:	Image file containing a clip mask for the shape of the button.
+id:		Nickname to use for this widget, when grouping.
+
+Notes:
+------
+
+Reference for button options:
+Options:             |# images|Normal|Pressed| Lit  |  Lit  |Prelit|Prelit    |
+prelight | indicator | total  |      |       |Normal|Pressed|Normal|Lit Normal|
+---------------------+--------+------+-------+------+-------+------+----------+
+    F    |     F     |   2    |  X   |   X   |      |       |      |          |
+    T    |     F     |   3    |  X   |   X   |      |       |  X   |          |
+    F    |     T     |   4    |  X   |   X   |  X   |   X   |      |          |
+    T    |     T     |   6    |  X   |   X   |  X   |   X   |  X   |    X     |
+
+
+==============================                                 [section:digit]
+digit_XXXX
+==============================
+
+Recognized digits:
+------------------
+
+In place of XXXX can be any name, this will be the id to use when referencing
+the digit from a number.
+Note: Digits must be defined before a number can reference them.
+      (place numbers after digits in the skindata file)
+
+Format:
+-------
+
+[digit_XXXX]
+image = file.png
+id = text		(none)
+
+Keys:
+-----
+image:		File containing images horizontally for the digits in order
+		0 to 9, and a blank space (11 sections total).
+		[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, blank]
+
+id:		Nickname to use for this widget, when grouping.
+
+
+==============================                                [section:number]
+number_XXXX
+==============================
+
+Recognized numbers:
+-------------------
+
+Use in place of XXXX, the second column is a text description of the button.
+
+hour		Time display.
+minute		Time display.
+second		Time display.
+
+song		Current song.
+song_total	Total songs in playlist.
+
+frame		Current frame.
+frame_total	Total frames in current song.
+
+input_rate	Input bitrate in Kbytes.
+input_hz		Input sample rate in kHz.
+output_bits	Output bitrate to sound device in Kbytes.
+output_hz	Output sample rate to sound device in kHz.
+
+cpu		Current cpu utilization of player back-end.
+
+song_minute	Current song total time.
+song_second	Current song total time.
+
+playlist_hour	Playlist length in time.
+playlist_minute	Playlist length in time.
+playlist_second	Playlist length in time.
+
+track		Current song track number (not the same as the song number).
+
+Format:
+-------
+
+[number_XXXX]
+image = file.png
+digit = id		(supply either an image _or_ digit key)
+length = 2
+x = 0
+y = 0
+
+zeros = TRUE		(FALSE)
+center = TRUE		(FALSE)
+rotation = 90		(0)
+
+id = text		(none)
+
+
+Keys:
+-----
+
+image:		File containing digit images (see digit_XXXX).
+digit:		Id (name) of a previously defined digit.
+		NOTE: Supply either one of the image _or_ digit keys, if both
+		are defined, image is used.
+x, y:		Coordinates for placement of the number.
+length:		Number of digits in the number.
+
+zeros:		Pad the number with leading zeros (for minutes, seconds, etc.).
+center:		Center justify the number within it's length.
+rotation:	Angle at which to draw the text. The standard angle is 0, and
+		increases clockwise in 90 degree increments. Using this method,
+		the only valid values are 0, 90, 180, and 270. All others are
+		read as 0.
+
+id:		Nickname to use for this widget, when grouping.
+
+
+==============================                                  [section:font]
+font_XXXX
+==============================
+
+Recognized fonts:
+----------------
+
+In place of XXXX can be any name, this will be the id to use when referencing
+the font from another widget.
+Note: Fonts must be defined before another widget references them.
+      (place text after fonts in the skindata file)
+
+Format:
+-------
+
+[font_XXXX]
+image = file.png
+extended = TRUE		(FALSE)
+
+description = Serif 16	(Sans 12)
+
+id = text		(none)
+
+Keys:
+-----
+image:		File containing images for a fixed font. With 3 or 6 lines of
+		32 characters each (see table below). The image key has
+		precedence over the description key.
+extended:	The image file also includes extended characters (6 lines).
+description:	Font description for this font. Please specify as generic of
+		a description as needed for the target font so that it has a
+		greater chance of working on other systems/locales.
+		Image has precedence over this key.
+id:		Nickname to use for this widget, when grouping.
+
+Notes:
+------
+
+   Please specify one image or description key, if both exist, image is used.
+
+   Description field compatibility: XFLD font descriptions are automatically
+   converted for compatibility with older skins, but are no longer officially
+   supported by the skin spec (as of SLIK 0.91.0). An XFLD description is of
+   the format: -*-helvetica-medium-*-*-*-10-*-*-*-*-*-*-*
+   Please do not use the old X font descriptions in new skins! The new
+   supported format examples:
+
+           Sans Bold 10
+           Bitstream Vera Serif 12
+           Courier Bold Italic 18
+
+   For the image file, the characters are represented in a grid of 32 colums
+   and 3 (or 6) rows. The characters are listed in three rows below so that
+   they can be copied and pasted into your graphics program. (the first
+   character in the top line is a space):
+
+            !"#$%&'()*+,-./0123456789:;<=>?
+           @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+           `abcdefghijklmnopqrstuvwxyz{|}~ 
+
+   When extended is TRUE these are the 3 addition lines of international
+   characters:
+
+            ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿
+           ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß
+           àáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ
+
+
+==============================                                  [section:text]
+text_XXXX
+==============================
+
+Recognized text:
+----------------
+
+Use in place of XXXX, the second column is a text description of the text.
+
+title		Current song title.
+album		Current song album.
+artist		Current song artist.
+genre		Current song genre.
+year		Current song year.
+comment		Current song comment.
+playlist	Current playlist filename.
+
+Format:
+-------
+
+[text_XXXX]
+image = file.png	(supply either an image, font, _or_ description key)
+font = id_text		(supply either an image, font, _or_ description key)
+width = 64
+length = 2		(0, only used for backwards compatibility)
+
+description = -*-*-*-*-*-*-*-*-*-*-*-*-*-*
+			(supply either an image, font, _or_ description key)
+
+red = 128		(0)
+green = 128		(0)
+blue = 128		(0)
+alpha = 128		(255)
+
+x = 0
+y = 0
+
+extended = TRUE		(FALSE)
+sizeable = TRUE		(FALSE)
+rotation = 90		(0)
+
+data = default_text	(none)
+
+id = text		(none)
+
+Keys:
+-----
+image:		File containing images for a fixed font. With 3 or 6 lines of
+		32 characters each. (see table in Font section, above)
+font:		Id (name) of a previously defined font.
+description:	Font description for this font. Please see the font section
+		for details of this field. (example: Sans 12)
+red, green,
+blue, alpha:	The color attributes in RGB format when using an X font. Valid
+		values are 0 to 255. Ignored for images.
+
+x, y:		Coordinates for placement of the text.
+width:		Width of the text field, in pixels.
+
+length:		Number of characters in the text field. (Maintained for
+		backwards compatibility only, use width for new skins.)
+
+extended:	The image file includes extended characters (6 lines).
+		NOTE: Ignored when font is defined, as font widgets already
+		include this information.
+sizeable:	When true, length will be dynamically adjusted to match the size
+		of the skin as it changes.
+rotation:	Angle at which to draw the text. The standard angle is 0, and
+		increases clockwise in 90 degree increments. Using this method,
+		the only valid values are 0, 90, 180, and 270. All others are
+		read as 0.
+data:		The text defined here is used as the default for the text
+		widget, it is only used when the application does not register
+		a matching key.
+
+id:		Nickname to use for this widget, when grouping.
+
+Notes:
+------
+
+   Supply either one of the image, font, _or_ description keys, if more than one
+   is defined, the order of key precedence is: image, description, font.
+
+
+==============================                                [section:slider]
+slider_XXXX
+==============================
+
+Recognized sliders:
+-------------------
+
+Use in place of XXXX, the second column is a text description of the slider.
+
+balance		Volume balance.
+position	Song position.
+volume		Volume.
+
+Format:
+-------
+
+[slider_XXXX]
+image = file.png
+length = 10
+x = 0
+y = 0
+vertical = TRUE		(FALSE)
+pressable = TRUE	(FALSE)
+prelight = FALSE	(FALSE)
+reversed = TRUE		(FALSE)
+
+sizeable = TRUE		(FALSE)
+trough_length = 20	(uses length)
+border_1 = 2		(0)
+border_2 = 2		(0)
+stretch = TRUE		(FALSE)
+
+item_key = key		(none)
+
+id = text		(none)
+
+Keys:
+-----
+image:		File containing slider images. In order of trough (background),
+		handle normal, handle pressed, and handle prelit. The images
+		are in order horizontally for horizontal slider, and
+		vertically for vertical slider.
+length:		Length of the slider trough (background) area.
+x, y:		Coordinates for placement of the slider.
+pressable:	The handle contains an image to indicate button press.
+prelight:	The handle contains an image to indicate mouse-over
+		prelighting.
+reversed:	Swaps the direction of the handle's movement, normally left to
+		right (vertical top to bottom) to right to left (bottom to
+		top).
+
+sizeable:	When true, trough_length will be dynamically adjusted to match
+		the size of the skin as it changes.
+trough_length:	If defined, this is the size to use as the length of the
+		widget (for backwards compatibility length is used to define
+		the actual trough image's size). When not defined length is
+		used.
+border_1,
+border_2:	The border sizes of the trough image when trough_length does
+		not match length. For vertical sliders this is top and bottom,
+		respectively, for Horizontal this is left and right.
+stretch:	When true, the remaining center portion of the trough (after
+		accounting for borders) is scaled to fill required space. The
+		default is to tile this area.
+
+item_key:	Key reference of an item that updates with the slider in such
+		a way that the item's image is drawn underneath the handle.
+
+id:		Nickname to use for this widget, when grouping.
+
+
+==============================                                  [section:dial]
+dial_XXXX
+==============================
+
+Recognized dials:
+-----------------
+
+Use in place of XXXX, the second column is a text description of the dial.
+
+balance		Volume balance.
+position	Song position.
+volume		Volume.
+
+Format:
+-------
+
+[dial_XXXX]
+image = file.png
+axis_x = 0
+axis_y = 0
+angle_begin = 0
+angle_end = 359
+handle_offset_x = 24
+handle_offset_y = 24
+clip_x = 0
+clip_y = 0
+clip_width = 32
+clip_height = 32
+pressable = TRUE	(FALSE)
+prelight = TRUE		(FALSE)
+reversed = TRUE		(FALSE)
+clip_mask = file.png	(none)
+
+fixed_handle = TRUE	(FALSE)
+fixed_radius = 100	(required when fixed_handle is TRUE)
+
+item_key = key		(none)
+
+id = text		(none)
+
+
+Keys:
+-----
+image:		File containing handle images vertically. In order of normal,
+		pressed, and prelit.
+axis_x, axis_y:	Center of rotation of handle relative to background.
+angle_begin,
+angle_end:	Endpoints of the handle's rotation in degrees, values are
+		from 0 to 359. 0 is far right point, increments clockwise.
+handle_offset_x,
+handle_offset_y:Position relative to handle image's upper left corner that
+		represents the handle rotation point, not necessarily
+		within the image.
+clip_x, clip_y:	Location of the clipping region (or clip mask) relative to
+		the background.
+clip_width,
+clip_height:	Height and width of the clipping region, not needed when
+		clip_mask is defined, since they are then taken from the
+		mask image's dimensions.
+clip_mask:	File containing image with transparency defining the
+		clipping mask for the dial.
+pressable:	The handle contains an image to indicate button press.
+prelight:	The handle contains an image to indicate mouse-over
+		prelighting.
+reversed:	Swaps the direction of the handle's rotation such that it
+		moves counterclockwise from angle_end to angle_start. The
+		default is to move counterclockwise from angle_start to
+		angle_end.
+
+fixed_handle:	When TRUE, the handle is drawn without rotation. Instead of
+		rotating the image, the handle image location is positioned
+		in an arc (of radius, below) such that is revolves around
+		the center axis.
+fixed_radius:	The distance to place the handle from the center axis, when
+		fixed_handle is TRUE, ignored otherwise.
+
+item_key:	Key reference of an item that updates with the dial in such
+		a way that the item's image is drawn underneath the handle.
+
+
+id:		Nickname to use for this widget, when grouping.
+
+Note: A dial draws the handle image in one of two styles, specified with the
+      fixed_handle parameter. There are two main differences: A fixed dial
+      is drawn with a static handle, that is the image itself is not rotated,
+      but merely moves around the center point. The other difference is that
+      a fixed dial's handle uses the fixed_radius to determine the distance
+      from the center axis point, the other ignores radius and uses the handle
+      offset values to overlay the handle's center point over the center axis.
+
+
+==============================                                [section:list]
+list_XXXX
+==============================
+
+Recognized lists:
+-------------------
+
+Use in place of XXXX, the second column is a text description of the list,
+extra lines describe each supported column key for that list.
+
+playlist	The playlist.
+	title		The song title.
+	time		The song length.
+	number		The song number.
+presets		The presets 1 through 10.
+	description	The preset menu description.
+	number		The preset number (1 - 10).	
+
+Format:
+-------
+
+[list_XXXX]
+image = file.png
+x = 0
+y = 0
+width = 20
+height  20
+sizeable = TRUE		(FALSE)
+columns = 2
+columns_right_justify = TRUE	(FALSE)
+
+border_top = 1
+border_right = 1
+border_bottom = 1
+border_left = 1
+center_stretch = TRUE	(FALSE)
+
+row_image = file.png
+row_pressable = TRUE	(FALSE)
+row_prelight = TRUE	(FALSE)
+row_border_left = 1
+row_border_right = 1
+row_stretch = TRUE	(FALSE)
+
+text_image = file.png
+text_extended = TRUE	(FALSE)
+
+text_font = Serif 10	(Sans 12)
+text_red = 128		(0)
+text_green = 128	(0)
+text_blue = 128		(0)
+text_alpha = 128	(255)
+
+divider_image = fl.png	(none)
+flag_image = file.png	(none)
+flag_sections = 4	(1)
+flag_column = 1		(0)
+
+column_#_key = key		(NULL, or blank)
+column_#_width = 42		(1)
+column_#_proportional = TRUE	(fixed width)
+column_#_right_justify = TRUE	(left justify)
+
+item_key = key		(none)
+
+id = text		(none)
+
+Keys:
+-----
+image:		File containing the list image background. This is where the
+		borders are also defined, remaining space is considered the
+		center.
+x, y:		Coordinates for placement of the slider.
+width, height:	Default size of the widget.
+sizeable:	The list size expands and shrinks with the skin size, note that
+		anchors should always remain default (top, left) when this is
+		enabled.
+columns		Number of columns in the list (should have corresponding number
+		of columns (0 to columns - 1) defined.
+		(see column_#_..., below.)
+columns_right_justify: When TRUE, the columns widths are calculated right to
+		left, but maintain the left to right (0, 1, 2, ...) order.
+
+border_top,
+border_right,
+border_bottom,
+border_left:	Size of the image borders.
+center_stretch:	Indicates if the center portion (see image, above) should be
+		scaled to fill the center of the list. The default is to fill
+		by tiling this image.
+
+row_image:	File containing the row images, vertically from top standard,
+		pressed, and prelight. Depending on row_pressable and
+		row_prelight, this image contains 1 to 3 images.
+row_pressable:	The row_image file includes a representation of the row being
+		pressed.
+row_prelight:	The row_image file includes a representation of the row being
+		prelighted.
+row_border_left,
+row_border_right: The left and right border size of row_image, above.
+row_stretch:	Indicates if the center portion of the row image should be
+		scaled to fit the entire row. The default is to tile the image
+		to fill the row.
+
+text_image:	Image containing the list text characters (font), please see
+		the Text widget for format and character chart reference.
+text_extended:	The text_image includes 3 additional rows of extended
+		(international) characters (see Text widget).
+
+text_font:	Font description for this font. Please see the font section
+		for details of this field. (Specify only one of either the 
+		text_image or text_font keys.)
+text_red,
+text_green,
+text_blue,
+text_alpha:	Color to use for the text_font, in RGB format, ignored for
+		image fonts (text_image).
+
+divider_image:	File containing an image for the divider between columns. If
+		not specified each column is separated by a width of 3 pixels.
+flag_image:	File containing images representing row flags (icons), this
+		works the same way as for Item widgets (see Item widget for
+		detailed file format info).
+flag_sections:	The number of section in the flag_image.
+flag_column:	The column that displays the flag_image.
+
+{ Note: '#' should replaced by the column being defined (0 to columns - 1) }
+column_#_key:		The text key identifying this column.
+column_#_width:		The width of the column in pixels.
+column_#_proportional:	When TRUE, the width of the column (above) is
+			interpreted as a percentage of the list's width. The
+			valid range when thhis is true is 1 to 100.
+column_#_right_justify: The text in the column should be right justified.
+
+item_key:	Key reference of an item that updates with the slider in such
+		a way that the item's image is drawn underneath the handle.
+
+id:		Nickname to use for this widget, when grouping.
+
+Signals:
+--------
+
+The list widget registers these signals, XXXX is replaced by the list name,
+the second column is the widget type, and the third is a brief description.
+If you want the list to actually scroll, set up these widgets.
+
+list_XXXX_scroll_down		button		Scrolls the list down.
+list_XXXX_scroll_up		button		Scrolls the list up.
+list_XXXX_scroll		slider		Scrolls the list.
+
+
+==============================                                  [section:decal]
+decal_XXXX
+==============================
+
+Recognized decals:
+-----------------
+
+Use in place of XXXX, the second column is a text description of the decal.
+
+Format:
+-------
+
+[decal_XXXX]
+image = file.png	(none, uses rectangle of color
+			 rect_red, rect_green, rect_blue)
+
+x = 0
+y = 0
+width = 64
+height = 64
+
+sizeable = TRUE		(FALSE)
+alpha = 64		(255)
+
+border_left = 4		(0)
+border_right = 4	(0)
+border_top = 5		(0)
+border_bottom =5	(0)
+
+stretch = TRUE		(FALSE)
+border_stretch = TRUE	(FALSE)
+
+rect_red = 128		(0)
+rect_green = 128	(0)
+rect_blue = 128		(0)
+rect_fill = TRUE	(FALSE)
+
+data = some text	(none)
+
+id = text		(none)
+
+Keys:
+-----
+image:		File containing images for decal.
+
+x, y:		Coordinates for placement of the decal.
+width, height:	Size of the decal, in pixels.
+
+sizeable:	When true, size will be dynamically adjusted to match the size
+		of the skin as it changes.
+alpha:		Transparency to use when drawing onto background, range is
+		0 (invisible) to 255 (fully visible).
+
+border_left,
+border_right,
+border_top,
+border_bottom:	Border size. For decals with an image, this indicates the edge
+		size of the source image to use as the edges of the decal, the
+		remaining center portion of the image is tiled or stretched
+		(see stretch option) to fill the decal.
+		If no image is defined, this is the border size of the unfilled
+		rectangle (see rect_fill option for fill details).
+
+stretch:	If true, the source image is scaled to fit the decal size,
+		after accounting for border sizes. If false the source image
+		is tiled.
+border_stretch:	If true stretch borders to fill decal size, if false the
+		borders are tiled.
+
+rect_red,
+rect_green,
+rect_blue:	The color attributes in RGB format when drawing the decal
+		rectangle. Values are 0 to 255. Only has effect when no image
+		is defined. To fill the rectangle set rect_fill true.
+rect_fill:	When true, the color rectangle is drawn filled. When false the
+		color rectangle is drawn with border sizes defined by the
+		border_X options.
+
+id:		Nickname to use for this widget, when grouping.
+
+Notes:
+------
+
+   Decals can overlap other widget types (even other decals), decals will
+   always be drawn under other widget types as they have their own layer.
+
+
+------------------------------------------------------------------------------
+Menus:                                                        [section:menus]
+------------------------------------------------------------------------------
+
+Skinned menus are made using the same method as a normal skin, the data file
+is usually name skindata_menu.
+
+Menu skins have the following unique conditions:
+
+List "menu" widget:
+-------------------
+
+A list widget with the key "menu" must be present, this list is used to
+display the menu items. The menu item text is displayed in the column with
+key "text". The menu list also supports a flag icon with 4 sections, those
+sections in order are:
+
+   Blank, Submenu indicator, toggled item Unchecked, toggled item Checked
+
+The list widget must also be sizeable (sizable = TRUE), so that it grows when
+the skin is sized to hold all menu items.
+
+The size of the menu list (as saved in the skindata file) should be such that:
+
+   Height (height = value) is equal the size required to display one (1) row.
+
+   Width (width = vale) is equal the size required to display 0 characters in
+                        the "text' column, and should include the width
+                        needed for the flag column (flag_column = value).
+
+Note: Lists have the ability to calculate the column widths right to left,
+      the ability was added specifically so that menus can have the flag
+      column on the right of the menu text. (columns_right_justify = TRUE)
+
+Menu background attributes:
+---------------------------
+
+The default skin skize should be the size needed to correctly hold the "menu"
+list widget. Since the skin will be automatically sized up from this default,
+the background should also scale well asthetically, use the approprate
+background options (has_border, border_left, etc.).
+
+The skin minimum size, maximum size, size increments, and sizeable flag are
+ignored. The final size is determined by the number of menu items and the menu
+item with the longest text description.
+
+For transparent menu simulation, set option transparent = TRUE.
+
+Submenus:
+---------
+
+Submenu skins can be different from the 'parent'. To do this set the "data"
+field for the "menu" list widget to the filename for the submenu's skindata
+file. All submenus of the parent will then use that skin.
+
+Other widgets:
+--------------
+
+All widgets other than the "menu" list work normally. Remember that a widget
+can be anchored to the bottom and right (anchor_bottom, anchor_right), so that
+it maintains it's respective position as the menu is automatically sized to
+accomodate the menu items.
+
+Note: If the application sets the menu as a child of a window, the menu will
+      inherit support of all the widgets the parent supports.
+
+
+------------------------------------------------------------------------------
+Flybys:                                                      [section:flybys]
+------------------------------------------------------------------------------
+
+The flyby windows (skindata_flyby) support all keys of the main window, as
+well as these text widget keys:
+
+now		Translated text for "now playing:"
+now_title	Title of currently playing song.
+now_artist	Artist of currently playing song.
+
+next		Translated text for "up next:"
+next_title	Title of the next song to be played.
+next_artist	Artist of the next song to be played.
+
+Also these buttons keys are unique to flybys:
+
+hide_flyby	Hides the flyby window immediately.
+
+------------------------------------------------------------------------------
+Sub Windows:                                             [section:subwindows]
+------------------------------------------------------------------------------
+
+Sub windows are those that are created when the "skin_open" button is pressed.
+To allow the user to close the window add a "skin_close" button to the window.
+
+These windows support all widget keys supported by the parent.
+
+
+============== EOF ==============
+

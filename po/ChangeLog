@@ -1,0 +1,14 @@
+2002-04-25  gettextize  <bug-gnu-utils@gnu.org>
+
+	* Makefile.in.in: Upgrade to gettext-0.10.38.
+
+Mon Sep  6 03:26:54 1999  John Ellis  <johne@bellatlantic.net>
+
+	* cs.po: Added Czech translation file from 
+	Tomas Prochazka <xprocha2@informatics.muni.cz>
+
+	* ja.po: Update Japanese po file from
+	Yuuki NINOMIYA <gm@smn.enjoy.ne.jp>
+
+
+

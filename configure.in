@@ -1,0 +1,111 @@
+AC_INIT(src/main.c)
+AM_CONFIG_HEADER(config.h)
+
+AM_INIT_AUTOMAKE(gqmpeg, 0.91.1)
+
+AM_MAINTAINER_MODE
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_STDC_HEADERS
+
+dnl this tests for japanese id3 tag support, which does not require iconv :-)
+AC_ARG_ENABLE(japanese, [  --enable-japanese       use japanese in ID3TAG [default no]],,enable_japanese=no)
+AC_MSG_CHECKING(whether to enable japanese)
+if test x$enable_japanese = xyes; then
+  AC_MSG_RESULT(yes)
+  AC_DEFINE(ENABLE_JAPANESE_TAGS)
+else
+  AC_MSG_RESULT(no)
+fi
+
+dnl this tests for russian id3 tag support, which does not require iconv :-)
+AC_ARG_ENABLE(russian, [  --enable-russian        use russian in ID3TAG [default no]],,enable_russian=no)
+AC_MSG_CHECKING(whether to enable russian)
+if test x$enable_russian = xyes; then
+  AC_MSG_RESULT(yes)
+  AC_DEFINE(ENABLE_RUSSIAN_TAGS)
+else
+  AC_MSG_RESULT(no)
+fi
+
+dnl reasonable guesses for where stuff is installed
+if test "x$prefix" = "xNONE"; then
+  prefix="/usr/local"
+else
+  prefix=$prefix
+fi
+
+AM_PATH_GTK_2_0(2.2.0,,AC_MSG_ERROR(GTK+ >= 2.2.0 not installed.))
+
+dnl Tru64 OSF1 mixer support (untested - advise of fixes)
+AC_CHECK_HEADERS(mme/mme_api.h,
+  AC_MSG_RESULT(Looks like Tru64 - setting needed flags)
+  CFLAGS="$CFLAGS -I/usr/include/mme"
+  CPPFLAGS="$CPPFLAGS -I/usr/include -I/usr/local/include -I/usr/include/mme"
+  LDFLAGS="$LDFLAGS -lmme"
+  AC_DEFINE(HAVE_OSFMME))
+
+dnl Test for libpng
+  if test -z "$LIBPNG"; then
+    AC_CHECK_LIB(png, png_read_info,
+      AC_TRY_CPP([#include <png.h>],
+        png_ok=yes,
+        png_ok=no),
+      AC_MSG_WARN(*** PNG library (libpng) not found ***), -lz -lm)
+      if test "$png_ok" = yes; then
+        AC_MSG_CHECKING([for png_structp in png.h])
+      AC_TRY_COMPILE([#include <png.h>],
+        [png_structp pp; png_infop info; png_colorp cmap; png_create_read_struct;],
+        png_ok=yes,
+        png_ok=no)
+      AC_MSG_RESULT($png_ok)
+      if test "$png_ok" = yes; then
+        PNG='png'; LIBPNG='-lpng -lz'
+      else
+        AC_MSG_WARN(*** PNG library (libpng) is too old ***)
+      fi
+    else
+     AC_MSG_WARN(*** PNG saving disabled --  skin editor will not be able to save 'internal' skins ***)
+    fi
+  fi
+  if test -n "$LIBPNG"; then
+    AC_DEFINE(HAVE_LIBPNG)
+  fi
+
+AC_SUBST(LIBPNG)
+
+dnl Video4Linux
+AC_CHECK_HEADER(linux/videodev.h, AC_DEFINE(HAVE_VIDEO4LINUX))
+
+dnl XFree86 Extended keyboard mappings
+AC_CHECK_HEADER(X11/XF86keysym.h,
+  AC_MSG_RESULT(Found XFree86 extended keymap symbols)
+  echo "*************************************"
+  echo "Internet keyboard support enabled."
+  echo "please see the README on how to map your internet keys with xmodmap"
+  echo "*************************************"
+  AC_DEFINE(HAVE_XF86_KEYSYMS, 1, Define if XFree86 is new enough to support it.))
+
+AC_DEFINE_UNQUOTED(GQMPEG_SKINDIR, "${prefix}/share/gqmpeg/skins")
+
+dnl locale location for po
+localedir='${datadir}/locale'
+AC_SUBST(localedir)
+
+ALL_LINGUAS="cs de fi fr ja pt_BR zh_TW"
+AM_GNU_GETTEXT
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CPPFLAGS)
+AC_SUBST(LDFLAGS)
+
+AC_OUTPUT([ m4/Makefile intl/Makefile po/Makefile.in
+Makefile
+gqmpeg.spec
+src/Makefile
+src/default_skin/Makefile
+plugin/Makefile
+skins/Makefile
+])
+

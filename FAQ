@@ -1,0 +1,217 @@
+FAQ (Frequently Asked Questions) for GQmpeg.         (last updated: 03-24-99)
+=== ---------------------------- === ======
+currently maintained by: John Ellis <gqview@geocities.com>
+
+Contents:
+=========
+
+1)  Basic troubleshooting and problems.
+
+  1.1 )  When I try to play a song, I get a 'mpg123 stopped sending data'
+         error, what's wrong?
+  1.2 )  When I play a song, the time display is not updated and the position
+         scrollbar does not work, what's wrong?
+  1.3 )  Sometimes when skipping or seeking within a song during playback,
+         GQmpeg prints a 'mpg123 reported: can't open /dev/dsp' error, and
+         drops into a paused state.
+  1.4 )  When loading a playlist with files on a cd-rom, it seems to take
+         forever, can I speed this up?
+  1.5 )  When I have a playlist with more than 999 songs, why are the song
+         counters not correct.
+  1.6 )  When using freeamp to emulate mpg123, why is GQmpeg's cpu utilization
+         display always zero?
+  1.7 )  When using GQmpeg as a shoutcast netscape plugin it crashes.
+  1.8 )  My home directory is across a network, and GQmpeg seems to be
+         constantly polling a file there, can I disable it?
+  1.9 )  When I attempt to load a skin other than the default, GQmpeg crashes,
+         why?
+  1.10)  Why isn't my video4linux radio card/tuner detected?
+  1.11)  Why is radio auto-scan not picking up any stations?
+
+2)  How do I ... ?
+
+  2.1 )  How do I do this via the keyboard?, what are the keyboard shortcuts?
+  2.2 )  How do I add an entire directory to a playlist? And how can I add
+         them recursively?
+  2.3 )  How do I play mpg123 through Esound?
+
+3)  Why isn't ... feature implemented / supported ?
+
+  3.1 )  Why do I have to use mpg123? I want to use another player engine.
+  3.2 )  The mixer/volume controls do not work, are they supported on my
+         platform?
+  3.3 )  Why is there no spectrum analyser?
+  3.4 )  Why is there no plugin support like other players?
+
+=============================================================================
+1)  Basic troubleshooting and problems.
+=============================================================================
+
+1.1 )  When I try to play a song, I get a 'mpg123 stopped sending data'
+       error, what's wrong?
+
+   Make sure you are using mpg123 version 0.59o or greater.
+
+   On FreeBSD, SGI IRIX 5.3, Linux/PPC, and most other non-x86 linux platforms
+   use mpg123 0.59q. When using 0.59o or 0.59p mpg123 needs to be compiled
+   with -DREAD_MMAP enabled in mpg123's Makefile.
+   (If you find this applies to other systems/platforms, contact me to have
+    that system added to this list)
+
+------------------------------------------------------------------------------
+
+1.2 )  When I play a song, the time display is not updated and the position
+       scrollbar does not work, what's wrong?
+
+   Make sure you are using mpg123 version 0.59o or greater.
+
+   On FreeBSD, SGI IRIX 5.3, Linux/PPC, and most other non-x86 linux platforms
+   use mpg123 0.59q. When using 0.59o or 0.59p mpg123 needs to be compiled
+   with -DREAD_MMAP enabled in mpg123's Makefile.
+   (If you find this applies to other systems/platforms, contact me to have
+    that system added to this list)
+
+------------------------------------------------------------------------------
+
+1.3 )  Sometimes when skipping or seeking within a song during playback,
+       GQmpeg prints a 'mpg123 reported: can't open /dev/dsp' error, and
+       drops into a paused state.
+
+   As of 0.4.4 this should be fixed.
+
+   There are reports that even versions after 0.4.4 have this problem
+   when used with the 2.2.0 Linux kernel.
+
+------------------------------------------------------------------------------
+
+1.4 )  When loading a playlist with files on a cd-rom, it seems to take
+       forever, can I speed this up?
+
+   Try disabling the reading of file headers and id3 tags on the General tab
+   of the configuration window. This should decrease the number of file
+   accesses when loading the playlist.
+
+------------------------------------------------------------------------------
+
+1.5 )  When I have a playlist with more than 999 songs, why are the song
+       counters not correct.
+
+   The Display is only capable of showing three digits, however playlists
+   with more than 999 songs work correctly.
+
+   Update: As of 0.5.0 skins can support more than 3 digits, using such skins
+           will fix the problem.
+
+------------------------------------------------------------------------------
+
+1.6 )  When using freeamp to emulate mpg123, why is GQmpeg's cpu utilization
+       display always zero?
+
+   Freeamp uses multiple threaded processes when running. The initial process
+   started by freeamp is the one monitored by GQmpeg, and is not the CPU
+   intensive decoder thread.
+
+------------------------------------------------------------------------------
+
+1.7 )  When using GQmpeg as a shoutcast netscape plugin it crashes.
+
+   Shoutcast support is currently buggy at best. Shoutcast requires
+   mpg123 0.59pre-p ... mpg123 0.59o WILL NOT WORK!
+   Not included in binary packages. See the shoutcast dir in the source code.
+
+------------------------------------------------------------------------------
+
+1.8 )  My home directory is across a network, and gqmpeg seems to be
+       constantly polling a file there, can I disable it?
+
+   Disable the 'allow command parsing...' option under preferences->general.
+   This will stop GQmpeg testing for a ~/.gqmpeg/command file every 3 seconds.
+
+------------------------------------------------------------------------------
+
+1.9 )  When I attempt to load a skin other than the default, GQmpeg crashes,
+       why?
+
+   Make sure GQmpeg was compiled with gtk 1.0.6 and imlib 1.8.x _or_
+   gtk 1.2.x and imlib 1.9.x. Do not mix gtk 1.0.6 and imlib 1.9.x!
+
+------------------------------------------------------------------------------
+
+1.10)  Why isn't my video4linux radio card/tuner detected?
+
+   Check that other radio programs work, examples are radio (included with
+   xawtv) and kradio. Radio is on supported under linux. The most common
+   problem is that video4linux it is not configured correctly - check that the
+   required kernel modules are being loaded when /dev/radio is accessed.
+
+------------------------------------------------------------------------------
+
+1.11)  Why is radio auto-scan not picking up any stations?
+
+   The radio/tv card (or it's driver) does not support or implement signal
+   strength reporting. Another cause are weak radio in your area - try
+   adjusting the antenna position.
+
+
+=============================================================================
+2)  How do I ... ?
+=============================================================================
+
+2.1 )  How do I do this via the keyboard?, what are the keyboard shortcuts?
+
+   Please see the README for a complete list of keyboard commands.
+
+------------------------------------------------------------------------------
+
+2.2 )  How do I add an entire directory to a playlist? And how can I add
+       them recursively?
+
+   Using the mouse, right click on a directory in the playlist window and
+   select the desired operation from the pop-up menu that appears.
+
+------------------------------------------------------------------------------
+
+2.3 )  How do I play mpg123 through Esound?
+
+   The easiest solution is to use the esound patched version of mpg123,
+   available on the Esound home page:
+
+                  http://www.tux.org/~ricdude/EsounD.html
+
+   mpg123 version 0.59q includes built-in Esound support. (compile option)
+
+=============================================================================
+3)  Why isn't ... feature implemented / supported ?
+=============================================================================
+
+3.1 )  Why do I have to use mpg123? I want to use another player engine.
+
+   Currently there is one other player that works with GQmpeg. Freeamp can
+   emulate mpg123's interface and therefore will work with GQmpeg. Freeamp
+   is available at www.freeamp.org
+
+------------------------------------------------------------------------------
+
+3.2 )  The mixer/volume controls do not work, are they supported on my
+       platform?
+
+   Currently the mixer/volume controls are known to work on Linux, FreeBSD,
+   and SPARC Ultra 1 w/ sun 2.5.1, patches to support other platforms will
+   be accepted.
+
+------------------------------------------------------------------------------
+
+3.3 )  Why is there no spectrum analyser?
+
+   GQmpeg is a frontend, and by nature does not have access to the sound's
+   data stream. (although this may be possible with Esound)
+
+------------------------------------------------------------------------------
+
+3.4 )  Why is there no plugin support like other players?
+
+   See 3.3 Update: this answer is subject to change :)
+
+=============================================================================
+FAQ (Frequently Asked Questions) for GQmpeg.                            (EOF)
+

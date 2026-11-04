@@ -1,0 +1,2978 @@
+Wed Apr  7 09:08:25 2004  John Ellis  <johne@verizon.net>
+  
+	* ui2_typedefs.h: Update SLIK version.
+	* README: Updates.
+	* configure.in: Release 0.91.1
+
+Tue Apr  6 02:55:40 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_text.c (x_font_convert_points_by_dpi): Check that the gtk setting
+	returns a valid (non zero) dpi, and fallback if needed.
+
+Mon Apr  5 14:38:46 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_editor.c: Fix order of free and widget destruction to avoid
+	crash in widget details.
+	* ui2_text_edit.c: Save text color information if font pointed to
+	by "font_id" does not contain an image.
+	* skin_default.c, skins/mrclean/skindata*: Update included skins to
+	use new font descriptions, updated the mrclean flyby.
+	* gqmpeg.spec.in, gqmpeg.desktop: Updated desktop file, spec file.
+	* README, TODO: Updates.
+	* configure.in: Release 0.91.0
+
+Mon Apr  5 05:05:59 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_editor.c, ui_tree_edit.[ch]: Updates from SLIK.
+	* utilops.c: Fix updating of previews in batch rename dialog.
+
+Sat Apr  3 12:46:22 2004  John Ellis  <johne@verizon.net>
+ 
+	* ui2_text.c: Scale text point sizes to result in pixel size always
+	equivelent to 96 dpi.
+ 
+Sat Apr  3 06:18:31 2004  John Ellis  <johne@verizon.net>
+
+	* display_menu.c, menu.c: Add mnemonics to menu items,
+	fix capitalization, change exit to quit.
+	* io_ogg123.c, playlist-dlg.c: Use stock buttons.
+	* playlist-window.c: Add accelerators to all buttons, significantly
+	speed up playlist view updates by setting columns to GROW_ONLY.
+	* utilops.c: Fix to show correct dialog.
+
+Sat Apr  3 04:29:47 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_button.h, ui2_display.c, ui2_editor.[ch], ui2_item.h, ui2_list.c,
+	ui2_list_edit.c, ui2_main.c, ui2_number.h, ui2_skin.c, ui2_text.[ch],
+	ui2_text_edit.c, ui2_typedefs.h, ui2_util.[ch], ui2_widget.[ch],
+	ui_pixbuf_ops.[ch], ui_tree_edit.c: Update to SLIK 0.91.0, highlights
+	include antialiased fonts via pango, new decal widget, many fixes.
+	* ui2_decal.[ch], ui2_decal_edit.[ch]: New files for SLIK 0.91.0.
+	* display.c: Set correct preset row flag.
+	* display_menu.c, menu.c: Use new preset_is_active() util.
+	* gqmpeg.g, main.c: Add new util preset_is_active().
+	* io_mpg123.c, io_ogg123.c, io_xmp.c, ipc.c: Use GIOChannel instead of
+	depreciated gdk_input_add.
+	* playlist-window.c: Fixes for GDK_DISABLE_DEPRECATED.
+	* playlist.c: Update the preset list display when loading or saving
+	the playlist.
+	* preferences.c: Use stock buttons, fix Skin adjustment frame, and use
+	helper utils to simplify window setup.
+
+Tue Mar 16 06:26:12 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_main.c, preferences.c: Update about window information.
+	* gqmpeg.1: Update contact info.
+	* gqmpeg.spec.in: Update RPM spec file.
+	* README: Updated.
+	* skin/Makefile.am: Fix skin installation paths.
+	* configure.in: Require gtk 2.2.0, release 0.90.0.
+
+Tue Mar 16 00:43:14 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_editor.c, ui2_main.[ch]: Updates from SLIK.
+	* ui2_logo.h: New.
+	* ui2_logo.xpm: Removed.
+	* main.c, ipc.c: Convert text to locale encoding before printing to
+	the terminal.
+	* playlist-window.c, preferences.c, window.c: Updates for window icons.
+	* src/Makefile.am: Add/remove logo files above.
+
+Mon Mar 15 23:26:14 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_editor.c, ui2_main.c, ui2_parse.c: Changes from SLIK.
+
+Mon Mar 15 23:09:47 2004  John Ellis  <johne@verizon.net>
+
+	* ui_fileops.c: use g_filename instead of g_locale to convert filename
+	encodings, add blurp about G_BROKEN_FILENAMES to warning dialog.
+
+Mon Mar 15 22:39:31 2004  John Ellis  <johne@verizon.net>
+
+	* playlist-window.c, playlist.c: Add a few sanity checks.
+
+Mon Mar 15 22:24:27 2004  John Ellis  <johne@verizon.net>
+
+	* dndutil.[ch]: Removed the uri utilities, and use the ones provided
+	by ui_bookmark instead.
+	* playlist-window.c: Use better uri utilities, fixes dnd bugs.
+	* ui_bookmark.c(uri_text_from_list): Only use a newline to separate
+	filenames instead of "\r\n" for plain text dnd.
+
+Mon Mar 15 22:00:46 2004  John Ellis  <johne@verizon.net>
+
+	* filelist.c, ipc.c, main.c, mpg_hdrutil.c, mpg_tagutil.c, playlist.c,
+	rcfile.c, skin_compat.c, skin_wamp.c: Convert filenames from utf8
+	before using lib functions, if necessary.
+	* ui2_*.c: Use pixbuf load utility which does correct thing with utf8
+	filenames.
+	* ui_fileops.c (encoding_dialog): Only try to use gtk if initialized.
+	* ui_help.c, ui_spinner.c: Convert filenames from utf8 if necessary.
+	* ui_tabcomp.h: Fix inconsistent argument name.
+	* playlist-window.c: Fix autoscrolling with dnd, reimplement editing
+	of titles and comments, fix save and restore of column widths.
+	* globals.c: Set the default column width string blank, so that
+	defaults are pulled from array in playlist-window.c.
+
+Mon Mar 15 18:51:45 2004  John Ellis  <johne@verizon.net>
+
+	* playlist-window.c: Fix selections, drag and drop, row movement.
+	* playlist.[ch] (playlist_insert_from_dir): New utility to insert dirs.
+
+Mon Mar 15 04:34:15 2004  John Ellis  <johne@verizon.net>
+
+	* playlist-window.[ch]: Converted to gtktreeview, still needs work
+	though.
+	* playlist.c: A few namespaces changed during above conversion.
+
+Sun Mar 14 23:33:32 2004  John Ellis  <johne@verizon.net>
+
+	* ogginfo.c, preferences.c: Convert clists to treeviews.
+
+Sun Mar 14 21:46:55 2004  John Ellis  <johne@verizon.net>
+
+	* menus.c: Set menu items to use stock icons where appropriate.
+	* playlist-dlg.c: Set stock buttons where appropriate.
+	* utilops.[ch]: Merged in version of this file from GQview, gaining
+	many new features and fixes.
+
+Sat Mar 13 06:25:57 2004  John Ellis  <johne@verizon.net>
+
+	* display_flyby.c, dndutil.c, io_mpg123.c, io_mpg123_cfg.c,
+	io_ogg123.c, io_ogg123_cfg.c, io_radio.c, io_radio_cfg.c,
+	io_xmp_cfg.c, main.c, mod_info.c, mpg_info.c, players.c,
+	playlist-dlg.c, playlist-window.c, preferences.c, preset-dlg.c,
+	songinfo.c, utilops.c, window.c: With the excpetion of GtkCList usage,
+	Make it all compile with -DG[GTK]_DISABLE_DEPRECATED.
+	* ui2_editor.c: Indent frame around treeviews in editor.
+	* ui2_main.c: Set about window as a dialog.
+	* TODO: Remind self to port clists to treeviews.
+
+Sat Mar 13 04:52:17 2004  John Ellis  <johne@verizon.net>
+
+	* ui2_*.c, ui_*.c: Merge in GTK 2 port completion of slik.
+	* ui_bookmark.[ch], ui_spinner.[ch,png], ui_tabcomp.png,
+	ui_tree_edit.[ch]: New files for new slik.
+	* ui_clist_edit.[ch], ui_tabcomp.xpm: Remove old files.
+	* display_menu.c: Fix return value.
+	* ogg_info.c, playlist-window.c: Temporarily disable inline editing,
+	until ported to GtkTreeView.
+	* src/Makefile.am: Build fixes for new SLIK.
+
+Mon Nov  3 13:30:49 2003  John Ellis  <johne@bellatlantic.net>
+
+	* [GTK2 Port]: Merged in changes from head.
+
+Tue Mar 11 11:40:59 2003  John Ellis  <johne@bellatlantic.net>
+
+        * ui2_editor.c: Test for NULL help_window, fixes crash when selecting
+        new widget after closing help.
+
+Wed Mar  5 10:38:22 2003  John Ellis  <johne@bellatlantic.net>
+
+	* window.c: Added #ifdefs for each symbol from XF86keysym.h, as which
+	ones are present depend on the version of X you have. Also added
+	F1 and Help keys to display help window.
+
+Sat Feb  1 23:28:03 2003  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updates.
+	* ui2_main.c, preferences.c: Copyright updates (new year).
+	* pr/*.po: Updated year for the above copyright strings.
+	* configure.in: Release 0.20.0
+
+Fri Jan 31 08:03:40 2003  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.c: In addition to F10, the Menu key now displays the
+	right click menu.
+
+Fri Jan 31 07:41:59 2003  John Ellis  <johne@bellatlantic.net>
+
+	* window.c: Added internet keyboard eject button (XF86Eject) to show
+	the playlist window (in addition to the media key). The XF86OpenUrl
+	button mapping will now display the open file dialog.
+	* README, TODO: Updates.
+
+Fri Jan 31 01:49:18 2003  John Ellis  <johne@bellatlantic.net>
+
+	* players.c: Do now allow playlist repeat to occur when 'play next
+	song on error' is enabled, to avoid a possible endless loop.
+
+Fri Jan 31 01:25:30 2003  John Ellis  <johne@bellatlantic.net>
+
+	* fr.po: Updated French translation,
+	submitted by Eric Lassauge <lassauge@mail.dotcom.fr>.
+
+Fri Jan 31 00:54:49 2003  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.[ch]: Updates to support new output format of ogg
+	tools 1.0 final, the release candidatei's format no longer supported.
+	* ogg_info.c: Updates, plus added the current approved standard ogg
+	comment fields (http://xiph.org/ogg/vorbis/doc/v-comment.html).
+
+Thu Jan 30 21:50:12 2003  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in, acconfig.h: Added test for XFree86 extended keyboard
+	symbols file, XF86keysym.h.
+	* window.c: Added support for the audio key extensions of XFree86.
+	* README: Documented which audio keys are supported by GQmpeg, and
+	added a brief howto section for mapping the keys so they work in X.
+
+Thu Nov 14 17:05:25 2002  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in, gqmpeg.spec.in: Use datadir for the locale path instead
+	of {prefix}.
+
+Wed Sep  4 19:07:52 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated with new version info.
+	* SKIN-SPECS: Fix typo.
+	* po/*.po: Make distcheck always touches these.
+	* configure.in: Release 0.19.0.
+
+Tue Sep  3 22:20:52 2002  John Ellis  <johne@bellatlantic.net>
+
+	* [GTK2 PORT]
+	* songinfo.c: Fixed close button size.
+
+Mon Sep  2 22:12:38 2002  John Ellis  <johne@bellatlantic.net>
+
+	* main.c(update_condition): Fixed bug where flyby would not display if
+	the delay between songs is 0 (off).
+
+Sun Sep  1 02:22:44 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.c: Fixed list row layer priority for forced transparency.
+
+Sun Sep  1 01:50:05 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.c: Ctrl key now allows focus movement off list widget.
+	* ui2_slider.c: Ctrl key for focus movement as above.
+	* ui2_skin.c: Added kayboard support for resize skins when focus is on
+	sizer button. Keys are shift left,up,right,down for size increments;
+	shift pgup,pgdown for min/max skin size; and shift home to return to
+	skins default size.
+
+Fri Aug 30 17:35:46 2002  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN-SPECS: Updates.
+
+Fri Aug 30 16:50:37 2002  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-window.c: Fixed slow removal of many selected songs.
+	* ui2_list.c: Fixed incorrect sending of row clicks
+	(was sending row number -1 clicks).
+	* [GTK2 port follows]
+	* globals.c, main.c, playlist.c: Minor formatting fixes.
+
+Tue Aug 27 23:34:24 2002  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c: Fixed prototype for timeout functions.
+	* gqmpeg.h, main.c(elapsed_run_time): New function for determining
+	elapsed time in 1000's of a second, needed for gtk2 version since the
+	old timer that returns a similar number is removed.
+	* io_xmp.c, playlist.c: Use new time function (above).
+	* ui2_editor.c, ui2_list.c, ui2_text.c: Specify timeouts to use an
+	idle priority.
+	* ui2_number.c: Fix incorrect offset when drawing numbers with all 9s.
+
+Tue Aug 27 18:16:37 2002  John Ellis  <johne@bellatlantic.net>
+
+	* dndutil.h: Fixed #ifdef header protection var name.
+	* players.[ch](player_module_id_exists): New function to determin id
+	id a valid number.
+	* playlist-dlg.c, playlist-window.c: Check all valid ids for possible
+	filter text, instead of stopping at first one that returns no text.
+	* window.c: Connect and handle delete_event on child windows.
+	* ui2_dial_edit.c, ui2_display.c, ui2_editor.c, ui2_list.[ch],
+	ui2_main.[ch], ui2_skin.c, ui2_text_edit.c, ui2_typedefs.h,
+	ui_pathsel.c, ui_tabcomp.c, ui_utildlg.c: Merged in SLIK 0.13.0,
+	includes several fixes. Added comment support to skin editor, speed up
+	window sizing and list scrolling.
+
+Tue Aug 20 18:48:21 2002  John Ellis  <johne@bellatlantic.net>
+
+	* [GTK2 port]
+	* *.[ch]: Merged in latest changes.
+	* ui_menu.c, ui_tabcomp.c, ui2_list.c, ui2_list_edit.c: Fixes from the
+	gtk2 slik version.
+
+Mon Aug 19 01:59:04 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated.
+	* po/*/po: make distcheck always touches these.
+	* configure.in: Release 0.18.0
+
+Sun Aug 18 19:26:37 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Added track number widget to skin spec.
+	* SKIN-SPECS: Document above track number widget.
+	* gqmpeg.h, main.c, playlist.[ch]: Added corresponding track number
+	retrieval functions.
+	* playlist-window.c: Added track number column, also went through and
+	made changing column order very easy by changing order of values in
+	playlist_view_config array.
+
+Sun Aug 18 02:03:02 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.[ch], mpg_info.c, mpg_tagutil.c: Added read/write support
+	of id3 v1.1 tags. Also fixed questionable tag writer implementation, it
+	was using spcaes to pad out text fields instead of NULLs.
+	* songinfo.[ch]: Added songinfo_add_spin utility, needed for track #s.
+	* typedefs.h: Added track field to SongData structures, still need to
+	add support to playlist and skin display (will do later).
+
+Sun Aug 18 00:41:12 2002  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.1: Fixed a man page formatting error.
+	* dock.c: Fix race condition in wm dock support, patch submitted
+	by BALATON Zoltan <balaton@eik.bme.hu>.
+
+Sat Aug 17 03:27:55 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Fixed focus tabbing order for the new window skins,
+	plus some cosmetic things.
+
+Sat Aug 17 01:24:12 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_main.c: Fixed the ui_mode_unique() util to test the ui's key
+	field instead of the skin mode kay as that may change with skin_toggle.
+	Also new windows via skin_open button now inherent all the parent's
+	callback functions.
+	* ui2_widget.[ch]: Added ui_widget_set_anchor() util.
+	* skin_default.c: Moved default widget to X fonts, added playlist
+	window, also added vertical window.
+	* default_skin/*.xpm: Fixes/cleanups to the default skin.
+	* default_skin/{back_playlist,back_vert,btn_down,btn_list,btn_sizer,
+	btn_up,btn_vert,itm_vcolon,list_back,list_flags,list_row}.xpm: New
+	images for the default skin.
+
+Thu Aug 15 01:06:29 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Made the flyby window 250 pixels wide, decreased by
+	35, it was a bit too wide.
+
+Wed Aug 14 20:15:39 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_dial.[ch], ui2_dial_edit.c: Added a fixed mode to dial widget.
+	* ui_pixbuf_ops.[ch](pixbuf_copy_area_alpha_with_clipping): New util
+	function, it pretty much does what it says.
+	* SKIN-SPECS: Added new fixed dial option comments.
+
+Wed Aug 14 15:53:23 2002  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN-SPECS: Added info for number and text rotation parameter.
+
+Wed Aug 14 04:30:06 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c, menu_back.xpm: Made the default skinned menu a bit
+	more defined around the edges.
+
+Wed Aug 14 04:06:00 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Made the default flyby a bit wider, to accomodate the
+	larger fonts to display the same approx. number of chars as before.
+
+Wed Aug 14 01:36:29 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_number.[ch], ui2_number_edit.c: Added rotation option for number
+	widget.
+	* ui2_text_edit.c: Fixed drawing of highlight when rotating text in
+	skin editor.
+	* skin_compat.c, skin_default.c, skin_wamp.c: Fixes for new number
+	rotation parameter.
+
+Mon Aug 12 22:14:34 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_compat.c, skin_default.c, skin_wamp.c: Fixes for new text
+	rotation parameter.
+	* ui2_list.c: Fixed for new font_draw rotation parameter.
+	* ui2_text.[ch], ui2_text_edit.c: Added ability to draw text widget
+	at 90, 180, and 270 degrees (rotated).
+	* ui_pixbuf_ops.[ch]: Added pixbuf manipulator for rotation of pixels
+	when copying.
+
+Fri Aug  2 16:41:59 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.c, ui2_list.c, ui2_main.[ch], ui2_menu.c, ui2_text.[ch],
+	ui2_text_edit.c, ui2_typedefs.h: SLIK 0.12.0 updates.
+
+Tue Jul 30 19:42:45 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Changed all text to use X fonts in the default skin.
+	* default_skin/letters.xpm: Removed text font file (see above).
+	* default_skin/Makefile.am(EXTRA_DIST): Removed letters.xpm.
+
+Wed Jul 17 14:47:02 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated.
+	* SKIN-SPECS: Updated for SLIK 0.11.0.
+	* po/*.po: make distcheck will touch these.
+	* configure.in: Release 0.17.0
+
+Wed Jul 17 12:41:20 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c: Fixes for zombie processes, and adjusted reported
+	bitrate to use nominal instead of average, based on patch
+	submitted by Tim Spalding <dominus@citcom.net>.
+
+Wed Jul 17 12:18:51 2002  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: On FreeBSD #include <machine/soundcard.h> should now be
+	<sys/soundcard.h>.
+	* po/zh_TW.po: Updated Chinese translation,
+	submitted by goldencat <goldencat@ezdelivery.net>.
+	* ui2_typedefs.h: Bumped SLIK to 0.11.0 to match SLIK proper.
+	
+
+Tue Jul 16 18:43:44 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Fixed menu window sizes for the default skin, also
+	made it work correctly in double size mode.
+	* ui2_editor.c: Show warning dialog that the editor will only work
+	with forced transparency, color shift, and double size off.
+	* ui2_list.c, ui2_text.c: Made new X fonts support color shifting.
+	* ui2_main.c: Mde the skin_expand button work correctly in double size.
+	* ui2_util.[ch](util_color): Added new util to apply color shifting to
+	rgba values.
+
+Tue Jul 16 17:12:06 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.[ch]: Added ui_edit_font_entry_new() utility.
+	* ui2_list_edit.c, ui2_text_edit.c: Use the new utility above for the
+	font entry field.
+
+Tue Jul 16 16:06:33 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_skin.[ch], ui2_typedefs.h: Added a scratch buffer utility for
+	both a pixbuf and a pixmap, for use by widgets so that they do not need
+	to create their own.
+	* ui2_text.[ch]: Use the scratch buffer when drawing the X fonts.
+	* ui2_list.c: font_draw() no longer takes a buffer argument.
+	* mrclean/skindata_submenu: Fixed the submenu of the mrclean skin.
+
+Sun Jul 14 19:23:35 2002  John Ellis  <johne@bellatlantic.net>
+
+	* mrclean/item-colon-[15,24].png: New images to replace timer colons.
+	* mrclean/item-std-[13,15].png: Removed old font images.
+	* mrclean/skindata[*]: Updated mrclean skin to use X fonts instead of
+	static images, should be more internationalization friendly now. Will
+	not 'switch' main skin until this version is out and tested...
+	* skins/Makefile.am: Updated files for above.
+
+Sun Jul 14 19:15:50 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.c, ui2_text.[ch]: Added option to fonts so that space
+	padding draw can be disabled when not needed.
+
+Thu Jul 11 14:17:41 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.[ch], ui2_list_edit.c: More work for X font support, editor
+	now supports it too.
+	* ui2_text.[ch], ui2_text_edit.c: The default font is now defined in
+	SLIK_DEFAULT_X_FONT, which is now public so that the list can use it
+	as well.
+
+Tue Jul  9 18:05:24 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_text.c: Added sanity check.
+	* ui2_list.[ch]: Started X font support for list widget, untested, old
+	image based fonts seem to work.
+	* ui2_list_edit.c: Simple compile fixes, X fonts unimplemented.
+	* ui2_menu.c: Fixed menu width calculations to use font_string_width to
+	work with new font method.
+	* skin_default.c: Fixes for new style list font setting.
+
+Tue Jul  9 14:58:38 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_compat.c, skin_default.c, skin_wamp.c: Fixes needed for new
+	width format of text widgets (now pixels instead of chars).
+	* ui2_parse.c: Fixed winamp skins from showing the alternate small mode
+	as the right click menu when skinned menus are enabled (funny little
+	bug :)
+	* ui2_text.c: Backwards compat fixes for font image rendering.
+	* ui2_text_edit.c: Fix compile warning (uninitialized pointer).
+
+Tue Jul  9 13:02:54 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_text_edit.c(text_edit_page_add_cb): Fix check for valid entry
+	items, fixes crash in skin editor when adding invalid font data.
+
+Sun Jul  7 20:52:27 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_parse.c: Fix return value.
+	* ui2_text.[ch], ui2_text_edit.c: Added X font support to text widget.
+	* ui_pathsel.c, ui_tabcomp.c: Set combo history case sensitive.
+	* ui_utildlg.[ch]: Fix cancel button addition such that dialogs do
+	not resize visibly on screen upon show.
+
+Wed Jul  3 08:57:27 2002  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, configure.in: Upgrade to gettext 0.11.1
+	* autogen.sh: Added gettextize command options.
+	* po/Makevars: New file for new gettext.
+	* po/fr.po, pt_BR.po, zh_TW.po: Fixes needed for new gettext.
+
+Mon Jun 10 00:38:40 2002  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-window.c(update_history_menu): Fix incorrect string passed
+	to a signal handler for selection of the root directory.
+
+Fri May  3 18:51:55 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updates.
+	* ui2_typedefs.c: SLIK 0.10.0
+	* configure.in: Release 0.16.0
+
+Fri May  3 17:58:40 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c: Made changes based on patch from
+	Luke Mewburn <lukem@netbsd.org>, including: fixes for filenames with
+	chars that may conflict with shell escapes, support bitrate reporting
+	of newer ogg123, and report a more accurate bitrate.
+	* ui2_parse.c: Fixed a file descriptor leak when loading a skin
+	(see? strace is useful afterall - once you trim the output :)
+
+Fri May  3 15:47:01 2002  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.[ch]: Added btn_save_pressed.
+	* display.c: Added open_file, open_playlist, open_custom, and
+	save_playlist keys to the skin spec.
+	* display_menu.c, menus.c: Added save playlist menu item.
+	* SKIN-SPECS: Updated for above.
+
+Fri May  3 15:21:33 2002  John Ellis  <johne@bellatlantic.net>
+
+	* dndutil.c, playlist-window.c: Changed back to only unescaping uris
+	from netscape drops.
+
+Thu May  2 17:59:37 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skins/mrclean/text-std-15-bold.png: Softened the font a bit for the
+	mrclean skin.
+
+Thu May  2 17:31:58 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.[ch], io_radio_cfg.c: Added configuration of radio device.
+
+Thu May  2 15:12:43 2002  John Ellis  <johne@bellatlantic.net>
+
+	* cpu_perc.c: Use fgets in place of fread to guarantee a nullified
+	string, also fix possible overruns (linux only). Also commented to
+	what #endif belongs to what #if, this is kind of messy...
+	* main.c: Now unrecognized command line options do not cause the
+	program to exit, esp. since they may be valid when we get to gtk_init.
+
+Thu Apr 25 22:18:04 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui_fileops.[ch], ui_utildlg.[ch]: Updates from SLIK.
+
+Thu Apr 25 21:20:50 2002  John Ellis  <johne@bellatlantic.net>
+
+	* dndutil.c: uri_get_list now always check fro escaped characters (%),
+	also fixed uri_parse_encoded_chars to be sane.
+	* playlist-window.c: No longer need to call uri_parse_encoded_chars.
+
+Thu Apr 25 18:32:35 2002  John Ellis  <johne@bellatlantic.net>
+
+	* [GTK2 port]
+	* ui2_skin.c(resize_skin): Removed gdk-critical warning by checking
+	that window->window is not NULL.
+
+Thu Apr 25 18:18:24 2002  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN-SPECS: Fix section tag for digit chapter.
+
+Thu Apr 25 17:49:13 2002  John Ellis  <johne@bellatlantic.net>
+
+	* [GTK2 port]
+	* io_ogg123.c: Register a monospace tag before attempting to use one.
+	* playlist-window.c: Changed the drag and drop button from 2 to 1, it
+	sort of works now, but apparently this is the best we can do until all
+	the clists are ported to gtk_tree_views.
+
+Thu Apr 25 17:26:09 2002  John Ellis  <johne@bellatlantic.net>
+
+	* [GTK2 port]
+	* ui2_button.c, ui2_dial.c, ui2_display.c, ui2_editor.c, ui2_item.c,
+	ui2_list.c, ui2_list_edit.c, ui2_main.c, ui2_menu.c, ui2_number.c,
+	ui2_parse.c, ui2_slider.c, ui2_text.c, ui_help.c, ui_tabcomp.c,
+	ui_utildlg.c: Merge in the SLIK GTK2 changes.
+	* display_flyby.c: Do our own version of gtk_widget_popup.
+	* io_ogg123.c: Use the new gtk_text_view in place of gtk_text.
+	* io_xmp.c: Use g_get_current_time in plase of gdk_time_get.
+	* playlist-window.c: Setting the paned handle size is no longer needed,
+	or allowed.
+	* playlist.c: Use the new gtk_text_view in place of gtk_text.
+	* preferences.c: Fix the button box spacing, and center justify the
+	about window labels.
+	* preset-dlg.c: Simply use an hbox in place of a button_box, as that
+	now makes the window unnecessarily large.
+	* skin_compat.c: gdk_pixbuf_new_from_file now has a gerror parameter.
+	* skin_wamp.c: Ditto.
+	* src/Makefile.am: The gdk-pixbuf flags are no longer needed as it is
+	now part of gtk proper.
+	* configure.in: Now test for gtk2, removed gdk-pixbuf test (as above).
+
+Thu Apr 25 17:07:35 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123_cfg.c, main.c, mpg_info.c, ogg_info.c: Fixes for const *'s
+	and proper signal casting.
+	* skin/mrclean/skindata_flyby: Removed blank focus line.
+
+Thu Apr 25 16:04:25 2002  John Ellis  <johne@bellatlantic.net>
+
+	* mrclean/skindata_about: Removed the blank focus = line.
+	* ui2_editor.c: Fixed the cause of the blank focus line (above).
+	* ui2_widget.c, ui_clist_edit.c, ui_menu.c, ui_pathsel.c, ui_tabcomp.c:
+	Fixes from slik.
+
+Fri Mar 22 21:04:56 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.c: Guard all the signal handlers against ui->skin == NULL
+
+Sun Mar 17 17:25:11 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README, SKIN-SPECS: Updates.
+	* configure.in: Release 0.15.0
+
+Sun Mar 17 16:56:58 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Added next/back buttons to the flyby.
+	* btn_snext.xpm, btn_sprev.xpm: The new buttons (above).
+	* ui2_typedefs.h: SLIK 0.9.0.
+
+Sun Mar 17 03:36:26 2002  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.[ch], display_menu.c, menus.c, ui2_editor.c, window.c: Fix
+	skin editor menu item such that the editor opens to the skin that the
+	menu was opened on.
+	* mrclean/skindata_about, skindata_extra: Added about window to the
+	mrclean skin ;).
+
+Sun Mar 17 01:09:53 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: When resetting song info widgets, use any available info.
+	* display_flyby.c: Added right click menu to flyby.
+	* ui2_main.[ch], ui2_typedefs.h: Added signal fo when new subwindows
+	are opened.
+	* window.c: Use the new signal (above) to set the window title and add
+	keyboard shortcuts.
+	* mrclean/skindata_*: Made the backgrounds cleaner, and some button
+	alignment changes.
+
+Sat Mar 16 01:28:07 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_main.c: Properly set start up status of expander buttons.
+	* mrclean/skindata_extra, blue-handle-24.png,
+	btn-expand-toggle-20-h.png, item-ab-static.png,
+	item-repeat1-static.png, item-volume-static.png: Added the 'Extra'
+	window.
+	* mrclean/btn-rnd-clr-26-handle3.png: Removed.
+	* mrclean/skindata_playlist: Use something that actually looks like
+	you can drag the corner to resize the window.
+
+Fri Mar 15 19:15:29 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display_flyby.c: When hovering with mouse, or interacting with the
+	window, do not hide the window.
+	* display_menu.[ch], menus.[ch]: For group windows, show a close window
+	menu item.
+	* ui2_main.c: Clean up child windows when changing to a different skin.
+	* window.c: Menu functions added a ui variable.
+	* mrclean/skindata, skindata_flyby, skindata_playlist: Added a playlist
+	window, added next/prev buttons to the flyby.
+	* mrcleab/blue-soft-round-logo.png, btn-rnd-clr-16-*.png,
+	btn-rnd-clr-26-dn.png, btn-rnd-clr-26-handle3.png,
+	btn-rnd-clr-26-list.png, btn-rnd-clr-26-up.png, bubble-slider-16-v.png,
+	list-clear-back.png, ist-clear-flags.png: New image files.
+
+Fri Mar 15 01:39:42 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch]: Added "playlist" text widget to display playlist
+	filename.
+	* display_flyby.c, display_menu.c: Set these as children of the main
+	window.
+	* playlist-window.c: Update the display playlist text on playlist
+	change.
+	* ui2_dial.c, ui2_slider.c: Use the new ui_widget_for_each_key_one().
+	* ui2_editor.c: Fix bug clearing skindata entry when setting it's list.
+	* ui2_main.[ch], ui2_skin.c, ui2_typedefs.h, ui2_widget.[ch]:
+	Implemented ui grouping, such that all ui widget are updated from
+	the parent. Also implemented the skin_open and skin_close buttons, as
+	they required grouping to work.
+	* ui2_menu.[ch]: Changed needed for grouping addition.
+
+Mon Mar 11 19:31:06 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display.c, dndutil.c, io_radio.c, io_radio_cfg.c, menus.c,
+	playlist-window.c, preferences.c, preset-dlg.c, window.c: Semantic
+	fixes found when porting to gtk 2.0 for GQoob.
+	* main.c: Fixed command line path handling, adding file with glob and
+	only by specifying filename in current dir should now work (oops).
+
+Mon Mar 11 02:54:50 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.c, ui2_typedefs.h: Use the help_window from ui_help.c.
+	* ui_help.[ch]: Added accessor to the vbox.
+	* ui2_number.c, ui2_text.c: Init the subwidgets from the ones that need
+	them.
+
+Sun Mar 10 03:45:31 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated.
+	* ui2_menu.c: Return sane value so we do not attempt to destroy a menu
+	over and over again.
+	* ui2_typedefs.h: Bumped SLIK to 0.8.1.
+	* io_mpg123.c: Added .m2a to file extensions of mpg123.
+	* mrclean/[skindata, btn-rnd-clr-26-toggle.png, item-pda-*-static.png,
+	item-clear-load-aa.png: Some cleanups for blockiness, incorrect
+	prelight shadow, and added a loading indicator.
+	* configure.in: Release 0.14.1
+
+Sat Mar  9 14:01:03 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui_pixbuf_save.c: Wrap png.h include to protect when HAVE_LIBPNG is
+	false.
+
+Fri Mar  9 00:29:29 2002  John Ellis  <johne@bellatlantic.net>
+
+	* po/POTFILES.in: Added new files.
+	* po/*.po: The usual make distcheck updates. (after fighting broken
+	autoconf, and finally downgrading to one with a working distcheck).
+	* skins/Makefile.am: Install fixes.
+	* configure.in: Release 0.14.0
+
+Fri Mar  8 22:38:15 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated.
+	* SKIN-SPECS: Added new list and focus options, added menu skin
+	section.
+
+Fri Mar  8 20:54:55 2002  John Ellis  <johne@bellatlantic.net>
+
+	* po/fr.po: Updated French translation,
+	submitted by Eric Lassauge <lassauge@mail.dotcom.fr>
+
+Fri Mar  8 20:29:57 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch]: Optimized the list widget row data retrieval, and now
+	when it does request data, the info loaded on demand (below).
+	* playlist-dlg.c, preset-dlg.c: Added more types to the filter list.
+	* playlist.[ch]: Added proper background on-demand loading support.
+	* playlist-window.c: Use new background info loader (above).
+	* ui2_menu.c: Some submenu offset fixes.
+
+Fri Mar  8 18:09:43 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.c: Set rows to default sensitive, and set the step size for
+	related sliders.
+	* ui2_menu.c: More navigation work.
+	* display_menu.c: Added dividers to match un-skinned menu. Also made
+	preset menu indicate active preset.
+	* menus.c: Same preset menu stuff as above.
+	* globals.c: Decided to keep built-in skin as the default...
+
+Fri Mar  8 00:52:09 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.c: Minor motion return value change.
+	* ui2_list.[ch]: Added menu motion hint reporting, left/right
+	arrow keys send motions too.
+	* ui2_menu.h: Added preview member pointer, ui2_menu.c will be fixed
+	soon, decided to not commit the mess I made of it.
+
+Thu Mar  7 20:03:46 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.[ch], ui2_list_edit.c: Added a right justify columns option.
+	* ui2_menu.c: Fixed alignment and implemented the submenu go_left flag.
+	Added support allowing list to specify the submenu's skin.
+	* skin_default.c: Fix up the menus to use the new alignment of lists.
+	* mrclean/skindata_menu: Same.
+	* mrclean/skindata_submenu: Added a submenu skin.
+
+Thu Mar  7 17:10:14 2002  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c: Add useful skindata keys to the editor.
+	* skin_default.c, focus.xpm: Fixed focus tabbing order, and the focus
+	image itself.
+	* ui2_editor.c: Update new widgets when adding them.
+	* ui2_text_edit.c: Fix bug preventing display of fonts when importing.
+
+Thu Mar  7 05:23:05 2002  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in, Makefile.am: Added new skins dir.
+	* skins/Makefile.am: Ditto.
+	* skins/mrclean/*: New skin now in distro!
+	* globals.c: Changed the default skin to mrclean, note that the
+	built-in default will not change.
+
+Thu Mar  7 04:46:55 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display_flyby.c, display_menu.c: Fall back to the default skin when
+	loading from the active skin path fails.
+	* mpg_hdrutil.c: Increased ID3 v2 tag skip to 64k (from 16) - if your
+	file has a tag longer you are defeating the whole point of mp3s.
+	* ui2_parse.c: Read in the correct key for the focus image (focus).
+
+Tue Mar  5 21:13:11 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_slider.[ch]: Added keyboard support to slider. Supports arrows,
+	page up/down, and home/end. Also added step size option, for use with
+	the keys. There is a small delay before the change takes effect so that
+	repeated keypresses will not cause an update on each press, but only
+	when done. If your key repeat rate delay is greater than 333 ms your
+	screwed - so just tap real fast :) 500 seemed too long.
+	* display.c: Set the step_size to that of 1 second, page size to 10.
+
+Tue Mar  5 19:25:47 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.c: Fixed keyboard focus movement, add tab support.
+	Implemented the focus border image option.
+	* ui2_editor.c: Finished focus support in the skin editor, fixed a few
+	bugs related to this.
+	* ui2_util.[ch]: Added util_pixbuf_copy_border_clipped().
+	* ui_pixbuf_ops.[ch]: Added pixbuf_copy_fill_alpha_offset(), allows
+	initial offset into source image.
+
+Tue Mar  5 01:15:14 2002  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.[ch]: Added default skin menu support.
+	* default_skin/menu_*.xpm: New files for above.
+	* ui2_list.[ch]: Added support for setting rows insensitive, currently
+	only effects drawing - not focus (yet).
+	* ui2_menu.[ch]: Implemented submenus - still needs a bit of work.
+	* display_menu.[ch]: The glue to the skinned menus should be pretty
+	much complete.
+
+Mon Mar  4 18:18:28 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display_flyby.[ch]: More work, looks rather complete now.
+	* globals.c, gqmpeg.h, preferences.c, rcfile.c: Added options to enable
+	flybys (off by default), set which corner flybys are in, made skinned
+	menus optional (off by default), and made keyboard focus for skins
+	optional (on by default).
+	* window.c: Honor the skinned menus user option.
+	* skin_default.[ch]: Added flyby support to defautl skin.
+	* default_skin/flyby_back.xpm: The flyby background.
+
+Sun Mar  3 23:17:29 2002  John Ellis  <johne@bellatlantic.net>
+
+	* display_flyby.[ch]: When the song is automatically changed, this
+	displays a breaif flyby window in a corner of the screen showing the
+	current song title and artist. Still needs to be made optional.
+	* ui2_util.[ch]: Move the clip region function here from ui2_display.c,
+	also fixed a bug (typo) in it.
+	* ui2_display.c: Use the new clip_region function.
+	* ui2_skin.c: Do not allow NULL keys to be passed to the skin_*for_each
+	functions, to protect the strcmps (NULL keys _are_ considered a bug,
+	but hey, it happened to me :)
+	* main.c: Hooked up necessary calls for the flyby.
+
+Sat Mar  2 00:42:16 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_menu.[ch]: Beginnings of skinnable menus.
+	* ui2_display.c: Fixes.
+	* ui2_list.[ch]: Small fix, plus added selection mode to work better as
+	a menu list.
+	* window.c: Temporarily force skinned menus. Will make optional
+	shortly.
+	* display_menu.[ch]: The skinned menu is generated here, submenus are
+	still not implemented.
+	* Makefile.am: Added new files.
+
+Thu Feb 28 18:21:23 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.c: Fixed focus draw bug, added F10 key to emit mouse
+	button 3 click (used by pop-up menus), and added chack to shift-tab
+	vs. plain tab.
+	* ui2_main.c: Reset widget references when changing skin.
+	* ui2_list.[ch]: Added keyboard focus support.
+	* window.c: Set the keyboard handler on the display widget instead
+	of the main window, it was interfering with the keyboard focus
+	handlers.
+
+Wed Feb 27 20:16:04 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.[ch], ui2_parse.c, ui2_skin.c, ui2_typedefs.h: More focus
+	work.
+	* ui2_editor.c: Added focus tab to add... dialog and background info,
+	still needs work to better support/adjust focus images.
+	* skin_default.c, focus.xpm: Added focus image to default skin.
+
+Tue Feb 26 21:50:23 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_display.[ch], ui2_main.c, ui2_typedefs.h, ui2_widget.[ch]: Added
+	basic keyboard navigation of widgets. Currently draws ugly red
+	rectangle around them.
+	* ui2_button.c: Added support for spacebar to activate buttons.
+	* ui2_dial.c, ui2_editor.c, ui2_item.c, ui2_list.c, ui2_number.c,
+	ui2_slider.c, ui2_text.c: There was a minor API extension, these needed
+	fixing for it.
+	* window.c: Spacebar no longer toggles pause/play, it now interferes
+	with the widget that has focus. (note fix to re-enable when focus
+	handling is disabled).
+
+Tue Feb 26 02:36:38 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updates.
+	* po/*.po: Most likely make distcheck will touch these.
+	* configure.in: Release 0.13.0
+
+Tue Feb 26 00:51:36 2002  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.[ch]: Added playlist_update_by_data_full(), needed for on
+	demand song info loading.
+	* playlist-window.c: As playlist items are selected, loaded song info
+	if it has not been loaded yet.
+
+Tue Feb 26 00:13:36 2002  John Ellis  <johne@bellatlantic.net>
+
+	* po/fr.po: Updated French translation,
+	submitted by Eric Lassauge <lassauge@mail.dotcom.fr>.
+	* po/fi.po: Added Finnish translation,
+	submitted by Lauri Nurmi <lanurmi@iki.fi>
+	* configure.in: Added fi to LINGUAS, updated test for another try to
+	be successful on Tru64.
+	* io_mpg123.c (handle_warnings): Added checks for more warnings.
+
+Mon Feb 25 19:31:35 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.c: Made the progress bar in the 'generate list' dialog
+	useful by indicating actual progress through skins.
+
+Mon Feb 25 17:14:33 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_button.c: Pass correct channel (3) to pixbuf_copy_channel.
+	* ui_pixbuf_ops.c (pixbuf_copy_channel): Fix to avoid copying past
+	end of pixel buffer.
+
+Mon Feb 25 00:06:21 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ui*.[ch]: Upped to SLIK 0.7.0.
+	* skin_default.[ch]: The default skin stuff is now in this new file.
+	* window.c: Hook up new default skin handler.
+	* skin_compat.c, skin_wamp.c: Fixed the widget_new() functions to the
+	new semantics (I hope I did not miss any, the compiler will not see
+	these kind of changes being missed).
+	* rcfile.c: Fix rc save bug introduced when I removed sprintf calls.
+	* Makefile.am: Removed ui2_default/init.[ch], added skin_default.[ch].
+
+Fri Feb 22 12:48:35 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Fixed a file descriptor leak (oops), also set the fd
+	pointers to -1 after closing them.
+	* io_ogg123.c: Did no have a leak, instead only set closed fd to -1.
+	* playlist.c: When loading playlist in strict mode, relaxed check to
+	only need to match "# GQ" in the first line of the playlist, this way
+	GQoob playlists can be loaded too.
+
+Fri Feb 22 12:29:33 2002  John Ellis  <johne@bellatlantic.net>
+
+	* mpg_info.c: Support the blank genre option for ID3 tags, index 255.
+	* playlist.c: Small adjustment to a strcmp.
+
+Mon Feb 18 02:06:51 2002  John Ellis  <johne@bellatlantic.net>
+
+	* cpu_perc.c, io_mpg123.c, io_ogg123.c, io_xmp.c, preferences.c,
+	rcfile.c: Use the safer strncpy and snprintf where appropriate to
+	avoid buffer over-runs.
+	* gqmpeg.h: The rc file name is now a define.
+	* main.c: Use defines for session playlist.
+
+Sat Feb  2 08:03:06 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c, ogginfo.c: Made the tests for TITLE, ARTIST, etc. case
+	insensitive.
+
+Tue Jan 29 06:41:20 2002  John Ellis  <johne@bellatlantic.net>
+
+	* mpg_hdrutil.c(get_mpg_header_info): If an ID3v2 tag is found,
+	countinue search further into the file. Currently it still gives up at
+	1K for normal files, and now 16k for ID3v2 files.
+
+Tue Jan 29 06:04:31 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README, gqmpeg.1: Updated.
+	* configure.in: Release 0.12.1
+
+Sun Jan 27 08:39:28 2002  John Ellis  <johne@bellatlantic.net>
+
+	* po/pt_BR.po: Fixed charset to make gettext 0.10.38 happy.
+
+Sun Jan 27 06:28:31 2002  John Ellis  <johne@bellatlantic.net>
+
+	* po/fr.po: Updated French translation,
+	submitted by Eric Lassauge <lassauge@mail.dotcom.fr>
+	* gqmpeg.spec.in, gqmpeg.desktop: Added French translations.
+
+Sun Jan 27 05:55:30 2002  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-window.c: The playlist now scrolls when hovering near top
+	or bottom during drag and drop.
+	* playlist.[ch]: Directory contents are now sorted before adding to
+	the playlist. Also use path_list() util instead of direct diropen.
+
+Sun Jan 27 04:05:25 2002  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Added --geometry +|-xxx+|-yyy command line option, also
+	clarified strcmp tests in command line parser.
+
+Mon Jan  7 06:19:23 2002  John Ellis  <johne@bellatlantic.net>
+
+	* ipc.[ch]: Added ipc_status_send() to send arbitrary text across
+	status fifo.
+	* playlist.c: Playlist loading start and end is now sent on ipc status
+	pipe.
+
+Mon Jan  7 04:16:20 2002  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c: Well it actually helps to test features when you add
+	them, m3u file tags are #EXTM3U (not EXTM30) and the comma should
+	not be included in the title text :/
+	* display.c: Add guard against mainwindow == NULL in all display_set
+	functions, as in startup some of these are actually called.
+	* io_mpg123.c: Only set song comments to http stream base urls when the
+	comment is empty (NULL).
+
+Mon Jan  7 03:33:38 2002  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c: Place quotes around the pathnames passed to the popen
+	calls so that paths with spaces actually work (oops).
+	* ipc.c: Update the display when ipc sets the volume.
+	* configure.in: Removed useless test.
+	* gqmpeg.desktop: Added pl translation.
+
+Thu Jan  3 15:37:32 2002  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in: Release 0.12.0
+
+Thu Jan  3 05:04:19 2002  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Removed old window placement code.
+	* ui2_main.[ch]: Added function ui_moveable_set(), and fix ui_show_cb
+	to honor the allow_move flag.
+	* window.c: Set ui moveability (this a word?) FALSE when in dock mode.
+	* ui_typedefs.h: SLIK 0.6.3.
+
+Thu Jan  3 03:55:28 2002  John Ellis  <johne@bellatlantic.net>
+
+	* po/zh_TW.po: Added Traditional Chinese translation,
+	submitted by Ryan Cheng<ryan@chinese2000.sniic.com>
+	* configure.in (ALL_LINGUAS): Added zh_TW.
+
+Thu Jan  3 03:48:01 2002  John Ellis  <johne@bellatlantic.net>
+
+	* README, gqmpeg.1: Updated email contact info, copyright years.
+	* *.[ch]: Updated copyrght year header.
+	* preferences.c, ui2_main.c: Updated contact address in about dialogs.
+
+Sun Dec 30 21:25:53 2001  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.[ch], typedefs.h: Added ability to customize the title and
+	comment fields of a playlist entry. Loading of titles from m3u format
+	files is also supported now (#EXTM30 and #EXTINF: lines only). Title
+	and comments are saved as #TITLE: and #COMMENT: lines, respectively,
+	prior to the path/URL line of the song. Also added
+	SONG_FLAG_CUSTOMIZED for customized songs.
+	* menus.c, playlist-window.[ch]: Added to right click menu choices for
+	customizing title and comment fields. Added push-pin icon to mark
+	customized entries in the playlist window (to remove customization
+	enter blank text).
+	* ui_clist_edit.c: Scroll clist horizontally to optimally align the
+	pop-up entry over the list window.
+	* icon-custom.xpm: Added the push-pin icon.
+	* src/Makefile.am (EXTRA_DIST): Added icon-custom.xpm.
+	* gqmpeg.spec.in: Updated to newer format, better use of path vars.
+
+Fri Dec 14 20:23:18 2001  John Ellis  <johne@bellatlantic.net>
+
+	* README, preferences.c, ui2_main.c: License clarification.
+	* ui_fileops.c (file_in_path): Fix mem leak.
+
+Wed Dec  5 15:36:32 2001  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.1: Added additional See ALSO pages.
+
+Sun Nov 18 06:20:22 2001  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am: Install the README with SKIN-SPECS file.
+	* README: Added section keys.
+	* gqmpeg.h, main.c, menus.c: Added help window, it merely displays the
+	README file.
+	* ui_help.[ch]: New files includes util to load a text file in a window
+	and scroll to a key marked by [section:key].
+	* songinfo.c: Changed a gtk_box_pack to a gtk_container_add.
+
+Sun Nov 18 04:13:00 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.[ch]: Added info and comment support (through ogginfo and
+	vorbiscomment) to ogg files.
+	* ogg_info.c: Move the ogg file info window here, and added info
+	display and comments editor.
+	* songinfo.[ch]: Added utils for song info windows.
+	* mod_info.c, mpg_info.c, io_radio.c: Fixes to use new utils from
+	songinfo.h.
+	* Makefile.am: Added ogg_info.c.
+
+Fri Nov 16 14:05:22 2001  John Ellis  <johne@bellatlantic.net>
+
+	* window.c: Added grey keypad +,- control of volume, balance.
+
+Fri Nov 16 10:39:27 2001  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, playlist.c, ui2_editor.c: Change back to rand() from random()
+	as rand() is actually portable.
+
+Mon Nov 12 18:46:17 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui_clist_edit.[ch]: Added utils for g_lists and clist row styles.
+	* ui_pathsel.c: Moved uig_list_insert_link() out to ui_clist_edit.
+
+Fri Nov  9 00:43:21 2001  John Ellis  <johne@bellatlantic.net>
+
+	* README, configure.in: Release 0.11.0
+
+Thu Nov  8 23:35:53 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui_menu.[ch]: Added more menu item utils.
+	* filelist.c: Include playlist files in the filter check.
+	* globals.c, gqmpeg.h, menus.[ch], playlist-window.c, window.c: All
+	menus are now created dynamically, removed global menu pointers, when
+	no song is active disable song manipulation menu items. Added
+	'Repeat 1' menu toggle, changed 'Time Display' to more descriptive
+	'Time Total'.
+	* preferences.c, preset-dlg.c: Removed calls to update menus (above).
+
+Thu Nov  8 22:20:20 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_skin.c, ui2_util.[ch]: Attempts to optimize image grabs of the
+	root window.
+
+Thu Nov  8 20:59:20 2001  John Ellis  <johne@bellatlantic.net>
+
+	* preferences.c: Made ok, apply, and cancel button sizes consistent.
+	* menus.c, playlist-dlg.c, playlist-window.c: Changed Load to Open.
+
+Thu Nov  8 19:47:47 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui_utildlg.c: Changed the vertical spacing on dialogs (same dialog
+	size, moved some space from above the buttons to top of window).
+	Also aligned buttons right and made them bigger.
+
+Thu Nov  8 02:23:32 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Decided to only set the chack_data timeout once, and for
+	a 1 second interval, then do the timeout calc there.
+
+Thu Nov  8 01:45:30 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Rewrote method of reading the pipe from mpg123. Also
+	simplified the parsers and tried to guard against buffer over-runs.
+	NOTE: will have to check released 0.10.0, but I think handling the
+	input from mpg123 immediately (as opposed to a timeout) is causing
+	occasional skips in the music :-[
+
+Wed Nov  7 22:59:33 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Moved from a timeout to an input_read handler to parse
+	mpg123's input faster (without delays).
+
+Wed Nov  7 10:16:48 2001  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Fixed usage of item_animation_step() to work with the
+	fixed (and now correct) reset flag.
+	* io_radio.c: Updated using gqradio's version as a guide - primarily
+	adds more error reporting and changes frequency handling from floats to
+	doubles.
+	* preferences.c: Removed direct opendir usage for path_list() util.
+
+Wed Nov  7 07:31:39 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_widget.[ch]: Made ui_widget_for_each_key() public.
+	* ui2_dial.c, ui2_slider.c: Fix the item link key.
+
+Wed Nov  7 06:39:43 2001  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN-SPECS: Updated.
+	* ui2_display.c, ui2_editor.c, ui2_item.[ch], ui2_list.[ch],
+	ui2_main.[ch], ui2_parse.h, ui2_skin.c, ui2_typedefs.h, ui2_util.c,
+	ui2_widget.[ch], ui_utildlg.c: Merge in new SLIK (0.6.2-ish).
+	* btn_funcs.c: Use new ui_iconify().
+	* display.c: Use new item_section_by_percent().
+
+Mon Nov  5 03:11:48 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.c(radio_control_set_mute): Correctly unset the MUTE flag,
+	oddly this was working for me, so never noticed.
+
+Thu Nov  1 04:02:27 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.c: Account for floeat -> int inaccuracy.
+	* playlist.c (playlist_load_line): fgets return includes a terminating
+	null character, so removed the ptr < buf + strlen(buf) check.
+
+Fri Oct 26 18:25:56 2001  John Ellis  <johne@bellatlantic.net>
+
+	* README, configure.in: Release 0.10.0
+
+Thu Oct 25 14:32:25 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c: Try to setup the default ogg123 device for the system.
+
+Thu Oct 25 13:59:40 2001  John Ellis  <johne@bellatlantic.net>
+
+	* types.[ch]: Added new filter_get_XXX() functions to get filter and
+	descriptions using a module number id.
+	* playlist-dlg.c, preset-dlg.c: Added module subtypes as additional
+	filter options for file dialogs.
+	* ui_pathsel.c: Fixed incorrect strncmp in dest_filter_list_sync() to
+	check entire string (strcmp). Ordered filter addition so that they are
+	listed in descending order, but keep All Files ( * ) filter at the
+	bottom of the list.
+
+Thu Oct 25 10:41:28 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.c: Fix entry descriptions for Frequency and Title.
+	* ui2_typedefs.h, ui_clist_edit.[ch], ui_pathsel.c: Updates from SLIK,
+	includes fixed cursor for editing clists, SLIK 0.6.1 sync, and
+	enhancement to file dialogs (new dir button, right click menus, rename
+	ability for dirs).
+
+Wed Oct 24 22:41:30 2001  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c: Reverted change to attempt fixing wrap around with
+	next button (see Log for Oct 24 19:31:00).
+	* btn_funcs.c: Properly handle wrap-around for next button when
+	repeat is enabled (old behavior when repeat is off). The bug was a
+	button bug and not a playlist bug (returning -1 at end of a playlist
+	is required for other stuff to work).
+	* TODO: Gave it some structure.
+
+Wed Oct 24 21:58:32 2001  John Ellis  <johne@bellatlantic.net>
+
+	* russian_tag.[ch]: Added support for Russian mpg ID3 tags,
+	submitted by Grigory Bakunov <black@asplinux.ru>
+	* acconfig.h, configure.in, src/Makefile.am, mpg_tagutil.c: Changes to
+	add above.
+
+Wed Oct 24 21:25:45 2001  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Added HPUX support (untested - see Makefile notes in code)
+	based on submition from Sylvain Meunier <meunier@sns.fr>
+
+Wed Oct 24 21:13:09 2001  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Added support fro Tru64,
+	submitted by Chris Houser <chouser@bluweb.com>
+	* acconfig.h, configure.in: Added checks for Tru64 (untested).
+
+Wed Oct 24 19:31:09 2001  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c: When shuffle is on, properly go from last song in the
+	list to the first of a newly shuffled list.
+	Patch from Sergey Svishchev <svs@ropnet.ru>
+	* io_ogg123.c: Changed the solaris device to the correct sun device,
+	also added a 'default' device, allowing ogg123 to select what it thinks
+	is best, set it as default option.
+	* README: Add blurb about ogg123's default device needing rc setup.
+	* main.c, playlist.c, ui2_editor.c: Use random() instead of rand().
+
+Wed Oct 24 19:26:32 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.[ch], io_ogg123_cfg.c: Applied patch from
+	Luke Mewburn <lukem@netbsd.org> to add user options entry for ogg123.
+	* io_mpg123_cfg.c: Made a message string more generic.
+
+Wed Oct 24 18:58:40 2001  John Ellis  <johne@bellatlantic.net>
+
+	* Applied patch from Eric Lassauge <ros_at1@muzillac.tls.mms.fr>,
+	this includes:
+	* POTFILES.in: Added missing ui2_list_edit.c.
+	* preferences.c, ui2_main.c: Marked more strings for translation.
+	* fr.po: Updated French translation.
+	* io_mpg123.c: Fix a few error printfs, add catch for real time
+	notice from mpg123.
+
+Wed Oct 24 18:21:02 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.[ch], io_radio_cfg.c: All video4linux specific stuff is now
+	properly grouped in #ifdefs, also removed v4l type details from the
+	radio_real_XXX functions. Unsupported platforms now disable playback
+	functions, the auto-scan button, and sets preferences insensitive.
+
+Wed Oct 24 02:32:20 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_list.c: Do not allow selection signal for invalid (blank) rows.
+
+Mon Oct 22 20:45:39 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.c: Fixup includes, documented radio: playlist entry format.
+
+Mon Oct 22 19:12:57 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.[ch], io_radio_cfg.c: Added preferences option to re-detect
+	the radio tuner.
+	* po/POTFILES.in: Added io_radio.c and io_radio_cfg.c.
+	* FAQ: Added two radio tuner points.
+	* TODO: Updated.
+
+Sat Oct 20 22:45:31 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.c: Added an auto-scan option to the station entry dialog,
+	this will add all detected stations to the playlist.
+
+Sat Oct 20 20:16:53 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.c(radio_real_status:linux): Use the VIDIOCGAUDIO ioctl to
+	correctly test for stereo reception.
+
+Sat Oct 20 19:23:55 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.[ch], io_radio_cfg.c: Changed the test for a redio device
+	to be 'on demand', so that the the test is not performed at start-up.
+
+Sat Oct 20 18:19:53 2001  John Ellis  <johne@bellatlantic.net>
+
+	* display.c(display_set_io_information): Add missing frames update.
+	* io_radio.c: Better radio card detection (check it works by ioctl),
+	detect low/high tuning limits, and update stereo and signal strength.
+
+Sat Oct 20 16:26:54 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_radio.[ch], io_radio_cfg.c: New files adding video4linux radio
+	tuner support.
+	* acconfig.h, configure.in: Added test for setting HAVE_VIDEO4LINUX.
+	* players.[ch](module_register_misc_type): fix transposed format and
+	description vars in func declaration.
+
+Mon Mar 26 23:03:25 2001  John Ellis  <johne@bellatlantic.net>
+
+	* globals.c, gqmpeg.h, preferences.c, rcfile.c, skin_wamp.c: Use
+	slik_double_size, and remove double_size_mode. This fixes the broken
+	double size feature.
+	* playlist-dlg.c: Fix playlist overwriting by actually showing
+	the confirm dialog.
+	* ui2_list.c: Fixes for scroll bug and double size.
+	* ui_parse.c, ui2_slider.c: Fix double size.
+
+Mon Mar 26 21:26:28 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c: The input buffer is now handled like the xmp input
+	(that is the read buffer is parsed into a secondary buffer, obeying
+	new line and backspace chars - so that no line of input is missed).
+	* io_xmp.c: Use sizeof() to cumpute the length of the read_buffer, so
+	that length is no longer hard coded.
+
+Mon Mar 26 18:23:48 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c, io_xmp.c: Debug printout changes.
+	* io_ogg123.c: Fix parsing of output to not occasionally miss things
+	like the 'Done.' string, this was causing songs to be incorrectly
+	flagged with a warning.
+	* main.c: Made the level of debug_mode incremental for each --debug
+	on the command line.
+
+Mon Mar 26 15:16:13 2001  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, window.c: The main window should always have a title of
+	"GQmpeg" for dock_mode (--dock) so that swallowing is easier by title.
+
+Fri Mar 23 11:01:41 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_ogg123.c (ogg123_child_shutdown): Removed duplicate close(1), this
+	was already closed after the fork and therefore is closing some random
+	file - bad bad. (fixes occasional 100%cpu bug).
+
+Mon Mar 19 13:22:18 2001  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated.
+	* po/ja.po: Applied patch from TOGAWA Satoshi <toga@puyo.org> that
+	updates the Japanese translation.
+	* configure.in: Release 0.9.0
+
+Mon Mar 19 12:56:34 2001  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN-SPECS: Updated.
+	* ui2_editor.c, ui2_typedefs.h: Upped to SLIK 0.6.0, includes fix to
+	hide editor's dummy widget from user.
+
+Sun Mar 18 17:52:03 2001  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch]: Added list widget for presets to skin spec. Also added
+	a 'number' field to display the song number in the playlist.
+	* preferences.c, preset-dlg.c: Update the presets list when changed.
+	* ui2_editor.c: Correctly set the skindata key when opening the editor.
+
+Sun Mar 18 01:20:09 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.c (prop_data_entry_cb): Update the widget when the
+	data entry is changed.
+	* ui2_number_edit.c: Ensure image is null when we have a digit_id.
+	* ui2_parse.c: split on " = " instead of " ", so that key and data can
+	contain spaces.
+	* ui2_text.c: When there is no function registered in the app to
+	request the text, use the widget's data text as the default. This
+	allows simple text to be added to skins for descriptions, etc.
+	* ui2_text_edit.c: Fix image and font_id text handling.
+
+Sun Mar 18 00:09:08 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_init.c: Init the new font type.
+	* ui2_number.c (number_register): return NULL on fail, not FALSE.
+	* ui2_text.[ch], ui2_text_edit.[ch]: Added FontData type, so that like
+	numbers and digits, a single font can be loaded and used by multiple
+	texts to conserve memory (some testing still to do).
+	* skin_wamp.c: Fixes for new text and font stuff, above.
+
+Sat Mar 17 22:10:51 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.c, ui2_typedefs.h: Added function to check that a widget
+	can be removed in the editor. Cleaned out digit hack in the editor,
+	this cleanly replaces it.
+	* ui2_number_edit.c: Added removable check, and set the digit_id when
+	adding a number so that digit slots are actually saved with the number.
+
+Sat Mar 17 12:13:34 2001  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Changed list playlist behavior (single click selects,
+	double click plays).
+	* main.c: Save/restore the new state_keys.
+	* preferences.c: Fixed bug where trailing slash on skin dirs was
+	causing incorrect skin name for states.
+	* ui2_list.c: Fix click to send signal after button release, and then
+	only if the same row was still hovered over.
+	* ui2_main.c: set/get the skin state keys. (beginning of saving each
+	skin's window size - the plan is to also allow skins to spawn their own
+	new skinned windows and remember their states (open or not) too).
+	* ui2_util.[ch] (ui_state*): Added simple list registry of skin window
+	state properties.
+
+Sat Mar 17 09:18:59 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.c: Fix bug causing unwanted widget movement when setting
+	the background form the add dialog.
+	* ui2_list.c: Fix broken row center calcualtion. (was using border vars
+	for the main border, and was incorrectly sized.)
+	* ui2_widget.c: Sync the back for all widget that are in bounds, even
+	hidden ones. (fixes transparency issues dial/slider linked items).
+
+Sun Mar 11 10:24:40 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_item.c (item_new): Added sanity check for sections.
+
+Wed Feb 28 16:23:35 2001  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c, playlist-dlg.c, playlist-window.c, preferences.c,
+	preset-dlg.c, utilops.c, window.c: Use GQmpeg for the window class, the
+	X man page encourages capitalizing at least the first letter, and this
+	way class GQmpeg does not conflict with instance gqmpeg (main window).
+	* ui2_editor.c, ui2_main.c: SLIK side of fixes.
+
+Wed Feb 28 01:59:05 2001  John Ellis  <johne@bellatlantic.net>
+
+	* README, TODO: Updated.
+	* gqmpeg.spec.in (%doc): Removed skindata-template, no longer
+	exists.
+	* configure.in: Release 0.8.3
+
+Wed Feb 28 01:41:16 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_dial_edit.c (dial_edit_write): Save the item_link key.
+	* ui2_list.c: Added drawing of the pressed state, small clean in
+	list_draw_row.
+
+Mon Feb 26 15:10:52 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.[ch], ui2_list.[ch], ui2_list_edit.c, ui2_main.[ch],
+	ui2_slider_edit.c, ui2_typedefs.h, ui_fileops.[ch], ui_utildlg.c:
+	Upped to SLIK 0.5.0
+
+Mon Feb 26 14:51:03 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: When only a base url (with no path) is given for http,
+	make sure the root dir is appended as newer mpg123's appear to be
+	strict about this.
+
+Mon Feb 26 14:05:59 2001  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c, players.c, songinfo.c, types.c: Check for NULL in a
+	few places. Fixes crash when requesting song info with an empty
+	playlist.
+	* gqmpeg.1, gqmpeg.spec.in: Updated URLS.
+
+Sun Feb 18 09:21:49 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_button_edit.c, ui2_dial_edit.c, ui2_editor.c: Fixes from SLIK.
+
+Sun Feb 18 08:24:44 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui_utildlg.[ch]: Real fix for enter activating wrong widgets, now
+	you must set it manually with generic_dialog_attach_default(). Note
+	that file_dialog_add_path_widgets() does this automatically.
+	* utilops.c: Connected necessary defaults, as from above.
+	* preset-dlg.c: The preset dialog should not have a default button, if
+	it did pressing enter on entry/clist would always choose button 1.
+
+Sun Feb 18 07:32:04 2001  John Ellis  <johne@bellatlantic.net>
+
+        * ui_utildlg.c (generic_dialog_key_press_cb): Only call the default
+        function upon press of enter while a gtkentry has the focus. (no
+        longer conflicts with pressing enter while focused on, say a button).
+
+Sun Feb 18 06:01:38 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui_default.c, ui2_dial_edit.c, ui2_editor.[ch], ui2_list.[ch], 
+	ui2_number_edit.c, ui2_skin.c, ui2_slider.[ch], ui2_slider_edit.c,
+	ui2_text.[ch], ui2_text_edit.c, ui2_typedefs.h, ui_pixbuf_ops.c,
+	ui_utildlg.c: Updated from SLIK.
+	* skin_compat.c, skin_wamp.c: Fixes for new func args of text widget.
+
+Fri Feb 16 00:15:09 2001  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch]: More work on list-playlist interface.
+	* playlist-window.c, playlist.c: Call funcs added above.
+	* ui2_list.[ch]: More fixes.
+
+Thu Feb 15 22:06:26 2001  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Added simple register of  a playlist (inclomplete).
+	* almost_every_other_file_not_starting_with_a_u.[ch]: const fixes.
+	* ui2_text.[ch]: const fixes.
+
+Thu Feb 15 20:35:34 2001  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, ui2_display.c, ui2_editr.c, ui2_init.c, ui2_main.[ch],
+	ui2_skin.[ch], ui2_typedefs.h, ui2_widgets.c, ui_pixbuf_ops.[ch]:
+	Updates for SLIK.
+	* ui2_list.[ch], ui2_list_edit.[ch]: More updates for new list widget.
+
+Tue Feb 13 02:34:33 2001  John Ellis  <johne@bellatlantic.net>
+
+        * ui_fileops.[ch]: Fix #includeing of time.h (moved it to header).
+
+Thu Feb  1 17:05:06 2001  John Ellis  <johne@bellatlantic.net>
+
+	* dndutil.c: Fix drag and drop for dropped file:///path/to/file uris.
+	* main.c: Added --version command line option.
+	* window.c, playlist-window.c: Set the window icons.
+
+Wed Jan 24 12:02:02 2001  John Ellis  <johne@bellatlantic.net>
+
+	* preferences.c: Set the wmclass for the preferences and about dialogs.
+
+Sat Jan 20 00:37:47 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui_tabcomp.c (tab_completion_append_to_history): Fix to keep the
+	same path in the entry when calling this.
+	* playlist.c (playlist_load_from_file): If we were in the PLAY state
+	before the load, start playing the new playlist.
+
+Fri Jan 19 23:43:05 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_main.c, ui_menu.[ch], ui_utildlg.[ch]: Merged fixes for SLIK.
+	* playlist-dlg.c, preset-dlg.[ch], utilops.c: Changes for above.
+	* btn_funcs.c, ipc.c, playlist-window.c: Changes for above.
+	* preferences.c: Changed Homepage URL.
+	* README: Ditto.
+
+Mon Jan  8 22:17:08 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_number_edit.c, ui_fileops.[ch]: Fix memory leaks from SLIK.
+	* globals.c: Fixes for above.
+
+Sat Jan  6 05:22:46 2001  John Ellis  <johne@bellatlantic.net>
+
+	* README: Updated.
+	* gqmpeg.spec.in: Fixes.
+	* configure.in: Released 0.8.2.
+
+Sat Jan  6 05:08:40 2001  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, ui2_main.c, ui2_typedefs.h, ui_tabcomp.c: Update SLIK to
+	0.4.1, involved marking the about box text, bumping version, and a few
+	updates.
+	* ui_menu.[ch]: New files for above.
+	* menus.c: Use functions from ui_menu.h instead of our own.
+	* po/POTFILES.in: Added btn_funcs.c.
+	* po/fr.po: Updated French translation from
+	Eric Lassauge <lassauge@mail.dotcom.fr>.
+
+Thu Jan  4 17:46:03 2001  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_parse.c: Import fix from SLIK. (fixes background change causing
+	widgets to move out of range, real reason is that the parser was not
+	setting min/max to the real size when sizing is not enabled.)
+
+Thu Jan  4 10:58:38 2001  John Ellis  <johne@bellatlantic.net>
+
+	* all files: Updated copyright information.
+
+Sat Dec 30 06:56:50 2000  John Ellis  <johne@bellatlantic.net>
+
+	* po/fr.po: Updated French translation, submitted by
+	Eric Lassauge <ros_at1@muzillac.tls.mms.fr>
+	* mixer.c: Applied NetBSD patch from
+	Thomas Klausner - wiz@danbala.tuwien.ac.at, and applied SGI patch from
+	Charlie Todd chtodd@core.com.
+
+Thu Dec 28 06:03:08 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_main.c, menu.c: Fixes to compile with '-g -Wall -O2
+	-Werror -Wmissing-prototypes'.
+
+Thu Dec 28 05:03:57 2000  John Ellis  <johne@bellatlantic.net>
+
+	* README, SKIN-SPECS: Updates.
+	* configure.in: Mark as 0.8.pre2.
+	* ui2_editor.c, ui2_typedefs.h: Update SLIK to 0.4.0.
+
+Tue Dec 26 05:01:48 2000  John Ellis  <johne@bellatlantic.net>
+
+	* players.c: Changed the order of the output tabs to be alphabetical.
+	* playlist-window.c: Changed order of the app tile (GQmpeg last,
+	filename first).
+	* skin_compat.c, ui2_display.c, ui2_editor.c, ui2_parse.c, ui2_skin.c,
+	ui2_typedefs.c: Fix mask brokenness with backwards compatibility, note
+	that the main->mask option is only kept for backwards compatibility and
+	does not work properly if the skin is sized different the background
+	image.
+
+Tue Dec 26 04:09:51 2000  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.[ch], io_mpg123_cfg.c: Fixed header include mess, still
+	load save option even if mpg123 is not found, to avoid losing settings.
+	Fix some error condition.
+	* io_ogg123.[ch], io_ogg123_cfg.c: Added preliminary support of
+	Vorbis' ogg123 for .ogg file types. The device selection needs fixing.
+	* io_xmp.[ch], io_xmp_cfg.c: Same as mpg123, above. Also fixed bug
+	when xmp dies unexpectedly.
+	* mod_info.c, mpg_hdrutil.c, mpg_info.c, mpg_tagutil.c: Header include
+	fixes.
+	* players.[ch]: Fixed header and init mess, added ogg123_init, fix
+	stuck play state on module_playback_error(), added
+	module_playback_data_changed(), which updates the display of all io
+	bitrate/channels/et.c data, needed for variable bitrate formats like
+	ogg where the data can change dynamically.
+	* preferences.c: Small fix.
+
+Tue Dec 26 01:15:54 2000  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.[ch]: Allow stop/pause to work during delayed countdown.
+	Added btn_edit_skin_pressed().
+	* globals.c, gqmpeg.h, main.c: Added title_convert_underscores option,
+	fixed song delay from always repeating (even when the option
+	was off, doh!)
+	* io_mpg123.[ch], io_mpg123_cfg.c: Added option to output files to
+	CDR raw format in addition to the wave output.
+	* menus.c: Added convenience functions, the file is much shorter now!
+	Also added 'Skin Editor...' to the popup menu.
+	* players.c: Allow execing of STATUS_STOP to go into stop when the
+	state is STATUS_NEXT.
+	* playlist.c, rcfile.c: Implement title_convert_underscores option.
+	* preferences.c: Added title_convert_underscores option, made the use
+	a button box for the ok, apply, cancel buttons, and fix up some tab
+	completion entries.
+	* ui2_editor.c: Remove useless warning when attempting to open editor
+	window more than once.
+	* window.c: Moved the actual open editor call out of here.
+
+Sun Dec 24 05:00:09 2000  John Ellis  <johne@bellatlantic.net>
+
+	* btn_func.c, main.c, window.c: Fixed dock mode to work again, and
+	reconnected the 'w' key to toggle the skin mode.
+	* ui2_display.c, ui2_editor.c, ui2_main.c: Fixes to add allow_move
+	option.
+
+Sun Dec 24 04:22:31 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Register the skin paths with the editor.
+	* ui2_editor.c, ui2_number.c: Bug fix updates for SLIK.
+
+Sat Dec 23 12:58:56 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, playlist-dlg.c, preferences.c, preset-dlg.c, skin_wamp.c,
+	ui2_default.c, ui2_parse.c, utilops.c: Made it all compile and work :)
+
+Sat Dec 23 03:58:55 2000  John Ellis  <johne@bellatlantic.net>
+
+	* *.[c,h,xpm]: Wholesale changes, moved to SLIK for skin interface.
+	Essentially this involved rename many files: fileops, pathsel, pixbuf*,
+	tabcomp, utildlg to ui_same_names.[ch]; ui2_compat to skin_compat. And
+	changing many of the includes to include the new names. Also fixed all
+	the dialogs to use the new ui_utildlg.h dialogs. Oh, and lots of little
+	cleanups where the move broke things.
+
+Mon Dec  4 20:25:27 2000  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c(btn_loop_ab_pressed): Ignore button press when source
+	is live (live sources usually cannot seek).
+
+Sun Dec  3 01:34:45 2000  John Ellis  <johne@bellatlantic.net>
+
+	* README, configure.in: Release 0.8.1
+	* po/*.po: make distcheck did this.
+
+Sun Dec  3 01:21:19 2000  John Ellis  <johne@bellatlantic.net>
+
+	* btn_func.c, display.[ch], main.c: Added override to force time
+	display to some value, use this to show time remaining between songs
+	when delaying/waiting for next song.
+
+Sat Dec  2 17:40:36 2000  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-window.c: Unmark translations for zero length strings, fixed
+	translation == random garbage bug.
+	* po/ja.po: Updated Japanese translations, from
+	Yuuki NINOMIYA <gm@debian.or.jp>
+	* po/POTFILES.in: Added missing ui2_editor.c:
+
+Fri Dec  1 22:58:34 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Fix item in small mode to be 'minus' as per v2 spec.
+
+Fri Dec  1 18:55:51 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c, ui2_button.c, ui2_editor.c, ui2_item.c, ui2_text.c,
+	window.c: Fixups for CFLAGS="-g -Wall -O2 -Werror -Wmissing-prototypes"
+	* po/*.po: make distcheck did this.
+	* configure.in: Release 0.8.0
+
+Fri Dec  1 16:49:42 2000  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, README, SKIN-SPECS-V2, gqmpeg.spec.in: Documentation
+	updates, spelling, etc.
+
+Fri Dec  1 16:03:54 2000  John Ellis  <johne@bellatlantic.net>
+
+	* japanese_tag.[ch]: Moved japanese id3 tag support functions into
+	separate files. Patch submitted by Yuuki NINOMIYA <gm@debian.or.jp>
+	(and also thanks for breaking out the functions into new files :)
+	* mpg_tagutil.c: Include japanese_tag.h, and change for above.
+
+Fri Dec  1 04:16:41 2000  John Ellis  <johne@bellatlantic.net>
+
+	* po/fr.po: Updated French translation, submitted by
+	Eric Lassauge <lassauge@mail.dotcom.fr>.
+
+Fri Dec  1 03:08:03 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch], globals.c, gqmpeg.h, main.c, preferences.c, rcfile.c:
+	Added optional delay between songs, default is off (0), and it blinks
+	pause and play button status on/off during countdown.
+
+Fri Dec  1 01:39:55 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Reset loop_ab to off on song change.
+	* players.c: Seek succes no longer (incorrectly) forces status
+	to STATUS_PLAY.
+	* ui2_editor.c: Properly set spins that do not have lower == 0, and
+	limit clipping width and height to a minimum of 1.
+	* default_skin/btn_ab.xpm: Make it look better (center the text).
+	* README: Updated, added skin editing section.
+
+Thu Nov 30 19:27:03 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, playlist.[ch]: Fix setting of song positioning feature.
+	* mixer.c: Applied patch to better describe mixer devices on NetBSD,
+	submitted by Thomas Klausner - wiz@danbala.tuwien.ac.at
+	* menus.c, playlist.[ch], playlist-window.[ch]: Added 'randomize list'
+	option to rght click menu in playlist window list. Also fixed a time
+	length update bug when sorting by column title.
+	* btn_funcs.[ch], display.[ch], globals.c, gqmpeg.h, main.c, window.c:
+	Added repeat_1, and repeat a-b button support.
+	* skin_default.c: Added repeat a-b and repeat 1 buttons.
+	* default_skin/btn_ab.xpm, btn_repeat_1.xpm: Added new button images.
+	* default_skin/back.xpm, btn_minus.xpm, btn_time.xpm: Graphic updates.
+
+Thu Nov 30 18:55:39 2000  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c, main.c: Fix crash on http strings ending with a '/'.
+
+Thu Nov 30 18:34:05 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c, gqmpeg.h, main.c, playlist.[ch]: Added year and comment
+	text widget support for skins.
+
+Thu Nov 30 18:14:52 2000  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in: Fix check for png.
+	* mpg_tagutil.c: Applied Japanese id3 tag update from
+	Yuuki NINOMIYA <gm@debian.or.jp>
+	and encouraged him to sparate out the bulk into a new file :)
+	* /po/ja.po: Updated Japanese translation from
+	Yuuki NINOMIYA <gm@debian.or.jp>
+
+Wed Nov 29 19:58:20 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c: Made song number have a length of 4.
+	* ui2_button.c: Add sanity check.
+	* ui2_editor.c: Display width and height for digits, and ignore digits
+	completely in edit_widget_find().
+
+Wed Nov 29 19:26:44 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_number.c: When length is not big enough to fit value, max value
+	which is all 9s.
+
+Wed Nov 29 18:55:38 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c, typedefs.h, ui2_compat.c, ui2_editor.h, ui2_parse.c,
+	ui_slider.[ch]: Yes, I know how to spell verticle^h^hal :)
+	* ui2_editor.c: Marked strings for translation, last time I ignore
+	marking while coding...
+	* SKIN-SPECS-V2: More work.
+
+Wed Nov 29 17:26:56 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch], playlist-window.c: Added indicator option for playlist
+	window button.
+	* io_mpg123.[ch]. io_mpg123_cfg.c: Added user options entry for passing
+	options to mpg123 (-n 150 is nice for intro play :)
+	* playlist.c: Fix to calculate playlist length during idle loading.
+
+Tue Nov 28 23:41:30 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Fixes for title autoscroll, remove cruft.
+	* fileops.[ch]: Added isname(), like isfile, but does not check that
+	the file is S_ISREG.
+	* io_mpg123_cfg.c: Fix desable -> disable typo.
+	* ipc.c: Added ipc commands for setting the skin and volume,
+	also added ipc subscriber limit of 16.
+	* main.c: Fixed -help to --help typo, and added --status, --volume,
+	--skin_set command line options.
+	* ui2_editor.[ch]: Made sure unique_filename() is really unique by
+	using new isname().
+	* ui2_parse.c: Fix clipping size parsing for dials.
+	* ui2_text.c: Fix autoscrolling, set nice default values.
+	* po/*.po: A few fixes for typos above.
+
+Tue Nov 28 19:33:52 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.c: More fixes.
+	* window.c: Pressing '`' also brings up editor window, move debug print
+	of registered ui keys/widgets to the '!' key.
+
+Tue Nov 28 05:48:54 2000  John Ellis  <johne@bellatlantic.net>
+
+	* tabcomp.c: Fix bug when trying to set a NULL path to hitory.
+	* ui2_editor.c: Filter out skindata files with the .bak extension when
+	generating widget list. Do not allow addition of widgets that exceed
+	skin background geometry.
+
+Mon Nov 27 20:37:40 2000  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, configure.in, acconfig.h: Added checks for linpng.
+	* pixbuf_save.[ch]: Added png saving.
+	* tabcomp.c: Fix to ignore adding empty (NULL) keys and paths to
+	history lists.
+	* ui2_editor.[ch]: Much more work and fixes, now saves internal
+	skin and winamp skins correctly, creating the necessary pngs (if png
+	support is compiled in).
+	* ui2_slider.c(slider_new): Fix wrong setting of has_press option.
+
+Mon Nov 27 05:44:09 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin_default.c, skin_wamp.c, ui2_compat.c, ui2_skin.c: Fix a few
+	parse errors. Fix memory leaks.
+	* ui2_editor.c: Completed widget add dialog, it now imports widgets
+	from all installed skins :) Also added load button.
+	(prefix/share/gqmpeg/skins/* and ~/.gqmpeg/skins/*)
+	* ui2_number.c: Fix memory leak.
+	* ui2_util.c: Fix more memory leaks.
+
+Sun Nov 26 00:02:48 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.[ch]: Had some time, so added item reading/addition tab.
+
+Sat Nov 25 18:19:43 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.[ch]: Started on the 'read skin' portion for importing
+	widgets from other skins. Only done the button widget so far for
+	testing.
+
+Sat Nov 25 02:57:32 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Added missing registers of status for balance, position,
+	and volume items.
+	* SKIN-SPECS-V2: Added above items.
+
+Sat Nov 25 02:33:59 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.[ch]: We now have fully a working save function, now all
+	that is missing is the ability to ADD widgets...
+	* typdefs.h, ui2_compat.c, ui_2parse.c, ui2_skin.c: Added gchar slots
+	for storing background path (and mask path).
+
+Fri Nov 24 18:30:40 2000  John Ellis  <johne@bellatlantic.net>
+
+	* fileops.[ch]: Added const correctness, and simple_checksum function.
+	* gqmpeg.h, main.c, pathsel.c, playlist-window.c, tabcomp.c, tabcomp.h:
+	Touched during const hunt.
+	* ui2_editor.[ch]: It can now save a skin (but is broken because there
+	is no way right now to know where the background image cam from :(.
+	* ui_parse.c, ui2_skin.c: Small fixes.
+
+Fri Nov 24 02:02:28 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_dial.c: Fixed bug in handling handle offset on x axis.
+	* ui2_editor.[ch]: All significant properties for all widget types
+	can now be edited.
+
+Thu Nov 23 20:12:46 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin_util.c, typedefs.h, ui2_compat.[ch], ui2_main.c, ui2_parse.[ch],
+	ui2_widget.[ch]: Various changes to allow editor to read in path keys.
+	* ui2_editor.[ch]: More work, now can change coordinates, keys,
+	and data of widgets.
+
+Thu Nov 23 00:09:08 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_editor.[ch]: Added beginning of a skin editor.
+	* window.c: Press the tilde '~' key to pop up the skin editor window.
+	* various files.c: Various fixes, small additions for the editor.
+
+Wed Nov 22 13:41:18 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_util.[ch]: Renamed from ui_util.[ch].
+	* ui2_*.[c], skin_default.c, skin_wamp.c: Include new ui2_util.h
+	* ui_*.[ch], skin_parse.[ch]: Removed old skin files.
+
+Wed Nov 22 13:19:54 2000  John Ellis  <johne@bellatlantic.net>
+
+	* btn_func.c, globals.c, gqmpeg.h, preferences.c, rcfile.c, typedefs.h:
+	The current skin info is now held in skin_default_path and
+	skin_mode_key. Also fixed time display from counting while dragging
+	a position slider or dial.
+	* ui2_compat.c, ui2_dial.c, ui2_display.c, ui2_main.c, ui2_skin.c,
+	ui2_slider.c, window.c: Well, it all seems to be working now with both
+	versions of the skin spec :)
+
+Tue Nov 21 21:10:35 2000  John Ellis  <johne@bellatlantic.net>
+
+	* btn_func.c, display.c: Hooked up all the possible widgets, and
+	supplied status callbacks.
+	* ui2_*.[ch]: Many things actually work now.
+	* typedefs.h: Changed for above.
+	* skin_default.c, skin_util.[ch], wkin_wamp.c: Compatibility is almost
+	complete. Just have to fix saving of alt-mode between program runs.
+
+Mon Nov 20 20:22:04 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c, skin_default.c, SKIN-SPECS-V2: Renamed a few key names.
+	* ui2_compat.[ch]: Added compatibility with v1 skins, easier than I
+	thought (some adjustments to a copy of old skin_parse.[ch]).
+	* Makefile.am, ui2_parse.c: Added ui2_compat stuff.
+
+Mon Nov 20 15:10:44 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_button.c, ui2_display.c, ui2_parse.c: More work, bugs.
+	* SKIN-SPECS: Made note that this is old deprecated version 1, and
+	refer reader to SKIN-SPECS-V2.
+	* SKIN-SPECS-V2: Added, began defining the Version 2 specs.
+
+Mon Nov 20 12:38:23 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c, skin_default.c, playlist-window.c: Misc fixes.
+	* typedefs.h, ui2_dial.c, ui2_slider.c: Make dial and sliders retain
+	their value for easy use, and fix reversed option on both.
+	* ui2_button.c: Fix stuck button after release.
+	* ui2_parse.c: Fix some parsing.
+
+Sat Nov 18 15:13:21 2000  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, btn_funcs.c, display.[ch], dock.c, globals.c, gqmpeg.h,
+	main.c, preferences.c, skin_default.c, skin_util.c, skin_wamp.c,
+	typedefs.c, ui2_button.[ch], ui2_dial.[ch], ui2_itam.[ch],
+	ui2_main.[ch], ui2_number.[ch], ui2_parse.[ch], ui2_skin.c,
+	ui2_slider.[ch], ui2_text.[ch], ui2_widget.[ch], window.[ch]: Well,
+	it now compiles! And runs without crashing on the default skin.
+	There are a lot of things #if 0'ed out just so that it sort of works.
+
+Fri Nov 17 16:41:23 2000  John Ellis  <johne@bellatlantic.net>
+
+	* Too many to list, basically almost everything alphabetically below
+	skin_default.c (compile breaks here), and all ui2_* files.
+
+Thu Nov 16 17:07:45 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_*.[ch], ui_util.[ch]: Well, at least these compile now :)
+
+Thu Nov 16 13:44:23 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_dial.[ch], ui2_slider.[ch]: Converted dial and slider.
+	* ui2_button.c: Fixety fix, still have not tried compiling anything
+	yet, still have to convert display.c, etc. to new API.
+
+Tue Sep 19 07:55:15 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui2_button.[ch], ui2_display.[ch], ui2_item.[ch], ui2_main.[ch],
+	ui2_parse.[ch], ui2_skin.[ch], ui2_widget.[ch]: Beginning work on skin
+	spec version 2. (no, it does not compile, have not even tried. many
+	functions/files are still not converted). Only committing for backup
+	purposes after a lost work scare when copying the wrong file. Doh!
+	* typedefs.h: Changes for above.
+
+Sun Jul 23 21:00:57 2000  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in, README: Release 0.7.3.
+
+Sun Jul 23 20:37:20 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Drop down histories are now saved between runs.
+	* pathsel.c: Now it really stays in sync with path entry, (must have
+	forgotten to copy new ver from GQview, previously)
+	* preferences.c: Updated URL to one that works ;)
+	* po/POTFILES.in: changed config.c to prederences.c (filename conflict)
+	* configure.in, po/pt_BR.po: Added Brazilian translation, from
+	Hellbrasil <hellbrasil@ig.com.br>
+	* po/{rest}.po: Updated URL in translations.
+	* README: updated, and hey, it passes make distcheck!
+
+Sun Jul 23 19:42:11 2000  John Ellis  <johne@bellatlantic.net>
+
+	* window.c: Made keys work with caps lock on, added home/end keys and
+	keypad works now.
+	* pathsel.c: Now stays in sync with path entry.
+	* tabcomp.[ch]: Copied new revision from GQview.
+	* {*}.[ch]: All file (except main.cm globals.c) now have their own
+	header file, made it all compile cleanly with "-g -Wall -O2
+	-Wmissing-prototypes -Wmissing-declarations -Werror"
+	* src/Makefile.am: Added all the new header files.
+
+Fri Jun 30 14:18:32 2000  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-dlg.c: When saveing, only select the text for the filename
+	in the entry.
+	* config.c, globals.c, gqmpeg.h, io_mpg123.[ch], io_mpg123_cfg.c,
+	io_xmp.c, mod_info.c, players.[ch], playlist-window.c, playlist.c,
+	rcfile.c, typedefs.h: Move read id3 headers option to mpg123's config
+	section since it only applies to that. Changed playlist accounting to
+	a 'read file information' option.
+
+Fri Jun 30 09:35:30 2000  John Ellis  <johne@bellatlantic.net>
+
+	* config.c: Changed max length of preset name entried from 32 to 255.
+	* io_mpg123.c: Made http urls display a title better.
+
+Wed Jun 28 16:59:51 2000  John Ellis  <johne@bellatlantic.net>
+
+	* menus.c (ceate_preset_menu): Fix crash caused by buffer overflow in
+	string buffer, since preset name can now be longer than 48 chars !!
+
+Fri Jun 16 00:12:37 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui_display.c: Made the mouse wheel control the volume.
+
+Thu Jun 15 23:37:38 2000  John Ellis  <johne@bellatlantic.net>
+
+	* po/fr.po: Updated french translation, submitted by
+	Eric Lassauge <lassauge@mail.dotcom.fr>
+	* gqmpeg.h, main.c, playlist-window.c, window.c: The window title for
+	the main window now displays the song title. Format: title - GQmpeg
+
+Thu Jun 15 22:45:59 2000  John Ellis  <johne@bellatlantic.net>
+
+	* io_xmp.c: Added .okt extension to registered types.
+	* gqmpeg.h, playlist-window.c: Added playlist_window_toggle().
+	* skin_default.c, skin_parse.c, skin_wamp.c: Made the playlist button
+	toggle the playlist window.
+	* ui_button.[ch]: Fixed the press/release/click prototype. Should be
+	a void instead a void *.
+
+Mon Jun  5 18:31:21 2000  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in: Release 0.7.2
+	* README: Updated.
+
+Thu Jun  1 22:26:22 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Fixed skin search bug (prefix/share/gqmpeg/skins/* checked
+	correctly now against --skin:). Added ipc -q, --quit options, changed
+	-help to -h and --help, -dock to --dock, -dockwm to --dockwm, -blank to
+	--blank, -skin: to --skin:, and -debug/skinhelp to --debug/skinhelp.
+	Non-ipc command line options are now passed when creating a new
+	process.
+	* gqmpeg.h, ipc.c: Add 'quit' command.
+	* gqmpeg.1, README: updated options.
+
+Thu Jun  1 21:11:49 2000  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN_SPECS, skindata-template: All options now documented, and some
+	doc formatting changes.
+
+Thu Jun  1 19:07:42 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui_itl.c (util_pixbuf_from_root_window): Added support for tiled
+	images, still doesn't work with solid colors/patterns (ie: no pixmap).
+
+Tue May 30 18:40:44 2000  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.[ch], io_mpg123_cfg.c: Removed freeamp support, was hit or
+	miss anyway.
+	* players.c: Show warning when no modules register in players_init().
+	* gqmpeg.spec.in: Removed libmikmod related stuff.
+
+Tue May 30 17:35:44 2000  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in, Makefile.am, io_mikmod.[ch], io_mikmod_cfg.c: Removed
+	support for mods using libmikmod.
+	* Makefile.am, io_xmp.[ch], io_xmp_cfg.c: Added support for mods
+	through xmp.
+	* mod_ctl.c: Thankfully, gone. :)
+
+Sun May 28 20:39:06 2000  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.1: Added small man page.
+	* gqmpeg.spec.in, Makefile.am: Install man page.
+
+Sun May 28 18:56:55 2000  John Ellis  <johne@bellatlantic.net>
+
+	* typedefs.h, ui_text.[ch]: Added autoscroll capabitility.
+	* playlist.c: playlist_free_data to playlist_data_free
+	namespace change, same with _new. Added accessors playlist_data_get_*.
+	playlist_data_get_title() Will remove filename extension if option is
+	enabled.
+	* main.c, playlist.c: Use the playlist_data_get_*() accessors.
+	* config.c, display.c, globals.c, gqmpeg.h, rcfile.c: Added option to
+	always scroll the title display, and to remove filename extensions in
+	that display.
+
+Sun May 28 16:58:40 2000  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Each platform now has its own mixer_init, mixer_get_vol, and
+	mixer_set_vol functions to get rid of the #ifdef mess. Added a
+	recordable flag to the device structure, only Linux sets it but this
+	will never be used by GQmpeg. Recordable devices are now listed in the
+	config window too, instead of filtering them out.
+	NOTE: I _hope_ I didn't break compile on the other platforms.
+
+Sat May 27 14:43:46 2000  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Handle the case that we are unable to open a file
+	descriptor to the child.
+
+Sat May 27 02:58:33 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c: Fix setting of total time button when live.
+	* skin_default.c: Added button to toggle total time display, moved item
+	for that above time and use it only to display the live flag. Swapped
+	minus and total buttons vertically.
+	* default_skin/{btn_time.xpm, itm_live.xpm}: New files for above.
+	* default_skin/Makefile.am: Added new files, above.
+	* default_skin/btn_minus.xpm: Added a prelight to help tell what the
+	button does.
+
+Sat May 27 01:19:17 2000  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg-shoutcast-plugin.sh: Added .m3u support.
+	* README.plugin: Added section on adding m3u support to netscape.
+
+Fri May 26 23:49:08 2000  John Ellis  <johne@bellatlantic.net>
+
+	* utilops.c (file_util_move_multiple): Changed a \b to a \n. (typo).
+	* config.c: Changed copyright to 2000.
+	* po/fr.po, configure.in: Added French translation, submitted by
+	Eric Lassauge <lassauge@mail.dotcom.fr>
+	* {cs,de,ja}.po: Edited \b to \n to match utilops.c (above).
+
+Fri May 26 19:03:41 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.[ch], playlist.c, skin_default.c, skin_parse.c, typedefs.h,
+	ui_display.c, ui_item.c, ui_item.h, ui_skin.c: Added background
+	playlist loading, so that very long playlists do not delay the start of
+	the first song. Added Load_Item to the skin-spec. Also added buttons
+	to toggle time remaining and total time to skin-spec.
+	(Time_Remaining_Button and Time_Total_Button, respectively.)
+
+Fri May 26 02:23:50 2000  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, gqmpeg.h: Added remove_extension_from_path() func.
+	* io_mpg123.[ch], io_mpg123_cfg.c: Added save to wav file option for
+	mpg123.
+
+Fri May 19 16:21:39 2000  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in: Moved version to 0.7.1 (release soon).
+
+Fri May 19 15:38:12 2000  John Ellis  <johne@bellatlantic.net>
+
+	* dock.c, gqmpeg.h, main.c: Applied patch for WindowMaker docking that
+	works. Patch submitted by BALATON Zoltan <balaton@eik.bme.hu>
+
+Fri May 19 11:55:33 2000  John Ellis  <johne@bellatlantic.net>
+
+	* (PATCHING SPREE)
+	* io_mpg123.c (parse_pipe_buffer): Added "Device Busy" to detected
+	errors.
+	* po/de.po: Updated German translation, submitted by
+        mawarkus@t-online.de (Matthias Warkus)
+	* gqmpeg.spec.in: Added translations for inclusion in RPMS.
+	* po/cs.po: Updated Czech translation, submitted by
+	Tomas Prochazka <xprocha2@informatics.muni.cz>
+	* io_mpg123.[ch], io_mpg123_cfg.c: Added option to disable resync on
+	error (mpg123 -y | --resync).
+	* ipc.c: Use gdk_input_add in place of gtk_timeout to read ipc file.
+	* io_mpg123.h (struct _ID3_Data): Use unsigned int for genre, fixes
+	genres over 127.
+	* plugins/gqmpeg-shoutcast-plugin.sh: Use cut instead of awk.
+	* dndutil.c, playlist-window.c: Added dnd support for x-url/http,
+	  x-url/ftp, and _NETSCAPE_URL (netscape).
+	* playlist-dlg.c: Don't force strict for loading/appending playlists,
+	and added option to show all files.
+	* playlist.c: Added relative path support (untested).
+	* playlist-window.c (playylist_window_build): Import is no longer
+	 needed, commented out the button.
+
+Thu May 18 13:47:33 2000  John Ellis  <johne@bellatlantic.net>
+
+	* display.c, skin_default.c, skin_parse.c, skin.wamp.c, typedefs.c,
+	ui_button.[ch], ui_dial.c, ui_display.c, ui_skin.c: Add clip mask to
+	buttons, dial fixups.
+
+Mon May 15 19:26:46 2000  John Ellis  <johne@bellatlantic.net>
+
+	* pixbuf_ops.[ch]: Added some more util funcs, umm.. hacked it so that
+	copying same pixbuf multiple times would not darken the dest when a
+	pixel's alpha is 0 (just made all (255 -a)'s to (256 - a), well if I
+	broke it all just flame me.
+	* skin_parse.c, typedefs.h, ui_dial.[ch]: Added a clip mask to allow
+	funky shaped dials that can surround other widgets (will add option
+	to most other widgets in time).
+
+Mon May 15 17:18:10 2000  John Ellis  <johne@bellatlantic.net>
+
+	* pixbuf_ops.[ch]: Better rotation, added a few utils.
+	* ui_dial.c: Fixups.
+
+Sun May 14 13:55:54 2000  John Ellis  <johne@bellatlantic.net>
+
+	* pixbuf_ops.c (pixbuf_copy_rotate_alpha): Should be a little faster,
+	moved some floats to guchar, use bitshifts instead of division.
+	* pixbuf_ops.c: A few var size cleanups (gint -> guint8, etc.).
+	* typefs.h, ui_dial.c: Moved dial rendering during mouse drag to an
+	idle call, so that stale mouse events can be dropped. This allows large
+	dials (enable double size) to keep up with the mouse. Also added a step
+	increment, so that movements are limited to a minimum of one pixel
+	along the dial's circumference (also helps with less redraws).
+
+Sat May 13 00:19:39 2000  John Ellis  <johne@bellatlantic.net>
+
+	* Makefile.am, typedefs.h, ui_dial.[ch]: New dial (knob) control.
+	* display.c, skin_parse.c, ui_display.c, ui_skin.c: Use the Dial in a
+	test of a Volume_Dial.
+	* pixbuf_ops.[ch]: New public pixbuf_pixel_get() func, minor cleanups
+	in pixbuf_copy_rotate_alpha(). (still slow).
+
+Mon May  8 19:09:53 2000  John Ellis  <johne@bellatlantic.net>
+
+	* config.c: Cleanup, removed (some) duplicated code.
+
+Thu Apr 27 16:39:09 2000  John Ellis  <johne@bellatlantic.net>
+
+	* io_mikmod.[ch], io_mikmod_cfg: Some work to allow configuration.
+	* mod-ctl.c: Fix reset crash, really just avoid crash in libmikmod
+	by stopping play, reset, then reload song from start. (ugly, I know)
+
+Mon Apr 24 18:28:34 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui_util.[ch], skin_parse.c, ui_display.c, ui_skin.c, config.c: Added
+	configurability of transparency and color shifting.
+
+Mon Apr 24 14:37:52 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui_util.[ch]: Added func to get a portion of the root window into
+	a pixbuf.
+	* ui_disiplay.c, ui_skin.c, typedefs.c: Added transparency support.
+	* skin_parse.c: parse transparency option from skindata.
+	* globals.c, gqmpeg.h: Added transparency_[r,g,b,a] vars. not used
+	yet, but will eventually be used to allow the user to adjust skin
+	backround transparency.
+
+Mon Apr 24 11:27:32 2000  John Ellis  <johne@bellatlantic.net>
+
+	* ui_util.[ch]: New files with double sizing utils.
+	* ui_item.c, ui_button.c, ui_text.c, ui_slider.c, ui_number.c,
+	skin_default.c, skin_parse.c, skin_wamp.c: Make double size work
+	with new gdk-pixbuf stuff.
+
+Sun Apr 23 21:53:34 2000  John Ellis  <johne@bellatlantic.net>
+
+	* skin*.c: Removed, and divided into the files below:
+	* skin_default.[ch], skin_load.[ch] skin_parse.[ch] skin_util.[ch]
+	skin_wamp.[ch] ui_button.[ch] ui_display.[ch] ui_item.[ch]
+	ui_number.[ch] ui_skin.[ch] ui_slider.[ch] ui_text.[ch]: New files
+	resulting from split and move to gdk-pixbuf.
+	* display.h: New header file.
+	* display.c: Removed redraw flags, used new namespaces.
+	* btn_func.c: Updated as above.
+	* typedefs.h: Move all type definitions here.
+	* gqmpeg.h: Updated, changed to gdk-pixbuf.
+	* configure.in, README, SKIN-SPECS: 0.7.0 updates.
+	* gqmpeg.spec.in: works now?
+	* Makefile.amm src/Makefile.am: Updated for all reasons above, and
+	now included RPM spec file in make distcheck do rpm -tb works.
+	* everything else: Bug fixes, -Wall cleanups, blah. blah.
+
+
+Thu Mar 16 17:07:46 2000  John Ellis  <johne@bellatlantic.net>
+
+	* pathsel.c, playlist.c, tabcomp.c: Fix memory leaks.
+
+Sat Oct  2 15:14:04 1999  John Ellis  <johne@bellatlantic.net>
+
+	* players.[ch]: Move to a queue for async commands (when reply of
+	success may not come for some time).
+	* btn_funcs.c, main.c, io_mpg123.c, io_mikmod.c: Change to new
+	commands from above.
+	* mod-ctl.c: Fix hang (seeking did not send ack).
+
+Fri Oct  1 17:36:43 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Applied patch to add OpenBSD support, patch from
+	Bruno Rohee <br@spooky.net>
+	* cpuperc.c: Applied patch for FreeBSD < 3.0 fix, also from Bruno.
+	* players.c: Also set frames(_remaining) to 0 on stop and next song,
+	fixes bug that total time/frames was for the previous song.
+
+Tue Sep  7 19:12:37 1999  John Ellis  <johne@bellatlantic.net>
+
+	* ipc.c: Extend ipc command and status stuff, added SIGPIPE handler
+	to status writing.
+
+Mon Sep  6 04:05:45 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, mpg_tagutil.c: Applied portions of patch from
+	Yuuki NINOMIYA <gm@smn.enjoy.ne.jp> dealing with japanese id3 tag
+	support, so it no longer requires iconv. Updated translation too.
+	* cs.po: Added Czech translation from
+	Tomas Prochazka <xprocha2@informatics.muni.cz>
+
+Mon Sep  6 03:16:59 1999  John Ellis  <johne@bellatlantic.net>
+
+	* ipc.c, main.c, gqmpeg.h: Added status request commands to ipc.
+	* README: Update to briefly explain ipc/status commands.
+	* rcfile.c (quoted_value): Use a method that does not change source.
+
+Fri Sep  3 20:33:31 1999  John Ellis  <johne@bellatlantic.net>
+
+	* config.c: Add debug on/off toggle to about :).
+	* io_mikmod.[ch], io_mikmod_cfg.c, mod_info.c: New files, preliminary
+	mod format support.
+	* acconfig.h, configure.in, Makefile.am, src/Makefile.am: Add test for
+	libmikmod, and set appropriate compile options.
+
+Mon Aug 23 22:34:09 1999  John Ellis  <johne@bellatlantic.net>
+
+	* src/default_skin/*.xpm, Makefile.am: Changed to a new default skin.
+	* skindef.c: Use the new skin files.
+	* btn_funcs.c, display.c, main.c, players.c, skinutil.c: Added 'live'
+	image for Total_Item. Also fixed a few time calculations (for live, and
+	when changing songs when status = STATUS_NEXT).
+	* SKIN_SPEC, skindata-template: Added live image ref for Total_Item.
+
+Mon Aug 23 20:46:47 1999  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c, display.c, globals.c, gqmpeg.h, main.c, menus.c,
+	playlist.c, rcfile.c, skinutil.c: Added total time played/remaining
+	option. Added skin item types for time remaining (eg, minus) and
+	time total/norm.
+	* skinui.c: Fix double size reversal when rendering mask.
+	(bug from previous Imlib fixes)
+	* SKIN-SPEC, skindata-template: Updated for new items (above).
+
+Sat Aug 21 14:09:13 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-dlg.c: Fix custom window bugs (could not add to playlist).
+	* playlist-window.c, globals.c, gqmpeg.h: Added saving of playlist
+	window pane positions and list column sizes.
+	* config.c, players.c: Added 'play next on error' option.
+	* rcfile.c, io_mpg123_cfg.c: Better organize and group rc file options.
+
+Sat Aug 21 00:27:42 1999  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c, dndutil.c, gqmpeg.h, io_mpg123.c, ipc.c, main.c, menu.c,
+	playlist-dlg.c, playlist-window.c, playlist.c, players.[ch]: Added menu
+	options to add/remove the current song to/from the playlist. Added a
+	flags attribute to SongData, and display an icon in the playlist window
+	according to the flags. The currently active song is now highlighted
+	in the playlist with an arrow, when song playback encounters an error,
+	a "!" icon is displayed, and a "?" is displayed for when the type of
+	a file is unable to be determined.
+	* icon-rarrow.xpm, icon-alert.xpm, icon-question.xpm: The flag icons.
+	* Makefile.am: Added references for new files.
+	* tabcomp.c: Set the entry text after setting the combo list.
+	* preset-dlg.c: New dialog for setting the presets.
+
+Wed Aug 18 22:24:48 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, tabcomp.c, utilops.c, playlist-dlg.c, playlist-window.c:
+	Added drop down history list for move/copy/open/save dialogs, fixed
+	width problems with clists (they were either displaying a horizontal
+	scrollbar when the were not supposed to, or not when they should have).
+
+Mon Aug 16 13:17:43 1999  John Ellis  <johne@bellatlantic.net>
+
+	* po/de.po: Added german translation
+	by mawarkus@t-online.de (Matthias Warkus)
+
+Mon Aug 16 13:13:26 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist-window.c, utilops.c: Make it easier for translators.
+
+Fri Jul 30 07:56:43 1999  John Ellis  <johne@bellatlantic.net>
+
+	* configure.in, acconfig.h, src/{main.c, mpg_tagutil.c}: Added japanese
+	support:
+	* po/ja.po: Added this file.
+	* dndutil.c: Fix dnd to include "/r/n" on the end of the URI lists.
+
+Wed Jul 21 18:28:28 1999  John Ellis  <johne@bellatlantic.net>
+
+	* Most files: Marked for translation.
+	* po/*, Makefile.am, configure.in: Set up gettext.
+
+Sat Jul  3 07:24:17 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, README, gqmpeg.spec: Release 0.6.3
+
+Sat Jul  3 06:54:45 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Added mpg123 0.59r support, which introduced escape
+	sequences to it's standard verbose output... THE BLASPHEMY!
+	Also added more debug output, so I can catch things like this in the
+	future without jumping through hoops.
+
+Fri Jul  2 12:12:52 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.[ch], io_mpg123_cfg.c: Add freeamp option, and made it
+	work with freeamp 1.2.3. Freeamps's mpg123 emulator is flaky, but works
+	well enough... Probably won't work with older versions of freeamp?
+	If mpg123 is not found at startup, then search for freeamp and enable
+	the option if found.
+
+Fri Jul  2 10:20:43 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Make it work again with freeamp. Print a warning when a
+	version prior to 0.59o is detected, and when the version can not be
+	detected.
+
+Fri Jul  2 09:50:37 1999  John Ellis  <johne@bellatlantic.net>
+
+	* config.c: Properly sort skin names, since we now have the complete
+	paths listed.
+
+Thu Jul  1 20:00:32 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c: Add playlist length recount when loading headers.
+	* playlist-window.c: (playlist_window_clist_populate) Check if the
+	playlist window is open before attempting to add items to the window.
+	When a song's length is zero (no header loading), print nothing for
+	time.
+
+Thu Jul  1 19:28:45 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Fix segmentation fault at g_hook_next_valid when mpg123
+	exits unexpectedly (crash or kill). Also doubled timeout when using
+	http (to 20 seconds).
+
+	NOTE: Looking at the code I see that I am still using an interface to
+	mpg123 using code written when gqmpeg was begun. Since then I have
+	learned a bit... I see that buffer over-runs can happen in many places
+	I will have to add 20+ checks for this, or move to a more elegent
+	solution. The crash caused when mpg123 exits was caused by not checking
+	a) that getc was not EOF, and b) that the buf_ptr was within allocated
+	memory. Hence we scribbled all over memory until something broke...
+
+Tue Jun 29 17:34:14 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c (playlist_update_by_path): New function to reload all
+	occurences of path.
+	* gqmpeg.h, mpg_info.c: Make the mpg song info window update the
+	playlist when a tag is saved.
+
+Tue Jun 29 16:31:40 1999  John Ellis  <johne@bellatlantic.net>
+
+	* config.c, main.c, window.c: Added support for placing skins
+	in a system dir, for example /usr/local/share/gqmpeg/skins.
+	* Makefile: re-create config.h if Makefile changes, since the PREFIX
+	may have changed. Also added dist_clean target to remove things such
+	as config.h before a release.
+
+Tue Jun 29 14:36:17 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c, Makefile: Applied patches to support native audio on
+	NetBSD. Submitted by Rui-Xiang Guo <rxg@ms25.url.com.tw>
+
+Tue Jun 15 20:13:47 1999  John Ellis  <johne@bellatlantic.net>
+
+	* display.c, gqmpeg.h, playlist.c: Freeze the display when loading a
+	playlist to improve speed.
+
+Tue Jun 15 19:55:05 1999  John Ellis  <johne@bellatlantic.net>
+
+	* filelist.c, main.c, mpg_info.c, pathsel.c, playlist.c,
+	playlist-window.c, tabcomp.c: Small speedups in GList creation.
+
+Tue Jun 15 15:02:08 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.[ch], io_mpg123_cfg.c: Add support for mpg123's
+	--aggressive option for higher scheduling priority.
+
+Mon Jun 14 21:18:41 1999  John Ellis  <johne@bellatlantic.net>
+
+	* ipc.c (ipc_read_data): Make it work with NetBSD, patch from
+	Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de>
+
+Mon Jun 14 20:07:50 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c (get_volume): Now update the volume from the device first.
+	(not done for sun, irix ... can't test anyway)
+	* main.c (update_condition): Update volume controls every 4 secs.
+
+Mon Jun 14 19:59:35 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c (shuffle_list_create): Fix hang under some conditions.
+
+Sat Jun 12 23:35:37 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: removed #undef _POSIX_SOURCE from NetBSD section.
+
+Tue Jun  1 17:48:50 1999  John Ellis  <johne@bellatlantic.net>
+
+	* README, gqmpeg.h, gqmpeg.spec: Release 0.6.2
+
+Tue Jun  1 16:40:37 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Add warning dialog for failed connections, etc.
+	* mpg_info.c, io_mpg123.h: Song info now recognizes type http.
+
+Mon May 31 18:09:13 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, ipc.c: Items added from the command line actually play now,
+	added -f, -pladd, -plem, -plappend now support file globbing.
+	* filelist.c, players.c: Add more debug output, and warn when a song
+	player type can not be determined.
+
+Fri May 28 09:51:45 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c (send_if_ipc_match): Add quotes around filenames sent over
+	ipc, since they are required when filenames have spaces.
+
+Thu May 27 10:11:40 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, README, gqmpeg.spec: Releease 0.6.1
+
+Wed May 26 11:27:51 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c (handle_warnings): Add cases for id3 tag output from
+	mpg123, fix from Eric Lassauge <lassauge@sagem.fr>
+
+Wed May 26 11:20:34 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c (main): Push the visual and colormap to gtk, this fixes
+	badmatch errors on 8-bit psuedo color displays.
+	patch from Kuninori NISHIZAWA <kuninori@viplab.is.tsukuba.ac.jp>
+
+Mon May 24 18:13:28 1999  John Ellis  <johne@bellatlantic.net>
+
+	* README, gqmpeg.h, gqmpeg.spec: Release 0.6.0
+
+Mon May 24 18:04:26 1999  John Ellis  <johne@bellatlantic.net>
+
+	* plugin/*: Moved and renamed the shoutcast directory to plugin,
+	updated the README.plugin file and fixed gqmpeg-shoutcast-plugin.sh
+	netscape plugin shell script.
+
+Sun May 23 13:52:20 1999  John Ellis  <johne@bellatlantic.net>
+
+	* tabcomp.c (tab_completion_new): New function, this creates the text
+	entry in addition to adding a button with tab icon for tab completion.
+	The main purpose of this is so that entries with tab completion are
+	obvious to the user, a button with the icon for future expansion.
+	* config.c, playlist-dlg.c, playlist-window.c, utilops.c: Use above
+	said function.
+
+Sun May 23 10:38:43 1999  John Ellis  <johne@bellatlantic.net>
+
+	* pathsel.c (destination_widget_sync_to_entry): New function to update
+	the file list to the  entry.
+	* tabcomp.c (tab_completion_add_tab_func): New function to specify
+	a callback for when tab completion is performed.
+	* playlist-dlg.c, utilops.c: Use above new function so that tab
+	completion updates the file lists and pressing enter on a dir will also
+	sync the lists.
+
+Sun May 23 08:58:58 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c (main): Fix bugs when showing playlist window on startup has
+	empty file lists.
+
+Wed May 19 07:50:12 1999  John Ellis  <johne@bellatlantic.net>
+
+	* io_mpg123.c: Better error handling, fix hang when mpg123 stops 
+	sending data but did not stop running. Unrecognized mpg123 output is
+	now printed as a warning message.
+
+Wed May 19 07:23:24 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c: Fixes for segfaults in shuffle_list_next/prev calls.
+	* btn_funcs.c(btn_next/prev_down): set song_seek_pos = -1 so that
+	the song is not cleared when the playlist is empty.
+
+Tue May 18 15:34:24 1999  John Ellis  <johne@bellatlantic.net>
+
+	* skinui.c(display_pressed): When in started  up in docked, the middle
+	mouse button will also show the main menu.
+
+Tue May 18 14:41:51 1999  John Ellis  <johne@bellatlantic.net>
+
+	* btn_funcs.c(btn_next_pressed): Fix bug when using keyboard/ipc to
+	change songs.
+
+Tue May 18 14:28:08 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Added patch for NetBSD submitted by
+	Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de>.
+
+Tue May 18 14:21:37 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Changed Solaris /dev/audio to /dev/audioctl for 2.6, not
+	sure if this effects (breaks) 2.5.
+
+Mon May 17 11:04:25 1999  John Ellis  <johne@bellatlantic.net>
+
+	* dock.c: new file, added code based on patch submitted by
+	Kimball Thurston <kimball@sgrail.com> for docking into Window Maker.
+	* main.c, window.c, globals.c, gqmpeg.h: Added support for dock
+	options, -dock only disables window moving by dragging the mouse,
+	-dockwm does this, and sets up the window for Window Maker (if found).
+
+Mon May 17 09:46:57 1999  John Ellis  <johne@bellatlantic.net>
+
+	* mixer.c: Add patch for SGI, patch submitted by
+	Kimball Thurston <kimball@sgrail.com>
+
+Sat May 15 06:30:06 1999  John Ellis  <johne@bellatlantic.net>
+
+	* cpu_perc.c: Applied patch for BSD cpu utilization from
+	Bruno Rohee <rohee@OpenBSD.ORG>.
+
+Sat May 15 05:56:24 1999  John Ellis  <johne@bellatlantic.net>
+
+	* all files: Major reworking resulting in too many changes and new 
+	files to list. To Summarize: Modularized the mpg123 interface, adding
+	new players for file types should be semi-easy now. Added http://
+	support (shoutcast), added multiple file selection and dnd to playlist
+	window. Moved similar functions into new files. Updated the move/copy/
+	rename/delete dialogs (copied from GQview).
+	* Makefile: attempt to shorten this thing, removed unneeded lines
+	in the dependencies (if this breaks any systems, try the Makefile.orig
+	file, if that works, notify me and I will revert back)
+
+Sat Mar 27 12:06:09 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c, MAkefile: Add FreeBSD cpu percentage code, patch submitted
+	by Charlie Root <PA@FreeBSD.ee.ntu.edu.tw>.
+
+Sat Mar 27 07:31:04 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, README, gqmpeg.spec: Release 0.5.1
+
+Sat Mar 27 07:21:24 1999  John Ellis  <johne@bellatlantic.net>
+
+	* *.[ch]: Fix headers of all files (not an image viewer!).
+
+Sat Mar 27 07:14:30 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, main.c, config.c, gqmpegrc.c: Add option, prev restarts
+	current song when playing or paused and time played esceeds 4 seconds.
+
+Sat Mar 27 06:47:11 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c (volume_slider_moved): Cast float to gint in call to func.
+
+Sat Mar 27 06:42:06 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c ({up,down,top,end}_button_pressed): Remove the old
+	location from the clist when moving.
+
+Sat Mar 27 06:23:52 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playerio.c (stop_playing_file): If kill() fails, sleep 1 sec and try
+	again. Would have used select, (to sleep only 100 ms) but do not know
+	if all platforms support it (portable?).
+
+Wed Mar 24 06:43:55 1999  John Ellis  <johne@bellatlantic.net>
+
+	* README, FAQ: Updates for 0.5.0 release.
+	* gqmpeg.h: Move version to 0.5.0, release.
+
+Wed Mar 24 05:44:04 1999  John Ellis  <johne@bellatlantic.net>
+
+	* SKIN-SPECS skindata-template: Updated for new skin features.
+
+Wed Mar 24 05:17:34 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, skinui.c, skinutil.c: Add a Position_Item widget.
+	Works the same as the Volume_Item .
+
+Wed Mar 24 05:08:08 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, main.c, playlist.c, gqmpegrc.c: Save playlist window size
+	when `remember window position` is enabled. It also saves the window
+	position, but not restored.
+	*playlist.c: Add song count display to playlist window.
+
+Wed Mar 24 04:35:01 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playlist.c: Apply patch from "Michael Bruun Petersen" <mbp@image.dk>
+	to show extra info in the playlist.
+	The code was then modified to include more information and a slightly
+	(IMHO) better layout, fix a few bugs, and place the list in a pane.
+
+Tue Mar 23 18:20:49 1999  John Ellis  <johne@bellatlantic.net>
+
+	* tagutil.c(parse_text): Fix bug with 1 character long strings.
+
+Tue Mar 23 17:33:58 1999  John Ellis  <johne@bellatlantic.net>
+
+	* main.c: Simply exit with an error if mpg123 is not found in the path.
+
+Tue Mar 23 14:57:05 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, display.c, globals.c, main.c, playlist.c, skin*.c: Made
+	changes based on the patch by LÅ·szlÅÛ, RÅÛbert - rob@sch.bme.hu
+	These include:
+	Added artist, album, genre, total song & playlist time, total frames
+	to the skin spec.
+	Added skin option of extended fonts for international characters.(6x32)
+	If no hour number and time exceeds 60 minutes, shift from m:s to h:m.
+	Add option to specify the number of digits in number items.
+	(to over-ride the defaults)
+	* fileops.c (set_current_dir): Do not chase symbolic links.
+
+Tue Mar 23 10:01:36 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpegrc.c, main.c, playerio.c, skinutil.c: Tell strtol to use 
+	a base of 10 instead of 0 (auto-detect).
+	* main.c(position_slider_released): Added missing {} in else statement.
+
+Tue Mar 23 09:48:19 1999  John Ellis  <johne@bellatlantic.net>
+
+	* gqmpeg.h, songinfo.c, tagutil.c: Add newer genres, based on patch
+	from "Yick W. Tse" <ywtse@mailcity.com>
+
+Tue Mar 23 09:15:57 1999  John Ellis  <johne@bellatlantic.net>
+
+	* playerio.c (stop_playing_file): Send SIGINT instead of SIGTERM to
+	mpg123 to stop it, this seems to fix the problem of opening /dev/dsp
+	errors when skipping in Linux 2.2.x.
+	* ipc.c (ipc_off): Close files only if those files were opened, patch
+	from Tino Schwarze <tino.schwarze@informatik.tu-chemnitz.de>.
+
+Tue Mar 23 09:15:41 1999  John Ellis  <johne@bellatlantic.net>
+
+	* ChangeLog: start this file.
+
+========== The old changelog format is appended (from README) below:
+
+0.4.6 (02-01-99)
+  - Updated to work with mpg123 0.59q release (o and p still supported)
+  - more work on ~/.gqmpeg/command, it is now a pipe, only exists when gqmpeg
+    is running. Still work in progress.
+  * fix possible SIGPIPE errors caused in playerio.c
+
+0.4.5 (01-22-99)
+  > Add simple command line options to control an already running process,
+    commands include play, stop, pause, next, and prev.
+  > Add mixer support for SPARC Ultra 1 machines (tested on solaris 2.5.1).
+    Patch submitted by Marcos Ramirez.
+  - Increase mpg123 buffer limit to 8192 (from 3000).
+  * Fix problems with changing shaped skins.
+  * Fix crash when using up/down playlist buttons in gtk 1.1.x
+
+0.4.4 (12-15-98)
+  > Final fix for mpg123 buffer stop problems, the solution is to set mpg123
+    to it's own group id and kill the entire group. whew! :)
+  - Add option to show all files in the playlist window filelist.
+  - Increase mpg123 piped data timeout to 10 seconds.
+  - Disable id3 tag editing for invalid files.
+  - Beginnings of a FAQ.
+
+0.4.3 (12-8-98)
+  > Add append playlist button in playlist window.
+  > Add option to display playlist length in the playlist window.
+  - Add optional workaround for mpg123 buffer playback problems when seeking
+    and skipping songs. (pause during error, then retry playback).
+  - Add WM hints for icon and class.
+  - Editing the Makefile is no longer necessary for any version of GTK.
+    (tested to work through gtk+-1.1.5)
+  * Applied helpful patch to fix a file descriptor leak in playerio.c
+
+0.4.2 (11-25-98)
+  > Add shaped skin support. (use the Mask: option in the skindata file)
+  > Updated the default skin to include volume/position slider and presets.
+  * Fixes for the latest GTK+-1.1.5
+
+0.4.1 (11-13-98)
+  > Add path entry to playlist with tab completion.
+  > Add tab completion all over, including file dialogs and config window.
+  > Add better slider capabilities (vertical, reverse direction options).
+  - Basic translation for iso_8859 characters when drawing skin fonts.
+  * Fixes for FreeBSD, mixer should work now.
+
+0.4.0 (11-9-98)
+  > Add double size mode
+  > Add option to display cpu/frame info in the visualization window of winamp
+    skins.
+  - Add support for the winamp balance bitmap.
+  * Fix Mixer routines to compile on non-linux systems. Note that on such
+    systems, the mixers controls do nothing.
+  * Fix loading of playlists to work when the current playlist is empty.
+
+0.3.7 (11-5-98)
+  > Add ability to edit/save Id3 tags.
+  > Add move/copy/rename/delete options in playlist editor.
+  > Add keyboard support, see key chart (above).
+  > Allow time display to show song time remaining.
+  - Playlist locations default to the ~/.gqmpeg/playlists directory.
+  - Search the HOME env var first, allowing custom config dir location.
+  - Skin directories can now contain spaces.
+  * Fix crash when viewing song info for files beginning with junk.
+  * Fix 'small_digit undefined' error report when it really was defined.
+  * Fix -debug mode from causing mouse release functions from being ignored.
+  * Fix segfault when closeing warning/songinfo windows using WM controls.
+0.3.6 (10-25-98)
+  > Added basic volume controls, only tested on Linux x86. There will surely
+    be problems on other platforms. (patches accepted/wanted). The controlled
+    mixer device is specified in the options dialog.
+  > Volume/Balance buttons, sliders, and status items added to skindata format.
+  > winamp skin compatibility includes the new volume controls.
+  > Added preset button capability (max 10), playlists can be bound to these.
+  > Added support for mpg123's --8bit option.
+  > Added option to enable window manager decorations.
+  > Song information window now contains mpg specific details including song
+    length, file size, bit rates, etc.
+  - Added install and gnome-install options to the Makefile.
+0.3.5 (9-1-98)
+  > Moved to imlib to load images, now any filetype can be used for skin
+    images. Skin loading is faster now too. (recommended file format is png)
+  > Added slider for song positioning, it is not in the default skin, however.
+  > Added Status_Item for display of play/stop/pause condition.
+  > Added ability for shuffle/repeat buttons to have a status light.
+  > Added loader for w!n@mp skins, this loader is attempted if the skin is not
+    found to be GQmpeg native.
+  - Skins listed in the config dialog have (amp) beside them if they are w!n@mp.
+  - The new skindata features are Position_Slider, Status_Item and
+    Shuffle/Repeat_Button now has a status light option.
+  * Fixed a serious bug causing segfault when GQmpeg is run on a system for the
+    first time and a valid session-playlist.gqmpeg file is not found. 0.3.4
+    would only work for those that upgraded because of this.
+  * Fixed bugs in button display when buttons have no prelight or status light
+    specified in the skindata file.
+0.3.4 (8-29-98)
+  > Added right click context menus to the main window and playlist lists.
+  > Added ID3 tag reading, by default this option is off. When a tag is
+    available the title of the song is set to the tag's title. Songs with
+    no tag revert to the filename. Tag support is read-only.
+  > Added a 'smart window placement' option. When enabled (default) the window
+    will snap to the edges of the screen when within 8 pixels. Also when
+    enabled, the small mode always moves closest to the nearest edge, but
+    within the area of the normal mode.
+  > Option to save the window position and the window mode (normal/small).
+  > Ability to add entire directories to the playlist by right clicking on a
+    directory in the directory list. Directories can be added recursively too.
+  - Middle clicking on a file adds it to the playlist, middle clicking on the
+    playlist plays that song. (Double left click was and is there, but this is
+    for those that hate double clicking)
+  - Song info available on most right click menus, only shows ID3 info for now.
+  - Available skins are now listed on the skin tab of the config dialog.
+  - Now when 'save playlist bettween sessions' and 'play on startup' are
+    enabled GQmpeg continues with the song that was playing on the last exit.
+  - Added another file type, .mp2 to the filter.
+  - Now when clicking on an area with no button, but not dragging to move the
+    window, the window is raised.
+  - Some major rewrites of some code, hoping no new bugs were introduced.
+0.3.3  (8-22-98)
+  > Removed window decorations, new Iconify_Button type for added to iconify
+    the window.
+  > To move the window, just click and drag anywhere there is no button.
+  > New Mixer_Button type, the mixer can be changed under config->General.
+  > Skins can have an alternate mode (can be a smaller version, for example),
+    and added a Alt_Skin_Button type to switch skins, the alternate skin is
+    defined with the same file format as the normal one, however it's data file
+    is named skindata_alt. If there is no skindata_alt file, alternate skin mode
+    is disabled.
+  > Updated the default skin for no window decorations and added a smaller
+    alternate skin.
+  - GQmpeg now attempts to read the HOME environment variable as a last chance
+    effort to figure out the home directory. If it still can not find a valid
+    home directory, it gracefully exits with an error message.
+  - The rc file themes renamed to HOME/.gqmpeg/gtkrc, was gtkrc-gqmpeg.
+  - New tab in config window called startup, all relevent options moved there.
+  * Reformatted this file (README) to fit within 80 character wide terminals.
+  * skindata files: changed Mpegplayer_Item to Mpeglayer_Item (typo)
+                    changed Mpegver_Item to Mpegversion_Item
+0.3.2  (8-20-98)
+  > SKIN support! (why only a minor version change? Because skin support could
+    be buggy and I want 0.4.0 to be stable.
+  > New skin tab on config dialog. It contains an entry to specify the default
+    skin. the default skin must reside in HOME/.gqmpeg/skins
+  - The gqmpeg config files are now all under HOME/.gqmpeg/*
+  - Added patch provided by Jeff Glover which adds #ifdef's for cpu utilization
+    display to work on SGI IRIX 5.3 and 6.5
+  * Fixed bug where when first starting GQmpeg and opening the playlist window,
+    the files were not being sorted.
+0.3.1  (8-18-98)
+  > Added option to specify a custom output sampling rate.
+  > Added option to show hidden files (those that begin with a dot).
+  > Added buttons in playlist to move a song to the top or end (words
+   'beginning' and 'bottom' too many letters) of a list.
+  - Added .mpg and .mpeg types to the file list.
+  - Home directory code fixed.
+  - Added patch provided by Heiner Schepers which adds #ifdef's for cpu
+    utilization display to work on Sun Solaris 2.5.1
+  * Fixed bug where GQmpeg would sigsegv if you pressed move down in the
+    playlist and had not selected a song in the playlist.
+  * Fixed bugs when removing songs from a playlist when playing or paused.
+
+0.3.0  (8-16-98)
+  > Added option of saving shuffle and repeat modes in a playlist, and the
+    option of disabling reading these modes from a playlist.
+  > Shuffle is now sane, and respects repeat mode. Prev and Next buttons now
+    go through the shuffled songs instead of regenerating a random song on
+    each press.
+  > Added a go to home directory button in the playlist dialog.
+0.2.2  (7-30-98)
+  > Fixed config dialog problems.
+0.2.1  (6-24-98)
+  > These additions/fixes supplied by Sampo Niskanen <sampo@compart.fi>:
+   * - next/prev song with empty playlist doesn't crash program
+   * - next/prev song while shuffle on selects random song
+   * - when loading playlist, if shuffle on, selects random song
+0.2.0  (6-06-98)
+  > New feature, drag and drop support. Works with other gtk apps. Just drag a
+    file or playlist onto the main window or playlist window to start playing
+    that song.
+  > Rewrote file lists.
+  > Removed lengthy delay at the end of a song when using buffered play, the
+    time should be more accurate too (less 'second skipping').
+  > Added apply button to configuration dialog.
+  > Big code reorganization.
+0.1.1  (5-04-98)
+  > Fixed missing definitions by moving tham all to gqmpeg.h, now compiling
+    should work on more systems.
+  > Changed playlist code (GLists are now implemented properly)
+0.1.0  (4-06-98)
+  > No history, first release!
+
+=========
+
+
+
+
+
+
+
+
+

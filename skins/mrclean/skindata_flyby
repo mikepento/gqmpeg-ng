@@ -1,0 +1,82 @@
+#SLIK skin data file
+
+#file created by gqmpeg 0.91.0 (SLIK 0.91.0)
+
+#Title: 
+#Version: 
+#Date stamp: Mon Apr  5 14:25:02 2004
+#Build: 3
+#Author: 
+#Email: 
+#URL: 
+#License: 
+
+[main]
+image = bubble-fly.png
+transparent = TRUE
+border = TRUE
+border_left = 50
+border_right = 50
+border_top = 12
+border_bottom = 14
+border_left_stretch = FALSE
+border_right_stretch = FALSE
+border_top_stretch = FALSE
+border_bottom_stretch = FALSE
+width = 295
+height = 56
+focus_stretch = FALSE
+focus_has_border = TRUE
+focus_border_left = 7
+focus_border_right = 7
+focus_border_top = 7
+focus_border_bottom = 7
+focus_anchor_right = FALSE
+focus_anchor_bottom = FALSE
+focus_filled = FALSE
+focus_red = 255
+focus_green = 0
+focus_blue = 0
+focus_alpha = 128
+
+[text_title]
+description = Sans Bold 11
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 12
+y = 9
+width = 275
+sizeable = FALSE
+rotation = 0
+
+[text_artist]
+description = Sans Bold 9
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 12
+y = 30
+width = 240
+sizeable = FALSE
+rotation = 0
+
+[button_next]
+image = btn-rnd-clr-16-right.png
+x = 271
+y = 32
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+anchor_bottom = TRUE
+
+[button_prev]
+image = btn-rnd-clr-16-left.png
+x = 255
+y = 32
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+anchor_bottom = TRUE

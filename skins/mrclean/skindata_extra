@@ -1,0 +1,400 @@
+#SLIK skin data file
+
+#file created by gqmpeg 0.91.0 (SLIK 0.91.0)
+
+#Title: MrClean
+#Version: 0.91.0
+#Date stamp: Mon Apr  5 13:54:53 2004
+#Build: 3
+#Author: John Ellis
+#Email: johne@verizon.net
+#URL: gqmpeg.sourceforge.net
+#License: images and design free for any use
+#Comments:
+
+[main]
+image = blue2-soft-round-logo.png
+transparent = FALSE
+border = TRUE
+border_left = 110
+border_right = 7
+border_top = 53
+border_bottom = 9
+border_left_stretch = FALSE
+border_right_stretch = FALSE
+border_top_stretch = FALSE
+border_bottom_stretch = FALSE
+sizeable = TRUE
+width = 266
+height = 206
+width_min = 266
+width_max = 450
+width_increment = 184
+height_min = 206
+height_max = 206
+height_increment = 1
+focus = focus-rect-border-1.png
+focus_stretch = FALSE
+focus_has_border = TRUE
+focus_border_left = 1
+focus_border_right = 1
+focus_border_top = 1
+focus_border_bottom = 1
+focus_anchor_right = FALSE
+focus_anchor_bottom = FALSE
+focus_filled = FALSE
+focus_red = 255
+focus_green = 0
+focus_blue = 0
+focus_alpha = 128
+
+[digit_large]
+image = digit-digital-24-aa.png
+
+[digit_small]
+image = digit-digital-15-aa.png
+
+[font_helvetica-14]
+description = Sans Bold 10
+
+[font_helvetica-12]
+description = Sans 9
+
+[button_play]
+image = btn-rect-clr-32r-play.png
+x = 8
+y = 170
+prelight = TRUE
+indicator = TRUE
+anchor_bottom = TRUE
+
+[button_stop]
+image = btn-rect-clr-32-stop.png
+x = 56
+y = 170
+prelight = TRUE
+indicator = FALSE
+anchor_bottom = TRUE
+
+[button_skin_expand]
+image = btn-expand-toggle-20-h.png
+x = 239
+y = 178
+prelight = TRUE
+indicator = TRUE
+data = +184 0
+
+[button_loop_ab]
+image = btn-rnd-clr-26-toggle.png
+x = 50
+y = 122
+prelight = TRUE
+indicator = TRUE
+
+[button_repeat_1]
+image = btn-rnd-clr-26-toggle.png
+x = 81
+y = 122
+prelight = TRUE
+indicator = TRUE
+
+[slider_position]
+image = bubble-slider-16-h.png
+x = 8
+y = 151
+length = 60
+pressable = TRUE
+prelight = TRUE
+reversed = FALSE
+vertical = FALSE
+trough_length = 250
+border_1 = 15
+border_2 = 15
+stretch = FALSE
+sizeable = FALSE
+anchor_bottom = TRUE
+
+[slider_volume]
+image = bubble-slider-16-v.png
+x = 241
+y = 50
+length = 60
+pressable = TRUE
+prelight = TRUE
+reversed = TRUE
+vertical = TRUE
+trough_length = 96
+border_1 = 15
+border_2 = 15
+stretch = FALSE
+sizeable = FALSE
+
+[list_presets]
+image = list-clear-back.png
+x = 266
+y = 32
+width = 177
+height = 166
+sizeable = FALSE
+columns = 2
+columns_right_justify = FALSE
+border_top = 3
+border_right = 3
+border_bottom = 3
+border_left = 3
+center_stretch = FALSE
+row_image = list-row-clear.png
+row_pressable = TRUE
+row_prelight = TRUE
+row_border_left = 4
+row_border_right = 4
+row_stretch = FALSE
+text_font = Sans Bold 9
+text_red = 0
+text_green = 0
+text_blue = 0
+text_alpha = 230
+flag_image = list-clear-flags.png
+flag_sections = 4
+flag_column = 0
+column_0_key = number
+column_0_width = 20
+column_0_proportional = FALSE
+column_0_right_justify = TRUE
+column_1_key = description
+column_1_width = 20
+column_1_proportional = FALSE
+column_1_right_justify = FALSE
+
+[button_skin_iconify]
+image = btn-rnd-clr-26-min.png
+x = 208
+y = 3
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+
+[button_skin_close]
+image = btn-rnd-clr-26-x.png
+x = 236
+y = 3
+prelight = TRUE
+indicator = FALSE
+anchor_right = TRUE
+
+[number_hour]
+digit = large
+x = 120
+y = 174
+length = 1
+zeros = FALSE
+center = FALSE
+rotation = 0
+anchor_bottom = TRUE
+
+[number_minute]
+digit = large
+x = 146
+y = 174
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+anchor_bottom = TRUE
+
+[number_second]
+digit = large
+x = 185
+y = 174
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+anchor_bottom = TRUE
+
+[number_song_minute]
+digit = small
+x = 106
+y = 25
+length = 4
+zeros = FALSE
+center = FALSE
+rotation = 0
+
+[number_song_second]
+digit = small
+x = 161
+y = 25
+length = 2
+zeros = TRUE
+center = FALSE
+rotation = 0
+
+[number_input_rate]
+digit = small
+x = 106
+y = 41
+length = 4
+zeros = FALSE
+center = FALSE
+rotation = 0
+
+[number_input_hz]
+digit = small
+x = 188
+y = 41
+length = 2
+zeros = FALSE
+center = FALSE
+rotation = 0
+
+[item_minus]
+image = item-pda-minus.png
+x = 113
+y = 184
+sections = 2
+anchor_bottom = TRUE
+
+[item_icon]
+image = item-volume-static.png
+x = 242
+y = 34
+sections = 1
+
+[item_icon]
+image = item-ab-static.png
+x = 16
+y = 127
+sections = 1
+
+[item_icon]
+image = item-repeat1-static.png
+x = 111
+y = 127
+sections = 1
+
+[button_skin_open]
+image = btn-rnd-clr-26-eye.png
+x = 208
+y = 122
+prelight = TRUE
+indicator = FALSE
+data = skindata_about
+
+[text_title]
+font = helvetica-14
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 8
+y = 6
+width = 198
+sizeable = TRUE
+rotation = 0
+
+[text_artist]
+font = helvetica-14
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 9
+y = 56
+width = 224
+sizeable = FALSE
+rotation = 0
+
+[text_album]
+font = helvetica-14
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 9
+y = 72
+width = 224
+sizeable = FALSE
+rotation = 0
+
+[text_comment]
+font = helvetica-14
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 9
+y = 104
+width = 224
+sizeable = FALSE
+rotation = 0
+
+[text_year]
+font = helvetica-14
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 9
+y = 88
+width = 50
+sizeable = FALSE
+rotation = 0
+
+[text_genre]
+font = helvetica-14
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 65
+y = 88
+width = 168
+sizeable = FALSE
+rotation = 0
+
+[text_desc]
+font = helvetica-12
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 155
+y = 42
+width = 30
+sizeable = FALSE
+rotation = 0
+data = Kb/s
+
+[text_desc]
+font = helvetica-12
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 214
+y = 42
+width = 23
+sizeable = FALSE
+rotation = 0
+data = kHz
+
+[item_colon]
+image = item-colon-24.png
+x = 138
+y = 181
+sections = 1
+anchor_bottom = TRUE
+
+[item_colon]
+image = item-colon-24.png
+x = 178
+y = 181
+sections = 1
+anchor_bottom = TRUE
+
+[item_colon]
+image = item-colon-15.png
+x = 156
+y = 29
+sections = 1

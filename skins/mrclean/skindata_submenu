@@ -1,0 +1,79 @@
+#SLIK skin data file
+                                                                                                                         
+#file created by gqmpeg 0.91.0 (SLIK 0.91.0)
+                                                                                                                         
+#Title: MrClean
+#Version: 0.91.0
+#Date stamp: Mon Apr  5 14:04:08 2004
+#Build: 1
+#Author: John Ellis
+#Email: johne@verizon.net
+#URL: gqmpeg.sourceforge.net
+#License: images and design free for any use
+
+[main]
+image = blue2-round-shadowed.png
+transparent = TRUE
+border = TRUE
+border_left = 12
+border_right = 13
+border_top = 10
+border_bottom = 11
+border_left_stretch = FALSE
+border_right_stretch = FALSE
+border_top_stretch = FALSE
+border_bottom_stretch = FALSE
+width = 40
+height = 29
+focus = focus-rect-border-1.png
+focus_stretch = FALSE
+focus_has_border = TRUE
+focus_border_left = 1
+focus_border_right = 1
+focus_border_top = 1
+focus_border_bottom = 1
+focus_anchor_right = FALSE
+focus_anchor_bottom = FALSE
+focus_filled = FALSE
+focus_red = 255
+focus_green = 0
+focus_blue = 0
+focus_alpha = 128
+
+[list_menu]
+image = list-clear.png
+x = 5
+y = 5
+width = 27
+height = 16
+sizeable = TRUE
+columns = 2
+columns_right_justify = FALSE
+border_top = 0
+border_right = 0
+border_bottom = 0
+border_left = 0
+center_stretch = FALSE
+row_image = list-row-clear.png
+row_pressable = TRUE
+row_prelight = TRUE
+row_border_left = 4
+row_border_right = 4
+row_stretch = FALSE
+text_font = Sans Bold 9
+text_red = 0
+text_green = 0
+text_blue = 150
+text_alpha = 230
+flag_image = list-menu-flags.png
+flag_sections = 4
+flag_column = 0
+column_0_key = icons
+column_0_width = 11
+column_0_proportional = FALSE
+column_0_right_justify = FALSE
+column_1_key = text
+column_1_width = 50
+column_1_proportional = TRUE
+column_1_right_justify = FALSE
+data = skindata_submenu

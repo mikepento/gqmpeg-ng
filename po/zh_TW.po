@@ -1,0 +1,3520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gqmpeg-0.16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-04-05 14:47-0400\n"
+"PO-Revision-Date: 2001-11-10 10:55:HK\n"
+"Last-Translator: Ryan Cheng<ryan@chinese2000.sniic.com>\n"
+"Language-Team: Chinese2000 <woodman@chinese2000.sniic.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Big5\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/btn_funcs.c:728
+msgid "Skin editor - GQmpeg"
+msgstr "面版編輯器 - GQmpeg"
+
+#: src/display_flyby.c:96
+msgid "Upper left"
+msgstr ""
+
+#: src/display_flyby.c:99
+#, fuzzy
+msgid "Upper right"
+msgstr "右"
+
+#: src/display_flyby.c:102
+#, fuzzy
+msgid "Lower right"
+msgstr "右"
+
+#: src/display_flyby.c:105
+msgid "Lower left"
+msgstr ""
+
+#: src/display_flyby.c:231
+#, fuzzy
+msgid "now playing:"
+msgstr "開始播放"
+
+#: src/display_flyby.c:246
+msgid "up next:"
+msgstr ""
+
+#: src/display_menu.c:180
+msgid "Play"
+msgstr "播放"
+
+#: src/display_menu.c:182 src/menus.c:101
+msgid "Pause"
+msgstr "暫停"
+
+#: src/display_menu.c:184
+msgid "Stop"
+msgstr "停止"
+
+#: src/display_menu.c:190 src/display_menu.c:228
+msgid "Playlist..."
+msgstr "播放列..."
+
+#: src/display_menu.c:193 src/preferences.c:860
+msgid "Presets"
+msgstr "預先調整"
+
+#: src/display_menu.c:210 src/menus.c:57
+#, c-format
+msgid "%d - (empty)"
+msgstr "%d - (空白)"
+
+#: src/display_menu.c:221
+msgid "Set preset to playlist..."
+msgstr "設定預先調整的播放列表..."
+
+#: src/display_menu.c:223
+msgid "Set preset to song..."
+msgstr "設定預先調整的歌曲"
+
+#: src/display_menu.c:226
+msgid "Open"
+msgstr "開啟"
+
+#: src/display_menu.c:230
+msgid "File..."
+msgstr "檔案..."
+
+#: src/display_menu.c:232
+msgid "Custom..."
+msgstr "自定"
+
+#: src/display_menu.c:235
+#, fuzzy
+msgid "Save playlist..."
+msgstr "儲存播放列"
+
+#: src/display_menu.c:241
+msgid "Toggle"
+msgstr "播放設定"
+
+#: src/display_menu.c:243
+msgid "Shuffle"
+msgstr "隨機"
+
+#: src/display_menu.c:245
+msgid "Repeat"
+msgstr "重覆"
+
+#: src/display_menu.c:247
+msgid "Repeat 1"
+msgstr "重覆 1"
+
+#: src/display_menu.c:249
+#, fuzzy
+msgid "Time total"
+msgstr "總時間"
+
+#: src/display_menu.c:251
+#, fuzzy
+msgid "Time remaining"
+msgstr "剩餘時間"
+
+#: src/display_menu.c:254
+msgid "Preferences..."
+msgstr "設定..."
+
+#: src/display_menu.c:260
+msgid "Current song"
+msgstr "當前歌曲"
+
+#: src/display_menu.c:262
+msgid "Song Info..."
+msgstr "歌曲資訊..."
+
+#: src/display_menu.c:264
+msgid "Add to playlist"
+msgstr "加到播放列表中"
+
+#: src/display_menu.c:266
+msgid "Remove from playlist"
+msgstr "從播放列表中移除"
+
+#: src/display_menu.c:269
+msgid "Run mixer..."
+msgstr "執行混音器..."
+
+#: src/display_menu.c:275
+msgid "Skin Editor..."
+msgstr "面版編輯器..."
+
+#: src/display_menu.c:277
+msgid "Help..."
+msgstr ""
+
+#: src/display_menu.c:279
+msgid "About..."
+msgstr "關於..."
+
+#: src/display_menu.c:285
+msgid "Iconify"
+msgstr "圖示化"
+
+#: src/display_menu.c:289
+#, fuzzy
+msgid "Close window"
+msgstr "視窗的兩倍大小"
+
+#: src/display_menu.c:292
+msgid "Quit"
+msgstr ""
+
+#: src/globals.c:138 src/main.c:1292
+msgid "Untitled.gqmpeg"
+msgstr "未命明.gqmpeg"
+
+#: src/io_mpg123.c:159
+msgid "mpg123 version prior to 0.59o found!\n"
+msgstr "找到早於版本 0.59o 的 mpg123!\n"
+
+#: src/io_mpg123.c:160
+msgid "assuming 0.59o compatible\n"
+msgstr "假設 0.59o 兼容\n"
+
+#: src/io_mpg123.c:161 src/io_mpg123.c:173
+#, c-format
+msgid ""
+"The version line reported was:\n"
+"%s\n"
+msgstr ""
+"版本行的報告是:\n"
+"%s\n"
+
+#: src/io_mpg123.c:171
+#, c-format
+msgid "unknown version of mpg123, assuming %s compatible\n"
+msgstr "不清楚的 mpg123 版本，假設 %s 兼容\n"
+
+#: src/io_mpg123.c:172
+msgid "(GQmpeg requires mpg123 0.59o or later)\n"
+msgstr "(GQmpeg 需要版本 0.59o 或更新)\n"
+
+#: src/io_mpg123.c:177
+#, c-format
+msgid "mpg123 version detected: %d\n"
+msgstr "偵測到的 mpg123 版本是: %d\n"
+
+#: src/io_mpg123.c:430
+#, c-format
+msgid "Warning, unrecognized mpg123 output:\"%s\"\n"
+msgstr "警告,不能確認的 mpg123 輸出:\"%s\"\n"
+
+#: src/io_mpg123.c:500
+#, c-format
+msgid "Error, mpg123 reported:\"%s\"\n"
+msgstr "錯誤, mpg123 報告:\"%s\"\n"
+
+#: src/io_mpg123.c:502
+msgid "GQmpeg: mpg123 error"
+msgstr "GQmpeg: mpg123 錯誤"
+
+#: src/io_mpg123.c:522
+msgid "mpg123 disappeared! (unexpected EOF)\n"
+msgstr "mpg123 消失了! (突然文件結束)\n"
+
+#: src/io_mpg123.c:530
+msgid "error reading from mpg123!\n"
+msgstr ""
+
+#: src/io_mpg123.c:548
+msgid "Error: mpg123 stopped sending data! (timeout)\n"
+msgstr "錯誤: mpg123 停止傳送資料! (逾時)\n"
+
+#: src/io_mpg123.c:848 src/io_ogg123.c:63 src/io_xmp.c:537 src/io_xmp.c:543
+msgid "Pipe failed.\n"
+msgstr "輸送管錯誤\n"
+
+#: src/io_mpg123.c:866 src/io_ogg123.c:79 src/io_xmp.c:564
+#, c-format
+msgid "unable to run %s (in the path?)\n"
+msgstr "不能執行 %s (在路徑中?)\n"
+
+#: src/io_mpg123.c:872 src/io_ogg123.c:85 src/io_xmp.c:570
+msgid "Fork failed.\n"
+msgstr ""
+
+#: src/io_mpg123.c:916 src/io_ogg123.c:603 src/io_xmp.c:212
+#, c-format
+msgid "Failed to successfully send signal to pid = %d\n"
+msgstr "不能將訊息傅到 pid = %d\n"
+
+#: src/io_mpg123.c:1014
+msgid "MPEG audio file"
+msgstr "MPEG 音效檔"
+
+#: src/io_mpg123.c:1211
+msgid "io_mpg123.c warning: attempt to stop playback of non matching file\n"
+msgstr "io_mpg123.c 警告: 嘗試停止再生不匹配的檔案\n"
+
+#: src/io_mpg123.c:1224
+msgid "io_mpg123.c warning: attempt to pause playback of non matching file\n"
+msgstr "io_mpg123.c 警告: 嘗試暫停再生不匹配的檔案\n"
+
+#: src/io_mpg123.c:1243
+msgid ""
+"io_mpg123.c warning: attempt to continue playback of non matching file\n"
+msgstr "io_mpg123.c 警告: 嘗試繼續再生不匹配的檔案\n"
+
+#: src/io_mpg123.c:1260
+msgid "io_mpg123.c warning: attempt to seek in non matching file\n"
+msgstr "io_mpg123.c 警告: 嘗試尋找再生不匹配的檔案\n"
+
+#: src/io_mpg123.c:1303
+msgid "Failed to find mpg123 in your path!\n"
+msgstr "在你的路徑中找不到 mpg123!\n"
+
+#: src/io_mpg123.c:1304
+msgid "mpg123 player module disabled.\n"
+msgstr "mpg123 播放器模組關閉。\n"
+
+#: src/io_mpg123.c:1310
+msgid "mp3 player"
+msgstr "mp3 播放器"
+
+#: src/io_mpg123.c:1340
+msgid "MP3/Shoutcast stream"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:250
+msgid "Use ID3 tags when available"
+msgstr "使用 ID3 標籤"
+
+#: src/io_mpg123_cfg.c:259
+msgid "Enable output buffer of size(Kbytes):"
+msgstr "啟動輸出緩衝區(千位元組):"
+
+#: src/io_mpg123_cfg.c:272
+msgid "Downsampling"
+msgstr "降低取樣"
+
+#: src/io_mpg123_cfg.c:282
+msgid "Auto or(1:1)"
+msgstr "自動或 (1:1)"
+
+#: src/io_mpg123_cfg.c:293
+msgid "22Khz (2:1)"
+msgstr "22 千赫茲 (2:1)"
+
+#: src/io_mpg123_cfg.c:304
+msgid "11Khz (4:1)"
+msgstr "11千赫茲 (4:1)"
+
+#: src/io_mpg123_cfg.c:319
+msgid "Custom (bits/sec):"
+msgstr "自定(位元/秒)"
+
+#: src/io_mpg123_cfg.c:335
+msgid "Mix both channels into mono output"
+msgstr "混合多聲道到單一輸出"
+
+#: src/io_mpg123_cfg.c:340
+msgid "8-bit output"
+msgstr "8位元輸出"
+
+#: src/io_mpg123_cfg.c:349
+msgid "Specific output device:"
+msgstr "特定的輸出裝置:"
+
+#: src/io_mpg123_cfg.c:362
+msgid "Attempt to get higher priority. (setuid root mpg123 helps here)"
+msgstr "取得更高的優先性(setuid root mpg123 helps here)"
+
+#: src/io_mpg123_cfg.c:367
+msgid "disable resync on error (may help VBR files)"
+msgstr "關閉再同步錯誤(可能幫助到 VBR 檔案)"
+
+#: src/io_mpg123_cfg.c:372
+msgid "Output to Wave"
+msgstr "輸出到 Wave 檔"
+
+#: src/io_mpg123_cfg.c:381
+msgid "Output to file"
+msgstr "輸出到檔案"
+
+#: src/io_mpg123_cfg.c:390
+msgid "Format:"
+msgstr "格式:"
+
+#: src/io_mpg123_cfg.c:395
+msgid "Wave (.wav)"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:401
+msgid "CDR raw (.raw)"
+msgstr ""
+
+#: src/io_mpg123_cfg.c:415
+msgid "Place files in path:"
+msgstr "設置檔案的路徑:"
+
+#: src/io_mpg123_cfg.c:430 src/io_ogg123_cfg.c:169
+msgid "User options:"
+msgstr "使用者選項:"
+
+#: src/io_mpg123_cfg.c:442 src/io_ogg123_cfg.c:181
+msgid "Options do not take effect until the next song."
+msgstr "設定會在下一首歌時才生效。"
+
+#: src/io_ogg123.c:483
+#, fuzzy, c-format
+msgid ""
+"Failed to set comments for file:\n"
+"%s"
+msgstr "不能設定音量大小於 %d\n"
+
+#: src/io_ogg123.c:484
+#, fuzzy
+msgid "Comment set failed - GQmpeg"
+msgstr "刪除檔案 - GQmpeg"
+
+#: src/io_ogg123.c:763
+#, c-format
+msgid "Error, ogg123 reported:\"%s\")\n"
+msgstr "錯誤, ogg123 報告:\"%s\")\n"
+
+#: src/io_ogg123.c:765
+msgid "GQmpeg: ogg123 error"
+msgstr "GQmpeg: ogg123 錯誤"
+
+#: src/io_ogg123.c:801
+msgid "ogg123 disappeared! (unexpected EOF)\n"
+msgstr "ogg123 消失了! (突然文件結束)\n"
+
+#: src/io_ogg123.c:963
+msgid "Ogg bitstream audio file"
+msgstr "Ogg bitstream 音效檔"
+
+#: src/io_ogg123.c:1137 src/io_xmp.c:1021
+#, c-format
+msgid "Failed to find %s in your path!\n"
+msgstr "在你的路徑中找不到 %s!\n"
+
+#: src/io_ogg123.c:1138
+msgid "ogg123 player module disabled.\n"
+msgstr "ogg123 播放器模組關閉。\n"
+
+#: src/io_ogg123.c:1144
+#, fuzzy, c-format
+msgid "\"%s\" not found.\n"
+msgstr "找不到檔案 %s 。"
+
+#: src/io_ogg123.c:1150
+#, c-format
+msgid "\"%s\" not found, comment support disabled.\n"
+msgstr ""
+
+#: src/io_ogg123.c:1156
+msgid "ogg player"
+msgstr "ogg 播放器"
+
+#: src/io_ogg123_cfg.c:129
+msgid "Device Options"
+msgstr "裝置選項"
+
+#: src/io_ogg123_cfg.c:142
+msgid "Device:"
+msgstr "裝置:"
+
+#: src/io_ogg123_cfg.c:155
+msgid "Device options:"
+msgstr "裝置選項:"
+
+#: src/io_radio.c:268
+#, c-format
+msgid "Failed to find %s\n"
+msgstr "找不到 %s\n"
+
+#: src/io_radio.c:424
+msgid "radio player module disabled. (failed check)\n"
+msgstr "關閉收音機模組播放器。(檢查失敗)\n"
+
+#: src/io_radio.c:563 src/io_radio.c:953
+msgid "Radio tuner"
+msgstr "收音機接收器"
+
+#: src/io_radio.c:568 src/mod_info.c:36 src/ogg_info.c:263
+msgid "Song info"
+msgstr "歌曲資訊"
+
+#: src/io_radio.c:579
+#, c-format
+msgid "%.2f Mhz"
+msgstr ""
+
+#: src/io_radio.c:580
+#, fuzzy
+msgid "Frequency"
+msgstr "頻率 (MHz)"
+
+#: src/io_radio.c:584 src/mod_info.c:49 src/mpg_info.c:231
+#: src/playlist-window.c:106
+msgid "Title"
+msgstr "標題"
+
+#: src/io_radio.c:598 src/io_radio.c:977
+msgid "Radio station"
+msgstr "廣播電台"
+
+#: src/io_radio.c:695
+msgid "Radio auto scan"
+msgstr "收音機自動追台"
+
+#: src/io_radio.c:695
+msgid "Scanning for available stations..."
+msgstr "掃描頻道..."
+
+#: src/io_radio.c:755
+msgid "Frequency (MHz):"
+msgstr "頻率 (MHz)"
+
+#: src/io_radio.c:770 src/ui2_editor.c:3945
+msgid "Title:"
+msgstr "標題:"
+
+#: src/io_radio.c:787
+msgid "Auto scan"
+msgstr "自動追台"
+
+#: src/io_radio_cfg.c:72
+msgid "Radio tuner found"
+msgstr "找到收音機接收器"
+
+#: src/io_radio_cfg.c:74
+msgid "Radio tuner not found"
+msgstr "找不到收音機接收器"
+
+#: src/io_radio_cfg.c:111
+msgid "Options"
+msgstr "選項"
+
+#: src/io_radio_cfg.c:124
+#, fuzzy
+msgid "device:"
+msgstr "裝置:"
+
+#: src/io_radio_cfg.c:141
+msgid "Detect radio"
+msgstr "偵查收音機"
+
+#: src/io_xmp.c:352
+msgid "GQmpeg: xmp error"
+msgstr "GQmpeg: xmp 錯誤"
+
+#: src/io_xmp.c:387
+msgid "xmp disappeared! (unexpected EOF)\n"
+msgstr "xmp 消失了! (突然文件結束)\n"
+
+#: src/io_xmp.c:903
+msgid "MOD format audio file"
+msgstr "MOD 格式檔案"
+
+#: src/io_xmp.c:1022
+msgid "xmp player module disabled.\n"
+msgstr "關閉 xmp 播放器模組\n"
+
+#: src/io_xmp.c:1028
+msgid "mod player"
+msgstr "mod 播放器"
+
+#: src/io_xmp_cfg.c:186
+msgid "Sound Options"
+msgstr "音效選項"
+
+#: src/io_xmp_cfg.c:195
+msgid "Mono output"
+msgstr "單聲道輸出"
+
+#: src/io_xmp_cfg.c:199
+msgid "Panning Percent:"
+msgstr "攝全景的百份比"
+
+#: src/io_xmp_cfg.c:203
+msgid "Software Mixer"
+msgstr "軟體混音器"
+
+#: src/io_xmp_cfg.c:212
+msgid "Mixing rate (hz):"
+msgstr "混合比率 (赫茲)"
+
+#: src/io_xmp_cfg.c:216
+msgid "8 bit"
+msgstr "8 位元"
+
+#: src/io_xmp_cfg.c:220
+msgid "Enable interpolation"
+msgstr "啟動添寫"
+
+#: src/ipc.c:69
+#, c-format
+msgid "error opening file for write %s\n"
+msgstr "檔案寫入時發生錯誤 %s\n"
+
+#: src/ipc.c:155
+#, c-format
+msgid "error opening command file for write %s\n"
+msgstr "指令檔案寫入時發生錯誤 %s\n"
+
+#: src/ipc.c:323
+msgid "available ipc commands:\n"
+msgstr "可用的 ipc 令:\n"
+
+#: src/ipc.c:324
+msgid "play, pause, stop, next, prev, quit\n"
+msgstr "播放, 暫停, 停止, 下一首, 前一首, 離開\n"
+
+#: src/ipc.c:325
+msgid "seek [+|-]n                seek n seconds into file, or +/-n\n"
+msgstr ""
+
+#: src/ipc.c:326
+msgid "pladd {\"file\"|file}        add file to playlist\n"
+msgstr ""
+
+#: src/ipc.c:327
+msgid "pladd_play {\"file\"|file}   add file to playlist and play it\n"
+msgstr ""
+
+#: src/ipc.c:328
+msgid "plremove {\"file\"|file}     remove file from playlist\n"
+msgstr ""
+
+#: src/ipc.c:329
+msgid "plclr                      clear playlist\n"
+msgstr ""
+
+#: src/ipc.c:330
+msgid "plload {playlist}          load playlist\n"
+msgstr ""
+
+#: src/ipc.c:331
+msgid "plappend {playlist}        append playlist\n"
+msgstr ""
+
+#: src/ipc.c:332
+msgid "play_file {\"file\"|file}    play file, do not add to playlist\n"
+msgstr ""
+
+#: src/ipc.c:333
+msgid "                           or, if playlist, load playlist\n"
+msgstr ""
+
+#: src/ipc.c:334
+msgid "   file is a path or http://server:port\n"
+msgstr ""
+
+#: src/ipc.c:335
+msgid "skin \"file\"                set skin\n"
+msgstr ""
+
+#: src/ipc.c:336
+msgid "volume [+|-]n              set volume to n (0 - 100) or +/-n\n"
+msgstr ""
+
+#: src/ipc.c:337
+msgid "getting a status printed to a file is also possible:\n"
+msgstr ""
+
+#: src/ipc.c:338
+msgid "status_add \"key\" \"file\"    start status printing to file\n"
+msgstr ""
+
+#: src/ipc.c:339
+msgid "status_rm \"key\"|\"file\"     stop printing to file or key\n"
+msgstr ""
+
+#: src/ipc.c:340
+msgid "these commands open file requestors, windows, etc.\n"
+msgstr "這些指令開啟檔案提問者,視窗..\n"
+
+#: src/ipc.c:341
+msgid "show_playlist\n"
+msgstr ""
+
+#: src/ipc.c:342
+msgid "show_open_file, show_open_custom, show_open_playlist\n"
+msgstr ""
+
+#: src/ipc.c:346
+#, c-format
+msgid "unknown ipc command: [%s]\n"
+msgstr "不明的 ipc 命令: [%s]\n"
+
+#: src/ipc.c:367
+msgid "ipc command file already locked, ipc disabled\n"
+msgstr "ipc指命檔已鎖定, ipc 關閉\n"
+
+#: src/ipc.c:380
+#, c-format
+msgid "Failed to mkfifo for %s\n"
+msgstr "mkfifo %s 失敗\n"
+
+#: src/ipc.c:390 src/mixer.c:112 src/mixer.c:197 src/mixer.c:228
+#, c-format
+msgid "unable to open %s\n"
+msgstr "不能開啟 %s \n"
+
+#: src/main.c:622
+msgid "execing gqmpeg failed\n"
+msgstr "執行gqmpeg失敗\n"
+
+#: src/main.c:635
+msgid "Timeout waiting for ipc of spawned gqmpeg process\n"
+msgstr ""
+
+#: src/main.c:679
+#, c-format
+msgid "ipc %s command requires data\n"
+msgstr "ipc %s 指令需要資料\n"
+
+#: src/main.c:828
+#, c-format
+msgid "Creating GQmpeg dir:%s\n"
+msgstr "建立 GQmpeg 目錄:%s\n"
+
+#: src/main.c:831 src/rcfile.c:122
+#, c-format
+msgid "Could not create dir:%s\n"
+msgstr "不能建立 目錄:%s\n"
+
+#: src/main.c:880
+#, c-format
+msgid "Using skin: %s\n"
+msgstr "使用的面板: %s\n"
+
+#: src/main.c:884
+#, c-format
+msgid "Skin not found: %s\n"
+msgstr "找到面板: %s\n"
+
+#: src/main.c:912
+#, fuzzy
+msgid "Help - GQmpeg"
+msgstr "複製 - GQmpeg"
+
+#: src/main.c:921
+msgid "usage: gqmpeg [option(s)] [file(s) | ipc_command(s)]\n"
+msgstr "用法: gqmpeg [option(s)] [file(s) | ipc_command(s)]\n"
+
+#: src/main.c:922
+msgid " standard options:\n"
+msgstr "標準選項:\n"
+
+#: src/main.c:923
+msgid "  --skin:<skindir>             load specified skin\n"
+msgstr "  --skin:<skindir>             載入特定的面板\n"
+
+#: src/main.c:924
+msgid "  --dock                       enable docking behavior\n"
+msgstr "  --dock                       啟動嵌入的屬性\n"
+
+#: src/main.c:925
+msgid "  --dockwm                     enable Window Maker docking\n"
+msgstr "  --dockwm                     啟動 Window Maker 嵌入\n"
+
+#: src/main.c:926
+msgid "  --skinhelp                   print mouse event coordinates\n"
+msgstr "  --skinhelp                   列出與滑鼠相關的事件\n"
+
+#: src/main.c:927
+msgid "  --debug                      enable debug output\n"
+msgstr "  --debug                      啟動除錯輸出\n"
+
+#: src/main.c:928
+msgid "  -h,  --help                  displays this message\n"
+msgstr "  -h,  --help                  顯視現在這個訊息\n"
+
+#: src/main.c:929
+msgid "  -v,  --version               shows version info\n"
+msgstr "  -v,  --version               顯示版本資訊\n"
+
+#: src/main.c:930
+msgid "  --blank                      start with empty playlist\n"
+msgstr "  --blank                      以空白的播放列表開始\n"
+
+#: src/main.c:931
+msgid "  --geometry [+|-]xxx[+|-]yyy  specify window position\n"
+msgstr ""
+
+#: src/main.c:932
+msgid "  --crack                      reserved\n"
+msgstr ""
+
+#: src/main.c:933
+msgid " available ipc_commands:\n"
+msgstr "可用的 ipc 命令:\n"
+
+#: src/main.c:934
+msgid "  -p          --play\n"
+msgstr ""
+
+#: src/main.c:935
+msgid "  -s          --stop\n"
+msgstr ""
+
+#: src/main.c:936
+msgid "  -n          --next\n"
+msgstr ""
+
+#: src/main.c:937
+msgid "  -b          --back\n"
+msgstr ""
+
+#: src/main.c:938
+msgid "  -ps         --pause\n"
+msgstr ""
+
+#: src/main.c:939
+msgid "  -pladd      --playlist_add <f>[..]    add file to playlist\n"
+msgstr "  -pladd      --playlist_add <f>[..]    將檔案加入到播放列中\n"
+
+#: src/main.c:940
+msgid ""
+"  -pladdplay  --playlist_add_play <f>   add file to playlist and play it\n"
+msgstr "  -pladdplay  --playlist_add_play <f>   將檔案加入到播放列中並播放\n"
+
+#: src/main.c:941
+msgid "  -plrm       --playlist_remove <f>[..] remove file from playlist\n"
+msgstr "  -plrm       --playlist_remove <f>[..] 將檔案在播放列表中移除\n"
+
+#: src/main.c:942
+msgid "  -plclr      --playlist_clear          clear playlist\n"
+msgstr "  -plclr      --playlist_clear          清除播放列表\n"
+
+#: src/main.c:943
+msgid "  -pl         --playlist <f>            load playlist\n"
+msgstr "  -pl         --playlist <f>            載入播放列表\n"
+
+#: src/main.c:944
+msgid "  -plappend   --playlist_append <f>[..] append playlist\n"
+msgstr "  -plappend   --playlist_append <f>[..] 插入播放列表\n"
+
+#: src/main.c:945
+msgid ""
+"  -f          --file <f>[..]            play file, do not add to playlist\n"
+msgstr ""
+"  -f          --file <f>[..]            播放檔案, 但不加入再播放列表中\n"
+
+#: src/main.c:946
+msgid ""
+"                                        or, if playlist, load playlist\n"
+msgstr ""
+"                                        或若有播放列表, 則載入播放列表\n"
+
+#: src/main.c:947
+msgid "  -q          --quit                    tell GQmpeg to quit\n"
+msgstr "  -q          --quit                    告訴 GQmpeg 離開\n"
+
+#: src/main.c:948
+msgid "              --skin_set <f>            set skin\n"
+msgstr "              --skin_set <f>            設定面版\n"
+
+#: src/main.c:949
+msgid ""
+"              --status                  print current status, song, time\n"
+msgstr "              --status                  列出目前態狀, 歌曲, 時間\n"
+
+#: src/main.c:950
+msgid ""
+"              --volume [+|-]#           set, or increment volume (0-100)\n"
+msgstr "              --volume [+|-]#           設定, 或增加音量 (0-100)\n"
+
+#: src/main.c:951
+msgid "              * files can also be of the format http://server:port\n"
+msgstr "              * 檔案的形式也可以是 http://server:port\n"
+
+#: src/main.c:1047
+msgid "Unable to determine the home directory\n"
+msgstr "不能偵測到家目錄\n"
+
+#: src/main.c:1052
+#, c-format
+msgid "Could not find home directory: %s\n"
+msgstr "不能找到家目錄: %s\n"
+
+#: src/main.c:1128
+msgid "--geometry missing argument\n"
+msgstr ""
+
+#: src/main.c:1130
+msgid "Invalid geometry format ([+|-]xxx[+|-]yyy)\n"
+msgstr ""
+
+#: src/main.c:1154
+msgid "Ignoring multiple skins!\n"
+msgstr "忽略多個面板!\n"
+
+#: src/main.c:1182
+#, c-format
+msgid ""
+"unknown option: %s\n"
+"use --help for options\n"
+msgstr ""
+"不明的選項: %s\n"
+"使用 --help 選項\n"
+
+#: src/main.c:1223
+#, c-format
+msgid "Loading playlist:%s\n"
+msgstr "載入播放列表:%s\n"
+
+#: src/main.c:1228
+#, c-format
+msgid "Appending playlist:%s\n"
+msgstr "加入播放列表:%s\n"
+
+#: src/main.c:1243
+#, c-format
+msgid "Adding song:%s\n"
+msgstr "加入歌曲:%s\n"
+
+#: src/main.c:1252
+#, c-format
+msgid "Unable to determine type:%s\n"
+msgstr "不能確定種類:%s\n"
+
+#: src/main.c:1286
+msgid "Could not load session-playlist file\n"
+msgstr "不能載入片段播放列表檔案\n"
+
+#: src/main.c:1312
+#, c-format
+msgid ""
+"config file contains invalid startup path:\n"
+"%s\n"
+msgstr ""
+"設定檔包含不正確的開始路徑:\n"
+"%s\n"
+
+#: src/menus.c:64
+#, fuzzy
+msgid "Set preset to _playlist..."
+msgstr "設定預先調整的播放列表..."
+
+#: src/menus.c:65
+#, fuzzy
+msgid "Set preset to _song..."
+msgstr "設定預先調整的歌曲"
+
+#: src/menus.c:100 src/menus.c:193 src/menus.c:230
+#, fuzzy
+msgid "_Play"
+msgstr "播放"
+
+#: src/menus.c:102
+#, fuzzy
+msgid "_Stop"
+msgstr "停止"
+
+#: src/menus.c:106
+#, fuzzy
+msgid "Play_list..."
+msgstr "播放列..."
+
+#: src/menus.c:109
+#, fuzzy
+msgid "P_resets"
+msgstr "預先調整"
+
+#: src/menus.c:113 src/menus.c:214 src/playlist-window.c:2393
+#, fuzzy
+msgid "_Open"
+msgstr "開啟"
+
+#: src/menus.c:115
+#, fuzzy
+msgid "_Playlist..."
+msgstr "播放列..."
+
+#: src/menus.c:116
+#, fuzzy
+msgid "_File..."
+msgstr "檔案..."
+
+#: src/menus.c:117
+#, fuzzy
+msgid "_Custom..."
+msgstr "自定"
+
+#: src/menus.c:120
+#, fuzzy
+msgid "Sa_ve playlist..."
+msgstr "儲存播放列"
+
+#: src/menus.c:126
+#, fuzzy
+msgid "_Toggle"
+msgstr "播放設定"
+
+#: src/menus.c:128
+#, fuzzy
+msgid "_Shuffle"
+msgstr "隨機"
+
+#: src/menus.c:129
+#, fuzzy
+msgid "_Repeat"
+msgstr "重覆"
+
+#: src/menus.c:130
+#, fuzzy
+msgid "Repeat _1"
+msgstr "重覆 1"
+
+#: src/menus.c:131
+#, fuzzy
+msgid "_Time total"
+msgstr "總時間"
+
+#: src/menus.c:132
+#, fuzzy
+msgid "T_ime remaining"
+msgstr "剩餘時間"
+
+#: src/menus.c:135
+#, fuzzy
+msgid "Pre_ferences..."
+msgstr "設定..."
+
+#: src/menus.c:140
+#, fuzzy
+msgid "_Current song"
+msgstr "當前歌曲"
+
+#: src/menus.c:142
+#, fuzzy
+msgid "Song _Info..."
+msgstr "歌曲資訊..."
+
+#: src/menus.c:144
+#, fuzzy
+msgid "_Add to playlist"
+msgstr "加到播放列表中"
+
+#: src/menus.c:146
+#, fuzzy
+msgid "_Remove from playlist"
+msgstr "從播放列表中移除"
+
+#: src/menus.c:150
+#, fuzzy
+msgid "Run _mixer..."
+msgstr "執行混音器..."
+
+#: src/menus.c:154
+#, fuzzy
+msgid "Skin _Editor..."
+msgstr "面版編輯器..."
+
+#: src/menus.c:155
+msgid "_Help..."
+msgstr ""
+
+#: src/menus.c:157
+#, fuzzy
+msgid "_About..."
+msgstr "關於..."
+
+#: src/menus.c:159
+#, fuzzy
+msgid "_Iconify"
+msgstr "圖示化"
+
+#: src/menus.c:162
+#, fuzzy
+msgid "Close _window"
+msgstr "視窗的兩倍大小"
+
+#: src/menus.c:165
+msgid "_Quit"
+msgstr ""
+
+#: src/menus.c:177 src/menus.c:189 src/playlist-window.c:2429
+#, fuzzy
+msgid "_Add"
+msgstr "增加"
+
+#: src/menus.c:178
+#, fuzzy
+msgid "Add _Recursive"
+msgstr "回遞地加入"
+
+#: src/menus.c:191 src/playlist-window.c:2430
+#, fuzzy
+msgid "_Insert"
+msgstr "插入"
+
+#: src/menus.c:194
+#, fuzzy
+msgid "Add and P_lay"
+msgstr "加入並播放"
+
+#: src/menus.c:195 src/menus.c:234
+#, fuzzy
+msgid "_Song Info..."
+msgstr "歌曲資訊..."
+
+#: src/menus.c:198 src/menus.c:218 src/menus.c:255
+#, fuzzy
+msgid "_Copy"
+msgstr "複制"
+
+#: src/menus.c:200 src/menus.c:220 src/menus.c:257
+#, fuzzy
+msgid "_Move"
+msgstr "移動"
+
+#: src/menus.c:201 src/menus.c:221 src/ui_pathsel.c:616 src/ui_pathsel.c:624
+#, fuzzy
+msgid "_Rename"
+msgstr "更名"
+
+#: src/menus.c:202 src/menus.c:222 src/menus.c:259 src/ui_pathsel.c:626
+#, fuzzy
+msgid "_Delete"
+msgstr "刪除"
+
+#: src/menus.c:216
+#, fuzzy
+msgid "_Append"
+msgstr "載入"
+
+#: src/menus.c:232 src/playlist-window.c:2431
+#, fuzzy
+msgid "_Remove"
+msgstr "刪除"
+
+#: src/menus.c:236
+#, fuzzy
+msgid "Edit _title"
+msgstr "標題"
+
+#: src/menus.c:237
+#, fuzzy
+msgid "Edit c_omment"
+msgstr "評註"
+
+#: src/menus.c:244
+#, fuzzy
+msgid "Randomize _list"
+msgstr "隨機列表"
+
+#: src/menus.c:258
+#, fuzzy
+msgid "Re_name"
+msgstr "更名"
+
+#: src/menus.c:275
+#, fuzzy
+msgid "_Edit..."
+msgstr "編輯..."
+
+#: src/mixer.c:122
+msgid "Unable to determine mixer devices\n"
+msgstr "偵測不到混音裝置\n"
+
+#: src/mixer.c:203
+#, c-format
+msgid "failed to set volume on %d\n"
+msgstr "不能設定音量大小於 %d\n"
+
+#: src/mixer.c:234
+#, c-format
+msgid "failed to get volume on %d\n"
+msgstr "不能取得音量大小於 %d\n"
+
+#: src/mixer.c:908
+msgid "no OSF MME devices found\n"
+msgstr "找不到 OSF MME裝置\n"
+
+#: src/mod_info.c:34 src/mpg_info.c:186 src/ogg_info.c:261
+#: src/playlist-window.c:112
+msgid "Filename"
+msgstr "檔案名稱"
+
+#: src/mod_info.c:51 src/ogg_info.c:277 src/ui2_editor.c:4512
+#, fuzzy
+msgid "Type"
+msgstr "類型"
+
+#: src/mod_info.c:51 src/mod_info.c:53
+msgid "unknown"
+msgstr ""
+
+#: src/mod_info.c:53
+#, fuzzy
+msgid "Tracker name"
+msgstr "音軌名稱 : "
+
+#: src/mod_info.c:55
+#, fuzzy
+msgid "Length (estimated)"
+msgstr "長度 (估計) : "
+
+#: src/mod_info.c:55 src/mpg_info.c:207 src/ogg_info.c:304
+#, fuzzy
+msgid "seconds"
+msgstr " 秒"
+
+#: src/mod_info.c:56
+msgid "Patterns"
+msgstr ""
+
+#: src/mod_info.c:57
+#, fuzzy
+msgid "Unique patterns"
+msgstr "唯一的式樣 : "
+
+#: src/mod_info.c:58
+#, fuzzy
+msgid "Instruments"
+msgstr "樂器 : "
+
+#: src/mod_info.c:59 src/ogg_info.c:281
+#, fuzzy
+msgid "Channels"
+msgstr "頻道 : "
+
+#: src/mpg_hdrutil.c:140
+#, c-format
+msgid "unable to open file for read: %s\n"
+msgstr "不能讀入檔案: %s\n"
+
+#: src/mpg_info.c:145
+msgid "Information"
+msgstr "資訊"
+
+#: src/mpg_info.c:156
+msgid "Live stream."
+msgstr "即時串流。"
+
+#: src/mpg_info.c:158
+msgid "File across network."
+msgstr "檔案透過網絡。"
+
+#: src/mpg_info.c:188
+msgid "Song data"
+msgstr "歌曲資料"
+
+#: src/mpg_info.c:200
+#, fuzzy
+msgid "Version"
+msgstr "版本 : "
+
+#: src/mpg_info.c:201
+#, fuzzy
+msgid "Layer"
+msgstr "層 : "
+
+#: src/mpg_info.c:202
+#, fuzzy
+msgid "Channel encoding"
+msgstr "頻道編碼 : "
+
+#: src/mpg_info.c:204
+#, fuzzy
+msgid "Bit Rate"
+msgstr "位元率"
+
+#: src/mpg_info.c:204 src/ogg_info.c:290 src/ogg_info.c:299 src/ogg_info.c:302
+#: src/ogg_info.c:303
+#, fuzzy
+msgid "Kbits"
+msgstr "%d 千位元"
+
+#: src/mpg_info.c:205
+#, fuzzy
+msgid "Sample Rate"
+msgstr "取樣率:"
+
+#: src/mpg_info.c:205
+msgid "Hz"
+msgstr ""
+
+#: src/mpg_info.c:206 src/ogg_info.c:305
+#, fuzzy
+msgid "File Size"
+msgstr "檔案大小 : "
+
+#: src/mpg_info.c:206 src/ogg_info.c:305
+#, fuzzy
+msgid "bytes"
+msgstr "%d 位元"
+
+#: src/mpg_info.c:207 src/ogg_info.c:304
+#, fuzzy
+msgid "Length"
+msgstr "長度:"
+
+#: src/mpg_info.c:209
+#, fuzzy
+msgid "Copyright"
+msgstr "版權所有 : "
+
+#: src/mpg_info.c:210
+#, fuzzy
+msgid "Original"
+msgstr "原作 : "
+
+#: src/mpg_info.c:211
+#, fuzzy
+msgid "Emphasis"
+msgstr "強調 : "
+
+#: src/mpg_info.c:212
+#, fuzzy
+msgid "Extensions"
+msgstr "延伸 : "
+
+#: src/mpg_info.c:216
+msgid "unable to find a valid header"
+msgstr "不能找到有效的標頭"
+
+#: src/mpg_info.c:219
+msgid "ID3 data"
+msgstr "ID3 資料"
+
+#: src/mpg_info.c:233 src/playlist-window.c:108
+msgid "Artist"
+msgstr "演譯者"
+
+#: src/mpg_info.c:235 src/playlist-window.c:107
+msgid "Album"
+msgstr "專輯"
+
+#: src/mpg_info.c:237 src/playlist-window.c:109
+msgid "Year"
+msgstr "年份"
+
+#: src/mpg_info.c:239 src/playlist-window.c:111
+msgid "Genre"
+msgstr "樂風"
+
+#: src/mpg_info.c:240 src/playlist-window.c:113
+msgid "Comment"
+msgstr "評註"
+
+#: src/mpg_info.c:243 src/playlist-window.c:114
+msgid "Track"
+msgstr ""
+
+#: src/mpg_info.c:251
+msgid "Save Tag"
+msgstr "儲存標籤"
+
+#: src/mpg_info.c:261
+msgid "disabled when no header is found"
+msgstr "找不到標頭時關閉"
+
+#: src/mpg_tagutil.c:107 src/mpg_tagutil.c:175
+#, c-format
+msgid "error opening file for tag: %s\n"
+msgstr "不能讀出檔案的標籤: %s\n"
+
+#: src/mpg_tagutil.c:113 src/mpg_tagutil.c:183 src/mpg_tagutil.c:198
+#: src/mpg_tagutil.c:208 src/mpg_tagutil.c:219
+#, c-format
+msgid "could not seek in file: %s\n"
+msgstr "在檔案中不能搜索: %s\n"
+
+#: src/mpg_tagutil.c:120 src/mpg_tagutil.c:189
+#, c-format
+msgid "could not read 128 bytes in file: %s\n"
+msgstr "在檔案中不能讀取 128 bytes: %s\n"
+
+#: src/mpg_tagutil.c:255
+#, c-format
+msgid "could not write tag to file: %s\n"
+msgstr "不能將標籤寫入檔案: %s\n"
+
+#: src/ogg_info.c:102 src/ogg_info.c:111
+#, fuzzy
+msgid "Newkey"
+msgstr "鍵"
+
+#: src/ogg_info.c:277
+#, fuzzy
+msgid "ogg bitstream file"
+msgstr "類形: ogg bitstream file"
+
+#: src/ogg_info.c:278
+#, fuzzy
+msgid "Vendor"
+msgstr "終點:"
+
+#: src/ogg_info.c:280
+msgid "Integrity check passed"
+msgstr ""
+
+#: src/ogg_info.c:283
+#, fuzzy
+msgid "Bit Rate (lowest)"
+msgstr "位元率"
+
+#: src/ogg_info.c:286 src/ogg_info.c:295
+#, fuzzy
+msgid "none set"
+msgstr "重覆"
+
+#: src/ogg_info.c:292
+#, fuzzy
+msgid "Bit Rate (highest)"
+msgstr "位元率"
+
+#: src/ogg_info.c:302
+#, fuzzy
+msgid "Bit Rate (encoded)"
+msgstr "位元率"
+
+#: src/ogg_info.c:303
+#, fuzzy
+msgid "Bit Rate (average)"
+msgstr "位元率"
+
+#: src/ogg_info.c:309
+#, fuzzy
+msgid "unable to read file info"
+msgstr "不能讀入檔案: %s\n"
+
+#: src/ogg_info.c:312 src/ui2_editor.c:3963
+#, fuzzy
+msgid "Comments"
+msgstr "評註"
+
+#: src/ogg_info.c:339 src/ui2_button_edit.c:309 src/ui2_dial_edit.c:696
+#: src/ui2_editor.c:4511 src/ui2_item_edit.c:262 src/ui2_list_edit.c:511
+#: src/ui2_list_edit.c:1504 src/ui2_number_edit.c:655
+#: src/ui2_slider_edit.c:583 src/ui2_text_edit.c:802
+msgid "Key"
+msgstr "鍵"
+
+#: src/ogg_info.c:347
+#, fuzzy
+msgid "Description"
+msgstr "裝置選項"
+
+#: src/ogg_info.c:365 src/ui2_button_edit.c:296 src/ui2_dial_edit.c:683
+#: src/ui2_item_edit.c:249 src/ui2_list_edit.c:1491 src/ui2_number_edit.c:630
+#: src/ui2_number_edit.c:643 src/ui2_slider_edit.c:570 src/ui2_text_edit.c:776
+#: src/ui2_text_edit.c:789
+msgid "Add"
+msgstr "增加"
+
+#: src/ogg_info.c:371
+msgid "Remove"
+msgstr "刪除"
+
+#: src/ogg_info.c:378
+#, fuzzy
+msgid "Save Comments"
+msgstr "評註"
+
+#: src/players.c:46
+msgid "GQmpeg warning"
+msgstr "GQmpeg 警告"
+
+#: src/players.c:47
+msgid ""
+"No player modules registered!\n"
+"This is not necessarily a problem, but does make the program a little "
+"useless.\n"
+msgstr ""
+"沒有已註冊的播放器模組!\n"
+"這不是一個必要條件,但會導至一些加能不全。\n"
+
+#: src/players.c:207
+#, c-format
+msgid "No registered player types match: %s\n"
+msgstr "沒有符合的已註冊的播放器: %s\n"
+
+#: src/players.c:264
+#, c-format
+msgid "No registered player types claim playback for: %s\n"
+msgstr "沒有需求的已註冊播放器種類: %s\n"
+
+#: src/playlist.c:455 src/playlist.c:461
+#, c-format
+msgid "undetermined type:%s\n"
+msgstr "不能偵察的類型:%s\n"
+
+#: src/playlist.c:600
+#, c-format
+msgid "failed to open \"%s\"\n"
+msgstr "不能開啟 \"%s\"\n"
+
+#: src/playlist.c:725
+msgid "Open failed"
+msgstr "開啟失敗"
+
+#: src/playlist.c:725
+msgid ""
+"The specified file could\n"
+"not be opened."
+msgstr "不能開啟特定的檔案。"
+
+#: src/playlist.c:729
+msgid "Invalid file"
+msgstr "無效的檔案"
+
+#: src/playlist.c:729
+msgid ""
+"The specified file is\n"
+"not a valid playlist."
+msgstr "特定的檔案不是有效的播放列表。"
+
+#: src/playlist.c:761
+#, c-format
+msgid "failed to open %s\n"
+msgstr "開啟 %s 失敗\n"
+
+#: src/playlist.c:989
+msgid "live"
+msgstr "實況"
+
+#: src/playlist-dlg.c:70
+#, c-format
+msgid ""
+"Overwrite playlist file:\n"
+"%s"
+msgstr ""
+"覆寫播放列表檔:\n"
+"%s"
+
+#: src/playlist-dlg.c:71
+msgid "Overwrite File"
+msgstr "覆寫檔案"
+
+#: src/playlist-dlg.c:74 src/utilops.c:590 src/utilops.c:1205
+#: src/utilops.c:1763
+msgid "Overwrite"
+msgstr "覆寫"
+
+#: src/playlist-dlg.c:83
+#, c-format
+msgid ""
+"Failed to save the playlist:\n"
+"%s"
+msgstr ""
+"儲存播放列表失敗:\n"
+"%s"
+
+#: src/playlist-dlg.c:84
+msgid "Save Failed"
+msgstr "儲存失敗"
+
+#: src/playlist-dlg.c:160
+msgid "Save Playlist"
+msgstr "儲存播放列"
+
+#: src/playlist-dlg.c:161
+msgid "Save playlist as:"
+msgstr "儲存播放列為:"
+
+#: src/playlist-dlg.c:169
+msgid "Open Playlist"
+msgstr "載入播放列表"
+
+#: src/playlist-dlg.c:170
+msgid "Open playlist from:"
+msgstr "載入播放列表於:"
+
+#: src/playlist-dlg.c:178
+msgid "Append Playlist"
+msgstr "附加到播放列表"
+
+#: src/playlist-dlg.c:179
+msgid "Append playlist from:"
+msgstr "附加播放列表於:"
+
+#: src/playlist-dlg.c:180
+msgid "Append"
+msgstr "載入"
+
+#: src/playlist-dlg.c:187
+msgid "Import Playlist"
+msgstr "匯入播放列表"
+
+#: src/playlist-dlg.c:188
+msgid "Import playlist from:"
+msgstr "匯入播放列表於:"
+
+#: src/playlist-dlg.c:189
+msgid "Import"
+msgstr "匯入"
+
+#: src/playlist-dlg.c:200
+msgid "GQmpeg Playlist Files"
+msgstr "GQmpeg 播放列表檔案"
+
+#: src/playlist-dlg.c:203 src/preset-dlg.c:92
+#, fuzzy
+msgid "m3u Playlist"
+msgstr "播放列表"
+
+#: src/playlist-dlg.c:232
+msgid "Playlist empty"
+msgstr "空白的播放列表"
+
+#: src/playlist-dlg.c:232
+msgid "The current playlist is empty, save aborted."
+msgstr "現有的播放列表是空白的, 放棄儲存。"
+
+#: src/playlist-dlg.c:314 src/playlist-dlg.c:377 src/playlist-dlg.c:455
+msgid "no entry defined"
+msgstr "沒有定義輸入"
+
+#: src/playlist-dlg.c:338
+msgid "GQmpeg - add custom song type"
+msgstr "GQmpeg - 加入自定的歌曲類型"
+
+#: src/playlist-dlg.c:342
+msgid "GQmpeg - open custom song type"
+msgstr "GQmpeg  - 開啟自定的歌曲類型"
+
+#: src/playlist-dlg.c:389
+msgid "No types enabled"
+msgstr "沒有已啟動的類型"
+
+#: src/playlist-dlg.c:447
+msgid "GQmpeg - edit custom song type"
+msgstr "GQmpeg - 編輯自定的歌曲類型"
+
+#: src/playlist-dlg.c:475
+#, c-format
+msgid "File %s not found."
+msgstr "找不到檔案 %s 。"
+
+#: src/playlist-dlg.c:476
+msgid "File not found"
+msgstr "找不到檔案"
+
+#: src/playlist-dlg.c:509
+msgid "Add to playlist:"
+msgstr "加入到播放列表:"
+
+#: src/playlist-dlg.c:513
+msgid "Open file:"
+msgstr "開啟檔案:"
+
+#: src/playlist-dlg.c:516
+msgid "GQmpeg - open"
+msgstr "GQmpeg - 開啟"
+
+#: src/playlist-dlg.c:521 src/preset-dlg.c:95
+msgid "Song Files"
+msgstr "歌曲檔案"
+
+#: src/playlist-window.c:110
+msgid "Time"
+msgstr "時間"
+
+#: src/playlist-window.c:1705
+#, c-format
+msgid "Playlist length: %02d:%02d:%02d , %d songs"
+msgstr "播放列表長度 : %02d:%02d:%02d , %d 歌曲"
+
+#: src/playlist-window.c:1709
+#, c-format
+msgid "(header loading is off), %d songs"
+msgstr "(標頭載入關閉), %d 歌曲"
+
+#: src/playlist-window.c:1722
+msgid " - GQmpeg playlist"
+msgstr " - GQmpeg 播放列表"
+
+#: src/playlist-window.c:2284
+msgid " - GQmpeg Playlist"
+msgstr " - GQmpeg 播放列表"
+
+#: src/playlist-window.c:2332
+#, fuzzy
+msgid "Folders:"
+msgstr "檔案:"
+
+#: src/playlist-window.c:2349
+msgid "Files:"
+msgstr "檔案:"
+
+#: src/playlist-window.c:2371
+#, fuzzy
+msgid "_Home"
+msgstr "家目錄"
+
+#: src/playlist-window.c:2372 src/songinfo.c:75
+msgid "Close"
+msgstr "關閉"
+
+#: src/playlist-window.c:2374 src/preferences.c:817
+msgid "Playlist"
+msgstr "播放列表"
+
+#: src/playlist-window.c:2383
+#, fuzzy
+msgid "_Save"
+msgstr "儲存"
+
+#: src/playlist-window.c:2384
+#, fuzzy
+msgid "Sa_ve as..."
+msgstr "另存新檔..."
+
+#: src/playlist-window.c:2386
+msgid "save mode"
+msgstr "儲存模式"
+
+#: src/playlist-window.c:2394
+#, fuzzy
+msgid "A_ppend"
+msgstr "載入"
+
+#: src/playlist-window.c:2396
+msgid "Move Song"
+msgstr "移動歌曲"
+
+#: src/playlist-window.c:2409
+#, fuzzy
+msgid "_Top"
+msgstr "頂端"
+
+#: src/playlist-window.c:2410
+#, fuzzy
+msgid "_End"
+msgstr "末端"
+
+#: src/playlist-window.c:2416
+#, fuzzy
+msgid "_Up"
+msgstr "上"
+
+#: src/playlist-window.c:2417
+#, fuzzy
+msgid "_Down"
+msgstr "下"
+
+#: src/playlist-window.c:2419
+msgid "Songs"
+msgstr "歌曲"
+
+#: src/playlist-window.c:2428
+#, fuzzy
+msgid "Add A_ll"
+msgstr "全部加入"
+
+#: src/playlist-window.c:2432
+#, fuzzy
+msgid "Re_move All"
+msgstr "全部移除"
+
+#: src/playlist-window.c:2438
+#, fuzzy
+msgid "Add _Custom"
+msgstr "加入自定"
+
+#: src/preferences.c:271
+msgid "None (default)"
+msgstr "沒有 (預設值)"
+
+#: src/preferences.c:312
+#, c-format
+msgid "Valid skin not found in:%s\n"
+msgstr "在 %s 中找不到有效的面版\n"
+
+#: src/preferences.c:313
+msgid ""
+"File named skindata (gqmpeg skins) or main.bmp (winamp skins) not found.\n"
+msgstr ""
+"無法找到檔案稱為 skindata (gqmpeg 的面版) 或 main.bmp (winamp 的面版。\n"
+
+#: src/preferences.c:561
+msgid "GQmpeg configuration"
+msgstr "GQmpeg 設定"
+
+#: src/preferences.c:605
+msgid "General"
+msgstr "一般"
+
+#: src/preferences.c:613
+msgid "Song Information"
+msgstr "歌曲資訊"
+
+#: src/preferences.c:615
+msgid "Read file headers (enables playlist length calculation)"
+msgstr "讀取檔案標目 (啟動播放列表長度計算)"
+
+#: src/preferences.c:617
+msgid "Window"
+msgstr "視窗"
+
+#: src/preferences.c:619
+msgid "Smart window placement"
+msgstr "聰明視窗位置"
+
+#: src/preferences.c:620
+msgid "Remember window position"
+msgstr "記錄視窗位置"
+
+#: src/preferences.c:621
+msgid "Enable window manager decorations"
+msgstr "啟動視窗管理員修飾"
+
+#: src/preferences.c:622
+msgid "Double sized window"
+msgstr "視窗的兩倍大小"
+
+#: src/preferences.c:624
+msgid "Title Display"
+msgstr "顯示標題"
+
+#: src/preferences.c:626
+msgid "Always scroll title"
+msgstr "不停捲動標題"
+
+#: src/preferences.c:627
+msgid "Show filename extension"
+msgstr "顯示檔案類型"
+
+#: src/preferences.c:628
+msgid "Convert underscores to spaces"
+msgstr "將底間轉為空白"
+
+#: src/preferences.c:630
+msgid "Mixer"
+msgstr "混音器"
+
+#: src/preferences.c:636
+msgid "External Mixer:"
+msgstr "外置的混音器:"
+
+#: src/preferences.c:651
+msgid "Volume controls device:"
+msgstr "音量大小控制裝置:"
+
+#: src/preferences.c:682
+msgid "First press of prev restarts song when playing"
+msgstr "當播放時先按上一個鍵來重新播放歌曲"
+
+#: src/preferences.c:683
+msgid "Allow command parsing through ~/.gqmpeg/command"
+msgstr "可以透過指令 ~/.gqmpeg/command分析"
+
+#: src/preferences.c:689
+msgid "Delay between songs (seconds):"
+msgstr "歌曲間的間距 (秒):"
+
+#: src/preferences.c:706
+msgid "Startup"
+msgstr "起動"
+
+#: src/preferences.c:714
+msgid "Initial playlist"
+msgstr "初始化播放列表"
+
+#: src/preferences.c:717
+msgid "Empty"
+msgstr "空白"
+
+#: src/preferences.c:728
+msgid "Save playlist between sessions"
+msgstr "儲存段落間的播放列表"
+
+#: src/preferences.c:739
+msgid "Open specific playlist:"
+msgstr "開啟特定的播放列表"
+
+#: src/preferences.c:757 src/preferences.c:777
+msgid "Use current"
+msgstr "使用現有的"
+
+#: src/preferences.c:763
+msgid "When program starts:"
+msgstr "當程式啟動:"
+
+#: src/preferences.c:765
+msgid "Start playing"
+msgstr "開始播放"
+
+#: src/preferences.c:766
+msgid "Show playlist window"
+msgstr "顯示播放列表"
+
+#: src/preferences.c:767
+msgid "Change to this directory:"
+msgstr "轉換到此目錄:"
+
+#: src/preferences.c:788
+msgid "Output"
+msgstr "輸出"
+
+#: src/preferences.c:825
+msgid "Obey shuffle / repeat if saved in playlist"
+msgstr "如儲存到播放列表則遵從隨意/重覆播放"
+
+#: src/preferences.c:826
+msgid "Show hidden files and directories in playlist window"
+msgstr "在播放列表視窗中顯示隱藏的檔案和目錄"
+
+#: src/preferences.c:827
+msgid "Show all files in the playlist window"
+msgstr "在播放列表視窗中顯示所有檔案"
+
+#: src/preferences.c:828
+msgid "Add single item drops on main window to playlist"
+msgstr "將主視窗的單一項目加入播放列表"
+
+#: src/preferences.c:829
+msgid "Play next song on error"
+msgstr "若發生錯誤時播放下一首歌"
+
+#: src/preferences.c:831
+msgid "Flybys"
+msgstr ""
+
+#: src/preferences.c:837
+msgid "Enable flybys"
+msgstr ""
+
+#: src/preferences.c:872 src/ui2_list_edit.c:510
+msgid "#"
+msgstr ""
+
+#: src/preferences.c:875
+msgid "Preset name"
+msgstr "預先調整的名稱"
+
+#: src/preferences.c:878
+msgid "Playlist file"
+msgstr "播放列表檔案?"
+
+#: src/preferences.c:909
+msgid "Play presets immediately"
+msgstr "立即播放"
+
+#: src/preferences.c:916
+msgid "Skins"
+msgstr "面板"
+
+#: src/preferences.c:928
+msgid "Skin:"
+msgstr "面板:"
+
+#: src/preferences.c:944
+msgid "Available skins:"
+msgstr "可用的面版:"
+
+#: src/preferences.c:956
+msgid "Display cpu and frame information in amp skins"
+msgstr "顯示於 amp 面板上的 cpu 和 frame 資訊"
+
+#: src/preferences.c:960
+msgid "Skin Adjustment"
+msgstr "面板調整"
+
+#: src/preferences.c:964
+#, fuzzy
+msgid "Color tint:"
+msgstr "關閉"
+
+#: src/preferences.c:973
+msgid "Force transparency"
+msgstr "強行透明"
+
+#: src/preferences.c:976
+#, fuzzy
+msgid "Enable menu skins"
+msgstr "可用的面版:"
+
+#: src/preferences.c:977
+msgid "Enable keyboard focus"
+msgstr ""
+
+#: src/preferences.c:1026 src/window.c:379
+msgid "About - GQmpeg"
+msgstr "關於 - GQmpeg"
+
+#: src/preferences.c:1046
+#, fuzzy, c-format
+msgid ""
+"GQmpeg %s\n"
+"A frontend to mpg123\n"
+"\n"
+"Copyright (c) %s John Ellis\n"
+"website: %s\n"
+"email: %s\n"
+"\n"
+"Released under the GNU General Public License"
+msgstr ""
+"GQmpeg %s\n"
+"mpg123 的前端程式\n"
+"\n"
+"版權所有(c) 2003 by John Ellis\n"
+"http://gqmpeg.sourceforge.net\n"
+"gqview@email.com\n"
+"\n"
+"以 GNU Public License 釋出"
+
+#: src/preset-dlg.c:69
+msgid "Set preset to playlist:"
+msgstr "設置預先調整的播放列表:"
+
+#: src/preset-dlg.c:74
+msgid "Set preset to song:"
+msgstr "設置預先調整的歌曲"
+
+#: src/preset-dlg.c:78
+msgid "GQmpeg - set preset"
+msgstr "GQmpeg - 設置預先調整"
+
+#: src/preset-dlg.c:89
+msgid "GQmpeg Playlist File"
+msgstr "GQmpeg播放列表檔"
+
+#: src/rcfile.c:119
+#, c-format
+msgid "Creating gqmpeg dir:%s\n"
+msgstr "建立gqmpeg目錄:%s\n"
+
+#: src/rcfile.c:123
+msgid "Config not saved!\n"
+msgstr "設家未能儲存!\n"
+
+#: src/rcfile.c:137
+#, c-format
+msgid "error saving config file: %s\n"
+msgstr "儲存設定檔錯誤: %s\n"
+
+#: src/skin_compat.c:104
+#, c-format
+msgid "Unable to create button from: %s\n"
+msgstr "不能建立按鈕: %s\n"
+
+#: src/skin_compat.c:196
+msgid "Large digit specified, but not defined\n"
+msgstr "指定較大數位,但不是定義\n"
+
+#: src/skin_compat.c:214
+msgid "Small digit specified, but not defined\n"
+msgstr "指定較小數位,但不是定義\n"
+
+#: src/skin_compat.c:230
+#, c-format
+msgid "Unable to load number file: %s"
+msgstr "不能載入數字檔案: %s"
+
+#: src/skin_compat.c:296
+#, c-format
+msgid "Unable to load item file: %s\n"
+msgstr "不能載入項目檔案: %s\n"
+
+#: src/skin_compat.c:353
+#, c-format
+msgid "Unable to load font file: %s\n"
+msgstr "不能載入字形檔案: %s\n"
+
+#: src/skin_compat.c:413
+#, c-format
+msgid "Unable to create slider from: %s\n"
+msgstr "不能建立浮動方塊: %s\n"
+
+#: src/skin_compat.c:492
+#, c-format
+msgid "Unable to create dial from: %s\n"
+msgstr "不能建立撥號: %s\n"
+
+#: src/skin_compat.c:729 src/ui2_parse.c:513
+#, c-format
+msgid "No background image from: %s\n"
+msgstr "沒有背景影像: %s\n"
+
+#: src/songinfo.c:49
+msgid "Song info - "
+msgstr "歌曲資訊 - "
+
+#: src/songinfo.c:65
+msgid "Unknown audio type"
+msgstr "不明的音效類型"
+
+#: src/songinfo.c:114 src/utilops.c:283
+msgid "Yes"
+msgstr "有"
+
+#: src/songinfo.c:116
+msgid "No"
+msgstr "沒有"
+
+#: src/ui2_button_edit.c:175 src/ui2_button_edit.c:288
+#: src/ui2_button_edit.c:310
+msgid "Indicator"
+msgstr "指示器"
+
+#: src/ui2_button_edit.c:178 src/ui2_button_edit.c:289
+#: src/ui2_button_edit.c:311 src/ui2_dial_edit.c:402 src/ui2_dial_edit.c:645
+#: src/ui2_dial_edit.c:698 src/ui2_list_edit.c:473 src/ui2_slider_edit.c:369
+#: src/ui2_slider_edit.c:549 src/ui2_slider_edit.c:586
+msgid "Prelight"
+msgstr ""
+
+#: src/ui2_button_edit.c:208
+msgid "Button error"
+msgstr "按鈕錯誤"
+
+#: src/ui2_button_edit.c:208
+msgid "Button must contain a key and valid image."
+msgstr "按鈕必需包含關鍵和有效影像"
+
+#: src/ui2_button_edit.c:285 src/ui2_dial_edit.c:640 src/ui2_editor.c:4584
+#: src/ui2_item_edit.c:240 src/ui2_list_edit.c:1473 src/ui2_number_edit.c:609
+#: src/ui2_slider_edit.c:543 src/ui2_text_edit.c:743
+msgid "Data:"
+msgstr "資料:"
+
+#: src/ui2_button_edit.c:286 src/ui2_dial_edit.c:641 src/ui2_editor.c:4590
+#: src/ui2_item_edit.c:241 src/ui2_list_edit.c:1474 src/ui2_number_edit.c:610
+#: src/ui2_slider_edit.c:544 src/ui2_text_edit.c:744
+msgid "Text id:"
+msgstr "文字 id:"
+
+#: src/ui2_button_edit.c:291 src/ui2_dial_edit.c:677 src/ui2_editor.c:1851
+#: src/ui2_editor.c:2277 src/ui2_editor.c:4600 src/ui2_item_edit.c:245
+#: src/ui2_list_edit.c:430 src/ui2_list_edit.c:461 src/ui2_list_edit.c:483
+#: src/ui2_list_edit.c:527 src/ui2_list_edit.c:532 src/ui2_number_edit.c:626
+#: src/ui2_slider_edit.c:564 src/ui2_text_edit.c:765
+msgid "Image:"
+msgstr "影像"
+
+#: src/ui2_button_edit.c:294 src/ui2_dial_edit.c:662 src/ui2_editor.c:4603
+msgid "Clip mask:"
+msgstr "修剪遮罩:"
+
+#: src/ui2_button_edit.c:308 src/ui2_dial_edit.c:695 src/ui2_editor.c:1794
+#: src/ui2_editor.c:1866 src/ui2_editor.c:2296 src/ui2_item_edit.c:261
+#: src/ui2_list_edit.c:1503 src/ui2_number_edit.c:654
+#: src/ui2_slider_edit.c:582 src/ui2_text_edit.c:801
+msgid "Image"
+msgstr "影像"
+
+#: src/ui2_dial_edit.c:401 src/ui2_dial_edit.c:644 src/ui2_dial_edit.c:697
+#: src/ui2_list_edit.c:472 src/ui2_slider_edit.c:366 src/ui2_slider_edit.c:548
+#: src/ui2_slider_edit.c:585
+msgid "Press"
+msgstr "按"
+
+#: src/ui2_dial_edit.c:406 src/ui2_dial_edit.c:654
+msgid "Rotation axis"
+msgstr "旋轉坐標軸"
+
+#: src/ui2_dial_edit.c:408 src/ui2_dial_edit.c:418 src/ui2_dial_edit.c:655
+#: src/ui2_dial_edit.c:667 src/ui2_editor.c:4567
+msgid "x:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:412 src/ui2_dial_edit.c:422 src/ui2_dial_edit.c:656
+#: src/ui2_dial_edit.c:668 src/ui2_editor.c:4571
+msgid "y:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:416 src/ui2_dial_edit.c:666
+msgid "Handle rotation axis"
+msgstr "處理旋轉坐標軸"
+
+#: src/ui2_dial_edit.c:426 src/ui2_dial_edit.c:647
+msgid "Endpoints"
+msgstr "端點"
+
+#: src/ui2_dial_edit.c:428
+msgid "begin:"
+msgstr "開始:"
+
+#: src/ui2_dial_edit.c:433
+msgid "end:"
+msgstr "終點:"
+
+#: src/ui2_dial_edit.c:438 src/ui2_dial_edit.c:652 src/ui2_slider_edit.c:398
+#: src/ui2_slider_edit.c:561
+msgid "Reverse"
+msgstr "逆轉"
+
+#: src/ui2_dial_edit.c:442 src/ui2_dial_edit.c:658
+msgid "Clipping area"
+msgstr "剪裁區域"
+
+#: src/ui2_dial_edit.c:444 src/ui2_dial_edit.c:659
+msgid "width:"
+msgstr "寬度:"
+
+#: src/ui2_dial_edit.c:448 src/ui2_dial_edit.c:660
+msgid "height:"
+msgstr "高度:"
+
+#: src/ui2_dial_edit.c:454 src/ui2_dial_edit.c:671
+msgid "Fixed handle"
+msgstr ""
+
+#: src/ui2_dial_edit.c:457 src/ui2_dial_edit.c:674
+msgid "Radius:"
+msgstr ""
+
+#: src/ui2_dial_edit.c:463 src/ui2_dial_edit.c:681 src/ui2_slider_edit.c:402
+#: src/ui2_slider_edit.c:568
+msgid "Item link key:"
+msgstr "項目連結鍵:"
+
+#: src/ui2_dial_edit.c:517
+msgid "Dial error"
+msgstr "撥號錯誤"
+
+#: src/ui2_dial_edit.c:517
+msgid "Dial must contain a key and valid image."
+msgstr ""
+
+#: src/ui2_dial_edit.c:648
+msgid "Begin:"
+msgstr "開始:"
+
+#: src/ui2_dial_edit.c:650
+msgid "End:"
+msgstr "末端:"
+
+#: src/ui2_editor.c:284
+#, fuzzy
+msgid "Select font"
+msgstr "部分"
+
+#: src/ui2_editor.c:430 src/ui2_editor.c:4576 src/ui2_number_edit.c:641
+#: src/ui2_text_edit.c:787
+msgid "Key:"
+msgstr "鍵:"
+
+#: src/ui2_editor.c:756
+msgid "Widget too big"
+msgstr "器件太大"
+
+#: src/ui2_editor.c:756
+msgid "The widget is too big, the width or height exceeds the background size."
+msgstr "器件太大, 寬度或高度超出背景大小"
+
+#: src/ui2_editor.c:1796 src/ui2_editor.c:2203
+msgid "Has border"
+msgstr "有邊框"
+
+#: src/ui2_editor.c:1802 src/ui2_list_edit.c:445 src/ui2_list_edit.c:467
+msgid "Left:"
+msgstr "左:"
+
+#: src/ui2_editor.c:1803 src/ui2_list_edit.c:446 src/ui2_list_edit.c:468
+msgid "Right:"
+msgstr "右:"
+
+#: src/ui2_editor.c:1807 src/ui2_list_edit.c:448
+msgid "Top:"
+msgstr "最上:"
+
+#: src/ui2_editor.c:1808 src/ui2_list_edit.c:449
+msgid "Bottom:"
+msgstr "最底:"
+
+#: src/ui2_editor.c:1810 src/ui2_editor.c:2209 src/ui2_editor.c:2213
+#: src/ui2_editor.c:2219 src/ui2_editor.c:2223 src/ui2_list_edit.c:450
+#: src/ui2_slider_edit.c:380 src/ui2_slider_edit.c:554
+msgid "Stretch"
+msgstr "伸展"
+
+#: src/ui2_editor.c:1813
+msgid "Anchor"
+msgstr ""
+
+#: src/ui2_editor.c:1814 src/ui2_editor.c:2211 src/ui2_editor.c:4608
+msgid "Right"
+msgstr "左"
+
+#: src/ui2_editor.c:1815 src/ui2_editor.c:2221 src/ui2_editor.c:4612
+msgid "Bottom"
+msgstr "底部"
+
+#: src/ui2_editor.c:1817 src/ui2_text_edit.c:500 src/ui2_text_edit.c:769
+#, fuzzy
+msgid "Color"
+msgstr "關閉"
+
+#: src/ui2_editor.c:1819 src/ui2_list_edit.c:490 src/ui2_text_edit.c:502
+#: src/ui2_text_edit.c:770
+#, fuzzy
+msgid "Red:"
+msgstr "終點:"
+
+#: src/ui2_editor.c:1820 src/ui2_list_edit.c:491 src/ui2_text_edit.c:505
+#: src/ui2_text_edit.c:771
+#, fuzzy
+msgid "Green:"
+msgstr "增量:"
+
+#: src/ui2_editor.c:1821 src/ui2_list_edit.c:492 src/ui2_text_edit.c:508
+#: src/ui2_text_edit.c:772
+msgid "Blue:"
+msgstr ""
+
+#: src/ui2_editor.c:1823
+#, fuzzy
+msgid "Filled"
+msgstr "檔案:"
+
+#: src/ui2_editor.c:1825 src/ui2_list_edit.c:494 src/ui2_text_edit.c:512
+#: src/ui2_text_edit.c:774
+msgid "Alpha:"
+msgstr ""
+
+#: src/ui2_editor.c:1855 src/ui2_editor.c:2283
+msgid "Change"
+msgstr "改變"
+
+#: src/ui2_editor.c:1867 src/ui2_editor.c:2300 src/ui2_list_edit.c:442
+#: src/ui2_list_edit.c:465
+msgid "Border"
+msgstr "外框"
+
+#: src/ui2_editor.c:2010 src/ui2_editor.c:2018
+msgid "Background error"
+msgstr "背景錯誤"
+
+#: src/ui2_editor.c:2010
+msgid "Mask is not valid."
+msgstr "遮罩無效。"
+
+#: src/ui2_editor.c:2018
+msgid "Image is not valid."
+msgstr "影像無效。"
+
+#: src/ui2_editor.c:2207
+msgid "Left"
+msgstr "右"
+
+#: src/ui2_editor.c:2208 src/ui2_editor.c:2212 src/ui2_editor.c:2218
+#: src/ui2_editor.c:2222
+msgid "Size:"
+msgstr "大小:"
+
+#: src/ui2_editor.c:2217
+msgid "Top"
+msgstr "頂端"
+
+#: src/ui2_editor.c:2227
+msgid "Stretch background"
+msgstr "背景伸展"
+
+#: src/ui2_editor.c:2228
+msgid "Allow resize"
+msgstr "可改變大小"
+
+#: src/ui2_editor.c:2230
+msgid "Default size"
+msgstr "預設大小"
+
+#: src/ui2_editor.c:2231 src/ui2_list_edit.c:437 src/ui2_text_edit.c:488
+#: src/ui2_text_edit.c:751
+msgid "Width:"
+msgstr "寬度:"
+
+#: src/ui2_editor.c:2232 src/ui2_list_edit.c:438
+msgid "Height:"
+msgstr "高度:"
+
+#: src/ui2_editor.c:2234
+msgid "Reset to image"
+msgstr "重置影像"
+
+#: src/ui2_editor.c:2238
+msgid "Width attributes"
+msgstr "寬度屬性"
+
+#: src/ui2_editor.c:2239 src/ui2_editor.c:2244
+msgid "Min:"
+msgstr "最小:"
+
+#: src/ui2_editor.c:2240 src/ui2_editor.c:2245
+msgid "Max:"
+msgstr "最大:"
+
+#: src/ui2_editor.c:2241 src/ui2_editor.c:2246
+msgid "Increment:"
+msgstr "增量:"
+
+#: src/ui2_editor.c:2243
+msgid "Height attributes"
+msgstr "高度屬性"
+
+#: src/ui2_editor.c:2280
+msgid "Mask:"
+msgstr "遮罩:"
+
+#: src/ui2_editor.c:2281 src/ui2_editor.c:2301
+msgid "Transparent"
+msgstr "透明"
+
+#: src/ui2_editor.c:2297 src/ui2_list_edit.c:512
+msgid "Width"
+msgstr "寬度"
+
+#: src/ui2_editor.c:2298
+msgid "Height"
+msgstr "高度"
+
+#: src/ui2_editor.c:2299
+msgid "Sizeable"
+msgstr "可改變大小"
+
+#: src/ui2_editor.c:2540
+#, fuzzy
+msgid "window"
+msgstr "視窗"
+
+#: src/ui2_editor.c:2596 src/ui2_editor.c:4150
+msgid "focus"
+msgstr ""
+
+#: src/ui2_editor.c:2803
+#, c-format
+msgid "%-12s w: %-3d h: %-3d"
+msgstr ""
+
+#: src/ui2_editor.c:2803
+msgid "skin size"
+msgstr "面板大小"
+
+#: src/ui2_editor.c:3539
+msgid "Load error"
+msgstr "載入錯誤"
+
+#: src/ui2_editor.c:3539
+msgid "Failed to load skin from path and key specified."
+msgstr "不能於路徑和特定的鍵載入面板。"
+
+#: src/ui2_editor.c:3564
+msgid "Widget still referenced"
+msgstr "器件仍在引用中"
+
+#: src/ui2_editor.c:3564
+msgid ""
+"This widget can not be removed,\n"
+"other widgets still reference it."
+msgstr ""
+"此器件不能移動\n"
+"因其他器件仍然關聯著它"
+
+#: src/ui2_editor.c:3617
+#, c-format
+msgid ""
+"Skin successfully saved to \"%s\"\n"
+"with data file \"%s\".\n"
+"Build %d\n"
+"Use the comment button to edit release information."
+msgstr ""
+
+#: src/ui2_editor.c:3620
+msgid "Skin saved"
+msgstr "儲存面板"
+
+#: src/ui2_editor.c:3627
+#, c-format
+msgid ""
+"Failed to save skin to \"%s\"\n"
+"with data file \"%s\"."
+msgstr ""
+"不能將面板和資料檔\"%s\".\n"
+"儲存至 \"%s\"."
+
+#: src/ui2_editor.c:3629
+msgid "Skin save failed"
+msgstr "面板儲存無效"
+
+#: src/ui2_editor.c:3778
+msgid "Help - SLIK"
+msgstr "幫助 - SLIK"
+
+#: src/ui2_editor.c:3786
+msgid "Scroll to follow active widget"
+msgstr "跟隨現行的器件滾動"
+
+#: src/ui2_editor.c:3936
+#, fuzzy
+msgid "Edit comments - SLIK"
+msgstr "評註"
+
+#: src/ui2_editor.c:3946
+#, fuzzy
+msgid "Version:"
+msgstr "版本 : "
+
+#: src/ui2_editor.c:3947
+#, fuzzy
+msgid "Author:"
+msgstr "自動或 (1:1)"
+
+#: src/ui2_editor.c:3948
+msgid "Email:"
+msgstr ""
+
+#: src/ui2_editor.c:3949
+msgid "URL:"
+msgstr ""
+
+#: src/ui2_editor.c:3950
+msgid "License:"
+msgstr ""
+
+#: src/ui2_editor.c:3952
+#, fuzzy
+msgid "Time stamp:"
+msgstr "總時間"
+
+#: src/ui2_editor.c:3956
+msgid "Build:"
+msgstr ""
+
+#: src/ui2_editor.c:3957
+#, fuzzy
+msgid "Reset"
+msgstr "重覆"
+
+#: src/ui2_editor.c:4067
+msgid "Reading skins - SLIK"
+msgstr "讀入背景 - SLIK"
+
+#: src/ui2_editor.c:4073
+msgid "Extracting widgets, please wait..."
+msgstr "提取器件,請等等..."
+
+#: src/ui2_editor.c:4146
+msgid "background"
+msgstr "背景"
+
+#: src/ui2_editor.c:4214
+msgid "Add widget - SLIK"
+msgstr "加入器件 - SLIK"
+
+#: src/ui2_editor.c:4236
+msgid "import"
+msgstr "匯入"
+
+#: src/ui2_editor.c:4246
+msgid "generate list from installed skins"
+msgstr "由已安裝的面板產生列表"
+
+#: src/ui2_editor.c:4384
+msgid "Editor warning"
+msgstr ""
+
+#: src/ui2_editor.c:4384
+msgid ""
+"The skin editor requires that the transparency, color tint,\n"
+"and double size options be off."
+msgstr ""
+
+#: src/ui2_editor.c:4419
+msgid "Skin editor - SLIK"
+msgstr "面板編輯器 - SLIK"
+
+#: src/ui2_editor.c:4459
+msgid "help"
+msgstr "幫助"
+
+#: src/ui2_editor.c:4465
+msgid "overlay"
+msgstr "覆寫"
+
+#: src/ui2_editor.c:4473
+msgid "redraw"
+msgstr "重畫"
+
+#: src/ui2_editor.c:4479
+msgid "click to focus"
+msgstr "單擊以焦點"
+
+#: src/ui2_editor.c:4486
+#, fuzzy
+msgid "comments"
+msgstr "評註"
+
+#: src/ui2_editor.c:4492
+msgid "add..."
+msgstr "加入..."
+
+#: src/ui2_editor.c:4498
+msgid "remove"
+msgstr "刪除"
+
+#: src/ui2_editor.c:4513
+#, fuzzy
+msgid "Data"
+msgstr "資料:"
+
+#: src/ui2_editor.c:4606
+msgid "Coordinate anchor"
+msgstr "等位拋錨"
+
+#: src/ui2_editor.c:4624
+msgid "Load"
+msgstr ""
+
+#: src/ui2_editor.c:4630
+msgid "Skin path:"
+msgstr "面板路徑"
+
+#: src/ui2_editor.c:4643
+msgid "Data filename:"
+msgstr "資料檔"
+
+#: src/ui2_editor.c:4664
+msgid "Save"
+msgstr "儲存"
+
+#: src/ui2_item_edit.c:137 src/ui2_item_edit.c:243 src/ui2_list_edit.c:536
+msgid "Sections:"
+msgstr "部分"
+
+#: src/ui2_item_edit.c:170
+msgid "Item error"
+msgstr "項目錯誤"
+
+#: src/ui2_item_edit.c:170
+msgid "Item must contain a key and valid image."
+msgstr "項目必需包含關鍵和有效影像。"
+
+#: src/ui2_item_edit.c:263
+msgid "Sections"
+msgstr "部分"
+
+#: src/ui2_list_edit.c:440 src/ui2_slider_edit.c:394 src/ui2_slider_edit.c:559
+#: src/ui2_text_edit.c:483 src/ui2_text_edit.c:747
+msgid "Dynamic size"
+msgstr "動態尺寸"
+
+#: src/ui2_list_edit.c:452 src/ui2_list_edit.c:469
+msgid "Stretch center"
+msgstr "伸展中心"
+
+#: src/ui2_list_edit.c:454
+msgid "Background"
+msgstr "背景"
+
+#: src/ui2_list_edit.c:475
+msgid "Row"
+msgstr "行"
+
+#: src/ui2_list_edit.c:482 src/ui2_text_edit.c:150 src/ui2_text_edit.c:497
+#: src/ui2_text_edit.c:761
+#, fuzzy
+msgid "Font:"
+msgstr "字體:"
+
+#: src/ui2_list_edit.c:487 src/ui2_text_edit.c:147 src/ui2_text_edit.c:480
+#: src/ui2_text_edit.c:746 src/ui2_text_edit.c:803
+msgid "Extended"
+msgstr "擴展"
+
+#: src/ui2_list_edit.c:489
+msgid "Color:"
+msgstr ""
+
+#: src/ui2_list_edit.c:496
+msgid "Text"
+msgstr "文字"
+
+#: src/ui2_list_edit.c:503
+msgid "Columns:"
+msgstr "列:"
+
+#: src/ui2_list_edit.c:513
+msgid "Dynamic"
+msgstr "動態"
+
+#: src/ui2_list_edit.c:514
+msgid "Justify"
+msgstr "對齊"
+
+#: src/ui2_list_edit.c:516
+msgid "Flag column:"
+msgstr "標記列:"
+
+#: src/ui2_list_edit.c:517
+#, fuzzy
+msgid "Right justify"
+msgstr "對齊"
+
+#: src/ui2_list_edit.c:519
+msgid "Columns"
+msgstr "列"
+
+#: src/ui2_list_edit.c:526
+msgid "Column divider"
+msgstr "分列"
+
+#: src/ui2_list_edit.c:531
+msgid "Flags"
+msgstr "標記"
+
+#: src/ui2_list_edit.c:538
+msgid "Images"
+msgstr "影像"
+
+#: src/ui2_list_edit.c:560 src/ui2_list_edit.c:1297
+msgid "right"
+msgstr "右"
+
+#: src/ui2_list_edit.c:560 src/ui2_list_edit.c:1297
+msgid "left"
+msgstr "左"
+
+#: src/ui2_list_edit.c:1140 src/ui2_list_edit.c:1145 src/ui2_list_edit.c:1150
+#: src/ui2_list_edit.c:1155 src/ui2_list_edit.c:1199
+msgid "List error"
+msgstr "列表錯誤"
+
+#: src/ui2_list_edit.c:1140
+msgid "List must contain a key and valid image."
+msgstr "列表必需包含關鍵和有效影像。"
+
+#: src/ui2_list_edit.c:1145
+msgid "Invalid or missing row image."
+msgstr "無效或遺失行影像。"
+
+#: src/ui2_list_edit.c:1150
+msgid "Invalid or missing text image."
+msgstr "無效或遺失文字影像。"
+
+#: src/ui2_list_edit.c:1155
+msgid "Must specify valid font description or image."
+msgstr ""
+
+#: src/ui2_list_edit.c:1199
+msgid "Failed to initialize font with specified parameters."
+msgstr ""
+
+#: src/ui2_list_edit.c:1505
+msgid "Flag"
+msgstr "標記"
+
+#: src/ui2_main.c:1347
+msgid "About - SLIK"
+msgstr "關於 - SLIK"
+
+#: src/ui2_main.c:1368
+#, fuzzy, c-format
+msgid ""
+"SLIK\n"
+"SimpLIstic sKin interface\n"
+"%s\n"
+"Copyright (c) %s John Ellis\n"
+"website: %s\n"
+"email: %s\n"
+"\n"
+"Released under the GNU General Public License"
+msgstr ""
+"GQmpeg %s\n"
+"mpg123 的前端程式\n"
+"\n"
+"版權所有(c) 2003 by John Ellis\n"
+"http://gqmpeg.sourceforge.net\n"
+"gqview@email.com\n"
+"\n"
+"以 GNU Public License 釋出"
+
+#: src/ui2_main.c:1430
+#, c-format
+msgid ""
+"utilizes SLIK %s\n"
+"SimpLIstic sKin interface"
+msgstr ""
+
+#: src/ui2_number_edit.c:412 src/ui2_number_edit.c:613
+#: src/ui2_slider_edit.c:376 src/ui2_slider_edit.c:553
+msgid "Length:"
+msgstr "長度:"
+
+#: src/ui2_number_edit.c:416 src/ui2_number_edit.c:614 src/ui2_text_edit.c:491
+#: src/ui2_text_edit.c:753
+#, fuzzy
+msgid "Rotation:"
+msgstr "廣播電台"
+
+#: src/ui2_number_edit.c:422 src/ui2_number_edit.c:618
+msgid "Pad with zeros"
+msgstr ""
+
+#: src/ui2_number_edit.c:426 src/ui2_number_edit.c:619
+msgid "Center"
+msgstr "中心"
+
+#: src/ui2_number_edit.c:432 src/ui2_number_edit.c:623
+msgid "Digit key:"
+msgstr "位數鍵:"
+
+#: src/ui2_number_edit.c:465
+msgid "Digit error"
+msgstr "位數錯誤"
+
+#: src/ui2_number_edit.c:465
+msgid "Digit must contain a key and valid image."
+msgstr "位數必需包含關鍵及有效的影像。"
+
+#: src/ui2_number_edit.c:503
+msgid "Number error"
+msgstr "位數錯誤"
+
+#: src/ui2_number_edit.c:503
+msgid "Number must contain a key, and valid image or digit key."
+msgstr "數字必需含有關鍵及有效的影像式數位鍵。"
+
+#: src/ui2_number_edit.c:640
+msgid "Add digit only"
+msgstr "只加入位數"
+
+#: src/ui2_slider_edit.c:363 src/ui2_slider_edit.c:547
+#: src/ui2_slider_edit.c:584
+msgid "Vertical"
+msgstr "垂直"
+
+#: src/ui2_slider_edit.c:372 src/ui2_slider_edit.c:551
+msgid "Trough"
+msgstr "木缽"
+
+#: src/ui2_slider_edit.c:386 src/ui2_slider_edit.c:556
+msgid "Border 1:"
+msgstr "邊框 1:"
+
+#: src/ui2_slider_edit.c:390 src/ui2_slider_edit.c:557
+msgid "Border 2:"
+msgstr "邊框 2:"
+
+#: src/ui2_slider_edit.c:445
+msgid "Slider error"
+msgstr "浮動塊錯誤"
+
+#: src/ui2_slider_edit.c:445
+msgid "Slider must contain a key and valid image."
+msgstr "浮動塊必需包含關鍵和有效影像。"
+
+#: src/ui2_slider_edit.c:562
+msgid "Trough length:"
+msgstr "木缽長度:"
+
+#: src/ui2_text_edit.c:518 src/ui2_text_edit.c:757
+msgid "Font key:"
+msgstr "字體:"
+
+#: src/ui2_text_edit.c:565
+msgid "Font error"
+msgstr "字體錯誤"
+
+#: src/ui2_text_edit.c:565
+#, fuzzy
+msgid "Font must contain a key and valid font description or image."
+msgstr "文字必需含關鍵和有效影像。"
+
+#: src/ui2_text_edit.c:574 src/ui2_text_edit.c:647
+#, fuzzy
+msgid "Invalid font"
+msgstr "無效的檔案"
+
+#: src/ui2_text_edit.c:574 src/ui2_text_edit.c:647
+msgid "Specified font not found, text not created"
+msgstr ""
+
+#: src/ui2_text_edit.c:615
+msgid "Text error"
+msgstr "文字錯誤"
+
+#: src/ui2_text_edit.c:615
+#, fuzzy
+msgid ""
+"Text must contain a key, and valid image, font description, or font key."
+msgstr "文字必需包含關鍵和有效影像或文字關鍵。"
+
+#: src/ui2_text_edit.c:786
+msgid "Add font only"
+msgstr "只加入字體"
+
+#: src/ui2_util.c:494
+#, fuzzy, c-format
+msgid "Unable to save skin state information to: %s\n"
+msgstr "不能建立按鈕: %s\n"
+
+#: src/ui_help.c:110
+#, fuzzy, c-format
+msgid ""
+"Unable to load:\n"
+"%s"
+msgstr "不能載入項目檔案: %s\n"
+
+#: src/ui_pathsel.c:418
+#, fuzzy, c-format
+msgid "A file with name %s already exists."
+msgstr "檔案 %s 已存在。"
+
+#: src/ui_pathsel.c:424
+#, c-format
+msgid "Failed to rename %s to %s."
+msgstr "不能由 %s 更名到 %s。"
+
+#: src/ui_pathsel.c:480 src/utilops.c:892 src/utilops.c:1047
+#, c-format
+msgid ""
+"Unable to delete file:\n"
+"%s"
+msgstr ""
+"不能刪除檔案:\n"
+"%s"
+
+#: src/ui_pathsel.c:481 src/utilops.c:1048
+msgid "File deletion failed"
+msgstr "刪除檔案失敗"
+
+#: src/ui_pathsel.c:523 src/utilops.c:1072
+#, c-format
+msgid ""
+"About to delete the file:\n"
+" %s"
+msgstr ""
+"關於刪除的檔案:\n"
+" %s"
+
+#: src/ui_pathsel.c:524
+msgid "Delete file"
+msgstr "刪除檔案"
+
+#: src/ui_pathsel.c:528 src/utilops.c:1032 src/utilops.c:1077
+msgid "Delete"
+msgstr "刪除"
+
+#: src/ui_pathsel.c:618 src/ui_pathsel.c:628
+msgid "Add _Bookmark"
+msgstr ""
+
+#: src/ui_pathsel.c:730 src/ui_pathsel.c:1034
+msgid "New Directory"
+msgstr "新的目錄"
+
+#: src/ui_pathsel.c:740
+#, c-format
+msgid ""
+"Unable to create directory:\n"
+"%s"
+msgstr ""
+"不能建立目錄:\n"
+"%s"
+
+#: src/ui_pathsel.c:741
+msgid "Error creating directory"
+msgstr "建立目錄時發生錯誤"
+
+#: src/ui_pathsel.c:954
+msgid "All Files"
+msgstr "所有檔案"
+
+#: src/ui_pathsel.c:1028
+msgid "Home"
+msgstr "家目錄"
+
+#: src/ui_pathsel.c:1040
+msgid "Show hidden"
+msgstr "列出隱藏的"
+
+#: src/ui_pathsel.c:1087
+#, fuzzy
+msgid "Folders"
+msgstr "檔案:"
+
+#: src/ui_pathsel.c:1099
+msgid "Path"
+msgstr ""
+
+#: src/ui_pathsel.c:1128
+msgid "Filter:"
+msgstr "過濾:"
+
+#: src/ui_pathsel.c:1162
+#, fuzzy
+msgid "Files"
+msgstr "檔案:"
+
+#: src/utilops.c:278
+#, c-format
+msgid ""
+"Overwrite file:\n"
+" %s\n"
+" with:\n"
+" %s"
+msgstr ""
+"覆寫檔案:\n"
+"%s\n"
+"由 :\n"
+" %s"
+
+#: src/utilops.c:279 src/utilops.c:586 src/utilops.c:1201 src/utilops.c:1759
+msgid "Overwrite file - GQmpeg"
+msgstr "覆寫檔案- GQmpeg "
+
+#: src/utilops.c:284
+msgid "Yes to all"
+msgstr "全部確定"
+
+#: src/utilops.c:286
+msgid "Skip"
+msgstr "略過"
+
+#: src/utilops.c:287
+#, fuzzy
+msgid "Skip all"
+msgstr "略過"
+
+#: src/utilops.c:299 src/utilops.c:601 src/utilops.c:1299 src/utilops.c:1361
+#: src/utilops.c:1657
+#, fuzzy
+msgid "Auto rename"
+msgstr "自動追台"
+
+#: src/utilops.c:309 src/utilops.c:611 src/utilops.c:1599 src/utilops.c:1817
+msgid "Rename"
+msgstr "更名"
+
+#: src/utilops.c:350
+msgid "Source to copy matches destination"
+msgstr ""
+
+#: src/utilops.c:351
+#, fuzzy, c-format
+msgid ""
+"Unable to copy file:\n"
+"%s\n"
+"to itself."
+msgstr ""
+"不能複製檔案:\n"
+"%s\n"
+"至:\n"
+"%s"
+
+#: src/utilops.c:355
+msgid "Source to move matches destination"
+msgstr ""
+
+#: src/utilops.c:356
+#, fuzzy, c-format
+msgid ""
+"Unable to move file:\n"
+"%s\n"
+"to itself."
+msgstr ""
+"不能移動檔案:\n"
+"%s\n"
+"到:\n"
+"%s"
+
+#: src/utilops.c:362 src/utilops.c:450 src/utilops.c:885
+msgid "Continue"
+msgstr "繼續"
+
+#: src/utilops.c:438 src/utilops.c:651
+msgid "Error copying file"
+msgstr "複製檔案發生錯誤"
+
+#: src/utilops.c:439
+#, fuzzy, c-format
+msgid ""
+"Unable to copy file:\n"
+"%s\n"
+"to:\n"
+"%s\n"
+"during multiple file copy."
+msgstr ""
+"不能複制檔案:\n"
+"%s到:\n"
+"%s\n"
+" 當多個檔案複制時"
+
+#: src/utilops.c:443 src/utilops.c:656
+msgid "Error moving file"
+msgstr "移動檔案發生錯誤"
+
+#: src/utilops.c:444
+#, fuzzy, c-format
+msgid ""
+"Unable to move file:\n"
+"%s\n"
+"to:\n"
+"%s\n"
+"during multiple file move."
+msgstr ""
+"不能移動檔案:\n"
+"%s到:\n"
+"%s\n"
+" 當多個檔案移動時。"
+
+#: src/utilops.c:575
+msgid "Source matches destination"
+msgstr ""
+
+#: src/utilops.c:576
+msgid "Source and destination are the same, operation cancelled."
+msgstr ""
+
+#: src/utilops.c:585
+#, c-format
+msgid ""
+"Overwrite file:\n"
+"%s\n"
+" with:\n"
+"%s"
+msgstr ""
+"覆寫檔案:\n"
+"%s\n"
+" 以:\n"
+"%s"
+
+#: src/utilops.c:652
+#, c-format
+msgid ""
+"Unable to copy file:\n"
+"%s\n"
+"to:\n"
+"%s"
+msgstr ""
+"不能複製檔案:\n"
+"%s\n"
+"至:\n"
+"%s"
+
+#: src/utilops.c:657
+#, c-format
+msgid ""
+"Unable to move file:\n"
+"%s\n"
+"to:\n"
+"%s"
+msgstr ""
+"不能移動檔案:\n"
+"%s\n"
+"到:\n"
+"%s"
+
+#: src/utilops.c:700
+msgid "Invalid destination"
+msgstr "無效的目的地"
+
+#: src/utilops.c:701
+#, fuzzy
+msgid ""
+"When operating with multiple files, please select\n"
+"a folder, not a file."
+msgstr "當操作多個檔案, 請選擇一個目錄而不是一個檔案。"
+
+#: src/utilops.c:704
+#, fuzzy
+msgid "Invalid folder"
+msgstr "無效的檔案"
+
+#: src/utilops.c:705
+#, fuzzy
+msgid "Please select an existing folder"
+msgstr "請選擇一個已存在的目錄"
+
+#: src/utilops.c:753
+msgid "Copy - GQmpeg"
+msgstr "複製 - GQmpeg"
+
+#: src/utilops.c:754
+msgid "Copy"
+msgstr "複制"
+
+#: src/utilops.c:756
+#, c-format
+msgid ""
+"Copy file:\n"
+"%s\n"
+"to:"
+msgstr ""
+"複製檔案:\n"
+"%s\n"
+"至:"
+
+#: src/utilops.c:758
+msgid "Copy multiple files to:"
+msgstr "複製多個檔案到:"
+
+#: src/utilops.c:763
+msgid "Move - GQmpeg"
+msgstr "移動 - GQmpeg"
+
+#: src/utilops.c:764
+msgid "Move"
+msgstr "移動"
+
+#: src/utilops.c:766
+#, c-format
+msgid ""
+"Move file:\n"
+"%s\n"
+"to:"
+msgstr ""
+"移動檔案:\n"
+"%s\n"
+"至:"
+
+#: src/utilops.c:768
+msgid "Move multiple files to:"
+msgstr "移動多個檔案至:"
+
+#: src/utilops.c:880
+#, c-format
+msgid ""
+"Unable to delete file:\n"
+" %s\n"
+" Continue multiple delete operation?"
+msgstr ""
+"不能刪除檔案:\n"
+" %s\n"
+" 繼續多個刪除動作?"
+
+#: src/utilops.c:881 src/utilops.c:893
+msgid "Delete failed"
+msgstr "刪除失敗"
+
+#: src/utilops.c:956
+#, fuzzy, c-format
+msgid "File %d of %d"
+msgstr "找不到檔案 %s 。"
+
+#: src/utilops.c:991
+#, fuzzy
+msgid "Delete files - GQmpeg"
+msgstr "刪除檔案 - GQmpeg"
+
+#: src/utilops.c:991
+msgid "About to delete multiple files..."
+msgstr "關於刪除多個檔案..."
+
+#: src/utilops.c:1025
+#, c-format
+msgid "Review %d files"
+msgstr ""
+
+#: src/utilops.c:1073
+msgid "Delete file - GQmpeg"
+msgstr "刪除檔案 - GQmpeg"
+
+#: src/utilops.c:1200 src/utilops.c:1758
+#, c-format
+msgid ""
+"Overwrite file:\n"
+"%s\n"
+"by renaming:\n"
+"%s"
+msgstr ""
+"覆寫檔案:\n"
+"%s\n"
+"以更改名稱:\n"
+"%s"
+
+#: src/utilops.c:1216
+#, c-format
+msgid ""
+"Unable to rename file:\n"
+"%s\n"
+" to:\n"
+"%s"
+msgstr ""
+"不能更改檔案名稱:\n"
+"%s\n"
+" 為:\n"
+"%s"
+
+#: src/utilops.c:1219 src/utilops.c:1774
+msgid "Error renaming file"
+msgstr "更改檔案名稱發生錯誤"
+
+#: src/utilops.c:1299
+msgid ""
+"Can not auto rename with the selected\n"
+"number set, one or more files exist that\n"
+"match the resulting name list.\n"
+msgstr ""
+
+#: src/utilops.c:1360
+#, fuzzy, c-format
+msgid ""
+"Failed to rename\n"
+"%s\n"
+"The number was %d."
+msgstr "不能由 %s 更名到 %s。"
+
+#: src/utilops.c:1597 src/utilops.c:1814
+msgid "Rename - GQmpeg"
+msgstr "更名 - GQmpeg"
+
+#: src/utilops.c:1597
+msgid "Rename multiple files:"
+msgstr "更改多個檔案名稱:"
+
+#: src/utilops.c:1627
+#, fuzzy
+msgid "Original Name"
+msgstr "原作 : "
+
+#: src/utilops.c:1628
+#, fuzzy
+msgid "Preview"
+msgstr "刪除"
+
+#: src/utilops.c:1667
+msgid "Rename:"
+msgstr "更名:"
+
+#: src/utilops.c:1669
+msgid "to:"
+msgstr "為:"
+
+#: src/utilops.c:1686
+#, fuzzy
+msgid "Begin text"
+msgstr "開始:"
+
+#: src/utilops.c:1694
+#, fuzzy
+msgid "Start #"
+msgstr "起動"
+
+#: src/utilops.c:1703
+msgid "End text"
+msgstr ""
+
+#: src/utilops.c:1715
+msgid "Padding:"
+msgstr ""
+
+#: src/utilops.c:1773
+#, c-format
+msgid ""
+"Unable to rename file:\n"
+"%s\n"
+"to:\n"
+"%s"
+msgstr ""
+"不能更改檔案名稱:\n"
+"%s\n"
+"為:\n"
+"%s"
+
+#: src/utilops.c:1814
+#, fuzzy
+msgid "Rename file:"
+msgstr ""
+"更改檔名:\n"
+"%s\n"
+"為:"
+
+#: src/utilops.c:1866
+#, fuzzy, c-format
+msgid ""
+"The folder:\n"
+"%s\n"
+"already exists."
+msgstr ""
+"目錄:\n"
+"%s\n"
+"已存在。"
+
+#: src/utilops.c:1867
+#, fuzzy
+msgid "Folder exists"
+msgstr "目錄已存在"
+
+#: src/utilops.c:1872
+#, c-format
+msgid ""
+"The path:\n"
+"%s\n"
+"already exists as a file."
+msgstr ""
+"路徑:\n"
+"%s\n"
+"已以檔案形式存在。"
+
+#: src/utilops.c:1873
+#, fuzzy
+msgid "Could not create folder"
+msgstr "不能建立目錄"
+
+#: src/utilops.c:1880
+#, fuzzy, c-format
+msgid ""
+"Unable to create folder:\n"
+"%s"
+msgstr ""
+"不能建立目錄:\n"
+"%s"
+
+#: src/utilops.c:1881
+#, fuzzy
+msgid "Error creating folder"
+msgstr "建立目錄時發生錯誤"
+
+#: src/utilops.c:1935
+#, fuzzy, c-format
+msgid ""
+"Create folder in:\n"
+"%s\n"
+"named:"
+msgstr ""
+"建立目檔於:\n"
+"%s\n"
+"命名為:"
+
+#: src/utilops.c:1936
+#, fuzzy
+msgid "New folder - GQmpeg"
+msgstr "新的目錄 - GQmpeg"
+
+#: src/utilops.c:1940
+msgid "Create"
+msgstr "建立"
+
+#: src/window.c:367
+#, fuzzy
+msgid "Playlist - GQmpeg"
+msgstr "空白的播放列表"
+
+#: src/window.c:371
+#, fuzzy
+msgid "Song Information - GQmpeg"
+msgstr "歌曲資訊"
+
+#: src/window.c:375
+#, fuzzy
+msgid "Extras - GQmpeg"
+msgstr "關於 - GQmpeg"
+
+#: src/window.c:383
+#, fuzzy
+msgid "GQmpeg"
+msgstr "移動 - GQmpeg"
+
+#: src/window.c:415
+msgid "loading skin..\n"
+msgstr "載入面板中..\n"
+
+#: src/window.c:422
+msgid "Default skin not loaded, using built-in default\n"
+msgstr "預設的面板未能載入,使用內建的預設面板\n"
+
+#: src/window.c:428
+msgid "Skin not loaded, using built-in default\n"
+msgstr "面板未能載入,使用內建的預設面板\n"
+
+#: src/window.c:437
+msgid "Skin in config file not loaded, using built-in default\n"
+msgstr "不能載入面板的設定檔,使用內建的預設面板\n"
+
+#~ msgid "Exit"
+#~ msgstr "離開"
+
+#~ msgid "Ok"
+#~ msgstr "確定"
+
+#~ msgid "Apply"
+#~ msgstr "套用"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid "Color shift (RGB)"
+#~ msgstr "顏色轉移(RGB)"
+
+#~ msgid "Percent:"
+#~ msgstr "百份比:"
+
+#~ msgid "Directories:"
+#~ msgstr "目錄:"
+
+#~ msgid "key"
+#~ msgstr "鍵"
+
+#~ msgid "type"
+#~ msgstr "類型"
+
+#~ msgid "data"
+#~ msgstr "資料"
+
+#~ msgid "Unable to write history lists to: %s\n"
+#~ msgstr "不能寫入過去的列表: %s\n"
+
+#~ msgid "Invalid directory"
+#~ msgstr "無效的目錄"
+
+#~ msgid "Delete files"
+#~ msgstr "刪除檔案"
+
+#~ msgid "GQmpeg - rename"
+#~ msgstr "GQmpeg - 更名"
+
+#~ msgid ""
+#~ "Overwrite file:\n"
+#~ "%s\n"
+#~ "with:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "覆寫檔案:\n"
+#~ "%s\n"
+#~ "以:\n"
+#~ "%s"
+
+#~ msgid "length:"
+#~ msgstr "長度:"
+
+#~ msgid "Filename: "
+#~ msgstr "檔名:"
+
+#~ msgid "Frequency: %.2f Mhz"
+#~ msgstr "頻率: %.2f Mhz"
+
+#~ msgid "Title: %s"
+#~ msgstr "標題: %s"
+
+#~ msgid "Title : "
+#~ msgstr "標題 : "
+
+#~ msgid "Type : "
+#~ msgstr "類型 : "
+
+#~ msgid "Length (patterns) : "
+#~ msgstr "長度 (式樣)"
+
+#~ msgid "%d Hz"
+#~ msgstr "%d 赫茲"
+
+#~ msgid "%d seconds"
+#~ msgstr "%d 秒"
+
+#~ msgid "Length : "
+#~ msgstr "長度 : "
+
+#~ msgid "Artist : "
+#~ msgstr "演譯者 : "
+
+#~ msgid "Album : "
+#~ msgstr "專輯 : "
+
+#~ msgid "Year : "
+#~ msgstr "年份 : "
+
+#~ msgid "Genre : "
+#~ msgstr "樂風 : "
+
+#~ msgid "Comment : "
+#~ msgstr "評註 : "

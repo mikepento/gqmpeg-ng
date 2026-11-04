@@ -1,0 +1,119 @@
+#SLIK skin data file
+
+#file created by gqmpeg 0.91.0 (SLIK 0.91.0)
+
+#Title: MrClean
+#Version: 0.91.0
+#Date stamp: Mon Apr  5 14:04:08 2004
+#Build: 1
+#Author: John Ellis
+#Email: johne@verizon.net
+#URL: gqmpeg.sourceforge.net
+#License: images and design free for any use
+
+[main]
+image = blue2-about.png
+transparent = TRUE
+border = FALSE
+focus_stretch = FALSE
+focus_has_border = TRUE
+focus_border_left = 7
+focus_border_right = 7
+focus_border_top = 7
+focus_border_bottom = 7
+focus_anchor_right = FALSE
+focus_anchor_bottom = FALSE
+focus_filled = FALSE
+focus_red = 255
+focus_green = 0
+focus_blue = 0
+focus_alpha = 0
+
+[font_lucida]
+description = Sans Bold 14
+
+[font_helvetica]
+description = Sans Bold 10
+
+[button_skin_close]
+image = btn-rnd-clr-26-x.png
+x = 227
+y = 3
+prelight = TRUE
+indicator = FALSE
+
+[dial_position]
+image = dial-ball2.png
+axis_x = 130
+axis_y = 121
+angle_begin = 270
+angle_end = 269
+handle_offset_x = 6
+handle_offset_y = 63
+clip_x = 66
+clip_y = 57
+clip_width = 129
+clip_height = 129
+pressable = FALSE
+prelight = FALSE
+reversed = FALSE
+clip_mask = dial-clip2.png
+
+[button_eyeball]
+image = dial-eye.png
+x = 105
+y = 98
+prelight = TRUE
+indicator = FALSE
+
+[text_line-1]
+font = lucida
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 86
+y = 8
+width = 102
+sizeable = FALSE
+rotation = 0
+data = Mr. Clean
+
+[text_line-2]
+font = helvetica
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 72
+y = 198
+width = 148
+sizeable = FALSE
+rotation = 0
+data = skin by John Ellis
+
+[text_emailme]
+font = helvetica
+red = 0
+green = 0
+blue = 0
+alpha = 230
+x = 70
+y = 216
+width = 160
+sizeable = FALSE
+rotation = 0
+data = johne@verizon.net
+
+[text_hidden]
+font = helvetica
+red = 160
+green = 0
+blue = 0
+alpha = 230
+x = 62
+y = 38
+width = 194
+sizeable = FALSE
+rotation = 0
+data =                                                     (I'm watching you)                 

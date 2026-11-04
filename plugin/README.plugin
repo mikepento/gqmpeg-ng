@@ -1,0 +1,28 @@
+icecast / shoutcast plugin for netscape                             (05-24-99)
+use at your own risk!
+
+GQmpeg requires mpg123 0.59pre-p or later to work with shoutcast
+mpg123 0.59o WILL NOT WORK!
+
+* copy gqmpeg-shoutcast-plugin.sh somewhere (probably being in your
+  path is a good idea), make sure it is executable!
+
+* in netscape, do this:
+
+  1) open the preferences dialog (edit menu)
+  2) go to navigator->applications
+  3) click the New... button
+  4) for Description enter   Shoutcast      (or anything you want to call this)
+  5) for MIMEType enter      audio/x-scpls
+  6) For Suffixes, enter     pls
+  7) Under 'handled by' choose application
+  8) in the application field enter "gqmpeg-shoutcast-plugin.sh %s" (no quotes)
+      (if the plugin is not in your path, specify the plugin's exact location)
+  9) select ok to close the dialog, then ok to close the preferences window
+
+* now, when a server is clicked on the icecast.org ,shoutcast.com, or many
+  other live mp3 streaming lists, gqmpeg should open and play
+  the stream.. Well it might..
+
+* for .m3u files, do the same as above, but for MIMEType put audio/x-mpegurl and
+  for Suffixes, enter m3u .
